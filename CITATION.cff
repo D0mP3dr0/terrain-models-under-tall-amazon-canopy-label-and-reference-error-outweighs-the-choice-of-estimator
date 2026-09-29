@@ -27,9 +27,9 @@ authors:
     affiliation: >-
       Military Institute of Engineering (IME), Brazil; CIICESI, ESTG,
       Polytechnic of Porto, Felgueiras, Portugal
-version: 1.2.0
+version: 1.2.1
 date-released: '2026-09-29'
-repository-code: 'https://github.com/D0mP3dr0/dem-gnn-v23-jstars-audit'
+repository-code: 'https://github.com/D0mP3dr0/terrain-models-under-tall-amazon-canopy-label-and-reference-error-outweighs-the-choice-of-estimator'
 license: MIT
 keywords:
   - graph neural network
