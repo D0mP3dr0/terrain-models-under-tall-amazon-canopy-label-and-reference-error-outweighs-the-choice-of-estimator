@@ -10,8 +10,8 @@ abstract: >-
   Models Under Tall Amazon Canopy: Label and Reference Error Outweighs the
   Choice of Estimator" (IEEE Journal of Selected Topics in Applied Earth
   Observations and Remote Sensing). Every number quoted in the manuscript has
-  a line in the fact sheet (audit/folha_de_fatos_jstars_v26.py and its output
-  audit/folha_de_fatos_jstars_v26.json) pointing to a stamped artifact and
+  a line in the fact sheet (audit/folha_de_fatos_jstars_v27.py and its output
+  audit/folha_de_fatos_jstars_v27.json) pointing to a stamped artifact and
   field; a number without a line does not exist.
 type: software
 authors:
@@ -27,7 +27,7 @@ authors:
     affiliation: >-
       Military Institute of Engineering (IME), Brazil; CIICESI, ESTG,
       Polytechnic of Porto, Felgueiras, Portugal
-version: 1.2.1
+version: 1.3.0
 date-released: '2026-09-29'
 repository-code: 'https://github.com/D0mP3dr0/terrain-models-under-tall-amazon-canopy-label-and-reference-error-outweighs-the-choice-of-estimator'
 license: MIT

@@ -1,0 +1,724 @@
+{
+  "_proveniencia": {
+    "script": "auditar_rf_filtro_gedi.py",
+    "sha256_script": "403b52f925dbf1af2a5bc37e9d0eaa1c3ef704abd9d1c01a8072e1895f97fffe",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-29T14:20",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/alvos/gedi02_a_amazonia_dedup.parquet",
+      "sha256": "b5fb30b7de92577233b85b382eb1e366f240a0475b85e827fed89e42b30ed6f9",
+      "bytes": 174139584,
+      "mtime": "2026-08-04 19:29"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/alvos/atl08_amazonia.parquet",
+      "sha256": "34b8ec39f0362d2f5beb938a5afeace9da6420c9020723b88d576a32ff8e4444",
+      "bytes": 20210390,
+      "mtime": "2026-08-02 17:08"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/gee/glo30_amazonia.tif",
+      "sha256": "22dff37e71790d1171c808dfb66579ead5bd7fbde25279e670df365ef70e6ddd",
+      "bytes": 157092796,
+      "mtime": "2026-08-02 18:44"
+    },
+    {
+      "caminho": "auditar_tabela3_dump.parquet",
+      "sha256": "652d60a6db96fc2c1ecf700214ce270e19d4ab20cfaf21b1876ba338881d9023",
+      "bytes": 48126,
+      "mtime": "2026-09-28 10:23"
+    },
+    {
+      "caminho": "auditar_rotulo_regua_v2.json",
+      "sha256": "2470115aaf6eed5ff2ea7d878f2dd6a1ac3f7bf682240599102a33fb01129e9a",
+      "bytes": 247271,
+      "mtime": "2026-09-28 11:58"
+    },
+    {
+      "caminho": "auditar_s7_arvore_lidar.json",
+      "sha256": "09d3030b23bfe6d908cd9bc4b9832418b4872b36aa641198a6faf6007c9abf57",
+      "bytes": 156106,
+      "mtime": "2026-09-28 21:46"
+    },
+    {
+      "caminho": "rotulos_lidar_v23.py",
+      "sha256": "bf8e36cfd2281b2eefae3cdd36b8b8b51cf145bc6a7e808008cc574792e14f8d",
+      "bytes": 42042,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "auditar_rotulo_regua_v2.py",
+      "sha256": "f50f622cbcdd5aab1c05d8e7682e87937aaf18e8cea16f6f5bb5833a685257d2",
+      "bytes": 34361,
+      "mtime": "2026-09-28 11:57"
+    },
+    {
+      "caminho": "geoide_v23.py",
+      "sha256": "001184fd628bba0c97fa030a20292026119260fec8cd21a18f3964aa49001796",
+      "bytes": 8743,
+      "mtime": "2026-08-02 19:34"
+    },
+    {
+      "caminho": "juiz_lidar_v4.py",
+      "sha256": "7768ba350a38cc94e9ab37a48cbac1b7b8917a902d3eb015ad430919c8b033c2",
+      "bytes": 21820,
+      "mtime": "2026-08-16 12:18"
+    },
+    {
+      "caminho": "auditar_rf_filtro_gedi.py",
+      "sha256": "403b52f925dbf1af2a5bc37e9d0eaa1c3ef704abd9d1c01a8072e1895f97fffe",
+      "bytes": 21118,
+      "mtime": "2026-09-29 14:19"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q1.npz",
+      "sha256": "015d0347d445bf9a0a4df08758fb1ea0d10fdb3e3a753d140e90e476f4147cf9",
+      "bytes": 11060217,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q2.npz",
+      "sha256": "803a5aaa1d528d8e71d6c416e563bd7df0bb2e3d438e8822ce96fd3257f7b110",
+      "bytes": 12925328,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q3.npz",
+      "sha256": "cd20a82c5e9bfb2e36b51385703b037790f9abfdabed75be9b96da5b73087765",
+      "bytes": 10711545,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q4.npz",
+      "sha256": "f9ffafdaffa777599b56c2143d9730cef677b54e641d952c417e5845fcdd0b93",
+      "bytes": 12905568,
+      "mtime": "2026-08-07 13:34"
+    }
+  ],
+  "pergunta": "R-F: above 30 m (ETH class), does A remain above the gap between estimators (O3) when the GEDI label is recomputed only from shots that pass the standard literature filter?",
+  "protocolo": "Pre-declared design note for check R-F (not distributed).",
+  "bracos_definicao": {
+    "F0": "quality_flag == 1 and num_modos >= 1 + the plausibility cut of the biome",
+    "F1": "F0 and degrade_flag == 0 and sensitivity >= 0.95",
+    "F2": "F0 and degrade_flag == 0 and sensitivity >= 0.98 and beam in ['BEAM0101', 'BEAM0110', 'BEAM1000', 'BEAM1011'] and solar_elevation < 0",
+    "atl08": "unchanged across the three arms (adopted criterion)"
+  },
+  "criterio": {
+    "estimandos": [
+      "lim_inf_A_media_m",
+      "lim_inf_A_mediana_m",
+      "lim_inf_reducao_mae_m"
+    ],
+    "regra": "supported if the three lower bounds > the O3 ceiling of the class",
+    "bootstrap": {
+      "B": 10000,
+      "semente": 42,
+      "alpha": 0.05,
+      "cluster": "transecto"
+    },
+    "piso_maior30m": {
+      "celulas_min": 110,
+      "transectos_min": 6
+    },
+    "classe_20_30m": "secondary reading against 0.500 m; floor not defined by the protocol (atinge_piso = null)"
+  },
+  "decisoes_de_implementacao": [
+    "population = auditar_tabela3_dump.parquet (sha256 checked against the one recorded in auditar_rotulo_regua_v2.json); A_adotado = termo_rotulo of the dump; montar_populacao is not re-executed",
+    "plausibility limits derived once, as in the original (all approved shots of the biome), and applied equally to the three arms; Fk = F0 and the extra condition of the arm",
+    "roughness step of montar_bioma omitted: it changes neither bom nor y_novo",
+    "G1: 'no cell above 0.5 m without a recorded explanation' implemented as zero cells above 0.5 m and zero cells without an F0 shot",
+    "G3 checked to 3 decimal places (the protocol fixes 1.442 and 0.500)",
+    "bootstrap: same stream tags as auditar_rotulo_regua_v2 for A and reduction in all arms; the shift has its own tag per arm",
+    "20-30 m class: floor not defined by the protocol (atinge_piso = null); mechanical verdict against 0.500 m as a secondary reading",
+    "unit: transect only (R-F does not ask for footprint)",
+    "sensitivity > 1 not excluded (literal protocol filter); count reported"
+  ],
+  "guardas": {
+    "G1": {
+      "n_celulas": 1194,
+      "n_ate_0_01_m": 1194,
+      "fracao_ate_0_01_m": 1.0,
+      "n_sem_disparo_F0_ou_sem_rotulo": 0,
+      "max_abs_dif_m": 1.3959378151184865e-06,
+      "n_acima_0_5_m": 0,
+      "quantis_abs_dif_m": {
+        "50": 1.5800711672397938e-07,
+        "99": 9.372773768845373e-07,
+        "100": 1.3959378151184865e-06
+      },
+      "passou": true
+    },
+    "G2": {
+      "recomputado": {
+        "media_pond_celula_m": 6.651019321277299,
+        "mediana_m": 3.699343681335449,
+        "n_celulas": 441,
+        "n_unidades": 10
+      },
+      "alvo_protocolo": {
+        "media_pond_celula_m": 6.651019321277299,
+        "mediana_m": 3.699343681335449,
+        "n_celulas": 441,
+        "n_unidades": 10
+      },
+      "alvo_regua_v2_json": {
+        "media_pond_celula_m": 6.651019321277299,
+        "mediana_m": 3.699343681335449,
+        "n_celulas": 441,
+        "n_unidades": 10
+      },
+      "diferencas": {
+        "media_pond_celula_m": 0.0,
+        "mediana_m": 0.0,
+        "n_celulas": 0,
+        "n_unidades": 0
+      },
+      "ic95_media_pond_recomputado": [
+        3.3086588594711053,
+        9.50574041667469
+      ],
+      "ic95_media_pond_regua_v2_json": [
+        3.3086588594711053,
+        9.50574041667469
+      ],
+      "ic95_mediana_recomputado": [
+        1.5437850952148438,
+        8.661331176757812
+      ],
+      "ic95_mediana_regua_v2_json": [
+        1.5437850952148438,
+        8.661331176757812
+      ],
+      "passou": true
+    },
+    "G3": {
+      "20-30m": {
+        "teto_O3_m_lido": 0.5004502757815885,
+        "alvo_3_casas": 0.5,
+        "passou": true
+      },
+      ">30m": {
+        "teto_O3_m_lido": 1.4423628558610613,
+        "alvo_3_casas": 1.442,
+        "passou": true
+      }
+    }
+  },
+  "populacao": {
+    "dump": "auditar_tabela3_dump.parquet",
+    "sha256_dump": "652d60a6db96fc2c1ecf700214ce270e19d4ab20cfaf21b1876ba338881d9023",
+    "n_celulas": 1194
+  },
+  "disparos": {
+    "n_gedi_bruto": 2208392,
+    "n_gedi_solo_topo_validos": 2208392,
+    "n_atl08_terreno_valido": 208735,
+    "n_disparos_na_caixa_finitos": 2417126,
+    "limites_do_bioma": {
+      "dossel_p9999_m": 122.9,
+      "erro_dem_p999_m": 53.96,
+      "k_gordura": 3.0,
+      "y_teto_m": 284.8,
+      "y_piso_m": -161.89,
+      "dossel_teto_m": 284.8,
+      "solo_min_m": -503.5,
+      "solo_max_m": 708.9,
+      "n_amostra": 659819,
+      "reprovados": 48
+    },
+    "reprovados_pelo_corte_de_plausibilidade": 48
+  },
+  "contagens_disparos": {
+    "F0": {
+      "bioma": {
+        "gedi_aprovados": 627569,
+        "atl08_aprovados": 32202
+      },
+      "celulas_ancora": {
+        "gedi_aprovados": 1181,
+        "atl08_aprovados": 19,
+        "gedi_aprovados_com_sensitivity_maior_que_1": 0
+      }
+    },
+    "F1": {
+      "bioma": {
+        "gedi_aprovados": 360417,
+        "atl08_aprovados": 32202,
+        "gedi_removidos_vs_F0": 267152
+      },
+      "celulas_ancora": {
+        "gedi_aprovados": 514,
+        "atl08_aprovados": 19,
+        "gedi_aprovados_com_sensitivity_maior_que_1": 0,
+        "gedi_removidos_vs_F0": 667
+      }
+    },
+    "F2": {
+      "bioma": {
+        "gedi_aprovados": 93357,
+        "atl08_aprovados": 32202,
+        "gedi_removidos_vs_F0": 534212
+      },
+      "celulas_ancora": {
+        "gedi_aprovados": 134,
+        "atl08_aprovados": 19,
+        "gedi_aprovados_com_sensitivity_maior_que_1": 0,
+        "gedi_removidos_vs_F0": 1047
+      }
+    }
+  },
+  "remocao_de_celulas": {
+    "F0": {
+      "20-30m": {
+        "celulas_F0": 460,
+        "celulas_Fk": 460,
+        "celulas_removidas": 0,
+        "celulas_so_atl08_ou_sem_mudanca_de_mediana": 460,
+        "transectos_removidos": []
+      },
+      ">30m": {
+        "celulas_F0": 441,
+        "celulas_Fk": 441,
+        "celulas_removidas": 0,
+        "celulas_so_atl08_ou_sem_mudanca_de_mediana": 441,
+        "transectos_removidos": []
+      }
+    },
+    "F1": {
+      "20-30m": {
+        "celulas_F0": 460,
+        "celulas_Fk": 228,
+        "celulas_removidas": 232,
+        "celulas_so_atl08_ou_sem_mudanca_de_mediana": 227,
+        "transectos_removidos": [
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0662"
+        ]
+      },
+      ">30m": {
+        "celulas_F0": 441,
+        "celulas_Fk": 160,
+        "celulas_removidas": 281,
+        "celulas_so_atl08_ou_sem_mudanca_de_mediana": 160,
+        "transectos_removidos": [
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0639"
+        ]
+      }
+    },
+    "F2": {
+      "20-30m": {
+        "celulas_F0": 460,
+        "celulas_Fk": 54,
+        "celulas_removidas": 406,
+        "celulas_so_atl08_ou_sem_mudanca_de_mediana": 53,
+        "transectos_removidos": [
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0662",
+          "NP_T-0899"
+        ]
+      },
+      ">30m": {
+        "celulas_F0": 441,
+        "celulas_Fk": 58,
+        "celulas_removidas": 383,
+        "celulas_so_atl08_ou_sem_mudanca_de_mediana": 58,
+        "transectos_removidos": [
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0639"
+        ]
+      }
+    }
+  },
+  "por_braco": {
+    "F0": {
+      "20-30m": {
+        "n_celulas": 460,
+        "n_transectos": 12,
+        "atinge_piso": null,
+        "A": {
+          "media_pond_celula_m": 4.560947264795718,
+          "ic95_media_pond": [
+            2.370060684006678,
+            6.5448248389826365
+          ],
+          "mediana_m": 2.6272153854370117,
+          "ic95_mediana": [
+            1.0328683853149414,
+            5.047708511352539
+          ],
+          "medias_por_transecto_m": {
+            "NP_T-0224": 11.349047209087171,
+            "NP_T-0226": 0.6775297685102983,
+            "NP_T-0227": 2.305289597346865,
+            "NP_T-0357": 11.609907323663885,
+            "NP_T-0358": 6.960545259363511,
+            "NP_T-0360": -1.626971504905007,
+            "NP_T-0621": 7.913653797573513,
+            "NP_T-0638": 1.7726962225777763,
+            "NP_T-0639": -1.0798873901367188,
+            "NP_T-0662": 5.100685119628906,
+            "NP_T-0896": 1.5807632015597435,
+            "NP_T-0899": 5.880231485738383
+          }
+        },
+        "reducao_mae_equivalente": {
+          "valor_m": 1.3985143726669773,
+          "ic95": [
+            0.24717873360397985,
+            2.654327446668687
+          ]
+        },
+        "limites_inferiores": {
+          "lim_inf_A_media_m": 2.370060684006678,
+          "lim_inf_A_mediana_m": 1.0328683853149414,
+          "lim_inf_reducao_mae_m": 0.24717873360397985
+        },
+        "teto_m": 0.5004502757815885,
+        "acima_do_teto": {
+          "lim_inf_A_media_m": true,
+          "lim_inf_A_mediana_m": true,
+          "lim_inf_reducao_mae_m": false
+        },
+        "veredito": "nao sustentado",
+        "deslocamento_mediana_Fk_menos_F0": {
+          "n": 460,
+          "media_m": 0.0,
+          "mediana_m": 0.0,
+          "ic95_media": [
+            0.0,
+            0.0
+          ],
+          "ic95_mediana": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      ">30m": {
+        "n_celulas": 441,
+        "n_transectos": 10,
+        "atinge_piso": true,
+        "A": {
+          "media_pond_celula_m": 6.651019321277299,
+          "ic95_media_pond": [
+            3.3086588594711053,
+            9.50574041667469
+          ],
+          "mediana_m": 3.699343681335449,
+          "ic95_mediana": [
+            1.5437850952148438,
+            8.661331176757812
+          ],
+          "medias_por_transecto_m": {
+            "NP_T-0224": 13.222765698152429,
+            "NP_T-0226": 1.53697641546076,
+            "NP_T-0227": 1.668202483135721,
+            "NP_T-0357": 8.691677935711748,
+            "NP_T-0358": 9.525107048653268,
+            "NP_T-0360": -0.5231957965426974,
+            "NP_T-0621": 6.757641928536551,
+            "NP_T-0638": 1.2650803690371306,
+            "NP_T-0639": 26.45229148864746,
+            "NP_T-0899": 6.200327383505331
+          }
+        },
+        "reducao_mae_equivalente": {
+          "valor_m": 4.837936126384987,
+          "ic95": [
+            2.9217891668014078,
+            5.6335665143611084
+          ]
+        },
+        "limites_inferiores": {
+          "lim_inf_A_media_m": 3.3086588594711053,
+          "lim_inf_A_mediana_m": 1.5437850952148438,
+          "lim_inf_reducao_mae_m": 2.9217891668014078
+        },
+        "teto_m": 1.4423628558610613,
+        "acima_do_teto": {
+          "lim_inf_A_media_m": true,
+          "lim_inf_A_mediana_m": true,
+          "lim_inf_reducao_mae_m": true
+        },
+        "veredito": "sustentado",
+        "deslocamento_mediana_Fk_menos_F0": {
+          "n": 441,
+          "media_m": 0.0,
+          "mediana_m": 0.0,
+          "ic95_media": [
+            0.0,
+            0.0
+          ],
+          "ic95_mediana": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "F1": {
+      "20-30m": {
+        "n_celulas": 228,
+        "n_transectos": 6,
+        "atinge_piso": null,
+        "A": {
+          "media_pond_celula_m": 2.938051311328411,
+          "ic95_media_pond": [
+            1.339593962467078,
+            5.2128068024008245
+          ],
+          "mediana_m": 1.5958247184753418,
+          "ic95_mediana": [
+            0.7058677673339844,
+            3.602855682373047
+          ],
+          "medias_por_transecto_m": {
+            "NP_T-0224": 11.662237167358398,
+            "NP_T-0226": 0.6775297685102983,
+            "NP_T-0638": 1.7624698479970295,
+            "NP_T-0639": -1.7397696177164714,
+            "NP_T-0896": 1.4727812048829632,
+            "NP_T-0899": 4.5332938005688375
+          }
+        },
+        "reducao_mae_equivalente": {
+          "valor_m": 1.0565225783268404,
+          "ic95": [
+            -0.12494972069783117,
+            2.4042225959875427
+          ]
+        },
+        "limites_inferiores": {
+          "lim_inf_A_media_m": 1.339593962467078,
+          "lim_inf_A_mediana_m": 0.7058677673339844,
+          "lim_inf_reducao_mae_m": -0.12494972069783117
+        },
+        "teto_m": 0.5004502757815885,
+        "acima_do_teto": {
+          "lim_inf_A_media_m": true,
+          "lim_inf_A_mediana_m": true,
+          "lim_inf_reducao_mae_m": false
+        },
+        "veredito": "nao sustentado",
+        "deslocamento_mediana_Fk_menos_F0": {
+          "n": 228,
+          "media_m": -0.013415479088373735,
+          "mediana_m": 0.0,
+          "ic95_media": [
+            -0.03475828672896831,
+            0.0
+          ],
+          "ic95_mediana": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      ">30m": {
+        "n_celulas": 160,
+        "n_transectos": 4,
+        "atinge_piso": false,
+        "A": {
+          "media_pond_celula_m": 4.376271176338196,
+          "ic95_media_pond": [
+            1.3262905332777235,
+            8.325613680934406
+          ],
+          "mediana_m": 1.8119468688964844,
+          "ic95_mediana": [
+            0.10172176361083984,
+            7.355111122131348
+          ],
+          "medias_por_transecto_m": {
+            "NP_T-0224": 10.21703857421875,
+            "NP_T-0226": 1.259790225904815,
+            "NP_T-0638": 1.4057665103819312,
+            "NP_T-0899": 3.4992655754089355
+          }
+        },
+        "reducao_mae_equivalente": {
+          "valor_m": 3.964560793936253,
+          "ic95": [
+            1.274334350868508,
+            6.562157147285436
+          ]
+        },
+        "limites_inferiores": {
+          "lim_inf_A_media_m": 1.3262905332777235,
+          "lim_inf_A_mediana_m": 0.10172176361083984,
+          "lim_inf_reducao_mae_m": 1.274334350868508
+        },
+        "teto_m": 1.4423628558610613,
+        "acima_do_teto": {
+          "lim_inf_A_media_m": false,
+          "lim_inf_A_mediana_m": false,
+          "lim_inf_reducao_mae_m": false
+        },
+        "veredito": "nao avaliavel",
+        "deslocamento_mediana_Fk_menos_F0": {
+          "n": 160,
+          "media_m": 0.0,
+          "mediana_m": 0.0,
+          "ic95_media": [
+            0.0,
+            0.0
+          ],
+          "ic95_mediana": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "F2": {
+      "20-30m": {
+        "n_celulas": 54,
+        "n_transectos": 5,
+        "atinge_piso": null,
+        "A": {
+          "media_pond_celula_m": 0.6994564260552745,
+          "ic95_media_pond": [
+            -1.476360421431692,
+            1.1639566519232787
+          ],
+          "mediana_m": 0.7271952629089355,
+          "ic95_mediana": [
+            -2.0224132537841797,
+            0.8609075546264648
+          ],
+          "medias_por_transecto_m": {
+            "NP_T-0224": -0.2585620880126953,
+            "NP_T-0226": -1.4461390177408855,
+            "NP_T-0638": 1.1408346891403198,
+            "NP_T-0639": -1.7397696177164714,
+            "NP_T-0896": 1.2848868335085009
+          }
+        },
+        "reducao_mae_equivalente": {
+          "valor_m": 0.35712033225476425,
+          "ic95": [
+            -0.08607277710586114,
+            0.9932006281648649
+          ]
+        },
+        "limites_inferiores": {
+          "lim_inf_A_media_m": -1.476360421431692,
+          "lim_inf_A_mediana_m": -2.0224132537841797,
+          "lim_inf_reducao_mae_m": -0.08607277710586114
+        },
+        "teto_m": 0.5004502757815885,
+        "acima_do_teto": {
+          "lim_inf_A_media_m": false,
+          "lim_inf_A_mediana_m": false,
+          "lim_inf_reducao_mae_m": false
+        },
+        "veredito": "nao sustentado",
+        "deslocamento_mediana_Fk_menos_F0": {
+          "n": 54,
+          "media_m": 0.0009417349496791713,
+          "mediana_m": 0.0,
+          "ic95_media": [
+            0.0,
+            0.00354793167088432
+          ],
+          "ic95_mediana": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      ">30m": {
+        "n_celulas": 58,
+        "n_transectos": 4,
+        "atinge_piso": false,
+        "A": {
+          "media_pond_celula_m": 1.5175716465917126,
+          "ic95_media_pond": [
+            0.017014887425806615,
+            4.222703036139993
+          ],
+          "mediana_m": 0.5945682525634766,
+          "ic95_mediana": [
+            -0.083648681640625,
+            3.714141845703125
+          ],
+          "medias_por_transecto_m": {
+            "NP_T-0224": 4.347319466727121,
+            "NP_T-0226": -0.41452937655978733,
+            "NP_T-0638": 1.030205768087636,
+            "NP_T-0899": 3.641159693400065
+          }
+        },
+        "reducao_mae_equivalente": {
+          "valor_m": 1.4694923396342991,
+          "ic95": [
+            0.017014887425807146,
+            4.222703036139992
+          ]
+        },
+        "limites_inferiores": {
+          "lim_inf_A_media_m": 0.017014887425806615,
+          "lim_inf_A_mediana_m": -0.083648681640625,
+          "lim_inf_reducao_mae_m": 0.017014887425807146
+        },
+        "teto_m": 1.4423628558610613,
+        "acima_do_teto": {
+          "lim_inf_A_media_m": false,
+          "lim_inf_A_mediana_m": false,
+          "lim_inf_reducao_mae_m": false
+        },
+        "veredito": "nao avaliavel",
+        "deslocamento_mediana_Fk_menos_F0": {
+          "n": 58,
+          "media_m": 0.0,
+          "mediana_m": 0.0,
+          "ic95_media": [
+            0.0,
+            0.0
+          ],
+          "ic95_mediana": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "vereditos_maior30m": {
+    "F0": "sustentado",
+    "F1": "nao avaliavel",
+    "F2": "nao avaliavel"
+  },
+  "contra_auditoria": "PENDING -- not yet checked by anyone other than the author of this script"
+}

@@ -8,13 +8,13 @@ Observations and Remote Sensing).
 This repository contains the audit scripts that produce every number cited
 in the manuscript and the stamped JSON artifacts those scripts read and
 write. The central piece is the fact sheet
-(`audit/folha_de_fatos_jstars_v26.py` and its output
-`audit/folha_de_fatos_jstars_v26.json`): every number in the text has an
+(`audit/folha_de_fatos_jstars_v27.py` and its output
+`audit/folha_de_fatos_jstars_v27.json`): every number in the text has an
 entry in the fact sheet pointing to a stamped artifact and field; a number
-without an entry does not exist. The fact sheet was built in eight
-successive versions (`folha_de_fatos_jstars.py`, `_v2`, `_v21` to `_v26`),
+without an entry does not exist. The fact sheet was built in nine
+successive versions (`folha_de_fatos_jstars.py`, `_v2`, `_v21` to `_v27`),
 each one copying the previous version's stamped output unchanged and adding
-the facts of the checks introduced since; all eight are included so the
+the facts of the checks introduced since; all nine are included so the
 lineage can be followed end to end.
 
 Raw rasters, training checkpoints and prediction arrays are not distributed
@@ -27,10 +27,13 @@ manuscript covers access to those inputs.
 - `audit/` — the fact-sheet lineage, the individual audit scripts and their
   stamped JSON outputs, and `audit/results/` (skill and evaluation outputs
   the fact sheet draws on)
-- `audit/fig/` — the one surviving figure generator (`gerar_fig1.py`) and
-  its numeric sidecar; a second sidecar (`fig9_numeros.json`) is kept for
-  lineage completeness even though the panel it describes was cut from the
+- `audit/fig/` — the figure generators that the fact sheet reads
+  (`gerar_fig1.py`, `gerar_fig3.py`, `gerar_fig8.py`) and their numeric
+  sidecars; one sidecar (`fig9_numeros.json`) is kept for lineage
+  completeness even though the panel it describes was cut from the
   submitted manuscript (see `PROVENANCE.md`)
+- `audit/_arquivo_2026-08-09/` — two early profiles of GEDI quality fields
+  over exposed soil, descriptive, read by the latest fact sheet
 - `audit/_pareceres_2026-09-28_execucao/` — two small reference-product
   artifacts (ANADEM sampling and a datum sanity check) read by the fact
   sheet; the folder keeps its original name because the artifacts point to
@@ -50,7 +53,7 @@ Everything here is released under the MIT licence; see `LICENSE`.
 
 ## Checking a number
 
-Every fact in `audit/folha_de_fatos_jstars_v26.json` carries `valor`,
+Every fact in `audit/folha_de_fatos_jstars_v27.json` carries `valor`,
 `unidade`, `artefato` and `campo`. To check a number quoted in the paper,
 find its fact, open the named artifact under `audit/`, and read the named
 field. Each stamped artifact also records, under `_fontes`, the sha256 of

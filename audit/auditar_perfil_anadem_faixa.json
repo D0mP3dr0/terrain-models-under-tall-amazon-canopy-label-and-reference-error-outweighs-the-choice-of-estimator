@@ -1,0 +1,286 @@
+{
+  "_proveniencia": {
+    "script": "auditar_perfil_anadem_faixa.py",
+    "sha256_script": "ef6cd0fe52bfd3c232af33f73cfce3e982860f08531b56f442de01ce3e73a0b9",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-29T14:43",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.parquet",
+      "sha256": "b01a6101850dfe7fc514c85be556fbe0aae3cc941fba9263b431a54556f92dc5",
+      "bytes": 4380157,
+      "mtime": "2026-08-18 18:02"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.json",
+      "sha256": "390126f935a32a54a31ba2209e53b6e40f610f99d2f8f7e69773feb334b03c1d",
+      "bytes": 6097,
+      "mtime": "2026-08-18 18:02"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/_proveniencia.json",
+      "sha256": "828b1c74a1528905b8ef8a8f5e24345ab9af58a2d7373bf729e731b6bd724c49",
+      "bytes": 6299,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q1.npz",
+      "sha256": "b863f994c8b96814534a94343d2a646097deb1b94be7cf165c74530d67cd3e63",
+      "bytes": 44897228,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q2.npz",
+      "sha256": "e70230f02c479067c1edd537235c85e9e623cc5aca6bcd0b7b85ba48efe81bb0",
+      "bytes": 42059826,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q3.npz",
+      "sha256": "a9101e9462912e4a494dca0bba4465e86f41b81f4c927b0c1e6fd90713e77633",
+      "bytes": 38822111,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q4.npz",
+      "sha256": "03981d874ab931c3678fc089bc2ff7089741f590a9c18ad585582195ed10f264",
+      "bytes": 37812742,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "juiz_grade_nativa_diretas.json",
+      "sha256": "5d8e47397eac39122d7d9b52e3118491c4547cffa6c856e4477d0fe09c6d76f5",
+      "bytes": 29459,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "artigo_v23_2/fig/gerar_fig8.py",
+      "sha256": "b4ec286e2ba341638d96f84fb21ac4532e16a4745f80d927e55654e4a88a299f",
+      "bytes": 8111,
+      "mtime": "2026-09-28 19:00"
+    },
+    {
+      "caminho": "juiz_lidar_v4.py",
+      "sha256": "7768ba350a38cc94e9ab37a48cbac1b7b8917a902d3eb015ad430919c8b033c2",
+      "bytes": 21820,
+      "mtime": "2026-08-16 12:18"
+    },
+    {
+      "caminho": "auditar_nmad_pareado.py",
+      "sha256": "52e471fc4df6e41f1f87ca6de800275770e7bb6eb1b59b6a84bfd9ce0b57a3a1",
+      "bytes": 21009,
+      "mtime": "2026-08-18 19:11"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_anadem.py",
+      "sha256": "f022646ea98e0ae3c4c7de9ce39e73c901a752442c8763e7564654ee115ea9d9",
+      "bytes": 23220,
+      "mtime": "2026-09-28 11:47"
+    }
+  ],
+  "tarefa": "MAE of ANADEM on the profile strip (NP_T-0224) over the same population and reference as the judge",
+  "faixa_do_perfil": "NP_T-0224",
+  "guarda_reproduz_juiz_1e-6": {
+    "passou": true,
+    "tolerancia_m": 1e-06,
+    "max_abs_dif_faixa_m": 0.0,
+    "max_abs_dif_todos_transectos_m": 0.0,
+    "dif_por_produto_faixa_m": {
+      "v23": 0.0,
+      "mlp": 0.0,
+      "fabdem": 0.0,
+      "gedtm30": 0.0,
+      "glo30": 0.0
+    },
+    "fonte": "juiz_grade_nativa_diretas.json -> por_transecto_mae"
+  },
+  "resultado_faixa": {
+    "anadem_mae_m": 5.2130728172402,
+    "mae_m_seis_produtos": {
+      "v23": 8.11125016350852,
+      "mlp": 8.756880785444366,
+      "fabdem": 6.262139073686887,
+      "gedtm30": 6.521423711988179,
+      "glo30": 21.88382573325638,
+      "anadem": 5.2130728172402
+    },
+    "ordem_crescente_de_mae": [
+      "anadem",
+      "fabdem",
+      "gedtm30",
+      "v23",
+      "mlp",
+      "glo30"
+    ],
+    "n_celulas_floresta_julgada": 8795,
+    "n_celulas_anadem_finito": 8795
+  },
+  "por_transecto_mae_descritivo": {
+    "NP_T-0224": {
+      "v23": 8.11125016350852,
+      "mlp": 8.756880785444366,
+      "fabdem": 6.262139073686887,
+      "gedtm30": 6.521423711988179,
+      "glo30": 21.88382573325638,
+      "anadem": 5.2130728172402,
+      "n_celulas": 8795,
+      "n_celulas_anadem_finito": 8795
+    },
+    "NP_T-0226": {
+      "v23": 5.370576222334396,
+      "mlp": 5.830286036609526,
+      "fabdem": 3.1080005684963887,
+      "gedtm30": 3.9287763797656186,
+      "glo30": 18.28549308473854,
+      "anadem": 3.395323130756098,
+      "n_celulas": 8561,
+      "n_celulas_anadem_finito": 8561
+    },
+    "NP_T-0227": {
+      "v23": 4.600974039331156,
+      "mlp": 4.708814132626463,
+      "fabdem": 3.3103500704579014,
+      "gedtm30": 3.081872111263094,
+      "glo30": 14.536496616391723,
+      "anadem": 3.307744556696891,
+      "n_celulas": 4735,
+      "n_celulas_anadem_finito": 4735
+    },
+    "NP_T-0357": {
+      "v23": 6.664352362177098,
+      "mlp": 7.617679582119158,
+      "fabdem": 5.4566250695565515,
+      "gedtm30": 7.326336517741452,
+      "glo30": 19.988186955714937,
+      "anadem": 9.170469546032937,
+      "n_celulas": 8613,
+      "n_celulas_anadem_finito": 8613
+    },
+    "NP_T-0358": {
+      "v23": 6.207619353329305,
+      "mlp": 7.105444074607047,
+      "fabdem": 6.1428943966268115,
+      "gedtm30": 6.918848596559311,
+      "glo30": 19.28360809667747,
+      "anadem": 8.490369804091452,
+      "n_celulas": 8577,
+      "n_celulas_anadem_finito": 8577
+    },
+    "NP_T-0360": {
+      "v23": 3.6459687203077475,
+      "mlp": 4.422902069789147,
+      "fabdem": 2.744029558843684,
+      "gedtm30": 3.2611276605253208,
+      "glo30": 15.182229055891302,
+      "anadem": 2.6963815371964257,
+      "n_celulas": 8270,
+      "n_celulas_anadem_finito": 8270
+    },
+    "NP_T-0621": {
+      "v23": 6.018548307003724,
+      "mlp": 6.400505846206433,
+      "fabdem": 4.34569994783708,
+      "gedtm30": 4.244748127909293,
+      "glo30": 17.113981483505885,
+      "anadem": 3.8173613861353712,
+      "n_celulas": 8712,
+      "n_celulas_anadem_finito": 8712
+    },
+    "NP_T-0638": {
+      "v23": 3.932439613777563,
+      "mlp": 3.876981660983295,
+      "fabdem": 3.5247029023769656,
+      "gedtm30": 3.008323030475663,
+      "glo30": 10.016213188063263,
+      "anadem": 3.7973879340335674,
+      "n_celulas": 7409,
+      "n_celulas_anadem_finito": 7409
+    },
+    "NP_T-0639": {
+      "v23": 4.198632804991335,
+      "mlp": 4.623739765697734,
+      "fabdem": 3.374018748484313,
+      "gedtm30": 3.3531622183251377,
+      "glo30": 13.623786673410338,
+      "anadem": 3.0592311740151,
+      "n_celulas": 8833,
+      "n_celulas_anadem_finito": 8833
+    },
+    "NP_T-0662": {
+      "v23": 5.936133712451428,
+      "mlp": 6.633061539074394,
+      "fabdem": 4.876137038200132,
+      "gedtm30": 6.475370247133316,
+      "glo30": 18.407913872503464,
+      "anadem": 8.711690336658108,
+      "n_celulas": 310,
+      "n_celulas_anadem_finito": 310
+    },
+    "NP_T-0896": {
+      "v23": 2.1932241899870437,
+      "mlp": 1.7317120454315504,
+      "fabdem": 2.862493837064863,
+      "gedtm30": 5.159468860307471,
+      "glo30": 5.53611687971562,
+      "anadem": 3.9741037686397545,
+      "n_celulas": 7405,
+      "n_celulas_anadem_finito": 7405
+    },
+    "NP_T-0899": {
+      "v23": 3.9073006327261606,
+      "mlp": 3.264505062127331,
+      "fabdem": 2.797656233835634,
+      "gedtm30": 2.811046468045543,
+      "glo30": 12.375637659558972,
+      "anadem": 2.3962828291104468,
+      "n_celulas": 8189,
+      "n_celulas_anadem_finito": 8189
+    },
+    "NP_T-0934": {
+      "v23": 3.8108878183498525,
+      "mlp": 3.4988062139220926,
+      "fabdem": 2.904992015690451,
+      "gedtm30": 2.0973766028018552,
+      "glo30": 8.78113160843957,
+      "anadem": 1.1156854633148263,
+      "n_celulas": 7878,
+      "n_celulas_anadem_finito": 7878
+    }
+  },
+  "n_transectos_julgaveis": 13,
+  "populacao": {
+    "n_floresta_julgavel_total": 96287,
+    "n_anadem_finito_total": 96287,
+    "julgaveis": [
+      "NP_T-0224",
+      "NP_T-0226",
+      "NP_T-0227",
+      "NP_T-0357",
+      "NP_T-0358",
+      "NP_T-0360",
+      "NP_T-0621",
+      "NP_T-0638",
+      "NP_T-0639",
+      "NP_T-0662",
+      "NP_T-0896",
+      "NP_T-0899",
+      "NP_T-0934"
+    ],
+    "reproduz_tabela_regua_k0_celulas_produto_x_faixa": 30
+  },
+  "metodo": "same population and same reference (k0, no delta correction) as the other five products: auditar_nmad_pareado_nativa_anadem.montar_populacao_com_anadem (mirror of juiz_lidar_v4.main; anadem added before the filters) and the expression at juiz_lidar_v4.py l. 334-336 (MAE = mean of |product - z_ref| per transect, z_ref = z_solo_v2 + canopy-gap offset of the transect); ANADEM from laterais_nativa_diretas/anadem_amazonia_Q*.npz, key DTM (gerar_fig8.py l. 60); cells with non-finite ANADEM are left out only of the ANADEM mean",
+  "nota": "per-transect descriptive: no test; the strip value is what the annotation of panel (a) of the profile figure can show next to the other five"
+}

@@ -19,6 +19,8 @@ translation. The two Parquet tables are byte-identical to the originals.
 
 | file | sha256 of the original | sha256 published here | payload sha256 |
 |---|---|---|---|
+| `_arquivo_2026-08-09/auditorias_pontuais/qualidade_lidar_4biomas.json` | `cb46d7a7e8350b210c1dd05c8602f9e455761e643303b41af3c3b0998bde8e50` | `6c488b75d9aa4c3081dad0f0e70c14d3489c4dee24077104a9e3fba6303a9a4e` | `fc3d270e223d8b5c7cf035a05d52a1d47db8761d613f18f9e8cb4dfb956a7c88` |
+| `_arquivo_2026-08-09/auditorias_pontuais/qualidade_lidar_do_zero.json` | `b42a7050b0d6eb5b5bcbf43db4a0f2b00af090d1c5d5b9b04785e0af7a79c261` | `30837dfce62ba1dbe91ddeb03c464f13024ea6eec99b1284bbe99c690ae08334` | `bbe32f83a7276ac74d8b7af0e7babcbd3c66c0bcc668945c629daae6b63c1efd` |
 | `_pareceres_2026-09-28_execucao/geo_produto_anadem.json` | `2738c9edce6e55fa5076e08c4479bfe262c7a6788b2b5730ec1f5edd63c913e6` | `7caa26f9614f0d6ac8169b924704f7721d38dac7e32c1ca2310058767ff65534` | `20b126e643696f80aae2424783772b45513e057f1635dd9aac870ff8a6e97749` |
 | `_pareceres_2026-09-28_execucao/guarda_sanidade_anadem_vs_glo30.json` | `fd35875b32154733ab36c9f0b4aa5b827d8f7f8cb86c0833c1e85827a39e73ee` | `c6fc28923fbc5e27a15793c9cbf15729f5345ae96f2811ed616a8eb3f6a26d65` | `1d3c934e8f61fc34b9500187aa1bcb985654556b787737992e46e41cdab941bc` |
 | `auditar_admissibilidade.json` | `b7ece3993e06263502771234d707a32c911370858bf6ce02e66f6e5082273b86` | `cb547f8d3b10352093cc386188bedde454fb0c5c6732214b4e69fb0f83db20e9` | `c04fe3a24a4d96de1839674f5446b793865f0efeada5b7d85a2f81228723eb51` |
@@ -33,7 +35,10 @@ translation. The two Parquet tables are byte-identical to the originals.
 | `auditar_nmad_pareado_nativa_anadem.json` | `95c726a1a7b703ba0092b74560df34e1b2ebb8225a45567ce7ffbd641aa75b66` | `88041dd73ec74d6ff0b1ee2fbe147e3f4625cff71f44aae111d710fbd3d20a06` | `62c3a0e422760ff9983695fc73ac093f18ea1a19829ddbc1814a34ce6e944a94` |
 | `auditar_nmad_pareado_nativa_diretas.json` | `bb3cce3e12470fb2da78fb3ebcc25fb3beeffee7a10c637726eaf3f7e6f00f2d` | `d89d6696c91e0ddc9ac01af847b7255f94ec3681f9e20765d1a0e7cec9cebb4d` | `4c6a24815423c1602d56bdab295780ab6e2f7edbb00c77212ecfbbbc59c67ce5` |
 | `auditar_paridade_capacidade.json` | `448bedb643f8dd1355bd06d3fd123a78c904111e6c30ffe6410e2593c207d3a2` | `352216e948a7292159d9dd3573ef34500e88ba46a4101a977896b9bcc89a1b98` | `165675e0786eea6f9c6c6f24f4d129dfa717f1547a14848c8d7936dcfc833081` |
+| `auditar_perfil_anadem_faixa.json` | `4325c5e3b63a339b25293b745580650fc458a41c28ea545e67816d16d069f405` | `c6ace9abafaf0292485409097430312c6fb4208ee62a4b2cfa728ec8b21b6628` | `32ce51d4acdb6b8c0d25c7e86c4657dc20f3fc036671423963735b68684b27cc` |
 | `auditar_recursos_s7.json` | `93a96efff7bcb49cf1eb05583dfff5f51fd02bbab6dcecb512161f2e8e44e986` | `01950374b53168488115ac8c33ccc388531135dab2354636fd787af50f68cc98` | `78255af2f5bba6da59f7c795bb213fe4e3673a27f403f2957eb80a3e36e7a666` |
+| `auditar_rf_filtro_gedi.json` | `1334a3e80966e416bbe6822248a731afd065e84c381db425f9b0c5ac61827306` | `90deb090bfe2d4c0276420d718960a0a336936f75822523b6933a2987d5f58be` | `57d0c2671b8152aadbc67cca13c5ca5079d5647c0c3f5e88be4efac82b36e940` |
+| `auditar_rf_filtro_gedi_v2.json` | `48b1698c371d9ed8c1700f842de9cf37b5e63ac08b092636cc1f5643bceaca91` | `74ab6e13e200acd8a8402352cbc12fddf06485423368f09a7fa1098cd820b727` | `5b98da3cafce028e2cb502e5020bdb62f571ff15e3443635137243205647b740` |
 | `auditar_robustez_o3.json` | `a49916313c23aa54ccfb70a6461b346cf601c5adb69e971a16632e8196e8d7e1` | `f7e21da632b458c8ebda01b40536d719dd0caaa32096cd6133cec89dcbd9501e` | `7c439d59d4a508982471490385f6bbef1b33481b578b217ff68a2f48f252b477` |
 | `auditar_rotulo_regua_v2.json` | `2470115aaf6eed5ff2ea7d878f2dd6a1ac3f7bf682240599102a33fb01129e9a` | `e02a5131bf9962e34f71b6c9feb9b292eb111919c4d7644f1de43ba8a413c31b` | `620cb79fae7e75212ddded0321a0818b727fd00e6676fa4c6accd16680866d88` |
 | `auditar_s1_estratificacao_lidar_v2.json` | `30d529bd422f105e1f8ab8e9dacf74b6fdacdf3de241d3b93a1a8a6524598f77` | `1274849694c3bf9eb7edf009ea2eeca7437d3ed59c8cb9019946c5522396367e` | `0a2a598746126fee94662cf1fd6d54591cfcf988b42be90d52f43fa9c654671b` |
@@ -49,6 +54,7 @@ translation. The two Parquet tables are byte-identical to the originals.
 | `delta_escala_celulas_nativa.parquet` | `110d75ca56626f268f32ece2acb2d0719ff7a19ced3e8f2b18fa3c122b2a14c2` | `110d75ca56626f268f32ece2acb2d0719ff7a19ced3e8f2b18fa3c122b2a14c2` | `n/a (byte-identical)` |
 | `f2_arvores_config.json` | `142aba794f5c2f530c118ad416dac33de060821b7614615d4607e02af5e4d2b2` | `89ced3baedddc2ede88167e76323fba7bad4dd8144e530973071a31ec2812dc1` | `9432f281d6c4f8dd899a0a6019ce4bfeae0d30314247d85ca31f77baa112c416` |
 | `fig/fig1_numeros.json` | `abe6e93e6c94a65d672af8b3edb797cb96c889d66662e2eb730635aa8720bb90` | `d9c733badd7389718fbc19c3d25f68e579e9de64b2debddcb138fd352803a932` | `130ed109517d6e2bbbe4b6a9f4067eb590f054e7b631c86029af0bfe6f4c81c7` |
+| `fig/fig3_numeros.json` | `d61302f37bbbe3e970032154185a06764d4a1f531de25a90330fe4a654a25e32` | `52dfcaac41c67b067d6af5426b542883d8afdfc4d6001644c8b733708d979b07` | `8d94e2c4e4a0324b0a35377be0110f26230dd3e13c74325b7ef64d567b6423dd` |
 | `fig/fig9_numeros.json` | `f57be0565fa93a14ecd1dfc5458929e20739fe9dc8ae4bc22cb417f0ccb04548` | `31af61976b92e85f4ad03cbe7c12daf9c75b5dce07b438685b9fba83cc476271` | `ff76de33061821fb8fd816f5efaa2b258452a358db4fd6556e365dc5c6a947a7` |
 | `folha_de_fatos_acdsa.json` | `848ccc1ec5afbf67c3f36f7a063ca4ecc604e0217c7bf69afa311285d6935207` | `c00c3331f440d9f743dcd58f6598292ef700d40217a35b037870d27ac811e2d9` | `eee19ac26376a819916d741263805da4b77b6e1eb11a2d755b47d8e6ba6f229f` |
 | `folha_de_fatos_jstars.json` | `b8a16a421486c9ac37b1b249e1020b02e9fd1ec9753679bfc2bd234714669103` | `f2ac9e22f52d6487b2a2a05ef304666efc88e264926f90c58c2f0cf9a229be2b` | `44b9290546ecd2b59c10ab0dfc9fb2e9361895944b07f78734137816d8fd272b` |
@@ -59,7 +65,9 @@ translation. The two Parquet tables are byte-identical to the originals.
 | `folha_de_fatos_jstars_v24.json` | `0c3d4c725d2d7de15feb4924096a3e9088af6cfcef4a50dbc6d43a9c405bdc1f` | `2be04161e67508454985878118c5d82df85e9d4dca7ae520bc5b88708f8866d2` | `617bee80b1d712e2d9b2bd2e95f5055d1e77c30d2939bc9f778f2558a170bb84` |
 | `folha_de_fatos_jstars_v25.json` | `aa3c5e9577dd0d9b476248cdc8e0e6bb5b78cf374f4e0d5bbe4a040a56c16b99` | `dc35396787e626483236ccbc2e82816134e294935772faeb6173e76869483fcf` | `e1e0a78dbb89d68ef177a59800755f7e68246263417b0c6b509fb823a44d2ab9` |
 | `folha_de_fatos_jstars_v26.json` | `7f8701e91988198746172f4f97d900858621a843826be06880bd0c22f36b8842` | `5584b61e73a4e1a008e2ba4a670ddf1b9f8b13b4415253728c37f2e2cdd085cb` | `26e774f972af79c263fefb4037001d1da277e37520ae7a1741f9750e8e9a279f` |
+| `folha_de_fatos_jstars_v27.json` | `dfa4770ee5bf801e14875a4cbaf7453e4dafb7593734f230c350f9a4c31b3d6a` | `f72a22e9f79e89847f95b192bc1504a1a96b25255ae360a0e52b956b86cbaf1a` | `036354c8f4be80397c3c2cbf1fb552a31eb2a1b310bdc5d6e9147daa32f26e5c` |
 | `geometria_celula.json` | `02c116803207b295f88dc230a571e6814b7a872929025c1a5e8d11938a58b0b5` | `73dcc872de7c845ce35c2e555c0ac0da92086267dd0866900a993ae94c681d7d` | `15bc7cb38a20f292d257e6e5a0a500d33bcb01e1b0b4b4bc80b92548d6846ad0` |
+| `juiz_grade_nativa_diretas.json` | `5d8e47397eac39122d7d9b52e3118491c4547cffa6c856e4477d0fe09c6d76f5` | `9253c10b92cf833a8b41ca89a5e0d9c336e9ac93b01a55c210afb975fa53ce55` | `e93d1a5156c19194404698fafb45a62c848fe01a1f87dafd6323ba0b19027052` |
 | `juiz_lidar_v4.json` | `4c02e2edbe0deff2e2edab6078f28443c1fc6c32e5b2b22162ad2096eaac39f3` | `30d680e796b23f19628293f1ea3e5a353585ca99bbd6c61deea4b5355755cf2b` | `f85658b91af25c33a8c2cc3e976592a165527fe2eb3c990f3e8ea15fc0700c62` |
 | `medir_delta_escala_v3_nativa.json` | `6c4638c25c95ee538552a20df8a10dfa15906752ec7f2d20ba0db534eec05438` | `f160ac58d0c65a8a2e7c34ba1194c52619fe95c531cf001052c09ddc31e952c2` | `d5907da39a98f261492ccd66c77506eeaa441a48c9d574d35b2cdb301ee75bb6` |
 | `results/baseline_mlp_b4s035.json` | `e70c0d3bf5b7eaeb9760fbfe02811de9e7cb8541bb95524dc20879a6faa2ca84` | `9e37ddd06b88281c3f4353adcef715eff4dafe9a763f433be49600a5f0910725` | `19c488849b5b89c3e0c0222ce4408f2e8c04e0f19fc3729b197bc3fb96e73246` |
@@ -93,6 +101,8 @@ the file published here. One literal that the code searches for in a design note
 
 | script | sha256 in the experiment tree | sha256 published here | code digest |
 |---|---|---|
+| `_arquivo_2026-08-09/auditorias_pontuais/qualidade_lidar_4biomas.py` | `386acf85941b8b4ede619353c0f7a165407af9ce543050372a689539550d23eb` | `e949616ebd3a9a35ae7c5ce92c0c6c29b53e63243e382bd1eb508a7bd5d42941` | `2e8f99df4ced5d8b23d7ed7b3489cc4d6ac66bd8d6134411dd24702c514458f3` |
+| `_arquivo_2026-08-09/auditorias_pontuais/qualidade_lidar_do_zero.py` | `f20746e3e4b76542d7a5a1c29bc5a21898425d550c3997eb7e248300be235f8f` | `cbf2b89ce89629ea521aeeff09363700d2c15db7d1c9134f4f61de91aff1270c` | `abb3cb16dabf9d89a0ab1c6a134da2df81457e30a8c303dbf6a08902e8d9a079` |
 | `auditar_admissibilidade.py` | `862579a606079ecd40f46a3aff1c370821370f54c1b5963b9510cac869cd333c` | `10acea6b2ab278371aab55b7ce067310b98e09b35cc3ffb327cd544d4812290e` | `92636d6ca209a686a806acad1bff0e7cab291248ba3d60d96222039e765ea761` |
 | `auditar_d5_invariancia.py` | `1fd917242f00b06afff4f55925eb667d59c963c6bd9971e882d9d5f1577491f9` | `0261314bf82ea5aa4bc29976fa190c44339e044f9ba5eefcde4584bcd7a06acb` | `c366eb92288ebd8314b718fa31be1a29b5e6bc8e15b3303a348412ab109e4bc4` |
 | `auditar_d8_triangulo.py` | `20c60c435ea671c4f2b568e44cc1a7ceccd21cec50f7c9ac12d4852f10d697a1` | `2093d9c87a6f0e790eb2064d39f67ad1a92f97cef3e4a86c308de1a3b0386035` | `448663ab9537f0f196fa99b3f56cba946fbc03379a53bfa84efcaa9ce62ab846` |
@@ -104,12 +114,16 @@ the file published here. One literal that the code searches for in a design note
 | `auditar_nmad_pareado.py` | `52e471fc4df6e41f1f87ca6de800275770e7bb6eb1b59b6a84bfd9ce0b57a3a1` | `9a4df65ccea53cec3debc12fecfbfeda021ee9a2471813b4ddb2af39ae40364f` | `c27f8bda0b567879bc6c19cff891a6c3936ed9032a9660cd94bb5cbbdb63c093` |
 | `auditar_nmad_pareado_nativa_anadem.py` | `f022646ea98e0ae3c4c7de9ce39e73c901a752442c8763e7564654ee115ea9d9` | `774fb0f7411bc10634f30eda8efc164f089c9f12b41e5ff59730bddde3ba56b7` | `c100b3715499fef4f11356bad18cebdcb8cb126f1e969436d7e1d5cb669e835f` |
 | `auditar_paridade_capacidade.py` | `313bf2a136cad9ff56840b2377076e4917a47e78572d81678d3d8e8e224c0a4f` | `718d659e1a06540fbf77eefffd80559d24d67ed8046273490a4c99a3d4a45c76` | `5d6042f75d4e1c42385ff61a68de693457a506cd054cb80b280ed7a470465e34` |
+| `auditar_perfil_anadem_faixa.py` | `ef6cd0fe52bfd3c232af33f73cfce3e982860f08531b56f442de01ce3e73a0b9` | `041bc7cbbbdc70b83f0436c68831b3d7f1628ce43f3cf3cf5400b715641dd79c` | `b46b7972616ee711c94761ba8cb8703da2c515e9924a8ee06ff941dcf6997e74` |
 | `auditar_recursos_s7.py` | `32daadcc9a3e36be73fec020beba8b1e99882dbcf3db17aa09a00ae054089bbc` | `07d26ae9a60c702246768263d2f99f72508d6bb82bbfb671bb5c6759b09acdf9` | `b258a1ecc6963056753e53efd92a4d9c4a1c7f05f5f356e665bf430df1e4dcc0` |
+| `auditar_rf_filtro_gedi.py` | `403b52f925dbf1af2a5bc37e9d0eaa1c3ef704abd9d1c01a8072e1895f97fffe` | `faea68a783bf5253ee4eb06877be81f3bcae33430ec8504f140696aa79684cad` | `e86d800012e3e569b50060c46cf77d17daffb31512282f2e8477486d92cfa024` |
+| `auditar_rf_filtro_gedi_v2.py` | `d594f0e8e127152ed9526b4a3486fd4ee34763247e971ba97ea46c68cacdfb53` | `24a59b8d08040842de2f37acea1c2cad10edff2309bd8ba46022da2962540e25` | `2b9e5e72abdafbe748111a2b79b685964bd29d0ddd608eb3a27121f6e5e4097f` |
 | `auditar_robustez_o3.py` | `c05944eeda4d6d65082bd9c1db55957968eb189906b0bc2cebbac5905041a1a9` | `b105226e5ab4ecfec438afa472c26d41e6b48c29abfb7d2f9e175b5c7075408d` | `7356ea0a59f5689b65bedb7a3bb2cae1eca54d1674140a98d24ef354373c0518` |
 | `auditar_rotulo_regua_v2.py` | `f50f622cbcdd5aab1c05d8e7682e87937aaf18e8cea16f6f5bb5833a685257d2` | `ed720086fb3b2980272bed67823bb6504393adade483290758e80e99825412ec` | `612db249bfcfcb0d00b7ac497e7447c1a7efa15dbbcd9d85642334c48da4efc0` |
 | `auditar_s1_estratificacao_lidar_v2.py` | `836ff7b447671a7f8b005ba2d8c5397f6526693b48981b9ad859e9e82b30a9d6` | `9c37f79e7d3118e8da640f10421ebdfc21cab65a7e628083a5905a082a85307d` | `30023c0ef1fe641e765a377797b5befdcb071a729c4b599b59faef59c65168c8` |
 | `auditar_s2_registro_referencia.py` | `72041a6e6f30f7c35fd7781d9c45ada59153edab0486e1b5505dc65a0cef5161` | `d9580b167cb8f019dff1705c3d5ef5ebdefef4a39f09bf0be121cf2451049ecf` | `bd65f8d78ece91eadf3e4e612aa8cee259b88fdbb35bf6d50115f038fddb03a4` |
 | `auditar_s5_baseline_fisico.py` | `a66c8c38834ed9e93e801c225ddc7c54d1277e86b1d69cf9ece68296909f9e0b` | `bcec3649f09051d4c0ccba813a24e7b49a9cee8d252a89fcf5074973f043da5e` | `9fcc546b71f6aa5bec21ce0026bd7f5ef9c40f0c9e31aa0bd8860c6d3892b627` |
+| `auditar_s7_arvore_lidar.py` | `915923e62226d6a7cd957e5b387518b1fb49c9e2f6a872fb842c225a603928ab` | `31353eef19e779be50df37f8f9f786ab5baffae5fe3c95da8b2455cef1ad5307` | `0b60e7ba14601b761ff2c7ba809fb77fcd5a65dd343b30c4b3249d335209507f` |
 | `auditar_s7_arvore_lidar_v2.py` | `3966e5c797fa5993b75ac26ab6f35a05b9472ddbd62d14629aff8893886753b1` | `026b119ecca775589d5917bac22e6230eb7e135ac907a0ab200e767d4db0e23b` | `8697f1e98aa1c3aef1b1764074814b477a8e3424dc6d947569597bcb5c7ad9b3` |
 | `auditar_s8_mascara_disturbio.py` | `3c27b9834061941bd91e4ed103b91d61e7a08a533e6583a42b812a4d4f301a1a` | `d4068adf2452caa945c50c648569b93ca77be00fae0d2a738ee60b473675606c` | `3cfd5434f20f6088ba929909b6ae3bfa228e18e1007be741c99182ee01598434` |
 | `auditar_tabela3.py` | `c7691eab1b1d77d28d8bec26a54207dcfe87352f062c1a0f77809b9a4c719d52` | `369bd1b8962e1de4174610d89505dc381653c4426869757e1b5cc6d88ac2b849` | `97ab89a9db59f4956eaf9b0740a47519c9afd45c5e518d7bf8dc27b977caf41d` |
@@ -117,6 +131,8 @@ the file published here. One literal that the code searches for in a design note
 | `b2_transferencia.py` | `aad40bb59cc7c5bf57dbc0ac789434fedc029803b97ebe445f48d6a95749d389` | `1d3a4c17d3a065086dc581b3f1e85f72b7e1316ac63fb0ade550e920c2254b25` | `cdec55f28dec50f59ef07c492bcef8d3cdad41aed8c8d1a10e74c8e07f2bfaac` |
 | `braco_arvores.py` | `8f3b1544535d55c653944caf06cc6bedf193ce0d3c7ed219d5f46a76030416b2` | `fbd26fcc89076dbbc9fbdf914f47fc054d0a01d819acc68f3b23c1b2f9e352b2` | `af87bdec4b4a167fba4faf961da9d528066cedc779d0cbdad858c3dece5fa6a3` |
 | `fig/gerar_fig1.py` | `7f2c5f88cabbd34b4beecba170c0bb33f5061637a480300f242a151efc45d87d` | `616a19faf99415e6ae439e5683c73f5b8c0b8198a3b25abaf54ce7c78da31d78` | `8a3a31f0705c6a865a79668ad0edc0cd9d632701012f8a794626cb3c6a6fa09e` |
+| `fig/gerar_fig3.py` | `9c486c10575ec13164c66f76ed625675447c440f447ffaacbad6eac449aafd09` | `7bbbcdd655fbb3a638c4b2eb91fa8e6ffc11cdfd8ed80060cb2a561cc1b14185` | `b99fb0338176708011deeeb735f2bb5bef3cef32001ba18ccdd6259174ba3f83` |
+| `fig/gerar_fig8.py` | `b4ec286e2ba341638d96f84fb21ac4532e16a4745f80d927e55654e4a88a299f` | `23bf293af3deef116fddaaf66c10f5cbedc2a14ad7f54dca44f64a5cd5c76641` | `41d54164920d0c879e73dd8390ce42cb73c001e56295632d517056b690b1d73e` |
 | `folha_de_fatos_acdsa.py` | `3218e5e3a720ee3a82f35094444a6f0b155103b0c331596c6c8e47197a5efc51` | `33262f63c277b643f662d5062c49e52833421492f6a67c42158ad58c6dfd42f7` | `829bb53f579c4772f5d703cf2c6065efca38fc07cd221f2361ca4c594b4271fa` |
 | `folha_de_fatos_jstars.py` | `add0cee5457b6c9443d9f543da32a74f154a79b3a98c9df917ad0aa196e44c5f` | `2c190909336a0c329956b39fe9948bb52b9acf06cfe799122bc1ab9ccaa09339` | `21c2da03f727672098336c4656b424a6f83e72ca2e306074402b51f9a4aca221` |
 | `folha_de_fatos_jstars_v2.py` | `d37ab07baa4037e75b5fd9158822c0186b1264f7dd70b409446a439d7ae00160` | `f33c2de8c150154dab32d5b9ef17e27ec7c1716d8a591aa1f792b5e7148e1248` | `de5fe1697299f5c0641b244d0ba2d5ae37297e97fb8a017a4a3ed07803321388` |
@@ -126,6 +142,8 @@ the file published here. One literal that the code searches for in a design note
 | `folha_de_fatos_jstars_v24.py` | `9d24b51bcb2ef2d71a2cd9445d5c0a8473d63fcfe45773af7e1c1576a45ddd37` | `16469ae9dd67f4eae151fe3cab5760b38e20df51c8723fea1eec1d9bea37832b` | `1164b3f7b8ce08b66d73736d658e05123f89a88708228050b091dc93f2730b2c` |
 | `folha_de_fatos_jstars_v25.py` | `ed8b234ca16e6e8a880f87588af807b5d8b9f405a833a9396a8a2b82e7b159e7` | `33ba6df1e9f14684495713cec22935e934bd755cbf2df881a011311acd14770a` | `fd725f2add47c8407d6c251f48b114ad335073c68d2bf31ea8930b83aa03cce7` |
 | `folha_de_fatos_jstars_v26.py` | `cd8372da7945760632aeb487fdd431fddad53ea925e0d73f51b4bcb3b14b6379` | `95c81b2421c913180e686d87747b18e0a5be2b6ce064ebee5c53b776100f8157` | `c975ad3b3aa7f08ab0548709f6a73148d9740707f3462ad0c2ff6ceb74b444bf` |
+| `folha_de_fatos_jstars_v27.py` | `1600e05e36f3dae089fe7824f2233bd63559bf841381dc09f89ec27704e511d4` | `b3a8bfa62f1da324ea57ae7ee69af7d75602dee631d10ec9b282008ee073b0cb` | `066a0b22bf67cd84dd49a0d0214ef4a0d55398414a3c6c27b026db762bbc080a` |
+| `geoide_v23.py` | `001184fd628bba0c97fa030a20292026119260fec8cd21a18f3964aa49001796` | `daaa70cf6c0900e753638ba2361bb140d9380e7b9316972100a3a7dda79b7e43` | `8139090341bb35e1bf4efe1d5a769d638b69ab1f3a7a4ea7cf87f2a36b5e52a6` |
 | `geometria_celula.py` | `a415a6d335298918a9c57dfb8798234b7fdcadef73a01e1efe22f4159c0fc6a3` | `04b2117bb4971766638aed8f9818f40a2e6d3ad42b300d12a80244d0be7f8649` | `7d33dfa08d484613834ae277b2a7a36e8b6b4cda803d9bab27b4cc49c6d50c38` |
 | `grade_v23.py` | `b5765a4047899145075b69dbe856a75421cd363a74e2fbb4426d913368f4d2df` | `840f72d6457b146e9cf7b3332a3b70e95df22caf4afb3e4733c753ce34086946` | `a6f7cd77f6dcb617115710bd81dbffefee1f367ca3e803eab2ae0097349e5a82` |
 | `juiz_lidar_v4.py` | `7768ba350a38cc94e9ab37a48cbac1b7b8917a902d3eb015ad430919c8b033c2` | `e94d6eb070395413c29da1d671d0ff3e69c87b324f1e1cf5d41ea386a4f371dd` | `55f78f11553cad0432b1d8bb0101c3acf81ade80d62831db4b257f928e86f2ab` |
@@ -133,6 +151,7 @@ the file published here. One literal that the code searches for in a design note
 | `preparar_laterais_nativa_v3_diretas.py` | `b52e1cf6fff507020ca5d3e7acab2a3ae5c599c807acc074196c506631a76cd9` | `2c8cb0af1e1403190d33c9062dceda955caf0626dc1899c650cdb9d5228f2c87` | `ca73527f101b0c876e108b7b1974acae5b2a18e18180846384d7872d08bf2195` |
 | `proveniencia.py` | `3f5716c109e53039ef1c74c345f5935fed4581278789b690c7993be3a86918fe` | `8e0701cd1e7f647399c4eaa38de8cd49a12405c09601034e68a4900da26b5f3c` | `5459b510ab66d00075f42013ef6945d43bf8b6b7ed6da59ba1afda7f53e73ad0` |
 | `regime.py` | `b7e68338e02c5e4c602f68def091e1e63f0842963d1b4f594f37091156423566` | `7b44052af58a9b5babfa49cf69cab4f53e69d2bd7687ceda09a74aebd444900c` | `6b7f7969eea982bc9158f87f0549cf2f71b8d8ed8195a1d30df2ef9be93281b5` |
+| `rotulos_lidar_v23.py` | `bf8e36cfd2281b2eefae3cdd36b8b8b51cf145bc6a7e808008cc574792e14f8d` | `7c887e5c3503dafcc3a30ef61989412bdd7898fb7b7eb13e0b4f44b05f58893f` | `5793479d0a4f247015e8063e893afea9c9d69008951700b894a048f50d97f04f` |
 | `selecao_em_validacao.py` | `bac2f4d620a3e8285e1d0af5339ece67dc014f2aadd29e7654ece0fe2d18b84d` | `ddc2fbab0dbe25aa7acbf8c8e7e9218ebc1038224ee2d1eee99b36cdf7f27843` | `2bf161fba89ddd7e2ccdde09b851ecfdd13c2a7db2f1bad8762547922104cdd9` |
 | `topo_v23.py` | `9b85234dc6a4ea3b629f5268c25fd6dc5ce29cf4b809c1a0567523b482e44507` | `53a7a2a0d4b9aeb69176f021b8765c0e479e570d623815a425f403f45da05f8c` | `15d4637869c150a1d3f31d8f17205c20c96194556292a3f69b5060ad4c72173e` |
 | `treinar_arvore_persistir.py` | `6bdf215c5c0e5253c713050842edc1381443af1a8e1d2f4b054de6a3327a3ad8` | `53a4d974059a131fcff7e144f9aa8823b58fb60af22ef822f2ccfc3840180e8c` | `e80c5717bcd62820379a67c7274915389e35bd1e53310a83faf1ff483f5bb8ac` |
@@ -144,12 +163,15 @@ the file published here. One literal that the code searches for in a design note
 The following artifacts carry no `_proveniencia.script` field. Most were produced before the
 provenance convention was adopted; the notes say what is known about each.
 
+- `_arquivo_2026-08-09/auditorias_pontuais/qualidade_lidar_4biomas.json`: early profile of GEDI quality fields against the input surface over exposed soil, written by the script of the same name; descriptive, not used for any number in the article.
+- `_arquivo_2026-08-09/auditorias_pontuais/qualidade_lidar_do_zero.json`: early profile of GEDI quality fields in one savanna quadrant, written by the script of the same name; descriptive, not used for any number in the article.
 - `_pareceres_2026-09-28_execucao/geo_produto_anadem.json`: ANADEM vertical-datum test; generating script not recovered.
 - `_pareceres_2026-09-28_execucao/guarda_sanidade_anadem_vs_glo30.json`: ANADEM vs GLO-30 sanity check in canopy gaps; generating script not recovered.
 - `comparar_ponto_s035.json`: stamped retroactively; the script that produced it is no longer in the experiment tree, so this number cannot be regenerated from code.
 - `comparar_suavidade_fina_ba4.json`: no `_proveniencia` and no `_fontes`; the generating script is no longer in the experiment tree.
 - `f2_arvores_config.json`: tree-ensemble configuration fixed by the earlier hyperparameter search in `braco_arvores.py` (recorded in `results/f2_arvores.json`); read, not searched again, by the tree-training scripts.
 - `fig/fig1_numeros.json`: written by `fig/gerar_fig1.py` (its `fontes` field lists the same inputs the script reads).
+- `fig/fig3_numeros.json`: numeric sidecar of the three-families figure, written by `fig/gerar_fig3.py`.
 - `fig/fig9_numeros.json`: numeric sidecar of a figure panel that was cut from the submitted manuscript; its generator is not in the experiment tree. It is kept because an earlier fact-sheet version reads it.
 - `results/d1_orcamento_gatv2_2_semobs.json`: training/evaluation output with the same schema as the outputs stamped by `b2_transferencia.py`; attributed to that script by schema, not by a stamp.
 - `results/d1_orcamento_mlp_semobs.json`: training/evaluation output with the same schema as the outputs stamped by `b2_transferencia.py`; attributed to that script by schema, not by a stamp.
@@ -176,5 +198,11 @@ provenance convention was adopted; the notes say what is known about each.
   canopy-height and lidar label arrays (`SATELITES/laterais/*.npz`), per-cell prediction arrays,
   and the five XGBoost checkpoints `arvore_f2_s7_seed{42,123,7,2024,31}.ubj`, whose sha256 are
   recorded in `treinar_arvore_persistir_v2.json`.
+- The label-filter check (`auditar_rf_filtro_gedi.py` and its `_v2` complement) and the strip profile
+  (`auditar_perfil_anadem_faixa.py`) read the GEDI and ICESat-2 shot tables, the GLO-30 raster and the
+  per-quadrant arrays, none of which is distributed here.
+- `auditar_s7_arvore_lidar.py` is the first version of the tree-ensemble audit; the stamped artifact
+  `auditar_s7_arvore_lidar.json` was written by `auditar_s7_arvore_lidar_v2.py`. The first version is
+  included because the latest fact sheet reads its source.
 - The fact-sheet builders also read the project's internal design and review notes, which are not
   distributed; their sha256 appear in the fact sheet's `_fontes`.
