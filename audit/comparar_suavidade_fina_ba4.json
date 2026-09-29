@@ -1,0 +1,46 @@
+{
+  "tolerancia_skill": 0.01,
+  "por_peso": {
+    "0.0": {
+      "skill": 0.27488865102393545,
+      "skill_dp": 0.0055670356574596645,
+      "skill_delta_vs_p0": 0.0,
+      "dentro_guarda_corpo": true,
+      "criados_media_quad": 252404.3,
+      "criados_2m_soma": 55968.2147132,
+      "frac_neg_dossel_q3": 0.0059796
+    },
+    "0.25": {
+      "skill": 0.2673916820037013,
+      "skill_dp": 0.005235289478810713,
+      "skill_delta_vs_p0": -0.007496969020234168,
+      "dentro_guarda_corpo": true,
+      "criados_media_quad": 203107.7,
+      "criados_2m_soma": 33415.8495952,
+      "frac_neg_dossel_q3": 0.0101438
+    },
+    "0.5": {
+      "skill": 0.2579520719871786,
+      "skill_dp": 0.003578059877631838,
+      "skill_delta_vs_p0": -0.016936579036756827,
+      "dentro_guarda_corpo": false,
+      "criados_media_quad": 166881.5,
+      "criados_2m_soma": 19475.6342912,
+      "frac_neg_dossel_q3": 0.002151
+    },
+    "16.0": {
+      "skill": 0.2707691446229981,
+      "skill_dp": 0.0059313464934631875,
+      "skill_delta_vs_p0": -0.004119506400937334,
+      "dentro_guarda_corpo": true,
+      "criados_media_quad": 241532.0,
+      "criados_2m_soma": 53263.5196784,
+      "frac_neg_dossel_q3": 0.0043724
+    }
+  },
+  "recomendacao": {
+    "regra": "smallest weight that halves those created >2m within the skill guardrail",
+    "peso": null,
+    "candidatos": []
+  }
+}

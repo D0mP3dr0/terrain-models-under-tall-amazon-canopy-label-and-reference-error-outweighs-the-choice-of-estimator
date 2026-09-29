@@ -1,0 +1,487 @@
+{
+  "_proveniencia": {
+    "script": "braco_arvores.py",
+    "commit": "2f4130c",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-08-14T20:34",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    },
+    "retroativo": true,
+    "nota": "retroactive stamp: the artifact was written before proveniencia.py existed; the sha256 of the sources is from stamping time, not from the original read",
+    "carimbo_anterior": {
+      "script": "braco_arvores.py",
+      "commit": "2f4130c",
+      "em": "2026-08-14T20:33"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "f2_arvores_config.json",
+      "sha256": "142aba794f5c2f530c118ad416dac33de060821b7614615d4607e02af5e4d2b2",
+      "bytes": 247,
+      "mtime": "2026-08-14 17:27"
+    }
+  ],
+  "contrato": {
+    "dados": "preparar_peca from B2 (same function as the neural arms)",
+    "colunas": "44 real; the 2 observation columns are zeroed in all `_semobs` arms",
+    "boost": 4.0,
+    "suavidade": 0.0,
+    "curriculo": "continuation of the ensemble, caps [450, 250, 180, 140]",
+    "busca": "16 configurations searched on validation",
+    "nao_transplantado": "Graph TV and physical losses (non-differentiable) — hence the comparison is made at the zero point of the frontier"
+  },
+  "config": {
+    "max_depth": 8,
+    "learning_rate": 0.05,
+    "min_child_weight": 50,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
+  },
+  "por_semente": {
+    "42": {
+      "validacao": {
+        "n": 96331,
+        "mae_media_ponderada_por_n_m": 5.195202000847928,
+        "mae_media_simples_m": 5.120398581027985,
+        "skill_media_ponderada_por_n": 0.28710910534054523,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.3447089195251465,
+            "n": 24324,
+            "skill": 0.13892032756159645
+          },
+          "Q2": {
+            "mae": 6.186221599578857,
+            "n": 26133,
+            "skill": 0.20338036807065962
+          },
+          "Q3": {
+            "mae": 3.6631810665130615,
+            "n": 19571,
+            "skill": 0.4502892364347032
+          },
+          "Q4": {
+            "mae": 4.287482738494873,
+            "n": 26303,
+            "skill": 0.38592021343183924
+          }
+        }
+      },
+      "teste": {
+        "n": 102849,
+        "mae_media_ponderada_por_n_m": 5.182833954438775,
+        "mae_media_simples_m": 5.087181568145752,
+        "skill_media_ponderada_por_n": 0.2916342925936647,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.185089111328125,
+            "n": 26973,
+            "skill": 0.172623803872043
+          },
+          "Q2": {
+            "mae": 6.284993648529053,
+            "n": 28000,
+            "skill": 0.20330815484170928
+          },
+          "Q3": {
+            "mae": 3.6553726196289062,
+            "n": 21050,
+            "skill": 0.46507960266180726
+          },
+          "Q4": {
+            "mae": 4.223270893096924,
+            "n": 26826,
+            "skill": 0.36738833689429307
+          }
+        }
+      },
+      "reserva": {
+        "n": 157847,
+        "mae_media_ponderada_por_n_m": 5.699413988095072,
+        "mae_media_simples_m": 5.860103130340576,
+        "skill_media_ponderada_por_n": 0.29620047563585616,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.590071201324463,
+            "n": 23026,
+            "skill": 0.08886643275396633
+          },
+          "Q2": {
+            "mae": 6.7440714836120605,
+            "n": 38029,
+            "skill": 0.13977007486975523
+          },
+          "Q3": {
+            "mae": 4.280104637145996,
+            "n": 46896,
+            "skill": 0.4677814994210009
+          },
+          "Q4": {
+            "mae": 5.826165199279785,
+            "n": 49896,
+            "skill": 0.3498420839953297
+          }
+        }
+      }
+    },
+    "123": {
+      "validacao": {
+        "n": 95945,
+        "mae_media_ponderada_por_n_m": 5.172488484287456,
+        "mae_media_simples_m": 5.121712863445282,
+        "skill_media_ponderada_por_n": 0.2906442375960587,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.349888801574707,
+            "n": 24356,
+            "skill": 0.1622836327374314
+          },
+          "Q2": {
+            "mae": 6.215882778167725,
+            "n": 25221,
+            "skill": 0.20095193225734798
+          },
+          "Q3": {
+            "mae": 3.7503721714019775,
+            "n": 20321,
+            "skill": 0.4485059048380875
+          },
+          "Q4": {
+            "mae": 4.170707702636719,
+            "n": 26047,
+            "skill": 0.37436111803753314
+          }
+        }
+      },
+      "teste": {
+        "n": 93505,
+        "mae_media_ponderada_por_n_m": 5.220519396427653,
+        "mae_media_simples_m": 5.1742358803749084,
+        "skill_media_ponderada_por_n": 0.2879377219965835,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.2282915115356445,
+            "n": 23255,
+            "skill": 0.16326507472091
+          },
+          "Q2": {
+            "mae": 6.368991374969482,
+            "n": 24837,
+            "skill": 0.20002109440681382
+          },
+          "Q3": {
+            "mae": 3.859809160232544,
+            "n": 19538,
+            "skill": 0.4399434131998782
+          },
+          "Q4": {
+            "mae": 4.239851474761963,
+            "n": 25875,
+            "skill": 0.36959803106374967
+          }
+        }
+      },
+      "reserva": {
+        "n": 157847,
+        "mae_media_ponderada_por_n_m": 5.755850618756072,
+        "mae_media_simples_m": 5.912437200546265,
+        "skill_media_ponderada_por_n": 0.28919676317919635,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.544185161590576,
+            "n": 23026,
+            "skill": 0.09354111558868228
+          },
+          "Q2": {
+            "mae": 6.976412773132324,
+            "n": 38029,
+            "skill": 0.11049866580253387
+          },
+          "Q3": {
+            "mae": 4.2842559814453125,
+            "n": 46896,
+            "skill": 0.4714880451612471
+          },
+          "Q4": {
+            "mae": 5.844894886016846,
+            "n": 49896,
+            "skill": 0.34435438957662357
+          }
+        }
+      }
+    },
+    "7": {
+      "validacao": {
+        "n": 99921,
+        "mae_media_ponderada_por_n_m": 5.210797091669315,
+        "mae_media_simples_m": 5.136000990867615,
+        "skill_media_ponderada_por_n": 0.2917875916625552,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.336071491241455,
+            "n": 25610,
+            "skill": 0.14945792421263737
+          },
+          "Q2": {
+            "mae": 6.229639530181885,
+            "n": 26909,
+            "skill": 0.22184533041715215
+          },
+          "Q3": {
+            "mae": 3.703514575958252,
+            "n": 20770,
+            "skill": 0.4677254956060538
+          },
+          "Q4": {
+            "mae": 4.274778366088867,
+            "n": 26632,
+            "skill": 0.3621130958056342
+          }
+        }
+      },
+      "teste": {
+        "n": 96889,
+        "mae_media_ponderada_por_n_m": 5.200069907112949,
+        "mae_media_simples_m": 5.167908132076263,
+        "skill_media_ponderada_por_n": 0.29281090535601156,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.103763580322266,
+            "n": 24833,
+            "skill": 0.17204984885349084
+          },
+          "Q2": {
+            "mae": 6.426301002502441,
+            "n": 24600,
+            "skill": 0.20150594261122245
+          },
+          "Q3": {
+            "mae": 3.8282511234283447,
+            "n": 21698,
+            "skill": 0.4330110584540481
+          },
+          "Q4": {
+            "mae": 4.313316822052002,
+            "n": 25758,
+            "skill": 0.37833379058497785
+          }
+        }
+      },
+      "reserva": {
+        "n": 157847,
+        "mae_media_ponderada_por_n_m": 5.760180423972467,
+        "mae_media_simples_m": 5.915043234825134,
+        "skill_media_ponderada_por_n": 0.2881588174792661,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.54135799407959,
+            "n": 23026,
+            "skill": 0.09074632955584028
+          },
+          "Q2": {
+            "mae": 6.954198837280273,
+            "n": 38029,
+            "skill": 0.11338390396734843
+          },
+          "Q3": {
+            "mae": 4.343007564544678,
+            "n": 46896,
+            "skill": 0.4616110101543781
+          },
+          "Q4": {
+            "mae": 5.821608543395996,
+            "n": 49896,
+            "skill": 0.34944471424809453
+          }
+        }
+      }
+    },
+    "2024": {
+      "validacao": {
+        "n": 96501,
+        "mae_media_ponderada_por_n_m": 5.214096814014447,
+        "mae_media_simples_m": 5.13877409696579,
+        "skill_media_ponderada_por_n": 0.2892087215031175,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.3763017654418945,
+            "n": 24197,
+            "skill": 0.162337546408041
+          },
+          "Q2": {
+            "mae": 6.1441731452941895,
+            "n": 26681,
+            "skill": 0.21824637916279033
+          },
+          "Q3": {
+            "mae": 3.760363817214966,
+            "n": 19574,
+            "skill": 0.45357725311732855
+          },
+          "Q4": {
+            "mae": 4.274257659912109,
+            "n": 26049,
+            "skill": 0.3562323478204913
+          }
+        }
+      },
+      "teste": {
+        "n": 99096,
+        "mae_media_ponderada_por_n_m": 5.171915121985817,
+        "mae_media_simples_m": 5.106801390647888,
+        "skill_media_ponderada_por_n": 0.2934854203664979,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.22463321685791,
+            "n": 23870,
+            "skill": 0.15698876484601065
+          },
+          "Q2": {
+            "mae": 6.35232400894165,
+            "n": 27562,
+            "skill": 0.2022811575310085
+          },
+          "Q3": {
+            "mae": 3.644552707672119,
+            "n": 20688,
+            "skill": 0.464751315890648
+          },
+          "Q4": {
+            "mae": 4.205695629119873,
+            "n": 26976,
+            "skill": 0.37610694368137654
+          }
+        }
+      },
+      "reserva": {
+        "n": 157847,
+        "mae_media_ponderada_por_n_m": 5.745211796518073,
+        "mae_media_simples_m": 5.893121242523193,
+        "skill_media_ponderada_por_n": 0.28734231457662124,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.476665019989014,
+            "n": 23026,
+            "skill": 0.10110444117926187
+          },
+          "Q2": {
+            "mae": 6.942514896392822,
+            "n": 38029,
+            "skill": 0.11467342083362875
+          },
+          "Q3": {
+            "mae": 4.297816753387451,
+            "n": 46896,
+            "skill": 0.46278206374226627
+          },
+          "Q4": {
+            "mae": 5.855488300323486,
+            "n": 49896,
+            "skill": 0.3399981618615291
+          }
+        }
+      }
+    },
+    "31": {
+      "validacao": {
+        "n": 97987,
+        "mae_media_ponderada_por_n_m": 5.1391429123726695,
+        "mae_media_simples_m": 5.088829398155212,
+        "skill_media_ponderada_por_n": 0.2964221833609813,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.091919422149658,
+            "n": 24722,
+            "skill": 0.1689934585221049
+          },
+          "Q2": {
+            "mae": 6.37640905380249,
+            "n": 26094,
+            "skill": 0.19310908116355507
+          },
+          "Q3": {
+            "mae": 3.8599252700805664,
+            "n": 20234,
+            "skill": 0.4330935380780163
+          },
+          "Q4": {
+            "mae": 4.027063846588135,
+            "n": 26937,
+            "skill": 0.4107904067289083
+          }
+        }
+      },
+      "teste": {
+        "n": 103045,
+        "mae_media_ponderada_por_n_m": 5.183607774190585,
+        "mae_media_simples_m": 5.14152330160141,
+        "skill_media_ponderada_por_n": 0.29008379392459566,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.293153762817383,
+            "n": 25602,
+            "skill": 0.15252267332711567
+          },
+          "Q2": {
+            "mae": 6.3225297927856445,
+            "n": 27175,
+            "skill": 0.1979286603074284
+          },
+          "Q3": {
+            "mae": 3.6953022480010986,
+            "n": 22656,
+            "skill": 0.44399037100764127
+          },
+          "Q4": {
+            "mae": 4.255107402801514,
+            "n": 27612,
+            "skill": 0.38204555530333384
+          }
+        }
+      },
+      "reserva": {
+        "n": 157847,
+        "mae_media_ponderada_por_n_m": 5.793637848551692,
+        "mae_media_simples_m": 5.945464134216309,
+        "skill_media_ponderada_por_n": 0.2836898960181334,
+        "por_quadrante": {
+          "Q1": {
+            "mae": 6.540040493011475,
+            "n": 23026,
+            "skill": 0.0988913153440435
+          },
+          "Q2": {
+            "mae": 7.011909484863281,
+            "n": 38029,
+            "skill": 0.10566715984077579
+          },
+          "Q3": {
+            "mae": 4.389980792999268,
+            "n": 46896,
+            "skill": 0.457927525340012
+          },
+          "Q4": {
+            "mae": 5.839925765991211,
+            "n": 49896,
+            "skill": 0.3408918939340285
+          }
+        }
+      }
+    }
+  },
+  "resumo": {
+    "skill_reserva_media": 0.28891765337781466,
+    "skill_reserva_dp": 0.004569036375282687,
+    "n_sementes": 5
+  }
+}

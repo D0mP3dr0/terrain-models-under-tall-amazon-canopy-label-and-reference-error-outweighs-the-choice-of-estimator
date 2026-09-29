@@ -1,0 +1,172 @@
+{
+  "_proveniencia": {
+    "script": "medir_delta_escala_v3_nativa.py",
+    "sha256_script": "c122a103c92af765261f33bf885e16723b110fe2fb2cd1e0b64a2eb208960439",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-28T11:47",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "delta_escala_celulas_nativa.parquet",
+      "sha256": "110d75ca56626f268f32ece2acb2d0719ff7a19ced3e8f2b18fa3c122b2a14c2",
+      "bytes": 4865835,
+      "mtime": "2026-09-28 11:41"
+    },
+    {
+      "caminho": "auditar_tabela3_dump.parquet",
+      "sha256": "652d60a6db96fc2c1ecf700214ce270e19d4ab20cfaf21b1876ba338881d9023",
+      "bytes": 48126,
+      "mtime": "2026-09-28 10:23"
+    },
+    {
+      "caminho": "medir_delta_escala_v3_nativa.py",
+      "sha256": "c122a103c92af765261f33bf885e16723b110fe2fb2cd1e0b64a2eb208960439",
+      "bytes": 29458,
+      "mtime": "2026-09-28 11:46"
+    }
+  ],
+  "hipotese": "scale delta (Richardson, lower shell) in NATIVE GEOMETRY (+0.5 px), same logic as medir_delta_escala_v3.py, for all cells of the 13 judgeable transects",
+  "modo": "write-from-parquet: does NOT re-read .laz; statistics recomputed from the already-written delta_escala_celulas_nativa.parquet (run of 2026-09-28 11:09-11:41) and from auditar_tabela3_dump.parquet",
+  "geometria": {
+    "LON0": -59.99986111111111,
+    "LAT1": -2.000138888888889,
+    "PASSO": 0.0002777777777777778,
+    "GRID": 7200,
+    "dlon_px": 0.5,
+    "dlat_px": 0.5,
+    "convencao": "identica a gridar_lidar_eba_v3_nativa.py"
+  },
+  "escalas_m": [
+    30.7,
+    15.35,
+    10.233333333333333,
+    6.14
+  ],
+  "transectos_julgaveis": [
+    "NP_T-0224",
+    "NP_T-0226",
+    "NP_T-0227",
+    "NP_T-0357",
+    "NP_T-0358",
+    "NP_T-0360",
+    "NP_T-0621",
+    "NP_T-0638",
+    "NP_T-0639",
+    "NP_T-0662",
+    "NP_T-0896",
+    "NP_T-0899",
+    "NP_T-0934"
+  ],
+  "n_transectos_julgaveis": 13,
+  "n_celulas": 108918,
+  "guarda_i_reproducao_grade_area_19T": {
+    "0-3m": {
+      "delta_m_recomputado": 0.14633569924401027,
+      "delta_m_referencia": 0.14633569924401027,
+      "diferenca_m": 0.0,
+      "bate": true
+    },
+    ">30m": {
+      "delta_m_recomputado": 4.9925998123264606,
+      "delta_m_referencia": 4.9925998123264606,
+      "diferenca_m": 0.0,
+      "bate": true
+    },
+    "n_celulas": 152567,
+    "n_transectos": 19,
+    "tolerancia_m": 1e-06,
+    "nota": "Recorded from the run log of 2026-09-28 11:09-11:41; NOT recomputed in this mode, which does not reread any .laz file"
+  },
+  "guarda_ii": {
+    "valor": 3.7654373275574855,
+    "faixa": [
+      3.571,
+      3.76
+    ],
+    "passou": false,
+    "n_celulas_dump_maior30m": 441,
+    "n_celulas_com_delta_nativo": 441,
+    "n_celulas_sem_par": 0,
+    "decisao": "guard misspecified (convex hull without guarantee); result accepted conditional on an independent recomputation"
+  },
+  "populacao_13T_classe_pelo_dossel_proprio_sem_ic": {
+    "0-3m": {
+      "n_celulas": 3615,
+      "n_transectos": 13,
+      "media_pond_celula_m": 0.14698861781852346
+    },
+    "3-10m": {
+      "n_celulas": 8400,
+      "n_transectos": 13,
+      "media_pond_celula_m": 0.5250042998226273
+    },
+    "10-20m": {
+      "n_celulas": 22344,
+      "n_transectos": 13,
+      "media_pond_celula_m": 1.071127847414061
+    },
+    "20-30m": {
+      "n_celulas": 43236,
+      "n_transectos": 13,
+      "media_pond_celula_m": 2.608441729041783
+    },
+    ">30m": {
+      "n_celulas": 31323,
+      "n_transectos": 13,
+      "media_pond_celula_m": 4.756268246396055
+    },
+    "TODAS": {
+      "n_celulas": 108918,
+      "n_transectos": 13,
+      "media_pond_celula_m": 2.6683730648125925
+    }
+  },
+  "populacao_dump_e4_classe_eth_exogena_sem_ic": {
+    "0-3m": {
+      "n_celulas": 4,
+      "n_transectos": 1,
+      "media_pond_celula_m": 0.15437674695402315
+    },
+    "3-10m": {
+      "n_celulas": 31,
+      "n_transectos": 4,
+      "media_pond_celula_m": 0.7994081155157012
+    },
+    "10-20m": {
+      "n_celulas": 258,
+      "n_transectos": 9,
+      "media_pond_celula_m": 0.7527695875537169
+    },
+    "20-30m": {
+      "n_celulas": 460,
+      "n_transectos": 12,
+      "media_pond_celula_m": 1.8814324598637273
+    },
+    ">30m": {
+      "n_celulas": 441,
+      "n_transectos": 10,
+      "media_pond_celula_m": 3.7654373275574855
+    },
+    "TODAS": {
+      "n_celulas": 1194,
+      "n_transectos": 13,
+      "media_pond_celula_m": 2.299523036137209
+    }
+  },
+  "celulas_parquet": "/trabalho/GNN_TOPO/V23/delta_escala_celulas_nativa.parquet",
+  "sha256_celulas_parquet": "110d75ca56626f268f32ece2acb2d0719ff7a19ced3e8f2b18fa3c122b2a14c2",
+  "versao": "v2 (D-1): guard (ii) recorded as it came out (the original guard was ill-specified -- convex hull without guarantee; no adjustment, no widening of the range); per-class statistics WITHOUT CI (CIs are left to the v2 audit script)",
+  "cpu_total_s": 0.1
+}

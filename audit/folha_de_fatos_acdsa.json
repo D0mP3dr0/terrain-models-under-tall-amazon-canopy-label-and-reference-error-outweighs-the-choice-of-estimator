@@ -1,0 +1,1231 @@
+{
+  "_proveniencia": {
+    "script": "folha_de_fatos_acdsa.py",
+    "sha256_script": "3218e5e3a720ee3a82f35094444a6f0b155103b0c331596c6c8e47197a5efc51",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-09-05T21:40",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "contagem_arestas.json",
+      "sha256": "701a483db07f9c73b2b3fdba3101a29f95f5767498c3110b91c79ae6e92c0f4b",
+      "bytes": 1128,
+      "mtime": "2026-08-16 12:20"
+    },
+    {
+      "caminho": "geometria_celula.json",
+      "sha256": "02c116803207b295f88dc230a571e6814b7a872929025c1a5e8d11938a58b0b5",
+      "bytes": 2199,
+      "mtime": "2026-08-16 12:20"
+    },
+    {
+      "caminho": "manifesto_features_46.json",
+      "sha256": "b4e33cff9d6dfc4d37b591f6cf87fe5fbdb1396b3dbe37474578be026ab09d44",
+      "bytes": 5192,
+      "mtime": "2026-08-19 20:33"
+    },
+    {
+      "caminho": "results/ofat_suavfina_b4s035.json",
+      "sha256": "345f448bdf52a29ed2f43706724746131cf370b845ad5811b7f83e67938b0bc8",
+      "bytes": 3705040,
+      "mtime": "2026-09-02 23:56"
+    },
+    {
+      "caminho": "auditar_tradeoff_suavidade_x1.json",
+      "sha256": "366a2d5a4e61de98b73692d3622b06ab7725d771b3d96249ec39886ca066801b",
+      "bytes": 14239,
+      "mtime": "2026-08-30 20:59"
+    },
+    {
+      "caminho": "auditar_geometria_reserva.json",
+      "sha256": "a04180c78039f14121157a430f157b0ac75e6de28fe71d4fe6ce76cd868fd282",
+      "bytes": 4448,
+      "mtime": "2026-08-20 09:57"
+    },
+    {
+      "caminho": "auditar_e2_e5.json",
+      "sha256": "1851e27769f646127b5e6a7716a0dd6e96fa13142faf418ab6b8b1d653fa3871",
+      "bytes": 12463,
+      "mtime": "2026-09-02 20:00"
+    },
+    {
+      "caminho": "auditar_regime_reserva.json",
+      "sha256": "d496d85e000542f04a414dc69bf24fc260b204bd90f54243437ba34fb08c34bd",
+      "bytes": 25131,
+      "mtime": "2026-09-03 00:07"
+    },
+    {
+      "caminho": "auditar_paridade_capacidade.json",
+      "sha256": "448bedb643f8dd1355bd06d3fd123a78c904111e6c30ffe6410e2593c207d3a2",
+      "bytes": 10630,
+      "mtime": "2026-09-01 21:49"
+    },
+    {
+      "caminho": "auditar_predicao_nula.json",
+      "sha256": "481517e366d770d88cd9754db0b32a3f21b77f42e7f91e73bf13de2859ed8d5f",
+      "bytes": 113729,
+      "mtime": "2026-09-03 00:07"
+    },
+    {
+      "caminho": "comparar_ponto_s035.json",
+      "sha256": "8b86c87ada3738d85ce5f369e5dfb74f5bfc0c21626d58a5f9722efb2432fba2",
+      "bytes": 1586,
+      "mtime": "2026-09-03 18:23"
+    },
+    {
+      "caminho": "auditar_recursos_s7.json",
+      "sha256": "93a96efff7bcb49cf1eb05583dfff5f51fd02bbab6dcecb512161f2e8e44e986",
+      "bytes": 7157,
+      "mtime": "2026-09-05 17:54"
+    },
+    {
+      "caminho": "auditar_hiperparametros_s8.json",
+      "sha256": "736d3d84e0ea8ad2ff6a8883e66beaf9e1eb3196647dd79aa495bae7edcc48a9",
+      "bytes": 15697,
+      "mtime": "2026-09-05 20:14"
+    },
+    {
+      "caminho": "comparar_ofat_dossel.json",
+      "sha256": "3daff51c05232849e6475fbc1dd1635e2368a90b6b9ffb0fd45e34c32f4a9fec",
+      "bytes": 6895,
+      "mtime": "2026-09-05 21:01"
+    }
+  ],
+  "gerado_para": "ACDSA 2027 system paper (acdsa_v23_sistema.tex)",
+  "regra": "every number cited in the paper text has a row in this sheet; an unused row is allowed, a number without a row DOES NOT EXIST. Copy from the sheet and check by diff against the row's artifact.",
+  "cerca": "scope fence: no D8/D1 as a claim, no label anatomy, no paired FABDEM/GEDTM30, no 'continental', no self-citation, E5 only as a guard",
+  "n_fatos": 117,
+  "fatos": [
+    {
+      "id": "nos_uniao",
+      "valor": 51840000,
+      "unidade": "nos",
+      "artefato": "contagem_arestas.json",
+      "campo": "nos_uniao",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "arestas_uniao",
+      "valor": 414547216,
+      "unidade": "arestas",
+      "artefato": "contagem_arestas.json",
+      "campo": "arestas_uniao",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "grau_medio",
+      "valor": 7.996666975308642,
+      "unidade": null,
+      "artefato": "contagem_arestas.json",
+      "campo": "grau_medio",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "area_km2",
+      "valor": 49168.18466864113,
+      "unidade": "km2",
+      "artefato": "geometria_celula.json",
+      "campo": "area_km2",
+      "carimbo_retroativo": true,
+      "nota": "2x2 degree mosaic, central Amazon; the term 'continental' is barred"
+    },
+    {
+      "id": "bbox",
+      "valor": [
+        -60.0,
+        -4.0,
+        -58.0,
+        -2.0
+      ],
+      "unidade": "graus",
+      "artefato": "geometria_celula.json",
+      "campo": "bbox",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "grade",
+      "valor": "7200x7200 (1 arcsec)",
+      "unidade": null,
+      "artefato": "geometria_celula.json",
+      "campo": "grade",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "lado_reserva_km",
+      "valor": 55.28865858440701,
+      "unidade": "km",
+      "artefato": "geometria_celula.json",
+      "campo": "conversoes_texto.reserva_1800_celulas_km",
+      "carimbo_retroativo": true,
+      "nota": "rounds to 55 km in prose"
+    },
+    {
+      "id": "d_in",
+      "valor": 46,
+      "unidade": "canais",
+      "artefato": "manifesto_features_46.json",
+      "campo": "d_in_modelo",
+      "nota": "46 = 44 fusion columns + 2 observation channels (observacao_b2.colunas)"
+    },
+    {
+      "id": "largura_fusao",
+      "valor": 44,
+      "unidade": "colunas",
+      "artefato": "manifesto_features_46.json",
+      "campo": "largura_X"
+    },
+    {
+      "id": "receita_peso_suavidade",
+      "valor": 0.35,
+      "unidade": null,
+      "artefato": "ofat_suavfina_b4s035.json",
+      "campo": "config.peso_suavidade",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "receita_peso_declividade",
+      "valor": 0.083,
+      "unidade": null,
+      "artefato": "ofat_suavfina_b4s035.json",
+      "campo": "config.peso_declividade",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "receita_boost_atl08",
+      "valor": 4.0,
+      "unidade": null,
+      "artefato": "ofat_suavfina_b4s035.json",
+      "campo": "config.boost_atl08",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "receita_pesos_desligados",
+      "valor": {
+        "peso_solo": null,
+        "peso_agua": null,
+        "peso_dossel": null
+      },
+      "unidade": null,
+      "artefato": "ofat_suavfina_b4s035.json",
+      "campo": "config.peso_solo/peso_agua/peso_dossel",
+      "carimbo_retroativo": true,
+      "nota": "v2.3: null in the config does NOT disable the constraint — b2_transferencia.py (~3273-3282) resolves null to the measured PESOS_ALVO, and the penalties remain ACTIVE (see fisica_pesos_ativos). The id 'desligados' is historical; the values here are the config nulls, faithfully copied. The previous note ('null = constraint disabled') was an upstream reading, refuted by the physics records of the runs."
+    },
+    {
+      "id": "fisica_pesos_ativos",
+      "valor": {
+        "ativa": true,
+        "peso_solo": 0.28,
+        "peso_agua": 0.38,
+        "n_registros": 20
+      },
+      "unidade": null,
+      "artefato": "ofat_suavfina_b4s035.json",
+      "campo": "runs[*].quadrantes[*].treino.fisica",
+      "carimbo_retroativo": true,
+      "nota": "the 3 class penalties are ACTIVE in the adopted recipe; the canopy term is present in ultimo_lote in all 20 records as a witness. The canopy TARGET (137.0) is a code constant (PESOS_ALVO) documented in the note resultado_teste_1_peso_dossel_2026-08-09 and does NOT enter as a citable value in this sheet, for lack of a stamped JSON from that era"
+    },
+    {
+      "id": "n_termos_perda",
+      "valor": 6,
+      "unidade": "termos",
+      "artefato": "ofat_suavfina_b4s035.json",
+      "campo": "config (derived: ancora + peso_suavidade + peso_declividade + peso_solo/peso_agua/peso_dossel)",
+      "carimbo_retroativo": true,
+      "nota": "enumeration: 1 anchor + 1 smoothness + 1 slope + 3 per-class penalties (ground/water/canopy); mechanisms in b2_transferencia.py:perda_fisica (canopy: sign hinge; water: planarity on edges; ground: magnitude shrinkage)"
+    },
+    {
+      "id": "sementes_receita",
+      "valor": [
+        42,
+        123,
+        7,
+        2024,
+        31
+      ],
+      "unidade": null,
+      "artefato": "ofat_suavfina_b4s035.json",
+      "campo": "config.seeds",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "s5_gatv2_l0.0_skill",
+      "valor": {
+        "media": 0.27488865102393545,
+        "ic95": [
+          0.26797626327135116,
+          0.28180103877651974
+        ]
+      },
+      "unidade": "skill",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "pontos[gatv2,0.0].skill_media/skill_ic95"
+    },
+    {
+      "id": "s5_gatv2_l0.0_viol_1m",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_1m_media"
+    },
+    {
+      "id": "s5_gatv2_l0.0_viol_10cm",
+      "valor": 134.6,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_10cm_media"
+    },
+    {
+      "id": "s5_gatv2_l0.0_cobertura_testemunha",
+      "valor": 1.0,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "cobertura_testemunha",
+      "nota": "MANDATORY next to any reading of violations (C15): coverage < 1 means absence of measurement, never compliance"
+    },
+    {
+      "id": "s5_gatv2_l0.0_uso_orcamento",
+      "valor": 0.9716666666666667,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "uso_do_orcamento_media"
+    },
+    {
+      "id": "s5_gatv2_l0.25_skill",
+      "valor": {
+        "media": 0.2673916820037013,
+        "ic95": [
+          0.2608912115376871,
+          0.2738921524697155
+        ]
+      },
+      "unidade": "skill",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "pontos[gatv2,0.25].skill_media/skill_ic95"
+    },
+    {
+      "id": "s5_gatv2_l0.25_viol_1m",
+      "valor": 0.2,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_1m_media"
+    },
+    {
+      "id": "s5_gatv2_l0.25_viol_10cm",
+      "valor": 358.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_10cm_media"
+    },
+    {
+      "id": "s5_gatv2_l0.25_cobertura_testemunha",
+      "valor": 1.0,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "cobertura_testemunha",
+      "nota": "MANDATORY next to any reading of violations (C15): coverage < 1 means absence of measurement, never compliance"
+    },
+    {
+      "id": "s5_gatv2_l0.25_uso_orcamento",
+      "valor": 0.9765555555555556,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "uso_do_orcamento_media"
+    },
+    {
+      "id": "s5_gatv2_l0.35_skill",
+      "valor": {
+        "media": 0.2637525543241753,
+        "ic95": [
+          0.2579888136350448,
+          0.2695162950133059
+        ]
+      },
+      "unidade": "skill",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "pontos[gatv2,0.35].skill_media/skill_ic95"
+    },
+    {
+      "id": "s5_gatv2_l0.35_viol_1m",
+      "valor": 0.2,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_1m_media"
+    },
+    {
+      "id": "s5_gatv2_l0.35_viol_10cm",
+      "valor": 285.8,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_10cm_media"
+    },
+    {
+      "id": "s5_gatv2_l0.35_cobertura_testemunha",
+      "valor": 1.0,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "cobertura_testemunha",
+      "nota": "MANDATORY next to any reading of violations (C15): coverage < 1 means absence of measurement, never compliance"
+    },
+    {
+      "id": "s5_gatv2_l0.35_uso_orcamento",
+      "valor": 0.9624444444444444,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "uso_do_orcamento_media"
+    },
+    {
+      "id": "s5_gatv2_l0.5_skill",
+      "valor": {
+        "media": 0.2579520719871786,
+        "ic95": [
+          0.2535093238537058,
+          0.26239482012065146
+        ]
+      },
+      "unidade": "skill",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "pontos[gatv2,0.5].skill_media/skill_ic95"
+    },
+    {
+      "id": "s5_gatv2_l0.5_viol_1m",
+      "valor": 0.4,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_1m_media"
+    },
+    {
+      "id": "s5_gatv2_l0.5_viol_10cm",
+      "valor": 313.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_10cm_media"
+    },
+    {
+      "id": "s5_gatv2_l0.5_cobertura_testemunha",
+      "valor": 1.0,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "cobertura_testemunha",
+      "nota": "MANDATORY next to any reading of violations (C15): coverage < 1 means absence of measurement, never compliance"
+    },
+    {
+      "id": "s5_gatv2_l0.5_uso_orcamento",
+      "valor": 0.9747619047619047,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "uso_do_orcamento_media"
+    },
+    {
+      "id": "s5_mlp_l0.0_skill",
+      "valor": {
+        "media": 0.27665322710553025,
+        "ic95": [
+          0.2707931561744126,
+          0.28251329803664793
+        ]
+      },
+      "unidade": "skill",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "pontos[mlp,0.0].skill_media/skill_ic95"
+    },
+    {
+      "id": "s5_mlp_l0.0_viol_1m",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_1m_media"
+    },
+    {
+      "id": "s5_mlp_l0.0_viol_10cm",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_10cm_media"
+    },
+    {
+      "id": "s5_mlp_l0.0_cobertura_testemunha",
+      "valor": 0.6,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "cobertura_testemunha",
+      "nota": "MANDATORY next to any reading of violations (C15): coverage < 1 means absence of measurement, never compliance"
+    },
+    {
+      "id": "s5_mlp_l0.0_uso_orcamento",
+      "valor": 0.8996349206349207,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "uso_do_orcamento_media"
+    },
+    {
+      "id": "s5_mlp_l0.25_skill",
+      "valor": {
+        "media": 0.26986505173456354,
+        "ic95": [
+          0.2658908857300714,
+          0.2738392177390557
+        ]
+      },
+      "unidade": "skill",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "pontos[mlp,0.25].skill_media/skill_ic95"
+    },
+    {
+      "id": "s5_mlp_l0.25_viol_1m",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_1m_media"
+    },
+    {
+      "id": "s5_mlp_l0.25_viol_10cm",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_10cm_media"
+    },
+    {
+      "id": "s5_mlp_l0.25_cobertura_testemunha",
+      "valor": 0.8,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "cobertura_testemunha",
+      "nota": "MANDATORY next to any reading of violations (C15): coverage < 1 means absence of measurement, never compliance"
+    },
+    {
+      "id": "s5_mlp_l0.25_uso_orcamento",
+      "valor": 0.8546349206349207,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "uso_do_orcamento_media"
+    },
+    {
+      "id": "s5_mlp_l0.35_skill",
+      "valor": {
+        "media": 0.262740562691612,
+        "ic95": [
+          0.25710458855860546,
+          0.26837653682461854
+        ]
+      },
+      "unidade": "skill",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "pontos[mlp,0.35].skill_media/skill_ic95"
+    },
+    {
+      "id": "s5_mlp_l0.35_viol_1m",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_1m_media"
+    },
+    {
+      "id": "s5_mlp_l0.35_viol_10cm",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_10cm_media"
+    },
+    {
+      "id": "s5_mlp_l0.35_cobertura_testemunha",
+      "valor": 0.3,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "cobertura_testemunha",
+      "nota": "MANDATORY next to any reading of violations (C15): coverage < 1 means absence of measurement, never compliance"
+    },
+    {
+      "id": "s5_mlp_l0.35_uso_orcamento",
+      "valor": 0.8272698412698413,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "uso_do_orcamento_media"
+    },
+    {
+      "id": "s5_mlp_l0.5_skill",
+      "valor": {
+        "media": 0.252702408172523,
+        "ic95": [
+          0.24562523181603693,
+          0.25977958452900907
+        ]
+      },
+      "unidade": "skill",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "pontos[mlp,0.5].skill_media/skill_ic95"
+    },
+    {
+      "id": "s5_mlp_l0.5_viol_1m",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_1m_media"
+    },
+    {
+      "id": "s5_mlp_l0.5_viol_10cm",
+      "valor": 0.0,
+      "unidade": "celulas/replica",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "violacoes_acima_10cm_media"
+    },
+    {
+      "id": "s5_mlp_l0.5_cobertura_testemunha",
+      "valor": 0.5,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "cobertura_testemunha",
+      "nota": "MANDATORY next to any reading of violations (C15): coverage < 1 means absence of measurement, never compliance"
+    },
+    {
+      "id": "s5_mlp_l0.5_uso_orcamento",
+      "valor": 0.7960793650793652,
+      "unidade": "fracao",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "uso_do_orcamento_media"
+    },
+    {
+      "id": "s5_limiar_leitura",
+      "valor": 1.0,
+      "unidade": "m",
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "limiar_da_leitura_m",
+      "nota": "declare the threshold; at 10 cm the graph already violates x1"
+    },
+    {
+      "id": "s5_sha256_pontos",
+      "valor": "85a1fc4e0198c5d7711d05ed5c382707b26a37d2358f11ad782a9dd6a685d611",
+      "unidade": null,
+      "artefato": "auditar_tradeoff_suavidade_x1.json",
+      "campo": "sha256_pontos_recorte"
+    },
+    {
+      "id": "dist_reserva_mediana_km",
+      "valor": 18.91285294941629,
+      "unidade": "km",
+      "artefato": "auditar_geometria_reserva.json",
+      "campo": "dist_reserva_km.mediana"
+    },
+    {
+      "id": "dist_em_dist_mediana_km",
+      "valor": 0.558164436593785,
+      "unidade": "km",
+      "artefato": "auditar_geometria_reserva.json",
+      "campo": "dist_em_distribuicao_km.mediana",
+      "nota": "cite BOTH medians, never the ratio (razao_em_metros_METRICAS_MISTAS is vetoed by the artifact)"
+    },
+    {
+      "id": "geom_n_combinacoes",
+      "valor": 20,
+      "unidade": null,
+      "artefato": "auditar_geometria_reserva.json",
+      "campo": "n_combinacoes"
+    },
+    {
+      "id": "buffer_celulas",
+      "valor": 67.0,
+      "unidade": "celulas",
+      "artefato": "auditar_geometria_reserva.json",
+      "campo": "buffer_celulas"
+    },
+    {
+      "id": "n_reserva_uniao",
+      "valor": 157847,
+      "unidade": "ancoras",
+      "artefato": "auditar_geometria_reserva.json",
+      "campo": "n_reserva_uniao"
+    },
+    {
+      "id": "e5_papel",
+      "valor": "diagnostico_guarda: NOT citable as a model result",
+      "unidade": null,
+      "artefato": "auditar_e2_e5.json",
+      "campo": "e5_guarda_g2.papel"
+    },
+    {
+      "id": "e5_pareado_skill",
+      "valor": {
+        "media": -0.1996067273108552,
+        "p": 0.0014428867942701097
+      },
+      "unidade": "skill",
+      "artefato": "auditar_e2_e5.json",
+      "campo": "e5_guarda_g2.pareado_skill",
+      "nota": "used EXCLUSIVELY as a protocol guard (protocol section), never as an ablation or result"
+    },
+    {
+      "id": "e5_razao_dp",
+      "valor": 11.653389100630173,
+      "unidade": null,
+      "artefato": "auditar_e2_e5.json",
+      "campo": "e5_guarda_g2.razao_dp_entre_sementes"
+    },
+    {
+      "id": "q1_degenerado",
+      "valor": true,
+      "unidade": null,
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "q1_degenerado"
+    },
+    {
+      "id": "s1_dossel_denso_n_uniao",
+      "valor": 151180,
+      "unidade": "nos",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_diagnosticas.dossel_denso.n_nos_uniao"
+    },
+    {
+      "id": "s1_dossel_denso_mae_gatv2",
+      "valor": {
+        "media": 5.989907047922988,
+        "ic95": [
+          5.9522966544728195,
+          6.027517441373156
+        ]
+      },
+      "unidade": "m",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_diagnosticas.dossel_denso.mae_uniao_gatv2"
+    },
+    {
+      "id": "s1_dossel_denso_mae_mlp",
+      "valor": {
+        "media": 6.010929338586033,
+        "ic95": [
+          5.9648497428361,
+          6.057008934335966
+        ]
+      },
+      "unidade": "m",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_diagnosticas.dossel_denso.mae_uniao_mlp"
+    },
+    {
+      "id": "s1_dossel_denso_contraste",
+      "valor": {
+        "media": -0.021022290663044885,
+        "ic95": [
+          -0.05976979949377258,
+          0.017725218167682803
+        ]
+      },
+      "unidade": "m",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_diagnosticas.dossel_denso.contraste_pareado_gatv2_menos_mlp_m",
+      "nota": "contrast not decided: the 95% CI of the paired contrast crosses zero (see _natureza)"
+    },
+    {
+      "id": "s1_dossel_esparso_n_uniao",
+      "valor": 3866,
+      "unidade": "nos",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_diagnosticas.dossel_esparso.n_nos_uniao"
+    },
+    {
+      "id": "s1_dossel_esparso_mae_gatv2",
+      "valor": {
+        "media": 4.940600626072734,
+        "ic95": [
+          4.883308205276092,
+          4.997893046869376
+        ]
+      },
+      "unidade": "m",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_diagnosticas.dossel_esparso.mae_uniao_gatv2"
+    },
+    {
+      "id": "s1_dossel_esparso_mae_mlp",
+      "valor": {
+        "media": 4.535617058917271,
+        "ic95": [
+          4.383700280719089,
+          4.687533837115454
+        ]
+      },
+      "unidade": "m",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_diagnosticas.dossel_esparso.mae_uniao_mlp"
+    },
+    {
+      "id": "s1_dossel_esparso_contraste",
+      "valor": {
+        "media": 0.40498356715546213,
+        "ic95": [
+          0.2745248818081342,
+          0.53544225250279
+        ]
+      },
+      "unidade": "m",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_diagnosticas.dossel_esparso.contraste_pareado_gatv2_menos_mlp_m",
+      "nota": "positive contrast with the entire 95% CI above zero: the MLP has lower MAE in this class in this a posteriori description (see _natureza; not a pre-registered claim)"
+    },
+    {
+      "id": "s1_fonte_nao_diagnosticas",
+      "valor": "auditar_predicao_nula.json (S6, pre-registered physical criterion; scope PER CLASS, see escopo_s6): water: NULL in the measured scope (Q2+Q3+Q4/reserva_final/10 runs, 30 cells); bare soil: MIXED in the measured scope (Q2+Q3+Q4/reserva_final/10 runs, 30 cells) (discordant cells: ['Q3/gatv2_seed7', 'Q4/gatv2_seed123', 'Q4/gatv2_seed2024', 'Q4/gatv2_seed31', 'Q4/gatv2_seed42', 'Q4/gatv2_seed7'])",
+      "unidade": null,
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "classes_nao_diagnosticas.fonte_citavel"
+    },
+    {
+      "id": "s1_fracao_coberta_s6",
+      "valor": {
+        "agua": 1.0,
+        "solo_exposto": 1.0,
+        "dossel_denso": 1.0,
+        "dossel_esparso": 1.0
+      },
+      "unidade": "fracao",
+      "artefato": "auditar_regime_reserva.json",
+      "campo": "escopo_s6.fracao_da_uniao_coberta_por_classe"
+    },
+    {
+      "id": "s3_params_gatv2_2_semobs",
+      "valor": 156929,
+      "unidade": "parametros",
+      "artefato": "auditar_paridade_capacidade.json",
+      "campo": "familias.gatv2_2_semobs.params_treinaveis"
+    },
+    {
+      "id": "s3_params_mlp_semobs",
+      "valor": 209665,
+      "unidade": "parametros",
+      "artefato": "auditar_paridade_capacidade.json",
+      "campo": "familias.mlp_semobs.params_treinaveis"
+    },
+    {
+      "id": "s3_razao_mlp_gatv2",
+      "valor": 1.3360500608555461,
+      "unidade": null,
+      "artefato": "auditar_paridade_capacidade.json",
+      "campo": "leitura.razao_mlp_sobre_gatv2",
+      "nota": "The MLP is the LARGER control — it closes off the 'insufficient capacity' explanation"
+    },
+    {
+      "id": "s3_n_sementes_paridade",
+      "valor": 10,
+      "unidade": "sementes",
+      "artefato": "auditar_paridade_capacidade.json",
+      "campo": "sementes_g2 (len)",
+      "nota": "double count checkpoint vs re-instantiation checked in each one; the 5 seeds of the adopted recipe are a subset"
+    },
+    {
+      "id": "lambda_criterio_regra",
+      "valor": "smallest weight that halves those created >2m within the skill guardrail",
+      "unidade": null,
+      "artefato": "comparar_ponto_s035.json",
+      "campo": "recomendacao.regra",
+      "carimbo_retroativo": true,
+      "nota": "criterion pre-declared before the smoothing-weight sweep"
+    },
+    {
+      "id": "lambda_guarda_skill",
+      "valor": 0.01,
+      "unidade": "skill",
+      "artefato": "comparar_ponto_s035.json",
+      "campo": "tolerancia_skill",
+      "carimbo_retroativo": true
+    },
+    {
+      "id": "lambda_pocos_2m",
+      "valor": {
+        "l0": 55968.2147132,
+        "l035": 27820.738340799995,
+        "fracao_cortada": 0.5029189606393051
+      },
+      "unidade": "pocos",
+      "artefato": "comparar_ponto_s035.json",
+      "campo": "por_peso[0.0/0.35].criados_2m_soma",
+      "carimbo_retroativo": true,
+      "nota": "hydrological pits created with depth >2m; fracao_cortada derived here (1 - l035/l0)"
+    },
+    {
+      "id": "lambda_custo_skill",
+      "valor": -0.011136096699760123,
+      "unidade": "skill",
+      "artefato": "comparar_ponto_s035.json",
+      "campo": "por_peso.0.35.skill_delta_vs_p0",
+      "carimbo_retroativo": true,
+      "nota": "exceeds the guard (tolerancia_skill) in absolute value; see lambda_criterio_candidatos_vazio"
+    },
+    {
+      "id": "lambda_criterio_candidatos_vazio",
+      "valor": true,
+      "unidade": null,
+      "artefato": "comparar_ponto_s035.json",
+      "campo": "recomendacao.candidatos",
+      "carimbo_retroativo": true,
+      "nota": "the rule did not select a candidate (guard exceeded); 0.35 was adopted by a formal decision, with an excess smaller than the between-seed standard deviation (skill_dp in the artifact itself)"
+    },
+    {
+      "id": "s3_d_in_era_b1",
+      "valor": 24,
+      "unidade": "canais",
+      "artefato": "auditar_paridade_capacidade.json",
+      "campo": "d_in_era_b1_derivado.d_in_era_b1",
+      "nota": "derived from the B1-era artifact; d_in fully explains the difference vs the B1 era"
+    },
+    {
+      "id": "s6_agua",
+      "valor": {
+        "veredito": "NULA",
+        "n_celulas_avaliadas": 30,
+        "unanime": true
+      },
+      "unidade": null,
+      "artefato": "auditar_predicao_nula.json",
+      "campo": "veredito.agua"
+    },
+    {
+      "id": "s6_solo_exposto",
+      "valor": {
+        "veredito": "MISTA",
+        "n_celulas_avaliadas": 30,
+        "unanime": false
+      },
+      "unidade": null,
+      "artefato": "auditar_predicao_nula.json",
+      "campo": "veredito.solo_exposto"
+    },
+    {
+      "id": "s6_dossel_denso",
+      "valor": {
+        "veredito": "NAO_NULA",
+        "n_celulas_avaliadas": 40,
+        "unanime": true
+      },
+      "unidade": null,
+      "artefato": "auditar_predicao_nula.json",
+      "campo": "veredito.dossel_denso"
+    },
+    {
+      "id": "s6_dossel_esparso",
+      "valor": {
+        "veredito": "NAO_NULA",
+        "n_celulas_avaliadas": 40,
+        "unanime": true
+      },
+      "unidade": null,
+      "artefato": "auditar_predicao_nula.json",
+      "campo": "veredito.dossel_esparso"
+    },
+    {
+      "id": "s6_agua_cota",
+      "valor": {
+        "dif_rel_max": 4.153139791481531e-06,
+        "celula_dif_rel": "Q3/mlp_seed123",
+        "dif_abs_max_m": 3.337860107421875e-05,
+        "celula_dif_abs": "Q3/mlp_seed123"
+      },
+      "unidade": null,
+      "artefato": "auditar_predicao_nula.json",
+      "campo": "`celulas.*.runs.*.classes.agua` (independent maxima over the evaluated ones)",
+      "nota": "upper bound for the non-diagnosticity sentence; MISTA is reported as MISTA + bound, never as NULA"
+    },
+    {
+      "id": "s6_solo_exposto_cota",
+      "valor": {
+        "dif_rel_max": 0.003499915294099832,
+        "celula_dif_rel": "Q4/gatv2_seed123",
+        "dif_abs_max_m": 0.015870094299316406,
+        "celula_dif_abs": "Q4/gatv2_seed123"
+      },
+      "unidade": null,
+      "artefato": "auditar_predicao_nula.json",
+      "campo": "`celulas.*.runs.*.classes.solo_exposto` (independent maxima over the evaluated ones)",
+      "nota": "upper bound for the non-diagnosticity sentence; MISTA is reported as MISTA + bound, never as NULA"
+    },
+    {
+      "id": "s7_gatv2_parede_b2_min",
+      "valor": 62.5,
+      "unidade": "min",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "familias.gatv2.parede_b2_min",
+      "nota": "graph: INICIO -> B2 CONCLUIDO; 5 seeds x 4 stages, loading, training and dense prediction of phase B2; same scope in both families (D1)"
+    },
+    {
+      "id": "s7_gatv2_treino_puro_por_semente_min",
+      "valor": 4.35,
+      "unidade": "min",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "familias.gatv2.treino_s_soma_media_min",
+      "nota": "mean over the 5 seeds of the sum of treino.treino_s across the 4 stages (run JSON); excludes loading, union and prediction (D2)"
+    },
+    {
+      "id": "s7_gatv2_vram_pico_gb",
+      "valor": 4.6,
+      "unidade": "GB",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "familias.gatv2.vram_pico_gb",
+      "nota": "maximum allocated over seeds x stages (run JSON), at seed 7, stage Q4; checked against the log (G3)"
+    },
+    {
+      "id": "s7_gatv2_rss_pico_gb",
+      "valor": 26.9,
+      "unidade": "GB",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "familias.gatv2.rss_pico_gb",
+      "nota": "process peak RAM ([MEM] lines of the log; G7 requires them to exist)"
+    },
+    {
+      "id": "s7_mlp_parede_b2_min",
+      "valor": 47.5,
+      "unidade": "min",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "familias.mlp.parede_b2_min",
+      "nota": "Single measurement: log line INICIO -> B2 CONCLUIDO; 5 seeds x 4 stages, loading, training and dense prediction of phase B2; same scope for both families (D1)"
+    },
+    {
+      "id": "s7_mlp_treino_puro_por_semente_min",
+      "valor": 1.05,
+      "unidade": "min",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "familias.mlp.treino_s_soma_media_min",
+      "nota": "mean over the 5 seeds of the sum of treino.treino_s across the 4 stages (run JSON); excludes loading, union and prediction (D2)"
+    },
+    {
+      "id": "s7_mlp_vram_pico_gb",
+      "valor": 0.735,
+      "unidade": "GB",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "familias.mlp.vram_pico_gb",
+      "nota": "maximum allocated over seeds x stages (run JSON), at seed 42, stage Q4; checked against the log (G3)"
+    },
+    {
+      "id": "s7_mlp_rss_pico_gb",
+      "valor": 26.8,
+      "unidade": "GB",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "familias.mlp.rss_pico_gb",
+      "nota": "process peak RAM ([MEM] lines of the log; G7 requires them to exist)"
+    },
+    {
+      "id": "s7_epocas_teto",
+      "valor": {
+        "etapa1": 45,
+        "etapa2": 25,
+        "etapa3": 18,
+        "etapa4": 14
+      },
+      "unidade": "epocas",
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "epocas_teto",
+      "nota": "per-stage cap of the growing window, identical in both families (G4)"
+    },
+    {
+      "id": "s7_hardware_da_maquina_de_auditoria",
+      "valor": {
+        "cpu": "AMD Ryzen 9 5900X 12-Core Processor",
+        "ram_total_gb": 128,
+        "gpu": "GPU: NVIDIA GeForce RTX 5070 Ti",
+        "vram_total_gb": 15.9
+      },
+      "unidade": null,
+      "artefato": "auditar_recursos_s7.json",
+      "campo": "hardware_da_maquina_de_auditoria",
+      "nota": "AUTHOR DECLARATION (D3): hardware read from the machine on which the audit ran; no artifact from the 10-11/08 runs records hardware (only 'dispositivo: cuda'); the host in the JSON stamp is retroactive. In prose: \"the authors' workstation\""
+    },
+    {
+      "id": "s8_gatv2_arquitetura",
+      "valor": {
+        "camadas_gatv2conv": 2,
+        "cabecas": 8,
+        "canais_por_cabeca": 32,
+        "largura_oculta": 256,
+        "dropout": 0.1
+      },
+      "unidade": null,
+      "artefato": "auditar_hiperparametros_s8.json",
+      "campo": "arquitetura.gatv2",
+      "nota": "instantiated from b1_kriging_indutivo.GATv2(46, 2); trainable parameters == s3_params_gatv2_2_semobs (G1)"
+    },
+    {
+      "id": "s8_mlp_arquitetura",
+      "valor": {
+        "blocos_lineares_ocultos": 4,
+        "largura_oculta": 256,
+        "ativacao": "ReLU",
+        "dropout": 0.1
+      },
+      "unidade": null,
+      "artefato": "auditar_hiperparametros_s8.json",
+      "campo": "arquitetura.mlp",
+      "nota": "instantiated from b1_kriging_indutivo.MLP(46); parameters == s3_params_mlp_semobs (G1)"
+    },
+    {
+      "id": "s8_fan_out",
+      "valor": [
+        8,
+        8
+      ],
+      "unidade": "vizinhos por camada",
+      "artefato": "auditar_hiperparametros_s8.json",
+      "campo": "treino.fan_out_por_camada",
+      "nota": "read from the graph log (25 samplers, all [8, 8]); the MLP samples without neighbors ([-1])"
+    },
+    {
+      "id": "s8_otimizador",
+      "valor": {
+        "otimizador": "AdamW",
+        "weight_decay": 0.01,
+        "weight_decay_escopo": "No decay: tensors with ndim <= 1 (biases) and the gate matrix '.A' (absent in both arms); everything else decays, including the attention vector (1,8,32); there is no normalization",
+        "agendador": "CosineAnnealingLR (per stage, eta_min = lr_min)",
+        "lr_min": 1e-06,
+        "lote": 6144
+      },
+      "unidade": null,
+      "artefato": "auditar_hiperparametros_s8.json",
+      "campo": "treino.{otimizador,weight_decay_matrizes,weight_decay_escopo,agendador,lr_min,lote}",
+      "nota": "calls read from b2_transferencia.py (G5); batch = witness 'BATCH do vetor V23' from both logs, equal to BATCH_V23 (G8); weight decay on tensors with ndim > 1, only the biases are excluded"
+    },
+    {
+      "id": "s8_agendador_execucao",
+      "valor": {
+        "gatv2": {
+          "n_etapa_corridas": 20,
+          "n_chegaram_ao_piso_lr": 11,
+          "n_parada_antecipada": 9,
+          "lr_final_max": 4.418404390752091e-05
+        },
+        "mlp": {
+          "n_etapa_corridas": 20,
+          "n_chegaram_ao_piso_lr": 4,
+          "n_parada_antecipada": 16,
+          "lr_final_max": 0.0002037483620108617
+        }
+      },
+      "unidade": null,
+      "artefato": "auditar_hiperparametros_s8.json",
+      "campo": "treino.agendador_execucao",
+      "nota": "cosine schedule configured over the stage cap down to lr_min; early stopping cuts the curve short, and only the stage runs that exhaust the cap reach the floor. In prose: 'a cosine schedule over each stage's cap toward 1e-6, cut short when early stopping fires'"
+    },
+    {
+      "id": "s8_etapas",
+      "valor": [
+        {
+          "etapa": 1,
+          "epocas_teto": 45,
+          "lr_inicial": 0.001,
+          "paciencia": 15,
+          "precisao": "bfloat16"
+        },
+        {
+          "etapa": 2,
+          "epocas_teto": 25,
+          "lr_inicial": 0.0005,
+          "paciencia": 8,
+          "precisao": "bfloat16"
+        },
+        {
+          "etapa": 3,
+          "epocas_teto": 18,
+          "lr_inicial": 0.0003,
+          "paciencia": 6,
+          "precisao": "bfloat16"
+        },
+        {
+          "etapa": 4,
+          "epocas_teto": 14,
+          "lr_inicial": 0.0002,
+          "paciencia": 6,
+          "precisao": "bfloat16"
+        }
+      ],
+      "unidade": null,
+      "artefato": "auditar_hiperparametros_s8.json",
+      "campo": "treino.etapas",
+      "nota": "uniform across the 5 seeds and the 2 families (G3); lr in the log == JSON (G4)"
+    },
+    {
+      "id": "s8_ic95_metodo",
+      "valor": "mean +- t(0.975, n-1) * sd(ddof=1) / sqrt(n), n = 5 seeds (t with 4 df)",
+      "unidade": null,
+      "artefato": "auditar_hiperparametros_s8.json",
+      "campo": "intervalos.metodo",
+      "nota": "Reproduced at the 8 points of S5 (G6); same method in S1 (T_975_GL4, ddof=1)"
+    },
+    {
+      "id": "s8_e5_teste",
+      "valor": "one-sample t on the per-seed paired differences (on - control), two-sided, 4 df",
+      "unidade": null,
+      "artefato": "auditar_hiperparametros_s8.json",
+      "campo": "teste_e5.teste",
+      "nota": "reproduced p = 0.00144289 (G7) vs e5_pareado_skill"
+    },
+    {
+      "id": "wc_criterio_regra",
+      "valor": "smallest weight with <1% of violations above 1 m and skill within the 0.010 tolerance against weight 0",
+      "unidade": null,
+      "artefato": "comparar_ofat_dossel.json",
+      "campo": "recomendacao.regra",
+      "carimbo_retroativo": true,
+      "nota": "criterion declared before the OFAT sweep of 2026-08-08; tolerancia_skill = 0.01"
+    },
+    {
+      "id": "wc_peso",
+      "valor": 137,
+      "unidade": null,
+      "artefato": "comparar_ofat_dossel.json",
+      "campo": "recomendacao.peso",
+      "carimbo_retroativo": true,
+      "nota": "candidates [137, 549, 2196]; 137 is the smallest; equal to PESOS_ALVO['dossel'] in b2_transferencia.py (resolution null -> target in the adopted runs)"
+    },
+    {
+      "id": "wc_custo_skill",
+      "valor": -0.00329919082415292,
+      "unidade": "skill",
+      "artefato": "comparar_ofat_dossel.json",
+      "campo": "por_peso.137.skill_delta_vs_p0",
+      "carimbo_retroativo": true,
+      "nota": "Skill 0.2742 vs 0.2775 at weight 0; SD across seeds 0.0059 at weight 0"
+    },
+    {
+      "id": "wc_severidade_1m",
+      "valor": {
+        "peso0_max_quadrante": 0.269786,
+        "peso137_max_quadrante": 0.0,
+        "peso0_por_quadrante": {
+          "Q1": 0.202552,
+          "Q2": 0.269786,
+          "Q3": 0.198966,
+          "Q4": 0.20812
+        }
+      },
+      "unidade": "fraction of canopy violations above 1 m",
+      "artefato": "comparar_ofat_dossel.json",
+      "campo": "por_peso.{0,137}.severidade.*.acima_1m",
+      "carimbo_retroativo": true,
+      "nota": "fraction of dense-canopy cells with Delta < 0 whose violation exceeds 1 m; zero in the 4 quadrants with 137, 549 and 2196"
+    },
+    {
+      "id": "split_bloco_m",
+      "valor": 1608,
+      "unidade": "m",
+      "artefato": "ofat_suavfina_b4s035.json",
+      "campo": "amazonia_*/quadrantes/*/particao.bloco_m",
+      "carimbo_retroativo": true,
+      "nota": "side length of the spatial block of the internal train/validation/test split (52 cells); in prose 'about 1.6 km'"
+    },
+    {
+      "id": "s6_tolerancia_rel",
+      "valor": 0.001,
+      "unidade": null,
+      "artefato": "auditar_predicao_nula.json",
+      "campo": "criterio.NULA",
+      "nota": "|MAE(p,y) - MAE(0,y)| / MAE(0,y) < tolerance in the cell; pre-registered on 2026-08-31; in prose '10^-3'"
+    }
+  ]
+}

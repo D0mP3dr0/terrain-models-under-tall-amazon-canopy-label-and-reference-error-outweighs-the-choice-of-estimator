@@ -1,0 +1,4272 @@
+{
+  "_proveniencia": {
+    "script": "auditar_dt3_criterios_registro.py",
+    "sha256_script": "3e8ab2c311e79a68db380453a9871cffc6085db75ddb5802ae5244173a709535",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-28T18:06",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "auditar_tabela3.json",
+      "sha256": "613cb716c8b9cd30a1d60046bf8d0c7cf3ead3ab471de7131565b342856e49d1",
+      "bytes": 26824,
+      "mtime": "2026-09-28 10:24"
+    },
+    {
+      "caminho": "auditar_tabela3_dump.parquet",
+      "sha256": "652d60a6db96fc2c1ecf700214ce270e19d4ab20cfaf21b1876ba338881d9023",
+      "bytes": 48126,
+      "mtime": "2026-09-28 10:23"
+    },
+    {
+      "caminho": "medir_delta_escala_v3_nativa.json",
+      "sha256": "6c4638c25c95ee538552a20df8a10dfa15906752ec7f2d20ba0db534eec05438",
+      "bytes": 5308,
+      "mtime": "2026-09-28 11:47"
+    },
+    {
+      "caminho": "delta_escala_celulas_nativa.parquet",
+      "sha256": "110d75ca56626f268f32ece2acb2d0719ff7a19ced3e8f2b18fa3c122b2a14c2",
+      "bytes": 4865835,
+      "mtime": "2026-09-28 11:41"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_diretas.json",
+      "sha256": "bb3cce3e12470fb2da78fb3ebcc25fb3beeffee7a10c637726eaf3f7e6f00f2d",
+      "bytes": 217379,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "auditar_d8_triangulo.json",
+      "sha256": "8c034686e697d6cb82bdf233e738c3e061cf3726367a9fbfbbc922766e607bc5",
+      "bytes": 23711,
+      "mtime": "2026-08-16 19:35"
+    },
+    {
+      "caminho": "auditar_rotulo_regua_v2.json",
+      "sha256": "2470115aaf6eed5ff2ea7d878f2dd6a1ac3f7bf682240599102a33fb01129e9a",
+      "bytes": 247271,
+      "mtime": "2026-09-28 11:58"
+    },
+    {
+      "caminho": "auditar_s2_registro_referencia.json",
+      "sha256": "aa3f0f34b2965da9f879b060f2beccb39d994fb2c2ac7bbb8c5674e33742a7a2",
+      "bytes": 71768,
+      "mtime": "2026-09-28 15:50"
+    },
+    {
+      "caminho": "juiz_grade_nativa_diretas.json",
+      "sha256": "5d8e47397eac39122d7d9b52e3118491c4547cffa6c856e4477d0fe09c6d76f5",
+      "bytes": 29459,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.parquet",
+      "sha256": "b01a6101850dfe7fc514c85be556fbe0aae3cc941fba9263b431a54556f92dc5",
+      "bytes": 4380157,
+      "mtime": "2026-08-18 18:02"
+    },
+    {
+      "caminho": "auditar_rotulo_regua_v2.py",
+      "sha256": "f50f622cbcdd5aab1c05d8e7682e87937aaf18e8cea16f6f5bb5833a685257d2",
+      "bytes": 34361,
+      "mtime": "2026-09-28 11:57"
+    },
+    {
+      "caminho": "auditar_s2_registro_referencia.py",
+      "sha256": "72041a6e6f30f7c35fd7781d9c45ada59153edab0486e1b5505dc65a0cef5161",
+      "bytes": 32973,
+      "mtime": "2026-09-28 15:49"
+    },
+    {
+      "caminho": "auditar_nmad_pareado.py",
+      "sha256": "52e471fc4df6e41f1f87ca6de800275770e7bb6eb1b59b6a84bfd9ce0b57a3a1",
+      "bytes": 21009,
+      "mtime": "2026-08-18 19:11"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_anadem.py",
+      "sha256": "f022646ea98e0ae3c4c7de9ce39e73c901a752442c8763e7564654ee115ea9d9",
+      "bytes": 23220,
+      "mtime": "2026-09-28 11:47"
+    },
+    {
+      "caminho": "juiz_lidar_v4.py",
+      "sha256": "7768ba350a38cc94e9ab37a48cbac1b7b8917a902d3eb015ad430919c8b033c2",
+      "bytes": 21820,
+      "mtime": "2026-08-16 12:18"
+    },
+    {
+      "caminho": "proveniencia.py",
+      "sha256": "3f5716c109e53039ef1c74c345f5935fed4581278789b690c7993be3a86918fe",
+      "bytes": 6141,
+      "mtime": "2026-09-02 23:55"
+    },
+    {
+      "caminho": "auditar_dt3_criterios_registro.py",
+      "sha256": "3e8ab2c311e79a68db380453a9871cffc6085db75ddb5802ae5244173a709535",
+      "bytes": 29960,
+      "mtime": "2026-09-28 18:05"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed42.npz",
+      "sha256": "b065964e52c3648e6639176f2efc37100b2bbb2b514e19ff517c61c936eb1998",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed123.npz",
+      "sha256": "e5cae136784d629b10e6d284d865ae2eb7152e1aa3ba2f97bf77d36f2f12d3e3",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed7.npz",
+      "sha256": "b2ae95c70caef15322cd99b7815c6163ac671feeb0a9f8d7a30c2976e2e269cc",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed2024.npz",
+      "sha256": "9616720901be153a82cfc87bc0647d1a1065bfd0bd87790e05a98e9782a1cb72",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed31.npz",
+      "sha256": "47483fbdc83d5127799b7a01182017ece692651b4f797d88efbaae9fa20795e0",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed42.npz",
+      "sha256": "ceb0db4cbfc2cc479a6d4135ab5b2fd18d84cf54b88c920b650048c90af523cf",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed123.npz",
+      "sha256": "c7cd87f784980f77650376028e41ce656510e6383259fc4ec777a8dd68ad82d2",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed7.npz",
+      "sha256": "8f4164aedfdb4ad922cab62f3b4b34436e7c76deffe530c125224c41702bee61",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed2024.npz",
+      "sha256": "7a26ea46817c319f1c272e3166e6d681fa4b61e35653d8a1d87034f3f8275e59",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed31.npz",
+      "sha256": "3766010c9c420b868478a64442049bf6390bf029350d66584fd5ad69fd134327",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q1.npz",
+      "sha256": "1fd3eb1a1ee78c1076f7fba83a3222c38b7bbcf94f68ffb3a614449539f9e0fd",
+      "bytes": 44856830,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q1.npz",
+      "sha256": "fd520a6189bd588276fc24ae94a9697a12bdb05687b713683d47052271533e23",
+      "bytes": 31052675,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q1.npz",
+      "sha256": "9db07dfe7655207ad67db06b3d717c1941af75b065c0ac72b4f20131e2d33d28",
+      "bytes": 43889002,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q1.npz",
+      "sha256": "9535647118c935e0229070c16372e53f60e880927d13e4e3f291348b7cf2a837",
+      "bytes": 539926,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q1.npz",
+      "sha256": "6142d950610129dd294a8cbcc69e53080a849a565f044dffd677d9a434dd2e35",
+      "bytes": 23516585,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q1.npz",
+      "sha256": "015d0347d445bf9a0a4df08758fb1ea0d10fdb3e3a753d140e90e476f4147cf9",
+      "bytes": 11060217,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q2.npz",
+      "sha256": "71d0a11fee3fb44307916a0bff77a45ec640ee54eedb5464e848474058088891",
+      "bytes": 41687083,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q2.npz",
+      "sha256": "d2f7a4d616c40d9fde51b83cb3aad9b3f3a0a7b431d784c1d6bb6e5d4b07c4c3",
+      "bytes": 28393374,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q2.npz",
+      "sha256": "b4266ada01884f9d3e3a7241b303d14de005764f8a0f6c7890ffc82394df3816",
+      "bytes": 42069195,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q2.npz",
+      "sha256": "fe9317f04bd71463981ef0f058bfc95408f7a4b0a7d621761f469c06af6ef09a",
+      "bytes": 2618347,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q2.npz",
+      "sha256": "a83517bbbae447867262b6926f2a2a5aa88d398596d6f7720296b03041854cf2",
+      "bytes": 22949409,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q2.npz",
+      "sha256": "803a5aaa1d528d8e71d6c416e563bd7df0bb2e3d438e8822ce96fd3257f7b110",
+      "bytes": 12925328,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q3.npz",
+      "sha256": "ef7e529cb710822a145e23370fb1525913009a392cb16c3821f011e1a2c4e2bd",
+      "bytes": 38521636,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q3.npz",
+      "sha256": "6f45c501be1cfdc271e59d5566933c57117f09d5b765919838decc1bd933f933",
+      "bytes": 21843383,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q3.npz",
+      "sha256": "5324d866168d2bfe8b0d5b6d9ee967ccade761297d199dafe3d06fbb79bb6007",
+      "bytes": 39530448,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q3.npz",
+      "sha256": "71ec340b90ca66ec05cf452c4d8e19c5a569563f30882219f6cbef2c7331bb6a",
+      "bytes": 7217291,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q3.npz",
+      "sha256": "865bfa10074c1ba55ca25b487f52e267aa1bac83a4fb0b0abc6b2ae2c7af94b2",
+      "bytes": 24834651,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q3.npz",
+      "sha256": "cd20a82c5e9bfb2e36b51385703b037790f9abfdabed75be9b96da5b73087765",
+      "bytes": 10711545,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q4.npz",
+      "sha256": "e689e7b4020ee31d2b0d5e98d14cdc79cc6d74e18e32b300d2c86c503dce6b9d",
+      "bytes": 37351990,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q4.npz",
+      "sha256": "0ccfc5b4dbdd32b855c2781fbb76484797d24e7ce64d5aed4a3e1de9de6acf98",
+      "bytes": 20948032,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q4.npz",
+      "sha256": "672978e10e862690b9e87f9c7e44cd96ecb79563aca7572898cae530599f289e",
+      "bytes": 39699540,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q4.npz",
+      "sha256": "259ed84611a9df13b5d6bb0067f1a20fc1cd16bfeb83f8cdfe2f5e173043238f",
+      "bytes": 6491679,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q4.npz",
+      "sha256": "8dff93b29aad1fbac2568943baebcb4629aa64b5fc2b489edc6f909cf3ae1cd4",
+      "bytes": 24317269,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q4.npz",
+      "sha256": "f9ffafdaffa777599b56c2143d9730cef677b54e641d952c417e5845fcdd0b93",
+      "bytes": 12905568,
+      "mtime": "2026-08-07 13:34"
+    }
+  ],
+  "desenho": "Pre-declared design note, section D-T3 (closing rule: runs once; the result goes into the text as it comes out)",
+  "diario": "internal/note_24.md",
+  "comando": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python auditar_dt3_criterios_registro.py",
+  "conferencia_sha256_antes_de_calcular": {
+    "auditar_tabela3.json": "613cb716c8b9cd30a1d60046bf8d0c7cf3ead3ab471de7131565b342856e49d1",
+    "auditar_tabela3_dump.parquet": "652d60a6db96fc2c1ecf700214ce270e19d4ab20cfaf21b1876ba338881d9023",
+    "medir_delta_escala_v3_nativa.json": "6c4638c25c95ee538552a20df8a10dfa15906752ec7f2d20ba0db534eec05438",
+    "delta_escala_celulas_nativa.parquet": "110d75ca56626f268f32ece2acb2d0719ff7a19ced3e8f2b18fa3c122b2a14c2",
+    "auditar_nmad_pareado_nativa_diretas.json": "bb3cce3e12470fb2da78fb3ebcc25fb3beeffee7a10c637726eaf3f7e6f00f2d",
+    "auditar_d8_triangulo.json": "8c034686e697d6cb82bdf233e738c3e061cf3726367a9fbfbbc922766e607bc5",
+    "auditar_rotulo_regua_v2.json": "2470115aaf6eed5ff2ea7d878f2dd6a1ac3f7bf682240599102a33fb01129e9a",
+    "auditar_s2_registro_referencia.json": "aa3f0f34b2965da9f879b060f2beccb39d994fb2c2ac7bbb8c5674e33742a7a2",
+    "juiz_grade_nativa_diretas.json": "5d8e47397eac39122d7d9b52e3118491c4547cffa6c856e4477d0fe09c6d76f5",
+    "solo_lidar_30m_v3_nativa.parquet": "b01a6101850dfe7fc514c85be556fbe0aae3cc941fba9263b431a54556f92dc5"
+  },
+  "operacionalizacao": {
+    "registros": {
+      "i_glo30": "auditar_s2_registro_referencia.json off_t_por_braco.i_atual",
+      "ii_b_gedtm30": "auditar_s2_registro_referencia.json off_t_por_braco.ii_b_gedtm30",
+      "iii_sem_offset": "auditar_s2_registro_referencia.json off_t_por_braco.iii_sem_offset"
+    },
+    "A_e_e_modelo": "shifted by -(off_arm[t] - off_i[t]) per anchor cell (dA/do=-1); delta intact; A-delta = A_arm - delta",
+    "estatistica": "ARV2.estimando_unidade / mae_reducao_unidade with the SAME bootstrap tags as v2 in all records (same unit draws); B=10000, seed 42, clustered by unit",
+    "teto_familias": "max(|lo|,|hi|) of the bootstrap 95% CI of the median of the v23-mlp dMAE per unit (REF.testar; floor of 200 cells, >=6 units), forest-judgeable population from REF.montar_populacao with z_ref = z_solo_v2 + off_arm; primary = transect ceiling in both units; secondary = ceiling recomputed in the footprint unit",
+    "O3": "O3 not applied: S7 missing (auditar_s7_arvore_lidar.json does not exist)"
+  },
+  "guardas": {
+    "G1_glo30_reproduz_v2_1e-9": {
+      "campos_conferidos": 808,
+      "max_abs_dif": 8.881784197001252e-16,
+      "passou": true
+    },
+    "G2_ii_b_gedtm30_reproduz_S2_A_1e-6": {
+      "20-30m": {
+        "recomputado_m": 7.569078831050707,
+        "s2_m": 7.569078831050707,
+        "diferenca_m": 0.0,
+        "n": 460,
+        "n_s2": 460,
+        "tolerancia_m": 1e-06,
+        "passou": true
+      },
+      ">30m": {
+        "recomputado_m": 9.898030694109512,
+        "s2_m": 9.898030694109512,
+        "diferenca_m": 0.0,
+        "n": 441,
+        "n_s2": 441,
+        "tolerancia_m": 1e-06,
+        "passou": true
+      }
+    },
+    "G2_iii_sem_offset_reproduz_S2_A_1e-6": {
+      "20-30m": {
+        "recomputado_m": 4.86950917865919,
+        "s2_m": 4.86950917865919,
+        "diferenca_m": 0.0,
+        "n": 460,
+        "n_s2": 460,
+        "tolerancia_m": 1e-06,
+        "passou": true
+      },
+      ">30m": {
+        "recomputado_m": 6.773765140109592,
+        "s2_m": 6.773765140109592,
+        "diferenca_m": 0.0,
+        "n": 441,
+        "n_s2": 441,
+        "tolerancia_m": 1e-06,
+        "passou": true
+      }
+    },
+    "G3_delta_invariante_ao_registro": {
+      "campos_conferidos": 316,
+      "passou": true
+    }
+  },
+  "populacao_teto": {
+    "n_linhas_parquet": 153711,
+    "n_floresta_julgavel": 96287,
+    "julgaveis": [
+      "NP_T-0224",
+      "NP_T-0226",
+      "NP_T-0227",
+      "NP_T-0357",
+      "NP_T-0358",
+      "NP_T-0360",
+      "NP_T-0621",
+      "NP_T-0638",
+      "NP_T-0639",
+      "NP_T-0662",
+      "NP_T-0896",
+      "NP_T-0899",
+      "NP_T-0934"
+    ],
+    "n_julgaveis": 13
+  },
+  "registros": {
+    "i_glo30": {
+      "off_t_m": {
+        "NP_T-0224": 0.1091461181640625,
+        "NP_T-0226": 2.0644378662109375,
+        "NP_T-0227": 1.3994674682617188,
+        "NP_T-0357": -0.8672447204589844,
+        "NP_T-0358": -0.64337158203125,
+        "NP_T-0360": 3.8000001907348633,
+        "NP_T-0621": 0.3148021697998047,
+        "NP_T-0638": -0.9626483917236328,
+        "NP_T-0639": -0.6826725006103516,
+        "NP_T-0662": 0.19123077392578125,
+        "NP_T-0896": 1.6838884353637695,
+        "NP_T-0899": -0.4019794464111328,
+        "NP_T-0934": -0.7817783355712891
+      },
+      "deslocamento_vs_glo30_por_transecto_m": {
+        "NP_T-0224": 0.0,
+        "NP_T-0226": 0.0,
+        "NP_T-0227": 0.0,
+        "NP_T-0357": 0.0,
+        "NP_T-0358": 0.0,
+        "NP_T-0360": 0.0,
+        "NP_T-0621": 0.0,
+        "NP_T-0638": 0.0,
+        "NP_T-0639": 0.0,
+        "NP_T-0662": 0.0,
+        "NP_T-0896": 0.0,
+        "NP_T-0899": 0.0,
+        "NP_T-0934": 0.0
+      },
+      "por_classe": {
+        "20-30m": {
+          "por_unidade": {
+            "transecto": {
+              "A": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 4.560947264795718,
+                "mediana_m": 2.6272153854370117,
+                "media_por_unidade_m": 4.370290840834027,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 11.349047209087171,
+                  "NP_T-0226": 0.6775297685102983,
+                  "NP_T-0227": 2.305289597346865,
+                  "NP_T-0357": 11.609907323663885,
+                  "NP_T-0358": 6.960545259363511,
+                  "NP_T-0360": -1.626971504905007,
+                  "NP_T-0621": 7.913653797573513,
+                  "NP_T-0638": 1.7726962225777763,
+                  "NP_T-0639": -1.0798873901367188,
+                  "NP_T-0662": 5.100685119628906,
+                  "NP_T-0896": 1.5807632015597435,
+                  "NP_T-0899": 5.880231485738383
+                },
+                "ic95_pond_celula": [
+                  2.370060684006678,
+                  6.5448248389826365
+                ],
+                "ic95_mediana": [
+                  1.0328683853149414,
+                  5.047708511352539
+                ],
+                "ic95_media_por_unidade": [
+                  1.9688801245400478,
+                  6.82876349840619
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.9456933365786306,
+                  7.1762011930128065
+                ],
+                "loo_pond_min_m": 3.896993767981436,
+                "loo_pond_max_m": 5.316143771283309,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.03857421875
+                }
+              },
+              "delta": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 1.8814324598637273,
+                "mediana_m": 1.5813047982607795,
+                "media_por_unidade_m": 2.41627803830487,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 3.6281703704722954,
+                  "NP_T-0226": 1.5665466407502153,
+                  "NP_T-0227": 1.844579508860943,
+                  "NP_T-0357": 3.2349947500612335,
+                  "NP_T-0358": 4.185775133366748,
+                  "NP_T-0360": 2.4440469568729486,
+                  "NP_T-0621": 1.778989808038324,
+                  "NP_T-0638": 1.0294040773224806,
+                  "NP_T-0639": 0.5250808322180367,
+                  "NP_T-0662": 5.287332622732805,
+                  "NP_T-0896": 1.6946314942021954,
+                  "NP_T-0899": 1.7757842647602142
+                },
+                "ic95_pond_celula": [
+                  1.6012499902483908,
+                  2.455460237980973
+                ],
+                "ic95_mediana": [
+                  1.1583065308801395,
+                  2.204544173514819
+                ],
+                "ic95_media_por_unidade": [
+                  1.714301262066565,
+                  3.2154130887279826
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.492143575778551,
+                  2.2707213439489036
+                ],
+                "loo_pond_min_m": 1.793003959977607,
+                "loo_pond_max_m": 1.999535403978356,
+                "teste_sinal": {
+                  "positivos": 12,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.00048828125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 2.6795148049319906,
+                "mediana_m": 1.0032012464941538,
+                "media_por_unidade_m": 1.9540128025291572,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 7.720876838614876,
+                  "NP_T-0226": -0.8890168722399171,
+                  "NP_T-0227": 0.46071008848592215,
+                  "NP_T-0357": 8.374912573602652,
+                  "NP_T-0358": 2.774770125996763,
+                  "NP_T-0360": -4.071018461777957,
+                  "NP_T-0621": 6.134663989535189,
+                  "NP_T-0638": 0.7432921452552955,
+                  "NP_T-0639": -1.6049682223547554,
+                  "NP_T-0662": -0.18664750310389877,
+                  "NP_T-0896": -0.11386829264245167,
+                  "NP_T-0899": 4.104447220978168
+                },
+                "ic95_pond_celula": [
+                  0.5346506728361439,
+                  4.4034847503669985
+                ],
+                "ic95_mediana": [
+                  -0.47473267905806615,
+                  3.2030389783363766
+                ],
+                "ic95_media_por_unidade": [
+                  -0.08759092324439931,
+                  4.10240083109877
+                ],
+                "ic95_t_jackknife_pond": [
+                  0.16588475693450677,
+                  5.193144852929475
+                ],
+                "loo_pond_min_m": 1.962391955026398,
+                "loo_pond_max_m": 3.3873748269331436,
+                "teste_sinal": {
+                  "positivos": 7,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.7744140625
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "reducao_mae_equivalente_m": 1.3985143726669773,
+                "ic95_pond_celula": [
+                  0.24717873360397985,
+                  2.654327446668687
+                ],
+                "ic95_t_jackknife": [
+                  -0.36922036104085376,
+                  3.166249106374808
+                ],
+                "loo_min_m": 0.9485763167273871,
+                "loo_max_m": 2.0444333601316904
+              }
+            },
+            "pegada": {
+              "A": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 4.560947264795718,
+                "mediana_m": 2.6272153854370117,
+                "media_por_unidade_m": 4.254579071519076,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 11.349047209087171,
+                  "PEGADA_NP_T-0226": 0.6775297685102983,
+                  "PEGADA_NP_T-0227": 2.305289597346865,
+                  "PEGADA_NP_T-0357_NP_T-0662": 11.067472139994303,
+                  "PEGADA_NP_T-0358": 6.960545259363511,
+                  "PEGADA_NP_T-0360": -1.626971504905007,
+                  "PEGADA_NP_T-0621": 7.913653797573513,
+                  "PEGADA_NP_T-0638": 1.7726962225777763,
+                  "PEGADA_NP_T-0639": -1.0798873901367188,
+                  "PEGADA_NP_T-0896": 1.5807632015597435,
+                  "PEGADA_NP_T-0899": 5.880231485738383
+                },
+                "ic95_pond_celula": [
+                  2.3368076723500724,
+                  6.529975512560943
+                ],
+                "ic95_mediana": [
+                  1.0328683853149414,
+                  4.974340438842773
+                ],
+                "ic95_media_por_unidade": [
+                  1.7204892242608743,
+                  6.891833270598965
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.9239657482827246,
+                  7.197928781308712
+                ],
+                "loo_pond_min_m": 3.896993767981436,
+                "loo_pond_max_m": 5.316143771283309,
+                "teste_sinal": {
+                  "positivos": 9,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.0654296875
+                }
+              },
+              "delta": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 1.8814324598637273,
+                "mediana_m": 1.5813047982607795,
+                "media_por_unidade_m": 2.1708210902710547,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 3.6281703704722954,
+                  "PEGADA_NP_T-0226": 1.5665466407502153,
+                  "PEGADA_NP_T-0227": 1.844579508860943,
+                  "PEGADA_NP_T-0357_NP_T-0662": 3.406022906117198,
+                  "PEGADA_NP_T-0358": 4.185775133366748,
+                  "PEGADA_NP_T-0360": 2.4440469568729486,
+                  "PEGADA_NP_T-0621": 1.778989808038324,
+                  "PEGADA_NP_T-0638": 1.0294040773224806,
+                  "PEGADA_NP_T-0639": 0.5250808322180367,
+                  "PEGADA_NP_T-0896": 1.6946314942021954,
+                  "PEGADA_NP_T-0899": 1.7757842647602142
+                },
+                "ic95_pond_celula": [
+                  1.5931278573953567,
+                  2.4113051355165864
+                ],
+                "ic95_mediana": [
+                  1.1663769191204754,
+                  2.137102833254326
+                ],
+                "ic95_media_por_unidade": [
+                  1.5592149340268653,
+                  2.818750063546271
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.4860813958350925,
+                  2.276783523892362
+                ],
+                "loo_pond_min_m": 1.793003959977607,
+                "loo_pond_max_m": 1.999535403978356,
+                "teste_sinal": {
+                  "positivos": 11,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.0009765625
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 2.6795148049319906,
+                "mediana_m": 1.0032012464941538,
+                "media_por_unidade_m": 2.0837579812480214,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 7.720876838614876,
+                  "PEGADA_NP_T-0226": -0.8890168722399171,
+                  "PEGADA_NP_T-0227": 0.46071008848592215,
+                  "PEGADA_NP_T-0357_NP_T-0662": 7.661449233877106,
+                  "PEGADA_NP_T-0358": 2.774770125996763,
+                  "PEGADA_NP_T-0360": -4.071018461777957,
+                  "PEGADA_NP_T-0621": 6.134663989535189,
+                  "PEGADA_NP_T-0638": 0.7432921452552955,
+                  "PEGADA_NP_T-0639": -1.6049682223547554,
+                  "PEGADA_NP_T-0896": -0.11386829264245167,
+                  "PEGADA_NP_T-0899": 4.104447220978168
+                },
+                "ic95_pond_celula": [
+                  0.5782621362111318,
+                  4.418075143462936
+                ],
+                "ic95_mediana": [
+                  -0.46776176475703934,
+                  3.2895658713619707
+                ],
+                "ic95_media_por_unidade": [
+                  -0.09045383414401317,
+                  4.339011275090907
+                ],
+                "ic95_t_jackknife_pond": [
+                  0.14701751031907184,
+                  5.212012099544909
+                ],
+                "loo_pond_min_m": 1.962391955026398,
+                "loo_pond_max_m": 3.3873748269331436,
+                "teste_sinal": {
+                  "positivos": 7,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.548828125
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "reducao_mae_equivalente_m": 1.3985143726669773,
+                "ic95_pond_celula": [
+                  0.2385740013942586,
+                  2.66857190235727
+                ],
+                "ic95_t_jackknife": [
+                  -0.3842480812807292,
+                  3.181276826614684
+                ],
+                "loo_min_m": 0.9485763167273871,
+                "loo_max_m": 2.0444333601316904
+              }
+            }
+          },
+          "teto_familias_v23_x_mlp": {
+            "transecto": {
+              "teto_m": 0.35607967854643785,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": 0.04728766019361761,
+                "mediana_m": -0.022948211474244973,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -0.1870581667870077,
+                  0.35607967854643785
+                ],
+                "teto_abs_ddiferenca_m": 0.35607967854643785,
+                "n_transectos": 12
+              },
+              "diferencas_por_unidade_m": {
+                "NP_T-0224": -0.2206867490369211,
+                "NP_T-0226": -0.15342958453709432,
+                "NP_T-0227": 0.1823217082728119,
+                "NP_T-0357": -0.47345905908399555,
+                "NP_T-0358": -0.7165529958762136,
+                "NP_T-0360": -0.011766964272573954,
+                "NP_T-0621": -0.03412945867591599,
+                "NP_T-0638": 0.3848537133401191,
+                "NP_T-0639": -0.04403682925199215,
+                "NP_T-0896": 0.3273056437527566,
+                "NP_T-0899": 0.7223000041242988,
+                "NP_T-0934": 0.6047324935681315
+              },
+              "n_unidades": 12,
+              "excluidos_abaixo_do_piso": [
+                "NP_T-0662"
+              ]
+            },
+            "pegada": {
+              "teto_m": 0.35607967854643785,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": 0.04750901574368569,
+                "mediana_m": -0.022948211474244973,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -0.1870581667870077,
+                  0.35607967854643785
+                ],
+                "teto_abs_ddiferenca_m": 0.35607967854643785,
+                "n_transectos": 12
+              },
+              "diferencas_por_unidade_m": {
+                "PEGADA_NP_T-0224": -0.2206867490369211,
+                "PEGADA_NP_T-0226": -0.15342958453709432,
+                "PEGADA_NP_T-0227": 0.1823217082728119,
+                "PEGADA_NP_T-0357_NP_T-0662": -0.4708027924831786,
+                "PEGADA_NP_T-0358": -0.7165529958762136,
+                "PEGADA_NP_T-0360": -0.011766964272573954,
+                "PEGADA_NP_T-0621": -0.03412945867591599,
+                "PEGADA_NP_T-0638": 0.3848537133401191,
+                "PEGADA_NP_T-0639": -0.04403682925199215,
+                "PEGADA_NP_T-0896": 0.3273056437527566,
+                "PEGADA_NP_T-0899": 0.7223000041242988,
+                "PEGADA_NP_T-0934": 0.6047324935681315
+              },
+              "n_unidades": 12,
+              "excluidos_abaixo_do_piso": []
+            }
+          },
+          "criterios": {
+            "S": {
+              "criterio": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    2.370060684006678,
+                    6.5448248389826365
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    1.9456933365786306,
+                    7.1762011930128065
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    2.3368076723500724,
+                    6.529975512560943
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    1.9239657482827246,
+                    7.197928781308712
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "positivo",
+              "motivo": null
+            },
+            "R": {
+              "criterio": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    0.5346506728361439,
+                    4.4034847503669985
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    0.16588475693450677,
+                    5.193144852929475
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    0.5782621362111318,
+                    4.418075143462936
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    0.14701751031907184,
+                    5.212012099544909
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "ordenacao_valida_A_menos_delta_maior_que_zero"
+            },
+            "O_familias_28_09": {
+              "criterio": "(O) lower bound of A (mean AND median) and of the equivalent MAE reduction above the largest cap of |contrast| between estimators against the lidar, in the transect AND footprint units",
+              "teto_abs_contrastes_lidar_m": 0.35607967854643785,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 2.370060684006678,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.0328683853149414,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 0.24717873360397985,
+                  "acima_do_teto_reducao": false
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 2.3368076723500724,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.0328683853149414,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 0.2385740013942586,
+                  "acima_do_teto_reducao": false
+                }
+              },
+              "veredito": "nao_demonstrado",
+              "veredito_leitura": "nao demonstrado",
+              "teto_de": "ceiling from v23 x mlp, transect unit, applied to both units"
+            },
+            "O_familias_teto_por_unidade_secundario": {
+              "teto_transecto_m": 0.35607967854643785,
+              "teto_pegada_m": 0.35607967854643785,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 2.370060684006678,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.0328683853149414,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 0.24717873360397985,
+                  "acima_do_teto_reducao": false
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 2.3368076723500724,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.0328683853149414,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 0.2385740013942586,
+                  "acima_do_teto_reducao": false
+                }
+              },
+              "veredito_leitura": "nao demonstrado",
+              "nota": "Secondary, declared before running; does not replace the primary"
+            }
+          },
+          "criterios_v2_teto_com_produtos_reproducao": {
+            "S": {
+              "criterio": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    2.370060684006678,
+                    6.5448248389826365
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    1.9456933365786306,
+                    7.1762011930128065
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    2.3368076723500724,
+                    6.529975512560943
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    1.9239657482827246,
+                    7.197928781308712
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "positivo",
+              "motivo": null
+            },
+            "R": {
+              "criterio": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    0.5346506728361439,
+                    4.4034847503669985
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    0.16588475693450677,
+                    5.193144852929475
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    0.5782621362111318,
+                    4.418075143462936
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    0.14701751031907184,
+                    5.212012099544909
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "ordenacao_valida_A_menos_delta_maior_que_zero"
+            },
+            "O": {
+              "criterio": "(O) lower bound of A (mean AND median) and of the equivalent MAE reduction above the largest cap of |contrast| between estimators against the lidar, in the transect AND footprint units",
+              "teto_abs_contrastes_lidar_m": 1.8391817818748755,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 2.370060684006678,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.0328683853149414,
+                  "acima_do_teto_mediana": false,
+                  "lim_inf_reducao_mae_m": 0.24717873360397985,
+                  "acima_do_teto_reducao": false
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 2.3368076723500724,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.0328683853149414,
+                  "acima_do_teto_mediana": false,
+                  "lim_inf_reducao_mae_m": 0.2385740013942586,
+                  "acima_do_teto_reducao": false
+                }
+              },
+              "veredito": "nao_demonstrado"
+            }
+          }
+        },
+        ">30m": {
+          "por_unidade": {
+            "transecto": {
+              "A": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 6.651019321277299,
+                "mediana_m": 3.699343681335449,
+                "media_por_unidade_m": 7.47968749542977,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 13.222765698152429,
+                  "NP_T-0226": 1.53697641546076,
+                  "NP_T-0227": 1.668202483135721,
+                  "NP_T-0357": 8.691677935711748,
+                  "NP_T-0358": 9.525107048653268,
+                  "NP_T-0360": -0.5231957965426974,
+                  "NP_T-0621": 6.757641928536551,
+                  "NP_T-0638": 1.2650803690371306,
+                  "NP_T-0639": 26.45229148864746,
+                  "NP_T-0899": 6.200327383505331
+                },
+                "ic95_pond_celula": [
+                  3.3086588594711053,
+                  9.50574041667469
+                ],
+                "ic95_mediana": [
+                  1.5437850952148438,
+                  8.661331176757812
+                ],
+                "ic95_media_por_unidade": [
+                  3.3809258654353687,
+                  12.62913536902857
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.7863219468449536,
+                  10.515716695709644
+                ],
+                "loo_pond_min_m": 5.452952957664674,
+                "loo_pond_max_m": 7.379704191277064,
+                "teste_sinal": {
+                  "positivos": 9,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.021484375
+                }
+              },
+              "delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 3.7654373275574855,
+                "mediana_m": 3.4992863057992594,
+                "media_por_unidade_m": 3.281080392279116,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 5.2000273695605355,
+                  "NP_T-0226": 4.0572359021084115,
+                  "NP_T-0227": 2.2691526026966193,
+                  "NP_T-0357": 4.5020315974379725,
+                  "NP_T-0358": 4.56061820887987,
+                  "NP_T-0360": 4.629664976615991,
+                  "NP_T-0621": 2.767028092807867,
+                  "NP_T-0638": 1.0368495712739663,
+                  "NP_T-0639": 0.3254795387789038,
+                  "NP_T-0899": 3.4627160626310185
+                },
+                "ic95_pond_celula": [
+                  2.7280044257678995,
+                  4.490291052158429
+                ],
+                "ic95_mediana": [
+                  2.075302351713489,
+                  4.102349878745109
+                ],
+                "ic95_media_por_unidade": [
+                  2.268461673516913,
+                  4.177407930154117
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.6774637446258334,
+                  4.853410910489138
+                ],
+                "loo_pond_min_m": 3.5039034861199325,
+                "loo_pond_max_m": 4.083196914365186,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 2.885581993719813,
+                "mediana_m": 0.9002925536409663,
+                "media_por_unidade_m": 4.198607103150655,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 8.022738328591895,
+                  "NP_T-0226": -2.5202594866476518,
+                  "NP_T-0227": -0.6009501195608982,
+                  "NP_T-0357": 4.189646338273775,
+                  "NP_T-0358": 4.964488839773398,
+                  "NP_T-0360": -5.152860773158689,
+                  "NP_T-0621": 3.9906138357286842,
+                  "NP_T-0638": 0.22823079776316443,
+                  "NP_T-0639": 26.126811949868557,
+                  "NP_T-0899": 2.7376113208743127
+                },
+                "ic95_pond_celula": [
+                  0.2581006502195765,
+                  5.103636190366062
+                ],
+                "ic95_mediana": [
+                  -1.5324516906219294,
+                  3.757460773859199
+                ],
+                "ic95_media_por_unidade": [
+                  -0.061171414985155506,
+                  9.915333944608777
+                ],
+                "ic95_t_jackknife_pond": [
+                  -0.16350689590138634,
+                  5.934670883341012
+                ],
+                "loo_pond_min_m": 1.9490494715447415,
+                "loo_pond_max_m": 3.6558443808188046,
+                "teste_sinal": {
+                  "positivos": 7,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.34375
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "reducao_mae_equivalente_m": 4.837936126384987,
+                "ic95_pond_celula": [
+                  2.9217891668014078,
+                  5.6335665143611084
+                ],
+                "ic95_t_jackknife": [
+                  3.2667214787518217,
+                  6.409150774018152
+                ],
+                "loo_min_m": 4.322335480169594,
+                "loo_max_m": 5.248965075071771
+              }
+            },
+            "pegada": {
+              "A": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 6.651019321277299,
+                "mediana_m": 3.699343681335449,
+                "media_por_unidade_m": 7.47968749542977,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 13.222765698152429,
+                  "PEGADA_NP_T-0226": 1.53697641546076,
+                  "PEGADA_NP_T-0227": 1.668202483135721,
+                  "PEGADA_NP_T-0357_NP_T-0662": 8.691677935711748,
+                  "PEGADA_NP_T-0358": 9.525107048653268,
+                  "PEGADA_NP_T-0360": -0.5231957965426974,
+                  "PEGADA_NP_T-0621": 6.757641928536551,
+                  "PEGADA_NP_T-0638": 1.2650803690371306,
+                  "PEGADA_NP_T-0639": 26.45229148864746,
+                  "PEGADA_NP_T-0899": 6.200327383505331
+                },
+                "ic95_pond_celula": [
+                  3.190223921393677,
+                  9.53529477863219
+                ],
+                "ic95_mediana": [
+                  1.5437036991119386,
+                  8.702144622802734
+                ],
+                "ic95_media_por_unidade": [
+                  3.312056098385982,
+                  12.585458561563282
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.7863219468449536,
+                  10.515716695709644
+                ],
+                "loo_pond_min_m": 5.452952957664674,
+                "loo_pond_max_m": 7.379704191277064,
+                "teste_sinal": {
+                  "positivos": 9,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.021484375
+                }
+              },
+              "delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 3.7654373275574855,
+                "mediana_m": 3.4992863057992594,
+                "media_por_unidade_m": 3.281080392279116,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 5.2000273695605355,
+                  "PEGADA_NP_T-0226": 4.0572359021084115,
+                  "PEGADA_NP_T-0227": 2.2691526026966193,
+                  "PEGADA_NP_T-0357_NP_T-0662": 4.5020315974379725,
+                  "PEGADA_NP_T-0358": 4.56061820887987,
+                  "PEGADA_NP_T-0360": 4.629664976615991,
+                  "PEGADA_NP_T-0621": 2.767028092807867,
+                  "PEGADA_NP_T-0638": 1.0368495712739663,
+                  "PEGADA_NP_T-0639": 0.3254795387789038,
+                  "PEGADA_NP_T-0899": 3.4627160626310185
+                },
+                "ic95_pond_celula": [
+                  2.7135584528777743,
+                  4.487720737644568
+                ],
+                "ic95_mediana": [
+                  2.075302351713489,
+                  4.096765172934467
+                ],
+                "ic95_media_por_unidade": [
+                  2.2748091243802206,
+                  4.193608347061309
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.6774637446258334,
+                  4.853410910489138
+                ],
+                "loo_pond_min_m": 3.5039034861199325,
+                "loo_pond_max_m": 4.083196914365186,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 2.885581993719813,
+                "mediana_m": 0.9002925536409663,
+                "media_por_unidade_m": 4.198607103150655,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 8.022738328591895,
+                  "PEGADA_NP_T-0226": -2.5202594866476518,
+                  "PEGADA_NP_T-0227": -0.6009501195608982,
+                  "PEGADA_NP_T-0357_NP_T-0662": 4.189646338273775,
+                  "PEGADA_NP_T-0358": 4.964488839773398,
+                  "PEGADA_NP_T-0360": -5.152860773158689,
+                  "PEGADA_NP_T-0621": 3.9906138357286842,
+                  "PEGADA_NP_T-0638": 0.22823079776316443,
+                  "PEGADA_NP_T-0639": 26.126811949868557,
+                  "PEGADA_NP_T-0899": 2.7376113208743127
+                },
+                "ic95_pond_celula": [
+                  0.24905183890733568,
+                  5.142533065596493
+                ],
+                "ic95_mediana": [
+                  -1.489478758102905,
+                  3.863944409121256
+                ],
+                "ic95_media_por_unidade": [
+                  -0.0056781182379142085,
+                  9.837224563574251
+                ],
+                "ic95_t_jackknife_pond": [
+                  -0.16350689590138634,
+                  5.934670883341012
+                ],
+                "loo_pond_min_m": 1.9490494715447415,
+                "loo_pond_max_m": 3.6558443808188046,
+                "teste_sinal": {
+                  "positivos": 7,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.34375
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "reducao_mae_equivalente_m": 4.837936126384987,
+                "ic95_pond_celula": [
+                  2.90477187134026,
+                  5.649109873927573
+                ],
+                "ic95_t_jackknife": [
+                  3.2667214787518217,
+                  6.409150774018152
+                ],
+                "loo_min_m": 4.322335480169594,
+                "loo_max_m": 5.248965075071771
+              }
+            }
+          },
+          "teto_familias_v23_x_mlp": {
+            "transecto": {
+              "teto_m": 1.0931085771662499,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": -0.6653765154136447,
+                "mediana_m": -0.6887541231502441,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -1.0931085771662499,
+                  -0.4988767736173676
+                ],
+                "teto_abs_ddiferenca_m": 1.0931085771662499,
+                "n_transectos": 11
+              },
+              "diferencas_por_unidade_m": {
+                "NP_T-0224": -0.7556503160027095,
+                "NP_T-0226": -0.5241752496295335,
+                "NP_T-0227": -0.4988767736173676,
+                "NP_T-0357": -1.0915455843936748,
+                "NP_T-0358": -1.238011184754063,
+                "NP_T-0360": -1.205990862026085,
+                "NP_T-0621": -0.6887541231502441,
+                "NP_T-0638": -0.5025199918684198,
+                "NP_T-0639": -1.0931085771662499,
+                "NP_T-0899": -0.2496786067050225,
+                "NP_T-0934": 0.5291695997632777
+              },
+              "n_unidades": 11,
+              "excluidos_abaixo_do_piso": [
+                "NP_T-0662",
+                "NP_T-0896"
+              ]
+            },
+            "pegada": {
+              "teto_m": 1.0931085771662499,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": -0.6654503547288871,
+                "mediana_m": -0.6887541231502441,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -1.0931085771662499,
+                  -0.4988767736173676
+                ],
+                "teto_abs_ddiferenca_m": 1.0931085771662499,
+                "n_transectos": 11
+              },
+              "diferencas_por_unidade_m": {
+                "PEGADA_NP_T-0224": -0.7556503160027095,
+                "PEGADA_NP_T-0226": -0.5241752496295335,
+                "PEGADA_NP_T-0227": -0.4988767736173676,
+                "PEGADA_NP_T-0357_NP_T-0662": -1.092357816861341,
+                "PEGADA_NP_T-0358": -1.238011184754063,
+                "PEGADA_NP_T-0360": -1.205990862026085,
+                "PEGADA_NP_T-0621": -0.6887541231502441,
+                "PEGADA_NP_T-0638": -0.5025199918684198,
+                "PEGADA_NP_T-0639": -1.0931085771662499,
+                "PEGADA_NP_T-0899": -0.2496786067050225,
+                "PEGADA_NP_T-0934": 0.5291695997632777
+              },
+              "n_unidades": 11,
+              "excluidos_abaixo_do_piso": [
+                "PEGADA_NP_T-0896"
+              ]
+            }
+          },
+          "criterios": {
+            "S": {
+              "criterio": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    3.3086588594711053,
+                    9.50574041667469
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    2.7863219468449536,
+                    10.515716695709644
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    3.190223921393677,
+                    9.53529477863219
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    2.7863219468449536,
+                    10.515716695709644
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "positivo",
+              "motivo": null
+            },
+            "R": {
+              "criterio": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    0.2581006502195765,
+                    5.103636190366062
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    -0.16350689590138634,
+                    5.934670883341012
+                  ],
+                  "exclui_zero_t_jackknife": false
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    0.24905183890733568,
+                    5.142533065596493
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    -0.16350689590138634,
+                    5.934670883341012
+                  ],
+                  "exclui_zero_t_jackknife": false
+                }
+              },
+              "veredito": "nenhuma_ordenacao"
+            },
+            "O_familias_28_09": {
+              "criterio": "(O) lower bound of A (mean AND median) and of the equivalent MAE reduction above the largest cap of |contrast| between estimators against the lidar, in the transect AND footprint units",
+              "teto_abs_contrastes_lidar_m": 1.0931085771662499,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 3.3086588594711053,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.5437850952148438,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 2.9217891668014078,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 3.190223921393677,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.5437036991119386,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 2.90477187134026,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito": "sustentado",
+              "veredito_leitura": "demonstrado",
+              "teto_de": "ceiling from v23 x mlp, transect unit, applied to both units"
+            },
+            "O_familias_teto_por_unidade_secundario": {
+              "teto_transecto_m": 1.0931085771662499,
+              "teto_pegada_m": 1.0931085771662499,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 3.3086588594711053,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.5437850952148438,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 2.9217891668014078,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 3.190223921393677,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.5437036991119386,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 2.90477187134026,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito_leitura": "demonstrado",
+              "nota": "Secondary, declared before running; does not replace the primary"
+            }
+          },
+          "criterios_v2_teto_com_produtos_reproducao": {
+            "S": {
+              "criterio": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    3.3086588594711053,
+                    9.50574041667469
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    2.7863219468449536,
+                    10.515716695709644
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    3.190223921393677,
+                    9.53529477863219
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    2.7863219468449536,
+                    10.515716695709644
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "positivo",
+              "motivo": null
+            },
+            "R": {
+              "criterio": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    0.2581006502195765,
+                    5.103636190366062
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    -0.16350689590138634,
+                    5.934670883341012
+                  ],
+                  "exclui_zero_t_jackknife": false
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    0.24905183890733568,
+                    5.142533065596493
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    -0.16350689590138634,
+                    5.934670883341012
+                  ],
+                  "exclui_zero_t_jackknife": false
+                }
+              },
+              "veredito": "nenhuma_ordenacao"
+            },
+            "O": {
+              "criterio": "(O) lower bound of A (mean AND median) and of the equivalent MAE reduction above the largest cap of |contrast| between estimators against the lidar, in the transect AND footprint units",
+              "teto_abs_contrastes_lidar_m": 2.9565717562467566,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 3.3086588594711053,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.5437850952148438,
+                  "acima_do_teto_mediana": false,
+                  "lim_inf_reducao_mae_m": 2.9217891668014078,
+                  "acima_do_teto_reducao": false
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 3.190223921393677,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.5437036991119386,
+                  "acima_do_teto_mediana": false,
+                  "lim_inf_reducao_mae_m": 2.90477187134026,
+                  "acima_do_teto_reducao": false
+                }
+              },
+              "veredito": "nao_demonstrado"
+            }
+          }
+        }
+      }
+    },
+    "ii_b_gedtm30": {
+      "off_t_m": {
+        "NP_T-0224": -4.657720565795898,
+        "NP_T-0226": -3.2984542846679688,
+        "NP_T-0227": -0.8271846771240234,
+        "NP_T-0357": -4.302623748779297,
+        "NP_T-0358": -3.7569427490234375,
+        "NP_T-0360": 1.0203361511230469,
+        "NP_T-0621": -1.015909194946289,
+        "NP_T-0638": -1.6304330825805664,
+        "NP_T-0639": -2.0529251098632812,
+        "NP_T-0662": -3.762359619140625,
+        "NP_T-0896": -2.8919830322265625,
+        "NP_T-0899": -3.6751232147216797,
+        "NP_T-0934": -4.859070301055908
+      },
+      "deslocamento_vs_glo30_por_transecto_m": {
+        "NP_T-0224": -4.766866683959961,
+        "NP_T-0226": -5.362892150878906,
+        "NP_T-0227": -2.226652145385742,
+        "NP_T-0357": -3.4353790283203125,
+        "NP_T-0358": -3.1135711669921875,
+        "NP_T-0360": -2.7796640396118164,
+        "NP_T-0621": -1.3307113647460938,
+        "NP_T-0638": -0.6677846908569336,
+        "NP_T-0639": -1.3702526092529297,
+        "NP_T-0662": -3.9535903930664062,
+        "NP_T-0896": -4.575871467590332,
+        "NP_T-0899": -3.273143768310547,
+        "NP_T-0934": -4.077291965484619
+      },
+      "por_classe": {
+        "20-30m": {
+          "por_unidade": {
+            "transecto": {
+              "A": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 7.569078831050707,
+                "mediana_m": 6.022767066955566,
+                "media_por_unidade_m": 7.441655799915041,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 16.115913893047132,
+                  "NP_T-0226": 6.040421919389204,
+                  "NP_T-0227": 4.531941742732607,
+                  "NP_T-0357": 15.045286351984197,
+                  "NP_T-0358": 10.0741164263557,
+                  "NP_T-0360": 1.1526925347068093,
+                  "NP_T-0621": 9.244365162319607,
+                  "NP_T-0638": 2.4404809134347096,
+                  "NP_T-0639": 0.29036521911621094,
+                  "NP_T-0662": 9.054275512695312,
+                  "NP_T-0896": 6.156634669150075,
+                  "NP_T-0899": 9.15337525404893
+                },
+                "ic95_pond_celula": [
+                  5.164681131063378,
+                  9.485122302144214
+                ],
+                "ic95_mediana": [
+                  3.4946257948875434,
+                  7.990748405456543
+                ],
+                "ic95_media_por_unidade": [
+                  4.750633148482509,
+                  10.158119789213986
+                ],
+                "ic95_t_jackknife_pond": [
+                  4.930693264891025,
+                  10.207464397210387
+                ],
+                "loo_pond_min_m": 6.771753180260752,
+                "loo_pond_max_m": 8.27997359190837,
+                "teste_sinal": {
+                  "positivos": 12,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.00048828125
+                }
+              },
+              "delta": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 1.8814324598637273,
+                "mediana_m": 1.5813047982607795,
+                "media_por_unidade_m": 2.41627803830487,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 3.6281703704722954,
+                  "NP_T-0226": 1.5665466407502153,
+                  "NP_T-0227": 1.844579508860943,
+                  "NP_T-0357": 3.2349947500612335,
+                  "NP_T-0358": 4.185775133366748,
+                  "NP_T-0360": 2.4440469568729486,
+                  "NP_T-0621": 1.778989808038324,
+                  "NP_T-0638": 1.0294040773224806,
+                  "NP_T-0639": 0.5250808322180367,
+                  "NP_T-0662": 5.287332622732805,
+                  "NP_T-0896": 1.6946314942021954,
+                  "NP_T-0899": 1.7757842647602142
+                },
+                "ic95_pond_celula": [
+                  1.6012499902483908,
+                  2.455460237980973
+                ],
+                "ic95_mediana": [
+                  1.1583065308801395,
+                  2.204544173514819
+                ],
+                "ic95_media_por_unidade": [
+                  1.714301262066565,
+                  3.2154130887279826
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.492143575778551,
+                  2.2707213439489036
+                ],
+                "loo_pond_min_m": 1.793003959977607,
+                "loo_pond_max_m": 1.999535403978356,
+                "teste_sinal": {
+                  "positivos": 12,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.00048828125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 5.68764637118698,
+                "mediana_m": 4.318583704572866,
+                "media_por_unidade_m": 5.025377761610171,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 12.487743522574837,
+                  "NP_T-0226": 4.473875278638989,
+                  "NP_T-0227": 2.6873622338716654,
+                  "NP_T-0357": 11.810291601922962,
+                  "NP_T-0358": 5.88834129298895,
+                  "NP_T-0360": -1.2913544221661395,
+                  "NP_T-0621": 7.465375354281282,
+                  "NP_T-0638": 1.4110768361122292,
+                  "NP_T-0639": -0.23471561310182576,
+                  "NP_T-0662": 3.7669428899625075,
+                  "NP_T-0896": 4.462003174947881,
+                  "NP_T-0899": 7.377590989288713
+                },
+                "ic95_pond_celula": [
+                  3.4508037501089923,
+                  7.313880176833301
+                ],
+                "ic95_mediana": [
+                  2.1113840304504663,
+                  5.955563588519986
+                ],
+                "ic95_media_por_unidade": [
+                  2.7800296040303425,
+                  7.373808927607148
+                ],
+                "ic95_t_jackknife_pond": [
+                  3.1884696945112454,
+                  8.186823047862713
+                ],
+                "loo_pond_min_m": 4.837151367305714,
+                "loo_pond_max_m": 6.280438187930014,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.03857421875
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "reducao_mae_equivalente_m": 3.904321089304687,
+                "ic95_pond_celula": [
+                  2.7433770969910602,
+                  4.47529365379809
+                ],
+                "ic95_t_jackknife": [
+                  2.864104047508543,
+                  4.944538131100831
+                ],
+                "loo_min_m": 3.5935680117161626,
+                "loo_max_m": 4.050128459596718
+              }
+            },
+            "pegada": {
+              "A": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 7.569078831050707,
+                "mediana_m": 6.022767066955566,
+                "media_por_unidade_m": 7.249667562091918,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 16.115913893047132,
+                  "PEGADA_NP_T-0226": 6.040421919389204,
+                  "PEGADA_NP_T-0227": 4.531941742732607,
+                  "PEGADA_NP_T-0357_NP_T-0662": 14.546035448710123,
+                  "PEGADA_NP_T-0358": 10.0741164263557,
+                  "PEGADA_NP_T-0360": 1.1526925347068093,
+                  "PEGADA_NP_T-0621": 9.244365162319607,
+                  "PEGADA_NP_T-0638": 2.4404809134347096,
+                  "PEGADA_NP_T-0639": 0.29036521911621094,
+                  "PEGADA_NP_T-0896": 6.156634669150075,
+                  "PEGADA_NP_T-0899": 9.15337525404893
+                },
+                "ic95_pond_celula": [
+                  5.168200776591288,
+                  9.47575103707583
+                ],
+                "ic95_mediana": [
+                  3.583682060241699,
+                  7.884737014770508
+                ],
+                "ic95_media_por_unidade": [
+                  4.404872043001819,
+                  10.226821356434915
+                ],
+                "ic95_t_jackknife_pond": [
+                  4.908178224863953,
+                  10.22997943723746
+                ],
+                "loo_pond_min_m": 6.771753180260752,
+                "loo_pond_max_m": 8.27997359190837,
+                "teste_sinal": {
+                  "positivos": 11,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.0009765625
+                }
+              },
+              "delta": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 1.8814324598637273,
+                "mediana_m": 1.5813047982607795,
+                "media_por_unidade_m": 2.1708210902710547,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 3.6281703704722954,
+                  "PEGADA_NP_T-0226": 1.5665466407502153,
+                  "PEGADA_NP_T-0227": 1.844579508860943,
+                  "PEGADA_NP_T-0357_NP_T-0662": 3.406022906117198,
+                  "PEGADA_NP_T-0358": 4.185775133366748,
+                  "PEGADA_NP_T-0360": 2.4440469568729486,
+                  "PEGADA_NP_T-0621": 1.778989808038324,
+                  "PEGADA_NP_T-0638": 1.0294040773224806,
+                  "PEGADA_NP_T-0639": 0.5250808322180367,
+                  "PEGADA_NP_T-0896": 1.6946314942021954,
+                  "PEGADA_NP_T-0899": 1.7757842647602142
+                },
+                "ic95_pond_celula": [
+                  1.5931278573953567,
+                  2.4113051355165864
+                ],
+                "ic95_mediana": [
+                  1.1663769191204754,
+                  2.137102833254326
+                ],
+                "ic95_media_por_unidade": [
+                  1.5592149340268653,
+                  2.818750063546271
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.4860813958350925,
+                  2.276783523892362
+                ],
+                "loo_pond_min_m": 1.793003959977607,
+                "loo_pond_max_m": 1.999535403978356,
+                "teste_sinal": {
+                  "positivos": 11,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.0009765625
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 5.68764637118698,
+                "mediana_m": 4.318583704572866,
+                "media_por_unidade_m": 5.078846471820864,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 12.487743522574837,
+                  "PEGADA_NP_T-0226": 4.473875278638989,
+                  "PEGADA_NP_T-0227": 2.6873622338716654,
+                  "PEGADA_NP_T-0357_NP_T-0662": 11.140012542592926,
+                  "PEGADA_NP_T-0358": 5.88834129298895,
+                  "PEGADA_NP_T-0360": -1.2913544221661395,
+                  "PEGADA_NP_T-0621": 7.465375354281282,
+                  "PEGADA_NP_T-0638": 1.4110768361122292,
+                  "PEGADA_NP_T-0639": -0.23471561310182576,
+                  "PEGADA_NP_T-0896": 4.462003174947881,
+                  "PEGADA_NP_T-0899": 7.377590989288713
+                },
+                "ic95_pond_celula": [
+                  3.424218799474943,
+                  7.323336338523706
+                ],
+                "ic95_mediana": [
+                  2.0894351024536384,
+                  5.955563588519986
+                ],
+                "ic95_media_por_unidade": [
+                  2.682571692106996,
+                  7.608637997346592
+                ],
+                "ic95_t_jackknife_pond": [
+                  3.1693931483884095,
+                  8.20589959398555
+                ],
+                "loo_pond_min_m": 4.837151367305714,
+                "loo_pond_max_m": 6.280438187930014,
+                "teste_sinal": {
+                  "positivos": 9,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.0654296875
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "reducao_mae_equivalente_m": 3.9043210893046876,
+                "ic95_pond_celula": [
+                  2.7569334498278253,
+                  4.470356647702898
+                ],
+                "ic95_t_jackknife": [
+                  2.8547750463757695,
+                  4.953867132233606
+                ],
+                "loo_min_m": 3.5935680117161626,
+                "loo_max_m": 4.050128459596717
+              }
+            }
+          },
+          "teto_familias_v23_x_mlp": {
+            "transecto": {
+              "teto_m": 0.29265802534720065,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": -0.02822040970970008,
+                "mediana_m": -0.11130326653148925,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -0.29265802534720065,
+                  0.26819685041011754
+                ],
+                "teto_abs_ddiferenca_m": 0.29265802534720065,
+                "n_transectos": 12
+              },
+              "diferencas_por_unidade_m": {
+                "NP_T-0224": -0.28857554395808727,
+                "NP_T-0226": -0.11902208587113705,
+                "NP_T-0227": 0.1526969494645325,
+                "NP_T-0357": -0.33938814567806475,
+                "NP_T-0358": -0.6578358867133876,
+                "NP_T-0360": -0.10358444719184146,
+                "NP_T-0621": -0.06266629584133643,
+                "NP_T-0638": 0.3836967513557026,
+                "NP_T-0639": -0.2610607521570296,
+                "NP_T-0896": -0.296740506736314,
+                "NP_T-0899": 0.6943766432445733,
+                "NP_T-0934": 0.5594584035659889
+              },
+              "n_unidades": 12,
+              "excluidos_abaixo_do_piso": [
+                "NP_T-0662"
+              ]
+            },
+            "pegada": {
+              "teto_m": 0.29265802534720065,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": -0.028845440999587673,
+                "mediana_m": -0.11130326653148925,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -0.29265802534720065,
+                  0.26819685041011754
+                ],
+                "teto_abs_ddiferenca_m": 0.29265802534720065,
+                "n_transectos": 12
+              },
+              "diferencas_por_unidade_m": {
+                "PEGADA_NP_T-0224": -0.28857554395808727,
+                "PEGADA_NP_T-0226": -0.11902208587113705,
+                "PEGADA_NP_T-0227": 0.1526969494645325,
+                "PEGADA_NP_T-0357_NP_T-0662": -0.34688852115671587,
+                "PEGADA_NP_T-0358": -0.6578358867133876,
+                "PEGADA_NP_T-0360": -0.10358444719184146,
+                "PEGADA_NP_T-0621": -0.06266629584133643,
+                "PEGADA_NP_T-0638": 0.3836967513557026,
+                "PEGADA_NP_T-0639": -0.2610607521570296,
+                "PEGADA_NP_T-0896": -0.296740506736314,
+                "PEGADA_NP_T-0899": 0.6943766432445733,
+                "PEGADA_NP_T-0934": 0.5594584035659889
+              },
+              "n_unidades": 12,
+              "excluidos_abaixo_do_piso": []
+            }
+          },
+          "criterios": {
+            "S": {
+              "criterio": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    5.164681131063378,
+                    9.485122302144214
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    4.930693264891025,
+                    10.207464397210387
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    5.168200776591288,
+                    9.47575103707583
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    4.908178224863953,
+                    10.22997943723746
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "positivo",
+              "motivo": null
+            },
+            "R": {
+              "criterio": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    3.4508037501089923,
+                    7.313880176833301
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    3.1884696945112454,
+                    8.186823047862713
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    3.424218799474943,
+                    7.323336338523706
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    3.1693931483884095,
+                    8.20589959398555
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "ordenacao_valida_A_menos_delta_maior_que_zero"
+            },
+            "O_familias_28_09": {
+              "criterio": "(O) lower bound of A (mean AND median) and of the equivalent MAE reduction above the largest cap of |contrast| between estimators against the lidar, in the transect AND footprint units",
+              "teto_abs_contrastes_lidar_m": 0.29265802534720065,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 5.164681131063378,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 3.4946257948875434,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 2.7433770969910602,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 5.168200776591288,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 3.583682060241699,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 2.7569334498278253,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito": "sustentado",
+              "veredito_leitura": "demonstrado",
+              "teto_de": "ceiling from v23 x mlp, transect unit, applied to both units"
+            },
+            "O_familias_teto_por_unidade_secundario": {
+              "teto_transecto_m": 0.29265802534720065,
+              "teto_pegada_m": 0.29265802534720065,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 5.164681131063378,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 3.4946257948875434,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 2.7433770969910602,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 5.168200776591288,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 3.583682060241699,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 2.7569334498278253,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito_leitura": "demonstrado",
+              "nota": "Secondary, declared before running; does not replace the primary"
+            }
+          }
+        },
+        ">30m": {
+          "por_unidade": {
+            "transecto": {
+              "A": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 9.898030694109512,
+                "mediana_m": 6.827724456787109,
+                "media_por_unidade_m": 10.312379260261315,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 17.98963238211239,
+                  "NP_T-0226": 6.899868566339666,
+                  "NP_T-0227": 3.8948546285214634,
+                  "NP_T-0357": 12.127056964032061,
+                  "NP_T-0358": 12.638678215645456,
+                  "NP_T-0360": 2.256468243069119,
+                  "NP_T-0621": 8.088353293282646,
+                  "NP_T-0638": 1.9328650598940642,
+                  "NP_T-0639": 27.82254409790039,
+                  "NP_T-0899": 9.473471151815879
+                },
+                "ic95_pond_celula": [
+                  6.0368534137669645,
+                  13.198914269142861
+                ],
+                "ic95_mediana": [
+                  4.122120666503906,
+                  12.290629386901855
+                ],
+                "ic95_media_por_unidade": [
+                  6.056478007413815,
+                  15.33252630853443
+                ],
+                "ic95_t_jackknife_pond": [
+                  5.460142015858239,
+                  14.335919372360785
+                ],
+                "loo_pond_min_m": 8.42288615045215,
+                "loo_pond_max_m": 10.825619603410551,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 3.7654373275574855,
+                "mediana_m": 3.4992863057992594,
+                "media_por_unidade_m": 3.281080392279116,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 5.2000273695605355,
+                  "NP_T-0226": 4.0572359021084115,
+                  "NP_T-0227": 2.2691526026966193,
+                  "NP_T-0357": 4.5020315974379725,
+                  "NP_T-0358": 4.56061820887987,
+                  "NP_T-0360": 4.629664976615991,
+                  "NP_T-0621": 2.767028092807867,
+                  "NP_T-0638": 1.0368495712739663,
+                  "NP_T-0639": 0.3254795387789038,
+                  "NP_T-0899": 3.4627160626310185
+                },
+                "ic95_pond_celula": [
+                  2.7280044257678995,
+                  4.490291052158429
+                ],
+                "ic95_mediana": [
+                  2.075302351713489,
+                  4.102349878745109
+                ],
+                "ic95_media_por_unidade": [
+                  2.268461673516913,
+                  4.177407930154117
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.6774637446258334,
+                  4.853410910489138
+                ],
+                "loo_pond_min_m": 3.5039034861199325,
+                "loo_pond_max_m": 4.083196914365186,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 6.132593366552026,
+                "mediana_m": 3.701666442282889,
+                "media_por_unidade_m": 7.031298867982197,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 12.789605012551858,
+                  "NP_T-0226": 2.8426326642312545,
+                  "NP_T-0227": 1.6257020258248438,
+                  "NP_T-0357": 7.6250253665940875,
+                  "NP_T-0358": 8.078060006765586,
+                  "NP_T-0360": -2.3731967335468713,
+                  "NP_T-0621": 5.321325200474779,
+                  "NP_T-0638": 0.8960154886200979,
+                  "NP_T-0639": 27.497064559121487,
+                  "NP_T-0899": 6.010755089184857
+                },
+                "ic95_pond_celula": [
+                  3.210587848477701,
+                  8.777898884956612
+                ],
+                "ic95_mediana": [
+                  1.8260547525463913,
+                  6.981989907197187
+                ],
+                "ic95_media_por_unidade": [
+                  2.758119592462743,
+                  12.503351657980435
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.6529777623753383,
+                  9.612208970728714
+                ],
+                "loo_pond_min_m": 4.918982664332219,
+                "loo_pond_max_m": 6.742422689045364,
+                "teste_sinal": {
+                  "positivos": 9,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.021484375
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "reducao_mae_equivalente_m": 7.778585676219846,
+                "ic95_pond_celula": [
+                  5.681563818722331,
+                  8.819484388180038
+                ],
+                "ic95_t_jackknife": [
+                  6.074663321403919,
+                  9.482508031035774
+                ],
+                "loo_min_m": 7.21092589372551,
+                "loo_max_m": 8.110849534144597
+              }
+            },
+            "pegada": {
+              "A": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 9.898030694109512,
+                "mediana_m": 6.827724456787109,
+                "media_por_unidade_m": 10.312379260261315,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 17.98963238211239,
+                  "PEGADA_NP_T-0226": 6.899868566339666,
+                  "PEGADA_NP_T-0227": 3.8948546285214634,
+                  "PEGADA_NP_T-0357_NP_T-0662": 12.127056964032061,
+                  "PEGADA_NP_T-0358": 12.638678215645456,
+                  "PEGADA_NP_T-0360": 2.256468243069119,
+                  "PEGADA_NP_T-0621": 8.088353293282646,
+                  "PEGADA_NP_T-0638": 1.9328650598940642,
+                  "PEGADA_NP_T-0639": 27.82254409790039,
+                  "PEGADA_NP_T-0899": 9.473471151815879
+                },
+                "ic95_pond_celula": [
+                  5.984006823090969,
+                  13.224777032493208
+                ],
+                "ic95_mediana": [
+                  4.103908538818359,
+                  12.324254989624023
+                ],
+                "ic95_media_por_unidade": [
+                  6.003471947383303,
+                  15.329483785564324
+                ],
+                "ic95_t_jackknife_pond": [
+                  5.460142015858239,
+                  14.335919372360785
+                ],
+                "loo_pond_min_m": 8.42288615045215,
+                "loo_pond_max_m": 10.825619603410551,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 3.7654373275574855,
+                "mediana_m": 3.4992863057992594,
+                "media_por_unidade_m": 3.281080392279116,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 5.2000273695605355,
+                  "PEGADA_NP_T-0226": 4.0572359021084115,
+                  "PEGADA_NP_T-0227": 2.2691526026966193,
+                  "PEGADA_NP_T-0357_NP_T-0662": 4.5020315974379725,
+                  "PEGADA_NP_T-0358": 4.56061820887987,
+                  "PEGADA_NP_T-0360": 4.629664976615991,
+                  "PEGADA_NP_T-0621": 2.767028092807867,
+                  "PEGADA_NP_T-0638": 1.0368495712739663,
+                  "PEGADA_NP_T-0639": 0.3254795387789038,
+                  "PEGADA_NP_T-0899": 3.4627160626310185
+                },
+                "ic95_pond_celula": [
+                  2.7135584528777743,
+                  4.487720737644568
+                ],
+                "ic95_mediana": [
+                  2.075302351713489,
+                  4.096765172934467
+                ],
+                "ic95_media_por_unidade": [
+                  2.2748091243802206,
+                  4.193608347061309
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.6774637446258334,
+                  4.853410910489138
+                ],
+                "loo_pond_min_m": 3.5039034861199325,
+                "loo_pond_max_m": 4.083196914365186,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 6.132593366552026,
+                "mediana_m": 3.701666442282889,
+                "media_por_unidade_m": 7.031298867982197,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 12.789605012551858,
+                  "PEGADA_NP_T-0226": 2.8426326642312545,
+                  "PEGADA_NP_T-0227": 1.6257020258248438,
+                  "PEGADA_NP_T-0357_NP_T-0662": 7.6250253665940875,
+                  "PEGADA_NP_T-0358": 8.078060006765586,
+                  "PEGADA_NP_T-0360": -2.3731967335468713,
+                  "PEGADA_NP_T-0621": 5.321325200474779,
+                  "PEGADA_NP_T-0638": 0.8960154886200979,
+                  "PEGADA_NP_T-0639": 27.497064559121487,
+                  "PEGADA_NP_T-0899": 6.010755089184857
+                },
+                "ic95_pond_celula": [
+                  3.1543770583887065,
+                  8.787980248571085
+                ],
+                "ic95_mediana": [
+                  1.8197409622372902,
+                  6.987244701986205
+                ],
+                "ic95_media_por_unidade": [
+                  2.8266102381613822,
+                  12.478832304692032
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.6529777623753383,
+                  9.612208970728714
+                ],
+                "loo_pond_min_m": 4.918982664332219,
+                "loo_pond_max_m": 6.742422689045364,
+                "teste_sinal": {
+                  "positivos": 9,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.021484375
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "reducao_mae_equivalente_m": 7.778585676219846,
+                "ic95_pond_celula": [
+                  5.628423529744899,
+                  8.825081021983985
+                ],
+                "ic95_t_jackknife": [
+                  6.074663321403919,
+                  9.482508031035774
+                ],
+                "loo_min_m": 7.21092589372551,
+                "loo_max_m": 8.110849534144597
+              }
+            }
+          },
+          "teto_familias_v23_x_mlp": {
+            "transecto": {
+              "teto_m": 1.1150836502396775,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": -0.6928301775628684,
+                "mediana_m": -0.6910092180776992,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -1.1150836502396775,
+                  -0.5081028412204045
+                ],
+                "teto_abs_ddiferenca_m": 1.1150836502396775,
+                "n_transectos": 11
+              },
+              "diferencas_por_unidade_m": {
+                "NP_T-0224": -0.7935204748731692,
+                "NP_T-0226": -0.5831248348162994,
+                "NP_T-0227": -0.5225897051760855,
+                "NP_T-0357": -1.107608742696934,
+                "NP_T-0358": -1.2623344117180242,
+                "NP_T-0360": -1.3146416942486576,
+                "NP_T-0621": -0.6910092180776992,
+                "NP_T-0638": -0.5081028412204045,
+                "NP_T-0639": -1.1150836502396775,
+                "NP_T-0899": -0.24827144400587287,
+                "NP_T-0934": 0.5251550638812716
+              },
+              "n_unidades": 11,
+              "excluidos_abaixo_do_piso": [
+                "NP_T-0662",
+                "NP_T-0896"
+              ]
+            },
+            "pegada": {
+              "teto_m": 1.1150836502396775,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": -0.6928697328355273,
+                "mediana_m": -0.6910092180776992,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -1.1150836502396775,
+                  -0.5081028412204045
+                ],
+                "teto_abs_ddiferenca_m": 1.1150836502396775,
+                "n_transectos": 11
+              },
+              "diferencas_por_unidade_m": {
+                "PEGADA_NP_T-0224": -0.7935204748731692,
+                "PEGADA_NP_T-0226": -0.5831248348162994,
+                "PEGADA_NP_T-0227": -0.5225897051760855,
+                "PEGADA_NP_T-0357_NP_T-0662": -1.1080438506961823,
+                "PEGADA_NP_T-0358": -1.2623344117180242,
+                "PEGADA_NP_T-0360": -1.3146416942486576,
+                "PEGADA_NP_T-0621": -0.6910092180776992,
+                "PEGADA_NP_T-0638": -0.5081028412204045,
+                "PEGADA_NP_T-0639": -1.1150836502396775,
+                "PEGADA_NP_T-0899": -0.24827144400587287,
+                "PEGADA_NP_T-0934": 0.5251550638812716
+              },
+              "n_unidades": 11,
+              "excluidos_abaixo_do_piso": [
+                "PEGADA_NP_T-0896"
+              ]
+            }
+          },
+          "criterios": {
+            "S": {
+              "criterio": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    6.0368534137669645,
+                    13.198914269142861
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    5.460142015858239,
+                    14.335919372360785
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    5.984006823090969,
+                    13.224777032493208
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    5.460142015858239,
+                    14.335919372360785
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "positivo",
+              "motivo": null
+            },
+            "R": {
+              "criterio": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    3.210587848477701,
+                    8.777898884956612
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    2.6529777623753383,
+                    9.612208970728714
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    3.1543770583887065,
+                    8.787980248571085
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    2.6529777623753383,
+                    9.612208970728714
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "ordenacao_valida_A_menos_delta_maior_que_zero"
+            },
+            "O_familias_28_09": {
+              "criterio": "(O) lower bound of A (mean AND median) and of the equivalent MAE reduction above the largest cap of |contrast| between estimators against the lidar, in the transect AND footprint units",
+              "teto_abs_contrastes_lidar_m": 1.1150836502396775,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 6.0368534137669645,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 4.122120666503906,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 5.681563818722331,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 5.984006823090969,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 4.103908538818359,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 5.628423529744899,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito": "sustentado",
+              "veredito_leitura": "demonstrado",
+              "teto_de": "ceiling from v23 x mlp, transect unit, applied to both units"
+            },
+            "O_familias_teto_por_unidade_secundario": {
+              "teto_transecto_m": 1.1150836502396775,
+              "teto_pegada_m": 1.1150836502396775,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 6.0368534137669645,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 4.122120666503906,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 5.681563818722331,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 5.984006823090969,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 4.103908538818359,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 5.628423529744899,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito_leitura": "demonstrado",
+              "nota": "Secondary, declared before running; does not replace the primary"
+            }
+          }
+        }
+      }
+    },
+    "iii_sem_offset": {
+      "off_t_m": {
+        "NP_T-0224": 0.0,
+        "NP_T-0226": 0.0,
+        "NP_T-0227": 0.0,
+        "NP_T-0357": 0.0,
+        "NP_T-0358": 0.0,
+        "NP_T-0360": 0.0,
+        "NP_T-0621": 0.0,
+        "NP_T-0638": 0.0,
+        "NP_T-0639": 0.0,
+        "NP_T-0662": 0.0,
+        "NP_T-0896": 0.0,
+        "NP_T-0899": 0.0,
+        "NP_T-0934": 0.0
+      },
+      "deslocamento_vs_glo30_por_transecto_m": {
+        "NP_T-0224": -0.1091461181640625,
+        "NP_T-0226": -2.0644378662109375,
+        "NP_T-0227": -1.3994674682617188,
+        "NP_T-0357": 0.8672447204589844,
+        "NP_T-0358": 0.64337158203125,
+        "NP_T-0360": -3.8000001907348633,
+        "NP_T-0621": -0.3148021697998047,
+        "NP_T-0638": 0.9626483917236328,
+        "NP_T-0639": 0.6826725006103516,
+        "NP_T-0662": -0.19123077392578125,
+        "NP_T-0896": -1.6838884353637695,
+        "NP_T-0899": 0.4019794464111328,
+        "NP_T-0934": 0.7817783355712891
+      },
+      "por_classe": {
+        "20-30m": {
+          "por_unidade": {
+            "transecto": {
+              "A": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 4.86950917865919,
+                "mediana_m": 3.2208423614501953,
+                "media_por_unidade_m": 4.870712205936159,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 11.458193327251234,
+                  "NP_T-0226": 2.741967634721236,
+                  "NP_T-0227": 3.7047570656085838,
+                  "NP_T-0357": 10.7426626032049,
+                  "NP_T-0358": 6.317173677332261,
+                  "NP_T-0360": 2.173028685829856,
+                  "NP_T-0621": 8.228455967373318,
+                  "NP_T-0638": 0.8100478308541434,
+                  "NP_T-0639": -1.7625598907470703,
+                  "NP_T-0662": 5.2919158935546875,
+                  "NP_T-0896": 3.2646516369235132,
+                  "NP_T-0899": 5.47825203932725
+                },
+                "ic95_pond_celula": [
+                  3.0557029934293847,
+                  6.729503385755898
+                ],
+                "ic95_mediana": [
+                  1.6588172912597656,
+                  4.887351989746094
+                ],
+                "ic95_media_por_unidade": [
+                  2.75100716115277,
+                  6.988420597826563
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.8743354649219963,
+                  6.8646828923963845
+                ],
+                "loo_pond_min_m": 4.422752709224306,
+                "loo_pond_max_m": 5.432206791226227,
+                "teste_sinal": {
+                  "positivos": 11,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.00634765625
+                }
+              },
+              "delta": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 1.8814324598637273,
+                "mediana_m": 1.5813047982607795,
+                "media_por_unidade_m": 2.41627803830487,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 3.6281703704722954,
+                  "NP_T-0226": 1.5665466407502153,
+                  "NP_T-0227": 1.844579508860943,
+                  "NP_T-0357": 3.2349947500612335,
+                  "NP_T-0358": 4.185775133366748,
+                  "NP_T-0360": 2.4440469568729486,
+                  "NP_T-0621": 1.778989808038324,
+                  "NP_T-0638": 1.0294040773224806,
+                  "NP_T-0639": 0.5250808322180367,
+                  "NP_T-0662": 5.287332622732805,
+                  "NP_T-0896": 1.6946314942021954,
+                  "NP_T-0899": 1.7757842647602142
+                },
+                "ic95_pond_celula": [
+                  1.6012499902483908,
+                  2.455460237980973
+                ],
+                "ic95_mediana": [
+                  1.1583065308801395,
+                  2.204544173514819
+                ],
+                "ic95_media_por_unidade": [
+                  1.714301262066565,
+                  3.2154130887279826
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.492143575778551,
+                  2.2707213439489036
+                ],
+                "loo_pond_min_m": 1.793003959977607,
+                "loo_pond_max_m": 1.999535403978356,
+                "teste_sinal": {
+                  "positivos": 12,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.00048828125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0662",
+                  "NP_T-0896",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 2.988076718795463,
+                "mediana_m": 1.4184566363485782,
+                "media_por_unidade_m": 2.4544341676312893,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 7.830022956778938,
+                  "NP_T-0226": 1.1754209939710203,
+                  "NP_T-0227": 1.8601775567476408,
+                  "NP_T-0357": 7.5076678531436665,
+                  "NP_T-0358": 2.131398543965513,
+                  "NP_T-0360": -0.27101827104309256,
+                  "NP_T-0621": 6.449466159334993,
+                  "NP_T-0638": -0.21935624646833712,
+                  "NP_T-0639": -2.287640722965107,
+                  "NP_T-0662": 0.004583270821882479,
+                  "NP_T-0896": 1.5700201427213178,
+                  "NP_T-0899": 3.702467774567035
+                },
+                "ic95_pond_celula": [
+                  1.3549513470041348,
+                  4.535738250716899
+                ],
+                "ic95_mediana": [
+                  0.24352662108537615,
+                  2.977956791073048
+                ],
+                "ic95_media_por_unidade": [
+                  0.7375069114309135,
+                  4.245513521643993
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.1741589437419984,
+                  4.801994493848928
+                ],
+                "loo_pond_min_m": 2.527694872024195,
+                "loo_pond_max_m": 3.4326713872478707,
+                "teste_sinal": {
+                  "positivos": 9,
+                  "n_unidades": 12,
+                  "p_bilateral": 0.14599609375
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 460,
+                "n_unidades": 12,
+                "reducao_mae_equivalente_m": 1.7152519714178798,
+                "ic95_pond_celula": [
+                  1.0731557204687923,
+                  2.579067573329469
+                ],
+                "ic95_t_jackknife": [
+                  0.6993464745843745,
+                  2.731157468251385
+                ],
+                "loo_min_m": 1.355689888479148,
+                "loo_max_m": 1.9504344205732624
+              }
+            },
+            "pegada": {
+              "A": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 4.86950917865919,
+                "mediana_m": 3.2208423614501953,
+                "media_por_unidade_m": 4.791127425928034,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 11.458193327251234,
+                  "PEGADA_NP_T-0226": 2.741967634721236,
+                  "PEGADA_NP_T-0227": 3.7047570656085838,
+                  "PEGADA_NP_T-0357_NP_T-0662": 10.288433710734049,
+                  "PEGADA_NP_T-0358": 6.317173677332261,
+                  "PEGADA_NP_T-0360": 2.173028685829856,
+                  "PEGADA_NP_T-0621": 8.228455967373318,
+                  "PEGADA_NP_T-0638": 0.8100478308541434,
+                  "PEGADA_NP_T-0639": -1.7625598907470703,
+                  "PEGADA_NP_T-0896": 3.2646516369235132,
+                  "PEGADA_NP_T-0899": 5.47825203932725
+                },
+                "ic95_pond_celula": [
+                  3.060555784608625,
+                  6.679048779261967
+                ],
+                "ic95_mediana": [
+                  1.6588172912597656,
+                  4.88127326965332
+                ],
+                "ic95_media_por_unidade": [
+                  2.531949861277644,
+                  7.134984112212752
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.857677956085757,
+                  6.881340401232624
+                ],
+                "loo_pond_min_m": 4.422752709224306,
+                "loo_pond_max_m": 5.432206791226227,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.01171875
+                }
+              },
+              "delta": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 1.8814324598637273,
+                "mediana_m": 1.5813047982607795,
+                "media_por_unidade_m": 2.1708210902710547,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 3.6281703704722954,
+                  "PEGADA_NP_T-0226": 1.5665466407502153,
+                  "PEGADA_NP_T-0227": 1.844579508860943,
+                  "PEGADA_NP_T-0357_NP_T-0662": 3.406022906117198,
+                  "PEGADA_NP_T-0358": 4.185775133366748,
+                  "PEGADA_NP_T-0360": 2.4440469568729486,
+                  "PEGADA_NP_T-0621": 1.778989808038324,
+                  "PEGADA_NP_T-0638": 1.0294040773224806,
+                  "PEGADA_NP_T-0639": 0.5250808322180367,
+                  "PEGADA_NP_T-0896": 1.6946314942021954,
+                  "PEGADA_NP_T-0899": 1.7757842647602142
+                },
+                "ic95_pond_celula": [
+                  1.5931278573953567,
+                  2.4113051355165864
+                ],
+                "ic95_mediana": [
+                  1.1663769191204754,
+                  2.137102833254326
+                ],
+                "ic95_media_por_unidade": [
+                  1.5592149340268653,
+                  2.818750063546271
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.4860813958350925,
+                  2.276783523892362
+                ],
+                "loo_pond_min_m": 1.793003959977607,
+                "loo_pond_max_m": 1.999535403978356,
+                "teste_sinal": {
+                  "positivos": 11,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.0009765625
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0896",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 2.988076718795463,
+                "mediana_m": 1.4184566363485782,
+                "media_por_unidade_m": 2.620306335656979,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 7.830022956778938,
+                  "PEGADA_NP_T-0226": 1.1754209939710203,
+                  "PEGADA_NP_T-0227": 1.8601775567476408,
+                  "PEGADA_NP_T-0357_NP_T-0662": 6.882410804616851,
+                  "PEGADA_NP_T-0358": 2.131398543965513,
+                  "PEGADA_NP_T-0360": -0.27101827104309256,
+                  "PEGADA_NP_T-0621": 6.449466159334993,
+                  "PEGADA_NP_T-0638": -0.21935624646833712,
+                  "PEGADA_NP_T-0639": -2.287640722965107,
+                  "PEGADA_NP_T-0896": 1.5700201427213178,
+                  "PEGADA_NP_T-0899": 3.702467774567035
+                },
+                "ic95_pond_celula": [
+                  1.3375891391668202,
+                  4.569766392012346
+                ],
+                "ic95_mediana": [
+                  0.24352662108537615,
+                  2.977956791073048
+                ],
+                "ic95_media_por_unidade": [
+                  0.8192936565622696,
+                  4.497979608436888
+                ],
+                "ic95_t_jackknife_pond": [
+                  1.1611627644222478,
+                  4.814990673168678
+                ],
+                "loo_pond_min_m": 2.527694872024195,
+                "loo_pond_max_m": 3.4326713872478707,
+                "teste_sinal": {
+                  "positivos": 8,
+                  "n_unidades": 11,
+                  "p_bilateral": 0.2265625
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 460,
+                "n_unidades": 11,
+                "reducao_mae_equivalente_m": 1.7152519714178798,
+                "ic95_pond_celula": [
+                  1.0700077951743632,
+                  2.5894545297777793
+                ],
+                "ic95_t_jackknife": [
+                  0.6901694186397882,
+                  2.7403345241959713
+                ],
+                "loo_min_m": 1.3556898884791493,
+                "loo_max_m": 1.9504344205732624
+              }
+            }
+          },
+          "teto_familias_v23_x_mlp": {
+            "transecto": {
+              "teto_m": 0.27584311695590036,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": 0.008478819571970905,
+                "mediana_m": -0.05426403502291999,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -0.19129186169636236,
+                  0.27584311695590036
+                ],
+                "teto_abs_ddiferenca_m": 0.27584311695590036,
+                "n_transectos": 12
+              },
+              "diferencas_por_unidade_m": {
+                "NP_T-0224": -0.22331209839222144,
+                "NP_T-0226": -0.15346860341290647,
+                "NP_T-0227": 0.16120080015079719,
+                "NP_T-0357": -0.5034944996962878,
+                "NP_T-0358": -0.7266727966667048,
+                "NP_T-0360": -0.1592716250005033,
+                "NP_T-0621": -0.04279936212015922,
+                "NP_T-0638": 0.39048543376100353,
+                "NP_T-0639": 0.06503140392688733,
+                "NP_T-0896": -0.06572870792568075,
+                "NP_T-0899": 0.708536817465256,
+                "NP_T-0934": 0.6512390727741706
+              },
+              "n_unidades": 12,
+              "excluidos_abaixo_do_piso": [
+                "NP_T-0662"
+              ]
+            },
+            "pegada": {
+              "teto_m": 0.27584311695590036,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": 0.008804867124441507,
+                "mediana_m": -0.05426403502291999,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -0.19129186169636236,
+                  0.27584311695590036
+                ],
+                "teto_abs_ddiferenca_m": 0.27584311695590036,
+                "n_transectos": 12
+              },
+              "diferencas_por_unidade_m": {
+                "PEGADA_NP_T-0224": -0.22331209839222144,
+                "PEGADA_NP_T-0226": -0.15346860341290647,
+                "PEGADA_NP_T-0227": 0.16120080015079719,
+                "PEGADA_NP_T-0357_NP_T-0662": -0.49958192906664056,
+                "PEGADA_NP_T-0358": -0.7266727966667048,
+                "PEGADA_NP_T-0360": -0.1592716250005033,
+                "PEGADA_NP_T-0621": -0.04279936212015922,
+                "PEGADA_NP_T-0638": 0.39048543376100353,
+                "PEGADA_NP_T-0639": 0.06503140392688733,
+                "PEGADA_NP_T-0896": -0.06572870792568075,
+                "PEGADA_NP_T-0899": 0.708536817465256,
+                "PEGADA_NP_T-0934": 0.6512390727741706
+              },
+              "n_unidades": 12,
+              "excluidos_abaixo_do_piso": []
+            }
+          },
+          "criterios": {
+            "S": {
+              "criterio": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    3.0557029934293847,
+                    6.729503385755898
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    2.8743354649219963,
+                    6.8646828923963845
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    3.060555784608625,
+                    6.679048779261967
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    2.857677956085757,
+                    6.881340401232624
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "positivo",
+              "motivo": null
+            },
+            "R": {
+              "criterio": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    1.3549513470041348,
+                    4.535738250716899
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    1.1741589437419984,
+                    4.801994493848928
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    1.3375891391668202,
+                    4.569766392012346
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    1.1611627644222478,
+                    4.814990673168678
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "ordenacao_valida_A_menos_delta_maior_que_zero"
+            },
+            "O_familias_28_09": {
+              "criterio": "(O) lower bound of A (mean AND median) and of the equivalent MAE reduction above the largest cap of |contrast| between estimators against the lidar, in the transect AND footprint units",
+              "teto_abs_contrastes_lidar_m": 0.27584311695590036,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 3.0557029934293847,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.6588172912597656,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 1.0731557204687923,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 3.060555784608625,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.6588172912597656,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 1.0700077951743632,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito": "sustentado",
+              "veredito_leitura": "demonstrado",
+              "teto_de": "ceiling from v23 x mlp, transect unit, applied to both units"
+            },
+            "O_familias_teto_por_unidade_secundario": {
+              "teto_transecto_m": 0.27584311695590036,
+              "teto_pegada_m": 0.27584311695590036,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 3.0557029934293847,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.6588172912597656,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 1.0731557204687923,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 3.060555784608625,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.6588172912597656,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 1.0700077951743632,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito_leitura": "demonstrado",
+              "nota": "Secondary, declared before running; does not replace the primary"
+            }
+          }
+        },
+        ">30m": {
+          "por_unidade": {
+            "transecto": {
+              "A": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 6.773765140109592,
+                "mediana_m": 3.8515625,
+                "media_por_unidade_m": 7.8926812126233745,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 13.331911816316492,
+                  "NP_T-0226": 3.6014142816716976,
+                  "NP_T-0227": 3.06766995139744,
+                  "NP_T-0357": 7.824433215252765,
+                  "NP_T-0358": 8.881735466622018,
+                  "NP_T-0360": 3.276804394192166,
+                  "NP_T-0621": 7.072444098336356,
+                  "NP_T-0638": 0.3024319773134978,
+                  "NP_T-0639": 25.76961898803711,
+                  "NP_T-0899": 5.798347937094198
+                },
+                "ic95_pond_celula": [
+                  3.8971481338853478,
+                  9.455623763160247
+                ],
+                "ic95_mediana": [
+                  2.010000228881836,
+                  8.386710166931152
+                ],
+                "ic95_media_por_unidade": [
+                  4.262408851708819,
+                  12.646625379994385
+                ],
+                "ic95_t_jackknife_pond": [
+                  3.291802673495372,
+                  10.255727606723813
+                ],
+                "loo_pond_min_m": 5.5781780784954655,
+                "loo_pond_max_m": 7.527388748941542,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 3.7654373275574855,
+                "mediana_m": 3.4992863057992594,
+                "media_por_unidade_m": 3.281080392279116,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 5.2000273695605355,
+                  "NP_T-0226": 4.0572359021084115,
+                  "NP_T-0227": 2.2691526026966193,
+                  "NP_T-0357": 4.5020315974379725,
+                  "NP_T-0358": 4.56061820887987,
+                  "NP_T-0360": 4.629664976615991,
+                  "NP_T-0621": 2.767028092807867,
+                  "NP_T-0638": 1.0368495712739663,
+                  "NP_T-0639": 0.3254795387789038,
+                  "NP_T-0899": 3.4627160626310185
+                },
+                "ic95_pond_celula": [
+                  2.7280044257678995,
+                  4.490291052158429
+                ],
+                "ic95_mediana": [
+                  2.075302351713489,
+                  4.102349878745109
+                ],
+                "ic95_media_por_unidade": [
+                  2.268461673516913,
+                  4.177407930154117
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.6774637446258334,
+                  4.853410910489138
+                ],
+                "loo_pond_min_m": 3.5039034861199325,
+                "loo_pond_max_m": 4.083196914365186,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "NP_T-0224",
+                  "NP_T-0226",
+                  "NP_T-0227",
+                  "NP_T-0357",
+                  "NP_T-0358",
+                  "NP_T-0360",
+                  "NP_T-0621",
+                  "NP_T-0638",
+                  "NP_T-0639",
+                  "NP_T-0899"
+                ],
+                "media_pond_celula_m": 3.0083278125521065,
+                "mediana_m": 0.7795889235708131,
+                "media_por_unidade_m": 4.6116008203442584,
+                "medias_por_unidade_m": {
+                  "NP_T-0224": 8.131884446755958,
+                  "NP_T-0226": -0.45582162043671404,
+                  "NP_T-0227": 0.7985173487008204,
+                  "NP_T-0357": 3.3224016178147906,
+                  "NP_T-0358": 4.321117257742148,
+                  "NP_T-0360": -1.3528605824238247,
+                  "NP_T-0621": 4.305416005528489,
+                  "NP_T-0638": -0.7344175939604685,
+                  "NP_T-0639": 25.444139449258206,
+                  "NP_T-0899": 2.33563187446318
+                },
+                "ic95_pond_celula": [
+                  0.940388954845384,
+                  5.058216410932282
+                ],
+                "ic95_mediana": [
+                  -0.2582581898763081,
+                  3.9549428448925728
+                ],
+                "ic95_media_por_unidade": [
+                  0.9738450673781098,
+                  9.85379621611775
+                ],
+                "ic95_t_jackknife_pond": [
+                  0.40746853407245087,
+                  5.609187091031762
+                ],
+                "loo_pond_min_m": 2.0742745923755335,
+                "loo_pond_max_m": 3.501924234351032,
+                "teste_sinal": {
+                  "positivos": 7,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.34375
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "reducao_mae_equivalente_m": 5.123165690565506,
+                "ic95_pond_celula": [
+                  3.625614544697888,
+                  5.714258800817549
+                ],
+                "ic95_t_jackknife": [
+                  3.9347703892894432,
+                  6.311560991841569
+                ],
+                "loo_min_m": 4.583872468805226,
+                "loo_max_m": 5.261799489189614
+              }
+            },
+            "pegada": {
+              "A": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 6.773765140109592,
+                "mediana_m": 3.8515625,
+                "media_por_unidade_m": 7.8926812126233745,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 13.331911816316492,
+                  "PEGADA_NP_T-0226": 3.6014142816716976,
+                  "PEGADA_NP_T-0227": 3.06766995139744,
+                  "PEGADA_NP_T-0357_NP_T-0662": 7.824433215252765,
+                  "PEGADA_NP_T-0358": 8.881735466622018,
+                  "PEGADA_NP_T-0360": 3.276804394192166,
+                  "PEGADA_NP_T-0621": 7.072444098336356,
+                  "PEGADA_NP_T-0638": 0.3024319773134978,
+                  "PEGADA_NP_T-0639": 25.76961898803711,
+                  "PEGADA_NP_T-0899": 5.798347937094198
+                },
+                "ic95_pond_celula": [
+                  3.77105694532274,
+                  9.45981357016677
+                ],
+                "ic95_mediana": [
+                  1.9807891845703125,
+                  8.452345848083496
+                ],
+                "ic95_media_por_unidade": [
+                  4.234721544201656,
+                  12.656486297084367
+                ],
+                "ic95_t_jackknife_pond": [
+                  3.291802673495372,
+                  10.255727606723813
+                ],
+                "loo_pond_min_m": 5.5781780784954655,
+                "loo_pond_max_m": 7.527388748941542,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 3.7654373275574855,
+                "mediana_m": 3.4992863057992594,
+                "media_por_unidade_m": 3.281080392279116,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 5.2000273695605355,
+                  "PEGADA_NP_T-0226": 4.0572359021084115,
+                  "PEGADA_NP_T-0227": 2.2691526026966193,
+                  "PEGADA_NP_T-0357_NP_T-0662": 4.5020315974379725,
+                  "PEGADA_NP_T-0358": 4.56061820887987,
+                  "PEGADA_NP_T-0360": 4.629664976615991,
+                  "PEGADA_NP_T-0621": 2.767028092807867,
+                  "PEGADA_NP_T-0638": 1.0368495712739663,
+                  "PEGADA_NP_T-0639": 0.3254795387789038,
+                  "PEGADA_NP_T-0899": 3.4627160626310185
+                },
+                "ic95_pond_celula": [
+                  2.7135584528777743,
+                  4.487720737644568
+                ],
+                "ic95_mediana": [
+                  2.075302351713489,
+                  4.096765172934467
+                ],
+                "ic95_media_por_unidade": [
+                  2.2748091243802206,
+                  4.193608347061309
+                ],
+                "ic95_t_jackknife_pond": [
+                  2.6774637446258334,
+                  4.853410910489138
+                ],
+                "loo_pond_min_m": 3.5039034861199325,
+                "loo_pond_max_m": 4.083196914365186,
+                "teste_sinal": {
+                  "positivos": 10,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.001953125
+                }
+              },
+              "pareada_A_menos_delta": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "unidades": [
+                  "PEGADA_NP_T-0224",
+                  "PEGADA_NP_T-0226",
+                  "PEGADA_NP_T-0227",
+                  "PEGADA_NP_T-0357_NP_T-0662",
+                  "PEGADA_NP_T-0358",
+                  "PEGADA_NP_T-0360",
+                  "PEGADA_NP_T-0621",
+                  "PEGADA_NP_T-0638",
+                  "PEGADA_NP_T-0639",
+                  "PEGADA_NP_T-0899"
+                ],
+                "media_pond_celula_m": 3.0083278125521065,
+                "mediana_m": 0.7795889235708131,
+                "media_por_unidade_m": 4.6116008203442584,
+                "medias_por_unidade_m": {
+                  "PEGADA_NP_T-0224": 8.131884446755958,
+                  "PEGADA_NP_T-0226": -0.45582162043671404,
+                  "PEGADA_NP_T-0227": 0.7985173487008204,
+                  "PEGADA_NP_T-0357_NP_T-0662": 3.3224016178147906,
+                  "PEGADA_NP_T-0358": 4.321117257742148,
+                  "PEGADA_NP_T-0360": -1.3528605824238247,
+                  "PEGADA_NP_T-0621": 4.305416005528489,
+                  "PEGADA_NP_T-0638": -0.7344175939604685,
+                  "PEGADA_NP_T-0639": 25.444139449258206,
+                  "PEGADA_NP_T-0899": 2.33563187446318
+                },
+                "ic95_pond_celula": [
+                  0.9490124602853743,
+                  5.0815588449051345
+                ],
+                "ic95_mediana": [
+                  -0.2704101364670917,
+                  4.047560364042493
+                ],
+                "ic95_media_por_unidade": [
+                  0.9954393603405071,
+                  9.802591003735758
+                ],
+                "ic95_t_jackknife_pond": [
+                  0.40746853407245087,
+                  5.609187091031762
+                ],
+                "loo_pond_min_m": 2.0742745923755335,
+                "loo_pond_max_m": 3.501924234351032,
+                "teste_sinal": {
+                  "positivos": 7,
+                  "n_unidades": 10,
+                  "p_bilateral": 0.34375
+                }
+              },
+              "reducao_mae_equivalente": {
+                "n_celulas": 441,
+                "n_unidades": 10,
+                "reducao_mae_equivalente_m": 5.123165690565506,
+                "ic95_pond_celula": [
+                  3.6065270778173977,
+                  5.718386671932531
+                ],
+                "ic95_t_jackknife": [
+                  3.9347703892894432,
+                  6.311560991841569
+                ],
+                "loo_min_m": 4.583872468805226,
+                "loo_max_m": 5.261799489189614
+              }
+            }
+          },
+          "teto_familias_v23_x_mlp": {
+            "transecto": {
+              "teto_m": 1.0766815060859036,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": -0.6765680911409654,
+                "mediana_m": -0.6896033813913514,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -1.0766815060859036,
+                  -0.49654769856678715
+                ],
+                "teto_abs_ddiferenca_m": 1.0766815060859036,
+                "n_transectos": 11
+              },
+              "diferencas_por_unidade_m": {
+                "NP_T-0224": -0.757260107645692,
+                "NP_T-0226": -0.5693487308054701,
+                "NP_T-0227": -0.5170015944256345,
+                "NP_T-0357": -1.0766815060859036,
+                "NP_T-0358": -1.2223563677921172,
+                "NP_T-0360": -1.3251654413268916,
+                "NP_T-0621": -0.6896033813913514,
+                "NP_T-0638": -0.49654769856678715,
+                "NP_T-0639": -1.0759173297604843,
+                "NP_T-0899": -0.2496786067050225,
+                "NP_T-0934": 0.5373117619547356
+              },
+              "n_unidades": 11,
+              "excluidos_abaixo_do_piso": [
+                "NP_T-0662",
+                "NP_T-0896"
+              ]
+            },
+            "pegada": {
+              "teto_m": 1.0779807995576256,
+              "detalhe": {
+                "par": "v23 vs mlp",
+                "testado": true,
+                "media_m": -0.6766862087293037,
+                "mediana_m": -0.6896033813913514,
+                "ic95_bootstrap_transecto_mediana_m": [
+                  -1.0779807995576256,
+                  -0.49654769856678715
+                ],
+                "teto_abs_ddiferenca_m": 1.0779807995576256,
+                "n_transectos": 11
+              },
+              "diferencas_por_unidade_m": {
+                "PEGADA_NP_T-0224": -0.757260107645692,
+                "PEGADA_NP_T-0226": -0.5693487308054701,
+                "PEGADA_NP_T-0227": -0.5170015944256345,
+                "PEGADA_NP_T-0357_NP_T-0662": -1.0779807995576256,
+                "PEGADA_NP_T-0358": -1.2223563677921172,
+                "PEGADA_NP_T-0360": -1.3251654413268916,
+                "PEGADA_NP_T-0621": -0.6896033813913514,
+                "PEGADA_NP_T-0638": -0.49654769856678715,
+                "PEGADA_NP_T-0639": -1.0759173297604843,
+                "PEGADA_NP_T-0899": -0.2496786067050225,
+                "PEGADA_NP_T-0934": 0.5373117619547356
+              },
+              "n_unidades": 11,
+              "excluidos_abaixo_do_piso": [
+                "PEGADA_NP_T-0896"
+              ]
+            }
+          },
+          "criterios": {
+            "S": {
+              "criterio": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    3.8971481338853478,
+                    9.455623763160247
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    3.291802673495372,
+                    10.255727606723813
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    3.77105694532274,
+                    9.45981357016677
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    3.291802673495372,
+                    10.255727606723813
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "positivo",
+              "motivo": null
+            },
+            "R": {
+              "criterio": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units",
+              "checagens_por_unidade": {
+                "transecto": {
+                  "ic95_pond_celula": [
+                    0.940388954845384,
+                    5.058216410932282
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    0.40746853407245087,
+                    5.609187091031762
+                  ],
+                  "exclui_zero_t_jackknife": true
+                },
+                "pegada": {
+                  "ic95_pond_celula": [
+                    0.9490124602853743,
+                    5.0815588449051345
+                  ],
+                  "exclui_zero_percentil": true,
+                  "ic95_t_jackknife": [
+                    0.40746853407245087,
+                    5.609187091031762
+                  ],
+                  "exclui_zero_t_jackknife": true
+                }
+              },
+              "veredito": "ordenacao_valida_A_menos_delta_maior_que_zero"
+            },
+            "O_familias_28_09": {
+              "criterio": "(O) lower bound of A (mean AND median) and of the equivalent MAE reduction above the largest cap of |contrast| between estimators against the lidar, in the transect AND footprint units",
+              "teto_abs_contrastes_lidar_m": 1.0766815060859036,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 3.8971481338853478,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 2.010000228881836,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 3.625614544697888,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 3.77105694532274,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.9807891845703125,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 3.6065270778173977,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito": "sustentado",
+              "veredito_leitura": "demonstrado",
+              "teto_de": "ceiling from v23 x mlp, transect unit, applied to both units"
+            },
+            "O_familias_teto_por_unidade_secundario": {
+              "teto_transecto_m": 1.0766815060859036,
+              "teto_pegada_m": 1.0779807995576256,
+              "checagens_por_unidade": {
+                "transecto": {
+                  "lim_inf_A_media_m": 3.8971481338853478,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 2.010000228881836,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 3.625614544697888,
+                  "acima_do_teto_reducao": true
+                },
+                "pegada": {
+                  "lim_inf_A_media_m": 3.77105694532274,
+                  "acima_do_teto_media": true,
+                  "lim_inf_A_mediana_m": 1.9807891845703125,
+                  "acima_do_teto_mediana": true,
+                  "lim_inf_reducao_mae_m": 3.6065270778173977,
+                  "acima_do_teto_reducao": true
+                }
+              },
+              "veredito_leitura": "demonstrado",
+              "nota": "Secondary, declared before running; does not replace the primary"
+            }
+          }
+        }
+      }
+    }
+  },
+  "tabela_vereditos_registro_classe_unidade": [
+    {
+      "registro": "i_glo30",
+      "classe": "20-30m",
+      "unidade": "transecto",
+      "S_passa": true,
+      "O_familias_28_09_passa": false,
+      "O_teto_por_unidade_passa": false,
+      "R_passa": true
+    },
+    {
+      "registro": "i_glo30",
+      "classe": "20-30m",
+      "unidade": "pegada",
+      "S_passa": true,
+      "O_familias_28_09_passa": false,
+      "O_teto_por_unidade_passa": false,
+      "R_passa": true
+    },
+    {
+      "registro": "i_glo30",
+      "classe": ">30m",
+      "unidade": "transecto",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": false
+    },
+    {
+      "registro": "i_glo30",
+      "classe": ">30m",
+      "unidade": "pegada",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": false
+    },
+    {
+      "registro": "ii_b_gedtm30",
+      "classe": "20-30m",
+      "unidade": "transecto",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": true
+    },
+    {
+      "registro": "ii_b_gedtm30",
+      "classe": "20-30m",
+      "unidade": "pegada",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": true
+    },
+    {
+      "registro": "ii_b_gedtm30",
+      "classe": ">30m",
+      "unidade": "transecto",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": true
+    },
+    {
+      "registro": "ii_b_gedtm30",
+      "classe": ">30m",
+      "unidade": "pegada",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": true
+    },
+    {
+      "registro": "iii_sem_offset",
+      "classe": "20-30m",
+      "unidade": "transecto",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": true
+    },
+    {
+      "registro": "iii_sem_offset",
+      "classe": "20-30m",
+      "unidade": "pegada",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": true
+    },
+    {
+      "registro": "iii_sem_offset",
+      "classe": ">30m",
+      "unidade": "transecto",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": true
+    },
+    {
+      "registro": "iii_sem_offset",
+      "classe": ">30m",
+      "unidade": "pegada",
+      "S_passa": true,
+      "O_familias_28_09_passa": true,
+      "O_teto_por_unidade_passa": true,
+      "R_passa": true
+    }
+  ],
+  "estabilidade_dos_vereditos": {
+    "S": {
+      "20-30m": {
+        "vereditos": {
+          "i_glo30": "positivo",
+          "ii_b_gedtm30": "positivo",
+          "iii_sem_offset": "positivo"
+        },
+        "igual_nos_tres": true,
+        "registros_que_mudam_o_veredito": []
+      },
+      ">30m": {
+        "vereditos": {
+          "i_glo30": "positivo",
+          "ii_b_gedtm30": "positivo",
+          "iii_sem_offset": "positivo"
+        },
+        "igual_nos_tres": true,
+        "registros_que_mudam_o_veredito": []
+      }
+    },
+    "O": {
+      "20-30m": {
+        "vereditos": {
+          "i_glo30": "nao demonstrado",
+          "ii_b_gedtm30": "demonstrado",
+          "iii_sem_offset": "demonstrado"
+        },
+        "igual_nos_tres": false,
+        "registros_que_mudam_o_veredito": [
+          "ii_b_gedtm30",
+          "iii_sem_offset"
+        ]
+      },
+      ">30m": {
+        "vereditos": {
+          "i_glo30": "demonstrado",
+          "ii_b_gedtm30": "demonstrado",
+          "iii_sem_offset": "demonstrado"
+        },
+        "igual_nos_tres": true,
+        "registros_que_mudam_o_veredito": []
+      }
+    },
+    "O_sec": {
+      "20-30m": {
+        "vereditos": {
+          "i_glo30": "nao demonstrado",
+          "ii_b_gedtm30": "demonstrado",
+          "iii_sem_offset": "demonstrado"
+        },
+        "igual_nos_tres": false,
+        "registros_que_mudam_o_veredito": [
+          "ii_b_gedtm30",
+          "iii_sem_offset"
+        ]
+      },
+      ">30m": {
+        "vereditos": {
+          "i_glo30": "demonstrado",
+          "ii_b_gedtm30": "demonstrado",
+          "iii_sem_offset": "demonstrado"
+        },
+        "igual_nos_tres": true,
+        "registros_que_mudam_o_veredito": []
+      }
+    },
+    "R": {
+      "20-30m": {
+        "vereditos": {
+          "i_glo30": "ordenacao_valida_A_menos_delta_maior_que_zero",
+          "ii_b_gedtm30": "ordenacao_valida_A_menos_delta_maior_que_zero",
+          "iii_sem_offset": "ordenacao_valida_A_menos_delta_maior_que_zero"
+        },
+        "igual_nos_tres": true,
+        "registros_que_mudam_o_veredito": []
+      },
+      ">30m": {
+        "vereditos": {
+          "i_glo30": "nenhuma_ordenacao",
+          "ii_b_gedtm30": "ordenacao_valida_A_menos_delta_maior_que_zero",
+          "iii_sem_offset": "ordenacao_valida_A_menos_delta_maior_que_zero"
+        },
+        "igual_nos_tres": false,
+        "registros_que_mudam_o_veredito": [
+          "ii_b_gedtm30",
+          "iii_sem_offset"
+        ]
+      }
+    }
+  },
+  "leitura_pre_declarada": {
+    "regra_literal": "'The title does not depend on the record' only if the verdict (O) above 30 m is 'demonstrado' in all three records, in both units. Otherwise the text names the record under which it fails. The same applies to (S) and (R) by class.",
+    "O_maior30_por_registro": {
+      "i_glo30": "demonstrado",
+      "ii_b_gedtm30": "demonstrado",
+      "iii_sem_offset": "demonstrado"
+    },
+    "titulo_nao_depende_do_registro": "sim",
+    "registros_em_que_falha": [],
+    "S_R_por_classe": {
+      "S": {
+        "20-30m": {
+          "vereditos": {
+            "i_glo30": "positivo",
+            "ii_b_gedtm30": "positivo",
+            "iii_sem_offset": "positivo"
+          },
+          "igual_nos_tres": true,
+          "registros_que_mudam_o_veredito": []
+        },
+        ">30m": {
+          "vereditos": {
+            "i_glo30": "positivo",
+            "ii_b_gedtm30": "positivo",
+            "iii_sem_offset": "positivo"
+          },
+          "igual_nos_tres": true,
+          "registros_que_mudam_o_veredito": []
+        }
+      },
+      "R": {
+        "20-30m": {
+          "vereditos": {
+            "i_glo30": "ordenacao_valida_A_menos_delta_maior_que_zero",
+            "ii_b_gedtm30": "ordenacao_valida_A_menos_delta_maior_que_zero",
+            "iii_sem_offset": "ordenacao_valida_A_menos_delta_maior_que_zero"
+          },
+          "igual_nos_tres": true,
+          "registros_que_mudam_o_veredito": []
+        },
+        ">30m": {
+          "vereditos": {
+            "i_glo30": "nenhuma_ordenacao",
+            "ii_b_gedtm30": "ordenacao_valida_A_menos_delta_maior_que_zero",
+            "iii_sem_offset": "ordenacao_valida_A_menos_delta_maior_que_zero"
+          },
+          "igual_nos_tres": false,
+          "registros_que_mudam_o_veredito": [
+            "ii_b_gedtm30",
+            "iii_sem_offset"
+          ]
+        }
+      }
+    },
+    "O_20_30_por_registro": {
+      "i_glo30": "nao demonstrado",
+      "ii_b_gedtm30": "demonstrado",
+      "iii_sem_offset": "demonstrado"
+    },
+    "secundario_teto_por_unidade_O_maior30": {
+      "vereditos": {
+        "i_glo30": "demonstrado",
+        "ii_b_gedtm30": "demonstrado",
+        "iii_sem_offset": "demonstrado"
+      },
+      "igual_nos_tres": true,
+      "registros_que_mudam_o_veredito": []
+    },
+    "O3": "O3 not applied: S7 missing (auditar_s7_arvore_lidar.json does not exist)"
+  },
+  "nao_faz": "does not edit any existing script/JSON; does not interpret for the paper; does not audit its own result; does not open a new test",
+  "contra_auditoria": "PENDING -- not yet checked by anyone other than the author of this script",
+  "tempo_total_s": 15.5
+}

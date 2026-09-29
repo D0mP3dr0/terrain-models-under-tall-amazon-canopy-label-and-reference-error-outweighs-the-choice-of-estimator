@@ -1,0 +1,49 @@
+{
+  "_proveniencia": {
+    "script": null,
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-09-03T18:23",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    },
+    "retroativo": true,
+    "sha256_script_no_momento_do_carimbo": null,
+    "nota": "retroactive stamp 2026-09-03: artifact behind the choice of lambda=0.35; content untouched, backup _backup_comparar_ponto_s035_pre_carimbo_2026-09-03.json"
+  },
+  "_fontes": [],
+  "tolerancia_skill": 0.01,
+  "por_peso": {
+    "0.0": {
+      "skill": 0.27488865102393545,
+      "skill_dp": 0.0055670356574596645,
+      "skill_delta_vs_p0": 0.0,
+      "dentro_guarda_corpo": true,
+      "criados_media_quad": 252404.3,
+      "criados_2m_soma": 55968.2147132,
+      "frac_neg_dossel_q3": 0.0059796
+    },
+    "0.35": {
+      "skill": 0.2637525543241753,
+      "skill_dp": 0.0046419487860392145,
+      "skill_delta_vs_p0": -0.011136096699760123,
+      "dentro_guarda_corpo": false,
+      "criados_media_quad": 188572.55000000002,
+      "criados_2m_soma": 27820.738340799995,
+      "frac_neg_dossel_q3": 0.0052312
+    }
+  },
+  "recomendacao": {
+    "regra": "smallest weight that halves those created >2m within the skill guardrail",
+    "peso": null,
+    "candidatos": []
+  }
+}

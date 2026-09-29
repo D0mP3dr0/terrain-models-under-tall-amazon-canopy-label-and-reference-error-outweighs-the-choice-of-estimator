@@ -1,0 +1,716 @@
+{
+  "_proveniencia": {
+    "script": "auditar_d8_triangulo.py",
+    "commit": "82c77a1",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-08-16T19:35",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "fila_2026-08-16_d8_f2_f1.sh",
+      "sha256": "444263624df84c14d3748b3b73806c50a9f568cfde1266b5054759863c60c448",
+      "bytes": 6142,
+      "mtime": "2026-08-16 18:01"
+    },
+    {
+      "caminho": "results/d8_triangulo_fator4_gatv2_2_semobs.json",
+      "sha256": "842a587cafbc5942da8d3e396d2cabcb5bcb5c26dd77cd481ffae73876b0d77f",
+      "bytes": 4600030,
+      "mtime": "2026-08-16 18:01"
+    },
+    {
+      "caminho": "results/d8_triangulo_fator4_mlp_semobs.json",
+      "sha256": "488f46311735147506c66ea751c3a87f7952ac760daed80bac8e70586ba6285c",
+      "bytes": 4280696,
+      "mtime": "2026-08-16 18:53"
+    },
+    {
+      "caminho": "results/ofat_boost_ba4.json",
+      "sha256": "2b16594822059650225e63e6551a3c26039dbcddd8b1bb1986dc7f466e6ec68f",
+      "bytes": 3712075,
+      "mtime": "2026-08-09 19:09"
+    },
+    {
+      "caminho": "results/noite_mlp_boost4_suave0.json",
+      "sha256": "8c603469372dec8cfbe8438ce8074abcffa299100fc8b77983a6bf09186e10b5",
+      "bytes": 3687412,
+      "mtime": "2026-08-15 00:55"
+    },
+    {
+      "caminho": "results/f2_arvores.json",
+      "sha256": "c5c53ff7cb6c1b251eb25e1ac1ee8d92e4e0547c3085bcaadb41189df9d43db7",
+      "bytes": 14092,
+      "mtime": "2026-08-14 20:34"
+    }
+  ],
+  "criterio_pre_declarado": {
+    "fonte": "fila_2026-08-16_d8_f2_f1.sh, header, section D8 (file stored in _fontes)",
+    "contraste": "Delta_T = skill(XGBoost) - skill(GATv2_fator4), paired by seed, 5 seeds",
+    "margem": 0.01,
+    "regra": {
+      "CAPACIDADE": "95% CI entirely above +margin",
+      "ORCAMENTO": "95% CI entirely within +-margin",
+      "INDETERMINADO": "qualquer outro caso"
+    },
+    "junto_sempre": "admissibility (canopy violations >1 m, p95, max) reported next to every skill value of this arm"
+  },
+  "veredito": "INDETERMINADO",
+  "sub_caso_nao_pre_registrado": null,
+  "frase_autorizada": "indeterminate; the text reports the range and the budget qualification, without ranking",
+  "delta_T_xgb_menos_gatv2_fator4": {
+    "n": 5,
+    "sementes": [
+      7,
+      31,
+      42,
+      123,
+      2024
+    ],
+    "media": 0.0026476535526613887,
+    "dp": 0.00684108921426064,
+    "se": 0.003059428104645483,
+    "t": 0.8654079985214068,
+    "p": 0.435632360905787,
+    "ic95": [
+      -0.005846680633186125,
+      0.011141987738508902
+    ],
+    "ic90": [
+      -0.0038745784202245167,
+      0.009169885525547294
+    ],
+    "tost_margem": 0.01,
+    "tost_p": 0.037050316661046696,
+    "tost_equivalente_a_5pct": true,
+    "sinal_consistente": 4,
+    "por_semente": {
+      "7": 0.010202852281914865,
+      "31": -0.008243137801384082,
+      "42": 0.005690998421644389,
+      "123": 0.0017433037214528713,
+      "2024": 0.0038442511396789003
+    }
+  },
+  "delta_T_em_metros_mae": {
+    "n": 5,
+    "sementes": [
+      7,
+      31,
+      42,
+      123,
+      2024
+    ],
+    "media": -0.019547036803586694,
+    "dp": 0.053894386688772083,
+    "se": 0.024102302448350835,
+    "t": -0.8110028842876863,
+    "p": 0.46286007349,
+    "ic95": [
+      -0.08646575646030716,
+      0.04737168285313378
+    ],
+    "ic90": [
+      -0.07092945282117635,
+      0.031835379214002965
+    ],
+    "tost_margem": 0.01,
+    "tost_p": 0.6438758462391245,
+    "tost_equivalente_a_5pct": false,
+    "sinal_consistente": 4,
+    "por_semente": {
+      "7": -0.07880648032827775,
+      "31": 0.06645699901382951,
+      "42": -0.04384388993095101,
+      "123": -0.01313182734843199,
+      "2024": -0.028409985424102224
+    }
+  },
+  "exploratorios_sem_pre_registro": {
+    "nota": "Only Delta_T is pre-declared; these contrasts have no multiplicity correction and no verdict",
+    "xgb_menos_mlp_fator4": {
+      "n": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "media": 0.015252552331130343,
+      "dp": 0.0038710179197412333,
+      "se": 0.0017311718421322445,
+      "t": 8.810536285262199,
+      "p": 0.0009156608984465792,
+      "ic95": [
+        0.010446048743786025,
+        0.02005905591847466
+      ],
+      "ic90": [
+        0.011561959202901533,
+        0.018943145459359153
+      ],
+      "tost_margem": 0.01,
+      "tost_p": 0.9806875852017365,
+      "tost_equivalente_a_5pct": false,
+      "sinal_consistente": 5,
+      "por_semente": {
+        "7": 0.015920650241255385,
+        "31": 0.009188767149851063,
+        "42": 0.017489765654224776,
+        "123": 0.014308877187755253,
+        "2024": 0.019354701422565235
+      }
+    },
+    "gatv2_menos_mlp_fator4": {
+      "n": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "media": 0.012604898778468954,
+      "dp": 0.004467263434672234,
+      "se": 0.001997820942665261,
+      "t": 6.309323578144576,
+      "p": 0.003226824812021095,
+      "ic95": [
+        0.007058058601144349,
+        0.01815173895579356
+      ],
+      "ic90": [
+        0.00834585062219194,
+        0.016863946934745966
+      ],
+      "tost_margem": 0.01,
+      "tost_p": 0.8688742010548737,
+      "tost_equivalente_a_5pct": false,
+      "sinal_consistente": 5,
+      "por_semente": {
+        "7": 0.00571779795934052,
+        "31": 0.017431904951235144,
+        "42": 0.011798767232580387,
+        "123": 0.012565573466302382,
+        "2024": 0.015510450282886334
+      }
+    },
+    "gatv2_x4_menos_x1": {
+      "n": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "media": 0.011381348801217783,
+      "dp": 0.004091539429606805,
+      "se": 0.0018297920594443063,
+      "t": 6.22002305807044,
+      "p": 0.003401120388196187,
+      "ic95": [
+        0.006301031594243849,
+        0.016461666008191718
+      ],
+      "ic90": [
+        0.007480512479645417,
+        0.015282185122790148
+      ],
+      "tost_margem": 0.01,
+      "tost_p": 0.7538457378387702,
+      "tost_equivalente_a_5pct": false,
+      "sinal_consistente": 5,
+      "por_semente": {
+        "7": 0.007952903384819854,
+        "31": 0.015795841041582714,
+        "42": 0.010978918226088152,
+        "123": 0.006883084592879174,
+        "2024": 0.015295996760719022
+      }
+    },
+    "mlp_x4_menos_x1": {
+      "n": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "media": -0.0029881260588459522,
+      "dp": 0.0016100206103873856,
+      "se": 0.0007200231060003796,
+      "t": -4.150041899966994,
+      "p": 0.014259799332792006,
+      "ic95": [
+        -0.004987230687130018,
+        -0.0009890214305618866
+      ],
+      "ic90": [
+        -0.004523105003453794,
+        -0.0014531471142381106
+      ],
+      "tost_margem": 0.01,
+      "tost_p": 0.000311344878715869,
+      "tost_equivalente_a_5pct": true,
+      "sinal_consistente": 5,
+      "por_semente": {
+        "7": -0.0030373830538339974,
+        "31": -0.003907853375134274,
+        "42": -0.0018331519486567416,
+        "123": -0.005102145398747038,
+        "2024": -0.0010600965178577115
+      }
+    },
+    "xgb_menos_gatv2_x1_E2_para_memoria": {
+      "n": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "media": 0.014029002353879171,
+      "dp": 0.00550590684900367,
+      "se": 0.0024623163984307753,
+      "t": 5.697481592056894,
+      "p": 0.004689261806549131,
+      "ic95": [
+        0.007192516042007786,
+        0.020865488665750557
+      ],
+      "ic90": [
+        0.008779721052965112,
+        0.01927828365479323
+      ],
+      "tost_margem": 0.01,
+      "tost_p": 0.9114375580348986,
+      "tost_equivalente_a_5pct": false,
+      "sinal_consistente": 5,
+      "por_semente": {
+        "7": 0.01815575566673472,
+        "31": 0.007552703240198633,
+        "42": 0.01666991664773254,
+        "123": 0.008626388314332045,
+        "2024": 0.019140247900397922
+      }
+    }
+  },
+  "resumo_por_braco": {
+    "gatv2_e2_x1": {
+      "skill": {
+        "media": 0.27488865102393545,
+        "dp": 0.0055670356574596645,
+        "min": 0.2682020666762233,
+        "max": 0.2805703748648643,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.865507099011539,
+        "dp": 0.037194280979795345,
+        "min": 5.827473273993806,
+        "max": 5.909939909820826,
+        "n": 5
+      }
+    },
+    "mlp_e2_x1": {
+      "skill": {
+        "media": 0.27665322710553025,
+        "dp": 0.00471953035571221,
+        "min": 0.2690477096719137,
+        "max": 0.28054386193028813,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.850497965600708,
+        "dp": 0.027251596409814446,
+        "min": 5.827380225206901,
+        "max": 5.8917610771038404,
+        "n": 5
+      }
+    },
+    "gatv2_d8_x4": {
+      "skill": {
+        "media": 0.2862699998251532,
+        "dp": 0.005662386916932929,
+        "min": 0.2779559651973512,
+        "max": 0.29193303381951746,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.770405971982262,
+        "dp": 0.04278183713062501,
+        "min": 5.727180849537863,
+        "max": 5.838986904300745,
+        "n": 5
+      }
+    },
+    "mlp_d8_x4": {
+      "skill": {
+        "media": 0.2736651010466843,
+        "dp": 0.003934536946366889,
+        "min": 0.267987613154056,
+        "max": 0.2787107099816314,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.870308870058063,
+        "dp": 0.021078796363980988,
+        "min": 5.840190568899167,
+        "max": 5.896537619706416,
+        "n": 5
+      }
+    },
+    "xgb": {
+      "skill": {
+        "media": 0.28891765337781466,
+        "dp": 0.004569036375282687,
+        "min": 0.2836898960181334,
+        "max": 0.29620047563585616,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.750858935178676,
+        "dp": 0.0339864503998745,
+        "min": 5.699413988095072,
+        "max": 5.793637848551692,
+        "n": 5
+      }
+    }
+  },
+  "por_semente": {
+    "7": {
+      "gatv2_d8": 0.2779559651973512,
+      "mlp_d8": 0.2722381672380107,
+      "gatv2_e2": 0.27000306181253136,
+      "mlp_e2": 0.2752755502918447,
+      "xgb": 0.2881588174792661
+    },
+    "31": {
+      "gatv2_d8": 0.29193303381951746,
+      "mlp_d8": 0.2745011288682823,
+      "gatv2_e2": 0.27613719277793475,
+      "mlp_e2": 0.2784089822434166,
+      "xgb": 0.2836898960181334
+    },
+    "42": {
+      "gatv2_d8": 0.2905094772142118,
+      "mlp_d8": 0.2787107099816314,
+      "gatv2_e2": 0.2795305589881236,
+      "mlp_e2": 0.28054386193028813,
+      "xgb": 0.29620047563585616
+    },
+    "123": {
+      "gatv2_d8": 0.2874534594577435,
+      "mlp_d8": 0.2748878859914411,
+      "gatv2_e2": 0.2805703748648643,
+      "mlp_e2": 0.27999003139018813,
+      "xgb": 0.28919676317919635
+    },
+    "2024": {
+      "gatv2_d8": 0.28349806343694234,
+      "mlp_d8": 0.267987613154056,
+      "gatv2_e2": 0.2682020666762233,
+      "mlp_e2": 0.2690477096719137,
+      "xgb": 0.28734231457662124
+    }
+  },
+  "vinculo_do_teto": {
+    "gatv2_e2_x1": {
+      "etapas_no_teto_total": 14,
+      "etapas_total": 20,
+      "razao_epocas_usadas_sobre_teto": 0.9745098039215686,
+      "epocas_teto_por_corrida": 102,
+      "etapas_com_melhor_no_teto": 7,
+      "etapas_com_melhor_acima_de_090_do_teto": 16,
+      "razao_melhor_sobre_teto_media": 0.9358730158730157,
+      "nota": "`etapas_no_teto` (parou_antes False) does NOT measure truncation — the best-epoch weights are always restored (b2_transferencia.py:1836-1837); the binding witness is `melhor_epoca/teto`"
+    },
+    "mlp_e2_x1": {
+      "etapas_no_teto_total": 9,
+      "etapas_total": 20,
+      "razao_epocas_usadas_sobre_teto": 0.9176470588235294,
+      "epocas_teto_por_corrida": 102,
+      "etapas_com_melhor_no_teto": 1,
+      "etapas_com_melhor_acima_de_090_do_teto": 4,
+      "razao_melhor_sobre_teto_media": 0.7717301587301588,
+      "nota": "`etapas_no_teto` (parou_antes False) does NOT measure truncation — the best-epoch weights are always restored (b2_transferencia.py:1836-1837); the binding witness is `melhor_epoca/teto`"
+    },
+    "gatv2_d8_x4": {
+      "etapas_no_teto_total": 3,
+      "etapas_total": 20,
+      "razao_epocas_usadas_sobre_teto": 0.8357843137254902,
+      "epocas_teto_por_corrida": 408,
+      "etapas_com_melhor_no_teto": 0,
+      "etapas_com_melhor_acima_de_090_do_teto": 2,
+      "razao_melhor_sobre_teto_media": 0.7505436507936508,
+      "nota": "`etapas_no_teto` (parou_antes False) does NOT measure truncation — the best-epoch weights are always restored (b2_transferencia.py:1836-1837); the binding witness is `melhor_epoca/teto`"
+    },
+    "mlp_d8_x4": {
+      "etapas_no_teto_total": 0,
+      "etapas_total": 20,
+      "razao_epocas_usadas_sobre_teto": 0.6235294117647059,
+      "epocas_teto_por_corrida": 408,
+      "etapas_com_melhor_no_teto": 0,
+      "etapas_com_melhor_acima_de_090_do_teto": 0,
+      "razao_melhor_sobre_teto_media": 0.4491666666666667,
+      "nota": "`etapas_no_teto` (parou_antes False) does NOT measure truncation — the best-epoch weights are always restored (b2_transferencia.py:1836-1837); the binding witness is `melhor_epoca/teto`"
+    },
+    "arvore": {
+      "testemunha_gravada": false,
+      "tetos_declarados": "continuation of the ensemble, caps [450, 250, 180, 140]",
+      "busca_na_validacao": "16 configurations searched on validation",
+      "nota": "f2_arvores.json does not store best_iteration per stage; the link of the cap [450,250,180,140] is NOT audited (braco_arvores.py); the tree had a search over 16 configurations on validation within the budget in which it is evaluated, while the networks use ETAPAS_LR from x1 carried over to x4 — the fairness slack runs in favor of the tree"
+    }
+  },
+  "admissibilidade": {
+    "definicao_p95": "violacao_p95_m_max_entre_quadrantes = MAX across quadrants of the within-quadrant p95 (not the p95 of the whole run); mean across seeds",
+    "gatv2_e2_x1": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.0,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 0,
+      "sementes_com_zero_violacoes": 5,
+      "quadrantes_zero_por_testemunha_total": 0,
+      "quadrantes_com_medicao_total": 20,
+      "violacoes_acima_10cm_media": 134.6,
+      "violacao_p95_m_max_entre_quadrantes_media": 0.05252199999999999,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 0.7508,
+      "pocos_por_km2_media": 118.31544693796855,
+      "slope_p99_9_graus_pior": 31.079
+    },
+    "mlp_e2_x1": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.0,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 0,
+      "sementes_com_zero_violacoes": 5,
+      "quadrantes_zero_por_testemunha_total": 8,
+      "quadrantes_com_medicao_total": 12,
+      "violacoes_acima_10cm_media": 0.0,
+      "violacao_p95_m_max_entre_quadrantes_media": 0.00033,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 0.0018,
+      "pocos_por_km2_media": 139.2923556136571,
+      "slope_p99_9_graus_pior": 30.71
+    },
+    "gatv2_d8_x4": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 162.6,
+      "violacoes_acima_1m_min": 37,
+      "violacoes_acima_1m_max": 374,
+      "sementes_com_zero_violacoes": 0,
+      "quadrantes_zero_por_testemunha_total": 0,
+      "quadrantes_com_medicao_total": 20,
+      "violacoes_acima_10cm_media": 2198.6,
+      "violacao_p95_m_max_entre_quadrantes_media": 0.862054,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 6.4626,
+      "pocos_por_km2_media": 93.04571460850056,
+      "slope_p99_9_graus_pior": 31.84
+    },
+    "mlp_d8_x4": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.0,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 0,
+      "sementes_com_zero_violacoes": 5,
+      "quadrantes_zero_por_testemunha_total": 1,
+      "quadrantes_com_medicao_total": 19,
+      "violacoes_acima_10cm_media": 0.0,
+      "violacao_p95_m_max_entre_quadrantes_media": 1.4000000000000001e-05,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 0.0,
+      "pocos_por_km2_media": 138.76267944900377,
+      "slope_p99_9_graus_pior": 31.198
+    },
+    "xgb": {
+      "n_sementes": null,
+      "sementes": null,
+      "violacoes_acima_1m_media": null,
+      "violacoes_acima_1m_min": null,
+      "violacoes_acima_1m_max": null,
+      "sementes_com_zero_violacoes": null,
+      "quadrantes_zero_por_testemunha_total": null,
+      "quadrantes_com_medicao_total": null,
+      "violacoes_acima_10cm_media": null,
+      "violacao_p95_m_max_entre_quadrantes_media": null,
+      "nota_p95": null,
+      "violacao_max_m_pior": null,
+      "pocos_por_km2_media": null,
+      "slope_p99_9_graus_pior": null,
+      "nota": "f2_arvores.json does not store G_raiox: tree admissibility is not measured in this artifact (E3, the XGBoost raster on the hydrological axis, is the route)"
+    }
+  },
+  "por_quadrante": {
+    "xgb_menos_gatv2_fator4": {
+      "Q1": {
+        "media": -0.006543909138484816,
+        "dp": 0.008476449002152659,
+        "t": -1.7262683546515842,
+        "p": 0.1593767402077473,
+        "sinal_consistente": 4
+      },
+      "Q2": {
+        "media": -0.004607141800151493,
+        "dp": 0.01668482624842602,
+        "t": -0.6174401874931918,
+        "p": 0.5703596913820167,
+        "sinal_consistente": 3
+      },
+      "Q3": {
+        "media": 0.027012445662849216,
+        "dp": 0.010578658863945205,
+        "t": 5.709765814125516,
+        "p": 0.0046527109680399355,
+        "sinal_consistente": 5
+      },
+      "Q4": {
+        "media": -0.010481129431964952,
+        "dp": 0.0009352212301062482,
+        "t": -25.05986512751087,
+        "p": 1.5053586341883087e-05,
+        "sinal_consistente": 5
+      },
+      "quadrantes_com_media_positiva": 1,
+      "nota": "4 quadrants: a unanimous sign has two-sided p 0.125 — undecidable at the quadrant level; read as amplitude. The per-quadrant p values are exploratory (5 seeds within the quadrant), without multiplicity correction"
+    },
+    "gatv2_menos_mlp_fator4": {
+      "Q1": {
+        "media": 0.029447075496128194,
+        "dp": 0.006210416815896616,
+        "t": 10.60245463386094,
+        "p": 0.00044791813368296265,
+        "sinal_consistente": 5
+      },
+      "Q2": {
+        "media": 0.02771740342452387,
+        "dp": 0.017209279305109754,
+        "t": 3.601429038264166,
+        "p": 0.022729208579475607,
+        "sinal_consistente": 5
+      },
+      "Q3": {
+        "media": -0.008157309937877777,
+        "dp": 0.00912566885789029,
+        "t": -1.9987904249734267,
+        "p": 0.11627701332095804,
+        "sinal_consistente": 4
+      },
+      "Q4": {
+        "media": 0.012828226092805761,
+        "dp": 0.0048224043095573595,
+        "t": 5.94823323241496,
+        "p": 0.00400773291308022,
+        "sinal_consistente": 5
+      },
+      "quadrantes_com_media_positiva": 3,
+      "nota": "4 quadrants: a unanimous sign has two-sided p 0.125 — undecidable at the quadrant level; read as amplitude. The per-quadrant p values are exploratory (5 seeds within the quadrant), without multiplicity correction"
+    }
+  },
+  "guardas_verificadas": {
+    "config_d8": {
+      "fator_epocas": 4,
+      "peso_suavidade": 0.0,
+      "boost_atl08": 4.0,
+      "frac_ancoras_treino": 1.0,
+      "fator_fases": 1,
+      "batch": null
+    },
+    "config_e2": {
+      "boost_atl08": 4.0,
+      "batch": null,
+      "vetor": "v23",
+      "regime": "ampliacao"
+    },
+    "proibidas_e2": [
+      "fator_epocas",
+      "fator_fases",
+      "frac_ancoras_treino"
+    ],
+    "tetos_x1": {
+      "etapa1": 45,
+      "etapa2": 25,
+      "etapa3": 18,
+      "etapa4": 14
+    },
+    "tetos_x4": {
+      "etapa1": 180,
+      "etapa2": 100,
+      "etapa3": 72,
+      "etapa4": 56
+    },
+    "lambda_efetivo_por_testemunha": "max of pesos.suave in calibragem_por_epoca == 0.0 in the 20 neural runs",
+    "concordancia_etapas_vs_quadrantes_treino": "epocas_usadas and epocas_teto identical in both blocks, per stage (failure severity: high)",
+    "tetos_uniformes_entre_sementes": "orcamento() requires a single epocas_teto per arm (fails loudly)",
+    "criterio_em_fontes": "fila_2026-08-16_d8_f2_f1.sh is the first entry of _fontes (sha256), so that any edit of the criterion is detectable",
+    "sementes": [
+      7,
+      31,
+      42,
+      123,
+      2024
+    ],
+    "n_reserva": 157847,
+    "sem_canal_observacao": true,
+    "agregacao": "`reserva_uniao.skill_media_ponderada_por_n` (networks) / `por_semente.reserva.skill_media_ponderada_por_n` (tree); identical to auditar_e2_e5.py"
+  },
+  "ressalvas": [
+    "5 seeds: the 95% CI uses t(4); the decision is on the mean across seeds, not on quadrants (92% of the variance is between quadrants — auditar_unidade_quadrante.json)",
+    "The pre-declared rule requires the 95% CI to lie within the margin, stricter than standard TOST (90% CI); both are reported, the verdict follows the pre-declared rule (relabeling would be post hoc)",
+    "ONLY Delta_T is pre-declared; the other contrasts are exploratory",
+    "Tuning asymmetry: the tree had a search of 16 configurations on validation at the budget at which it is evaluated; the networks use ETAPAS_LR from x1 carried over to x4; the fairness slack runs in favor of the tree",
+    "the tree has no recorded admissibility and no budget witness; the columns are declared as absent"
+  ],
+  "contra_auditoria": {
+    "data": "2026-08-16",
+    "pareceres": [
+      "internal/note_09.md",
+      "internal/note_03.md",
+      "internal/note_06.md"
+    ],
+    "veredito_dos_tres": "approved with corrections — applied in this version"
+  }
+}

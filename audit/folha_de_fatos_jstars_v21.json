@@ -1,0 +1,3508 @@
+{
+  "_proveniencia": {
+    "script": "folha_de_fatos_jstars_v21.py",
+    "sha256_script": "d8a2db68fc2b9f00eba41355da6f021d9fed7aef3ac40fa6d3c94450fa19249d",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-28T13:00",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "folha_de_fatos_jstars_v2.json",
+      "sha256": "e32782c40b05d7b19cd7e7097097e06ea1fa1383fbb9581a73138ab4cbcfb80a",
+      "bytes": 102201,
+      "mtime": "2026-09-28 12:18"
+    },
+    {
+      "caminho": "auditar_rotulo_regua_v2.json",
+      "sha256": "2470115aaf6eed5ff2ea7d878f2dd6a1ac3f7bf682240599102a33fb01129e9a",
+      "bytes": 247271,
+      "mtime": "2026-09-28 11:58"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_anadem.json",
+      "sha256": "95c726a1a7b703ba0092b74560df34e1b2ebb8225a45567ce7ffbd641aa75b66",
+      "bytes": 342309,
+      "mtime": "2026-09-28 11:48"
+    },
+    {
+      "caminho": "auditar_densidade_solo_nativa.json",
+      "sha256": "e9eeb3634ec1fde6307ed11048e6063e019101f2ae96e9942d4c471de96bbe3e",
+      "bytes": 19820,
+      "mtime": "2026-08-18 19:21"
+    },
+    {
+      "caminho": "artigo_v23_2/_pareceres_2026-09-28_execucao/guarda_sanidade_anadem_vs_glo30.json",
+      "sha256": "fd35875b32154733ab36c9f0b4aa5b827d8f7f8cb86c0833c1e85827a39e73ee",
+      "bytes": 1027,
+      "mtime": "2026-09-28 11:40"
+    },
+    {
+      "caminho": "artigo_v23_2/_pareceres_2026-09-28_execucao/geo_produto_anadem.json",
+      "sha256": "2738c9edce6e55fa5076e08c4479bfe262c7a6788b2b5730ec1f5edd63c913e6",
+      "bytes": 7943,
+      "mtime": "2026-09-28 11:44"
+    }
+  ],
+  "gerado_para": "Article 1 of V23 (target IEEE JSTARS, pacote_overleaf/main.tex)",
+  "regra": "every number cited in the paper text has a row in this sheet; an unused row is allowed, a number without a row DOES NOT EXIST. Copy from the sheet and check by diff against the row's artifact.",
+  "protocolo": "Complements the V23 Article 1 fact sheet with missing facts (parte_C: fidelity per ETH class, paired contrast v23 x FABDEM/GEDTM30/MLP in MAE and NMAD, return density in the lower shell per canopy class, ANADEM datum test in the clearings)",
+  "parte_A": {
+    "n_fatos": 34,
+    "fatos": [
+      {
+        "id": "jstars_lambda_criterio_regra",
+        "valor": "smallest weight that halves those created >2m within the skill guardrail",
+        "unidade": null,
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "recomendacao.regra",
+        "carimbo_retroativo": true,
+        "nota": "criterion pre-declared before the fine smoothing-weight sweep"
+      },
+      {
+        "id": "jstars_lambda_guarda_skill",
+        "valor": 0.01,
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "tolerancia_skill",
+        "carimbo_retroativo": true
+      },
+      {
+        "id": "jstars_lambda_peso_nao_eleito",
+        "valor": true,
+        "unidade": null,
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "recomendacao.peso",
+        "carimbo_retroativo": true,
+        "nota": "recomendacao.peso = null in the source (no weight selected by the rule); the raw null value does not enter the fact sheet (guard G2), only the derived boolean proposition is kept"
+      },
+      {
+        "id": "jstars_lambda_p0",
+        "valor": {
+          "skill": 0.27488865102393545,
+          "skill_dp": 0.0055670356574596645,
+          "dentro_guarda_corpo": true
+        },
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "por_peso.0.0.{skill,skill_dp,dentro_guarda_corpo}",
+        "carimbo_retroativo": true
+      },
+      {
+        "id": "jstars_lambda_p035",
+        "valor": {
+          "skill": 0.2637525543241753,
+          "skill_dp": 0.0046419487860392145,
+          "skill_delta_vs_p0": -0.011136096699760123,
+          "dentro_guarda_corpo": false
+        },
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "por_peso.0.35.{skill,skill_dp,skill_delta_vs_p0,dentro_guarda_corpo}",
+        "carimbo_retroativo": true
+      },
+      {
+        "id": "jstars_lambda_criados_2m",
+        "valor": {
+          "p0": 55968.2147132,
+          "p035": 27820.738340799995
+        },
+        "unidade": "pocos hidrologicos >2m",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "por_peso.{0.0,0.35}.criados_2m_soma",
+        "carimbo_retroativo": true
+      },
+      {
+        "id": "jstars_lambda_corte_relativo_criados_2m",
+        "valor": 0.5029189606393051,
+        "unidade": "fracao",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "derived: 1 - criados_2m_soma(0.35)/criados_2m_soma(0.0)",
+        "carimbo_retroativo": true,
+        "nota": "computed in code from the two fields cited above"
+      },
+      {
+        "id": "jstars_lambda_excesso_sobre_guarda",
+        "valor": 0.0011360966997601227,
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "derived: |por_peso.0.35.skill_delta_vs_p0| - tolerancia_skill",
+        "carimbo_retroativo": true,
+        "nota": "calculado em codigo"
+      },
+      {
+        "id": "jstars_lambda_excesso_vs_skill_dp",
+        "valor": {
+          "excesso_sobre_guarda": 0.0011360966997601227,
+          "skill_dp_p035": 0.0046419487860392145,
+          "excesso_menor_que_skill_dp": true
+        },
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "derived: excesso_sobre_guarda compared with por_peso.0.35.skill_dp",
+        "carimbo_retroativo": true,
+        "nota": "computed in code: the excess over the skill guard is smaller than the spread (sd) across seeds at the same weight"
+      },
+      {
+        "id": "jstars_lambda_registro_acdsa",
+        "valor": {
+          "ids": [
+            "lambda_criterio_regra",
+            "lambda_guarda_skill",
+            "lambda_pocos_2m",
+            "lambda_custo_skill",
+            "lambda_criterio_candidatos_vazio"
+          ],
+          "n": 5
+        },
+        "unidade": null,
+        "artefato": "folha_de_fatos_acdsa.json",
+        "campo": "fatos[*].id (prefix 'lambda_'), filtered in code",
+        "nota": "ACDSA (folha_de_fatos_acdsa.json) already records the same caveat about 0.35 lying outside the skill guardrail for the same criterion comparar_ponto_s035.json; see the ids above for the values stamped there"
+      },
+      {
+        "id": "jstars_params_gatv2",
+        "valor": 156929,
+        "unidade": "parametros",
+        "artefato": "auditar_paridade_capacidade.json",
+        "campo": "familias.gatv2_2_semobs.params_treinaveis"
+      },
+      {
+        "id": "jstars_params_mlp",
+        "valor": 209665,
+        "unidade": "parametros",
+        "artefato": "auditar_paridade_capacidade.json",
+        "campo": "familias.mlp_semobs.params_treinaveis"
+      },
+      {
+        "id": "jstars_params_razao_mlp_sobre_gatv2",
+        "valor": 1.3360500608555461,
+        "unidade": null,
+        "artefato": "auditar_paridade_capacidade.json",
+        "campo": "leitura.razao_mlp_sobre_gatv2",
+        "nota": "checked in code: 209665/156929 = 1.3360500609; the MLP (control) has MORE parameters than GATv2"
+      },
+      {
+        "id": "jstars_params_arvore_disponivel",
+        "valor": false,
+        "unidade": null,
+        "artefato": "results/f2_arvores.json",
+        "campo": "config (keys: colsample_bytree, learning_rate, max_depth, min_child_weight, subsample)",
+        "carimbo_retroativo": true,
+        "nota": "no project artifact records a parameter or leaf count for XGBoost (results/f2_arvores.json.config only has training hyperparameters: max_depth, learning_rate, min_child_weight, subsample, colsample_bytree); there is no tree count to include"
+      },
+      {
+        "id": "jstars_custo_estrategia",
+        "valor": "growing window as a disjoint union of the quadrants in a single graph; neighborhood sampling in mini-batches (NeighborLoader); 8-connected edges generated from the mesh; queue with a RAM guard and an epoch budget locked per stage (b2_transferencia.py)",
+        "unidade": null,
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "estrategia"
+      },
+      {
+        "id": "jstars_custo_hardware",
+        "valor": {
+          "cpu": "AMD Ryzen 9 5900X 12-Core Processor",
+          "ram_total_gb": 128,
+          "gpu": "GPU: NVIDIA GeForce RTX 5070 Ti",
+          "vram_total_gb": 15.9
+        },
+        "unidade": null,
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "hardware_da_maquina_de_auditoria.{cpu,ram_total_gb,gpu,vram_total_gb}",
+        "nota": "author's statement (D3): hardware of the machine on which THIS audit ran, not a measurement of the original runs of 10-11/08 (which only record 'dispositivo: cuda'); same caveat used in the ACDSA for the same S7 artifact"
+      },
+      {
+        "id": "jstars_custo_gatv2_parede_b2_min",
+        "valor": 62.5,
+        "unidade": "min",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.gatv2.parede_b2_min",
+        "nota": "graph: INICIO -> B2 CONCLUIDO, same scope in both families"
+      },
+      {
+        "id": "jstars_custo_gatv2_treino_puro_min",
+        "valor": 4.35,
+        "unidade": "min",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.gatv2.treino_s_soma_media_min",
+        "nota": "mean over the 5 seeds; excludes loading, union and dense prediction"
+      },
+      {
+        "id": "jstars_custo_gatv2_vram_pico_gb",
+        "valor": {
+          "valor": 4.6,
+          "onde": "Peak VRAM at seed 7, stage Q4"
+        },
+        "unidade": "GB",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.gatv2.{vram_pico_gb,vram_pico_onde}"
+      },
+      {
+        "id": "jstars_custo_gatv2_rss_pico_gb",
+        "valor": 26.9,
+        "unidade": "GB",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.gatv2.rss_pico_gb"
+      },
+      {
+        "id": "jstars_custo_mlp_parede_b2_min",
+        "valor": 47.5,
+        "unidade": "min",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.mlp.parede_b2_min",
+        "nota": "Single measurement: log line INICIO -> B2 CONCLUIDO, same scope for both families"
+      },
+      {
+        "id": "jstars_custo_mlp_treino_puro_min",
+        "valor": 1.05,
+        "unidade": "min",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.mlp.treino_s_soma_media_min",
+        "nota": "mean over the 5 seeds; excludes loading, union and dense prediction"
+      },
+      {
+        "id": "jstars_custo_mlp_vram_pico_gb",
+        "valor": {
+          "valor": 0.735,
+          "onde": "Peak VRAM at seed 42, stage Q4"
+        },
+        "unidade": "GB",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.mlp.{vram_pico_gb,vram_pico_onde}"
+      },
+      {
+        "id": "jstars_custo_mlp_rss_pico_gb",
+        "valor": 26.8,
+        "unidade": "GB",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.mlp.rss_pico_gb"
+      },
+      {
+        "id": "jstars_custo_epocas_teto",
+        "valor": {
+          "etapa1": 45,
+          "etapa2": 25,
+          "etapa3": 18,
+          "etapa4": 14
+        },
+        "unidade": "epocas",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "epocas_teto",
+        "nota": "per-stage cap of the growing window, identical in both families"
+      },
+      {
+        "id": "jstars_custo_registro_acdsa",
+        "valor": {
+          "ids": [
+            "s7_gatv2_parede_b2_min",
+            "s7_gatv2_treino_puro_por_semente_min",
+            "s7_gatv2_vram_pico_gb",
+            "s7_gatv2_rss_pico_gb",
+            "s7_mlp_parede_b2_min",
+            "s7_mlp_treino_puro_por_semente_min",
+            "s7_mlp_vram_pico_gb",
+            "s7_mlp_rss_pico_gb",
+            "s7_epocas_teto",
+            "s7_hardware_da_maquina_de_auditoria"
+          ],
+          "n": 10
+        },
+        "unidade": null,
+        "artefato": "folha_de_fatos_acdsa.json",
+        "campo": "fatos[*].id (prefix 's7_'), filtered in code",
+        "nota": "ACDSA already uses the same auditar_recursos_s7.json for the computational cost paragraph and the parameter count; same source, same audit machine, same caveats"
+      },
+      {
+        "id": "jstars_admissibilidade_x4_gatv2_1m",
+        "valor": 1090.2,
+        "unidade": "celulas/replica",
+        "artefato": "auditar_f2_celula.json",
+        "campo": "admissibilidade.'(100%, x4) gatv2'.violacoes_acima_1m_media",
+        "aviso_proveniencia": "source without sha256_script and without retroativo=true (artifact from 16-17/08, predating that requirement of 18/08); see parte_A.qualidade_das_fontes",
+        "nota": "numeric source of 'about 1,090 cells per replicate': main.tex:60 \"places the ground above the canopy in 1,090 cells per replicate. Cutting\"; main.tex:153 \"above the canopy in about 1,090 cells per training replicate, where before\"; main.tex:785 \"meter above the canopy in about 1,090 cells per replicate, against 0.2 cells\" (lines located by code search)"
+      },
+      {
+        "id": "jstars_admissibilidade_x1_gatv2_1m",
+        "valor": 0.2,
+        "unidade": "celulas/replica",
+        "artefato": "auditar_f2_celula.json",
+        "campo": "admissibilidade.'(100%, x1) gatv2'.violacoes_acima_1m_media",
+        "aviso_proveniencia": "source without sha256_script and without retroativo=true (artifact from 16-17/08, predating that requirement of 18/08); see parte_A.qualidade_das_fontes",
+        "nota": "numeric source of 'against 0.2 cells at the one-times cap': main.tex:785 \"meter above the canopy in about 1,090 cells per replicate, against 0.2 cells\" (line located by code search)"
+      },
+      {
+        "id": "jstars_admissibilidade_xgb_nulo",
+        "valor": true,
+        "unidade": null,
+        "artefato": "auditar_d8_triangulo.json",
+        "campo": "admissibilidade.xgb (all numeric fields None, checked in code)",
+        "aviso_proveniencia": "source without sha256_script and without retroativo=true (artifact from 16-17/08, predating that requirement of 18/08); see parte_A.qualidade_das_fontes",
+        "nota": "f2_arvores.json does not store G_raiox: tree admissibility is not measured in this artifact (E3, the XGBoost raster on the hydrological axis, is the route)"
+      },
+      {
+        "id": "jstars_admissibilidade_familias_medidas",
+        "valor": [
+          "gatv2",
+          "mlp"
+        ],
+        "unidade": null,
+        "artefato": "auditar_f2_celula.json",
+        "campo": "derived: admissibility keys with numeric violacoes_acima_1m_media in auditar_f2_celula.json, versus admissibilidade.xgb entirely None in auditar_d8_triangulo.json",
+        "aviso_proveniencia": "source without sha256_script and without retroativo=true (artifact from 16-17/08, predating that requirement of 18/08); see parte_A.qualidade_das_fontes",
+        "nota": "the physical admissibility measure (violations above 1 m) exists only for the two networks (graph and pointwise); the tree (XGBoost) has no such measure in any project artifact — f2_arvores.json does not record the required raster (noted path: E3, the XGBoost raster on the hydrological axis)"
+      },
+      {
+        "id": "jstars_gedtm30_metodo_amostragem",
+        "valor": "window of the official COG reprojected bilinearly directly onto the node grid",
+        "unidade": null,
+        "artefato": "preparar_laterais_nativa_v3_diretas.py",
+        "campo": "function gedtm30_direto(), return field 'metodo'",
+        "nota": "extracted by regex from the body of the function that writes laterais_nativa_diretas/gedtm30_amazonia_*.npz, a direct input of auditar_nmad_pareado_nativa_diretas.json (Table IV); in prose: bilinear on the node lattice (grid)"
+      },
+      {
+        "id": "jstars_gedtm30_pixel_nativo_graus",
+        "valor": 0.00025,
+        "unidade": "graus",
+        "artefato": "preparar_laterais_nativa_v3_diretas.py",
+        "campo": "function gedtm30_direto(), return field 'pixel_nativo_graus'"
+      },
+      {
+        "id": "jstars_gedtm30_fonte_tabela_iv",
+        "valor": {
+          "artefato": "auditar_nmad_pareado_nativa_diretas.json",
+          "entradas_laterais": "D:\\GNN_TOPO\\SATELITES\\laterais_nativa_diretas",
+          "mae_20_30m": 3.7469328032878537,
+          "vies_20_30m": 0.8637808086024407,
+          "nmad_20_30m": 4.440809591674804,
+          "confere_com_main_tex_arredondado_2casas": true
+        },
+        "unidade": null,
+        "artefato": "auditar_nmad_pareado_nativa_diretas.json",
+        "campo": "entradas.laterais + tabela_pool_ETH.gedtm30.'20-30m'.{mae,vies,nmad}",
+        "nota": "code check against the Table IV row in main.tex ('GEDTM30$^{\\\\dagger}$ & 3.75 & $+0.86$ & 4.44 & 5.56 & $+5.37$ & 3.44\\\\\\\\'): mae 3.75 vs 3.75, bias 0.86 vs 0.86, nmad 4.44 vs 4.44"
+      },
+      {
+        "id": "jstars_anadem_busca",
+        "valor": {
+          "comando": "Search command used: `find /trabalho/GNN_TOPO /arquivo -iname *anadem*`",
+          "n_achados": 8,
+          "achados_raster_ou_dado": [],
+          "achados_bibliograficos": [
+            "Web link to a PDF, not a document: ANADEM: A Digital Terrain Model for South America.",
+            "Web link, not a document: ANADEM: A Digital Terrain Model for South America.",
+            "internal/library_record_03.md",
+            "Bibliographic reading note: ANADEM: A Digital Terrain Model for South America (MDPI).",
+            "internal/library_record_01.md",
+            "Bibliographic source file: ANADEM: A Digital Terrain Model for South America (PDF).",
+            "internal/library_record_02.md",
+            "Extracted full text: ANADEM: A Digital Terrain Model for South America (MDPI)."
+          ]
+        },
+        "unidade": null,
+        "artefato": "artigo_v23_2/pacote_overleaf/main.tex",
+        "campo": "search on disk (not in the manuscript); citation in main.tex:95 \"itself \\cite{laipelt2024anadem} enter those comparisons on the same terms.\"",
+        "nota": "no data/raster file with 'anadem' in its name under `/trabalho/GNN_TOPO` or `/arquivo`; the hits are all bibliographic material (PDF/reading note/.url shortcut) about the ANADEM paper, and none is an input to the training or evaluation pipeline. Fact: ANADEM is ABSENT from the evaluated set (cited in the Introduction, not compared in Table IV)"
+      }
+    ],
+    "qualidade_das_fontes": {
+      "cmp_lambda": {
+        "arquivo": "comparar_ponto_s035.json",
+        "estado": "retroativo",
+        "script_declarado": null
+      },
+      "acdsa": {
+        "arquivo": "folha_de_fatos_acdsa.json",
+        "estado": "sha256_script",
+        "script_declarado": "folha_de_fatos_acdsa.py"
+      },
+      "s3": {
+        "arquivo": "auditar_paridade_capacidade.json",
+        "estado": "sha256_script",
+        "script_declarado": "auditar_paridade_capacidade.py"
+      },
+      "f2arv": {
+        "arquivo": "f2_arvores.json",
+        "estado": "retroativo",
+        "script_declarado": "braco_arvores.py"
+      },
+      "s7": {
+        "arquivo": "auditar_recursos_s7.json",
+        "estado": "sha256_script",
+        "script_declarado": "auditar_recursos_s7.py"
+      },
+      "f2cel": {
+        "arquivo": "auditar_f2_celula.json",
+        "estado": "NO sha256_script AND NO retroactive record (predates August 18)",
+        "script_declarado": "auditar_f2_celula.py"
+      },
+      "d8": {
+        "arquivo": "auditar_d8_triangulo.json",
+        "estado": "NO sha256_script AND NO retroactive record (predates August 18)",
+        "script_declarado": "auditar_d8_triangulo.py"
+      },
+      "nmad_diretas": {
+        "arquivo": "auditar_nmad_pareado_nativa_diretas.json",
+        "estado": "sha256_script",
+        "script_declarado": "auditar_nmad_pareado.py"
+      }
+    }
+  },
+  "parte_B": {
+    "n_fatos": 69,
+    "grupos": {
+      "e4_A_por_classe": 6,
+      "e4_delta_nativo_com_ic": 6,
+      "e4_pareada_A_menos_delta": 6,
+      "e4_reducao_mae_equivalente": 6,
+      "e4_confirmatorio": 1,
+      "e4_curva_piso": 1,
+      "e4_orcamento_p1": 2,
+      "e4_veredito_S": 2,
+      "e4_veredito_R": 2,
+      "e4_veredito_O": 4,
+      "e4_leitura_declarada": 2,
+      "tabela_iv_pool": 6,
+      "tabela_iv_pareado_anadem": 10,
+      "delta_nativo_fig6b": 6,
+      "delta_nativo_fig6b_geometria": 1,
+      "d5_veredito": 2,
+      "d5_fora_do_criterio": 4,
+      "populacao": 2
+    },
+    "fatos": {
+      "e4_A_por_classe": [
+        {
+          "id": "jstarsb_e4_A_0_3m",
+          "valor": {
+            "media_pond_celula_m": -2.1166043281555176,
+            "mediana_m": -1.4621210098266602,
+            "n_celulas": 4,
+            "n_transectos": 1,
+            "n_pegadas": 1,
+            "ic95_pond_celula": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_mediana": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_t_jackknife_pond": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'0-3m'.por_unidade.{transecto,pegada}.A.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "A = solo_anc - z_ref (label AND reference term; the design does NOT isolate the label -- see the artifact's own hypothesis). Percentile and t-jackknife CI, transect unit (primary); number of footprints alongside (mandatory unit, parameter-free rule: footprints that share a cell form one unit)"
+        },
+        {
+          "id": "jstarsb_e4_A_3_10m",
+          "valor": {
+            "media_pond_celula_m": 1.2862107676844443,
+            "mediana_m": 0.3238353729248047,
+            "n_celulas": 31,
+            "n_transectos": 4,
+            "n_pegadas": 4,
+            "ic95_pond_celula": [
+              -0.9821200370788574,
+              3.0478254726954868
+            ],
+            "ic95_mediana": [
+              -1.6918506622314453,
+              1.4463510513305664
+            ],
+            "ic95_t_jackknife_pond": [
+              -3.5047337826379685,
+              6.077155318006858
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'3-10m'.por_unidade.{transecto,pegada}.A.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "A = solo_anc - z_ref (label AND reference term; the design does NOT isolate the label -- see the artifact's own hypothesis). Percentile and t-jackknife CI, transect unit (primary); number of footprints alongside (mandatory unit, parameter-free rule: footprints that share a cell form one unit)"
+        },
+        {
+          "id": "jstarsb_e4_A_10_20m",
+          "valor": {
+            "media_pond_celula_m": 2.1542668601339177,
+            "mediana_m": 1.1662821769714355,
+            "n_celulas": 258,
+            "n_transectos": 9,
+            "n_pegadas": 9,
+            "ic95_pond_celula": [
+              0.6617163553473598,
+              2.6458109146186324
+            ],
+            "ic95_mediana": [
+              0.044338226318359375,
+              1.3825511932373047
+            ],
+            "ic95_t_jackknife_pond": [
+              0.6807094093657655,
+              3.62782431090207
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'10-20m'.por_unidade.{transecto,pegada}.A.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "A = solo_anc - z_ref (label AND reference term; the design does NOT isolate the label -- see the artifact's own hypothesis). Percentile and t-jackknife CI, transect unit (primary); number of footprints alongside (mandatory unit, parameter-free rule: footprints that share a cell form one unit)"
+        },
+        {
+          "id": "jstarsb_e4_A_20_30m",
+          "valor": {
+            "media_pond_celula_m": 4.560947264795718,
+            "mediana_m": 2.6272153854370117,
+            "n_celulas": 460,
+            "n_transectos": 12,
+            "n_pegadas": 11,
+            "ic95_pond_celula": [
+              2.370060684006678,
+              6.5448248389826365
+            ],
+            "ic95_mediana": [
+              1.0328683853149414,
+              5.047708511352539
+            ],
+            "ic95_t_jackknife_pond": [
+              1.9456933365786306,
+              7.1762011930128065
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'20-30m'.por_unidade.{transecto,pegada}.A.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "A = solo_anc - z_ref (label AND reference term; the design does NOT isolate the label -- see the artifact's own hypothesis). Percentile and t-jackknife CI, transect unit (primary); number of footprints alongside (mandatory unit, parameter-free rule: footprints that share a cell form one unit)"
+        },
+        {
+          "id": "jstarsb_e4_A_30m_mais",
+          "valor": {
+            "media_pond_celula_m": 6.651019321277299,
+            "mediana_m": 3.699343681335449,
+            "n_celulas": 441,
+            "n_transectos": 10,
+            "n_pegadas": 10,
+            "ic95_pond_celula": [
+              3.3086588594711053,
+              9.50574041667469
+            ],
+            "ic95_mediana": [
+              1.5437850952148438,
+              8.661331176757812
+            ],
+            "ic95_t_jackknife_pond": [
+              2.7863219468449536,
+              10.515716695709644
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'>30m'.por_unidade.{transecto,pegada}.A.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "A = solo_anc - z_ref (label AND reference term; the design does NOT isolate the label -- see the artifact's own hypothesis). Percentile and t-jackknife CI, transect unit (primary); number of footprints alongside (mandatory unit, parameter-free rule: footprints that share a cell form one unit)"
+        },
+        {
+          "id": "jstarsb_e4_A_todas",
+          "valor": {
+            "media_pond_celula_m": 4.705479253676269,
+            "mediana_m": 2.34466552734375,
+            "n_celulas": 1194,
+            "n_transectos": 13,
+            "n_pegadas": 12,
+            "ic95_pond_celula": [
+              2.760503976960947,
+              7.1412336366174864
+            ],
+            "ic95_mediana": [
+              1.190704345703125,
+              4.34613037109375
+            ],
+            "ic95_t_jackknife_pond": [
+              2.409005607813486,
+              7.001952899539052
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'TODAS'.por_unidade.{transecto,pegada}.A.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "A = solo_anc - z_ref (label AND reference term; the design does NOT isolate the label -- see the artifact's own hypothesis). Percentile and t-jackknife CI, transect unit (primary); number of footprints alongside (mandatory unit, parameter-free rule: footprints that share a cell form one unit)"
+        }
+      ],
+      "e4_delta_nativo_com_ic": [
+        {
+          "id": "jstarsb_e4_delta_0_3m",
+          "valor": {
+            "media_pond_celula_m": 0.15437674695402315,
+            "mediana_m": -0.0093489355931613,
+            "n_celulas": 4,
+            "n_transectos": 1,
+            "n_pegadas": 1,
+            "ic95_pond_celula": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_t_jackknife_pond": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'0-3m'.por_unidade.{transecto,pegada}.delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "native delta (D-1) PAIRED per cell with CI (bootstrap of the v2 audit script itself); DIFFERENT from the descriptive delta without CI of the delta_nativo_fig6b group, which comes directly from medir_delta_escala_v3_nativa.json"
+        },
+        {
+          "id": "jstarsb_e4_delta_3_10m",
+          "valor": {
+            "media_pond_celula_m": 0.7994081155157011,
+            "mediana_m": 0.24384498989378223,
+            "n_celulas": 31,
+            "n_transectos": 4,
+            "n_pegadas": 4,
+            "ic95_pond_celula": [
+              0.4781739743983136,
+              1.2390318176502981
+            ],
+            "ic95_t_jackknife_pond": [
+              -0.021759300795311076,
+              1.6205755318267134
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'3-10m'.por_unidade.{transecto,pegada}.delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "native delta (D-1) PAIRED per cell with CI (bootstrap of the v2 audit script itself); DIFFERENT from the descriptive delta without CI of the delta_nativo_fig6b group, which comes directly from medir_delta_escala_v3_nativa.json"
+        },
+        {
+          "id": "jstarsb_e4_delta_10_20m",
+          "valor": {
+            "media_pond_celula_m": 0.7527695875537169,
+            "mediana_m": 0.42124902670436093,
+            "n_celulas": 258,
+            "n_transectos": 9,
+            "n_pegadas": 9,
+            "ic95_pond_celula": [
+              0.5857583771549071,
+              1.1671518638489309
+            ],
+            "ic95_t_jackknife_pond": [
+              0.49394382809467396,
+              1.0115953470127599
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'10-20m'.por_unidade.{transecto,pegada}.delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "native delta (D-1) PAIRED per cell with CI (bootstrap of the v2 audit script itself); DIFFERENT from the descriptive delta without CI of the delta_nativo_fig6b group, which comes directly from medir_delta_escala_v3_nativa.json"
+        },
+        {
+          "id": "jstarsb_e4_delta_20_30m",
+          "valor": {
+            "media_pond_celula_m": 1.8814324598637273,
+            "mediana_m": 1.5813047982607795,
+            "n_celulas": 460,
+            "n_transectos": 12,
+            "n_pegadas": 11,
+            "ic95_pond_celula": [
+              1.6012499902483908,
+              2.455460237980973
+            ],
+            "ic95_t_jackknife_pond": [
+              1.492143575778551,
+              2.2707213439489036
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'20-30m'.por_unidade.{transecto,pegada}.delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "native delta (D-1) PAIRED per cell with CI (bootstrap of the v2 audit script itself); DIFFERENT from the descriptive delta without CI of the delta_nativo_fig6b group, which comes directly from medir_delta_escala_v3_nativa.json"
+        },
+        {
+          "id": "jstarsb_e4_delta_30m_mais",
+          "valor": {
+            "media_pond_celula_m": 3.7654373275574855,
+            "mediana_m": 3.4992863057992594,
+            "n_celulas": 441,
+            "n_transectos": 10,
+            "n_pegadas": 10,
+            "ic95_pond_celula": [
+              2.7280044257678995,
+              4.490291052158429
+            ],
+            "ic95_t_jackknife_pond": [
+              2.6774637446258334,
+              4.853410910489138
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'>30m'.por_unidade.{transecto,pegada}.delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "native delta (D-1) PAIRED per cell with CI (bootstrap of the v2 audit script itself); DIFFERENT from the descriptive delta without CI of the delta_nativo_fig6b group, which comes directly from medir_delta_escala_v3_nativa.json"
+        },
+        {
+          "id": "jstarsb_e4_delta_todas",
+          "valor": {
+            "media_pond_celula_m": 2.299523036137209,
+            "mediana_m": 1.638520944277687,
+            "n_celulas": 1194,
+            "n_transectos": 13,
+            "n_pegadas": 12,
+            "ic95_pond_celula": [
+              1.6062696017658489,
+              3.5144058641016027
+            ],
+            "ic95_t_jackknife_pond": [
+              1.1922886948445641,
+              3.406757377429854
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'TODAS'.por_unidade.{transecto,pegada}.delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "native delta (D-1) PAIRED per cell with CI (bootstrap of the v2 audit script itself); DIFFERENT from the descriptive delta without CI of the delta_nativo_fig6b group, which comes directly from medir_delta_escala_v3_nativa.json"
+        }
+      ],
+      "e4_pareada_A_menos_delta": [
+        {
+          "id": "jstarsb_e4_A_menos_delta_0_3m",
+          "valor": {
+            "media_pond_celula_m": -2.2709810751095407,
+            "mediana_m": -1.4252108308403368,
+            "n_celulas": 4,
+            "n_transectos": 1,
+            "ic95_pond_celula": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_t_jackknife_pond": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'0-3m'.por_unidade.transecto.pareada_A_menos_delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "input to criterion (R): 'A - delta > 0' enters the prose only if the percentile AND t-jackknife intervals exclude zero"
+        },
+        {
+          "id": "jstarsb_e4_A_menos_delta_3_10m",
+          "valor": {
+            "media_pond_celula_m": 0.48680265216874313,
+            "mediana_m": 0.08781952760656964,
+            "n_celulas": 31,
+            "n_transectos": 4,
+            "ic95_pond_celula": [
+              -2.1832925754215737,
+              2.0779482089215975
+            ],
+            "ic95_t_jackknife_pond": [
+              -3.7379013554309664,
+              4.711506659768452
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'3-10m'.por_unidade.transecto.pareada_A_menos_delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "input to criterion (R): 'A - delta > 0' enters the prose only if the percentile AND t-jackknife intervals exclude zero"
+        },
+        {
+          "id": "jstarsb_e4_A_menos_delta_10_20m",
+          "valor": {
+            "media_pond_celula_m": 1.4014972725802008,
+            "mediana_m": 0.6351009113237751,
+            "n_celulas": 258,
+            "n_transectos": 9,
+            "ic95_pond_celula": [
+              -0.3802429930600645,
+              1.8645405928960088
+            ],
+            "ic95_t_jackknife_pond": [
+              -0.15534546872725263,
+              2.9583400138876543
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'10-20m'.por_unidade.transecto.pareada_A_menos_delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "input to criterion (R): 'A - delta > 0' enters the prose only if the percentile AND t-jackknife intervals exclude zero"
+        },
+        {
+          "id": "jstarsb_e4_A_menos_delta_20_30m",
+          "valor": {
+            "media_pond_celula_m": 2.6795148049319906,
+            "mediana_m": 1.0032012464941538,
+            "n_celulas": 460,
+            "n_transectos": 12,
+            "ic95_pond_celula": [
+              0.5346506728361439,
+              4.4034847503669985
+            ],
+            "ic95_t_jackknife_pond": [
+              0.16588475693450677,
+              5.193144852929475
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'20-30m'.por_unidade.transecto.pareada_A_menos_delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "input to criterion (R): 'A - delta > 0' enters the prose only if the percentile AND t-jackknife intervals exclude zero"
+        },
+        {
+          "id": "jstarsb_e4_A_menos_delta_30m_mais",
+          "valor": {
+            "media_pond_celula_m": 2.885581993719813,
+            "mediana_m": 0.9002925536409663,
+            "n_celulas": 441,
+            "n_transectos": 10,
+            "ic95_pond_celula": [
+              0.2581006502195765,
+              5.103636190366062
+            ],
+            "ic95_t_jackknife_pond": [
+              -0.16350689590138634,
+              5.934670883341012
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'>30m'.por_unidade.transecto.pareada_A_menos_delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "input to criterion (R): 'A - delta > 0' enters the prose only if the percentile AND t-jackknife intervals exclude zero"
+        },
+        {
+          "id": "jstarsb_e4_A_menos_delta_todas",
+          "valor": {
+            "media_pond_celula_m": 2.4059562175390603,
+            "mediana_m": 0.8104626541204869,
+            "n_celulas": 1194,
+            "n_transectos": 13,
+            "ic95_pond_celula": [
+              0.7626629015684423,
+              3.9011389425203493
+            ],
+            "ic95_t_jackknife_pond": [
+              0.7327053792416831,
+              4.079207055836438
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'TODAS'.por_unidade.transecto.pareada_A_menos_delta.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife_pond}",
+          "nota": "input to criterion (R): 'A - delta > 0' enters the prose only if the percentile AND t-jackknife intervals exclude zero"
+        }
+      ],
+      "e4_reducao_mae_equivalente": [
+        {
+          "id": "jstarsb_e4_reducao_mae_0_3m",
+          "valor": {
+            "reducao_mae_equivalente_m": -1.9719678880121236,
+            "n_celulas": 4,
+            "n_transectos": 1,
+            "ic95_pond_celula": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_t_jackknife": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: cluster bootstrap requires >=2 units; artifact stores [null,null]"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'0-3m'.por_unidade.transecto.reducao_mae_equivalente.{reducao_mae_equivalente_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife}",
+          "nota": "Removing the class mean of A (equivalent to correcting the label by the mean of the term); input to criterion (O)"
+        },
+        {
+          "id": "jstarsb_e4_reducao_mae_3_10m",
+          "valor": {
+            "reducao_mae_equivalente_m": 0.47614088051590997,
+            "n_celulas": 31,
+            "n_transectos": 4,
+            "ic95_pond_celula": [
+              -0.8835250401099168,
+              0.7348706839112769
+            ],
+            "ic95_t_jackknife": [
+              -1.8207050052981208,
+              2.772986766329941
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'3-10m'.por_unidade.transecto.reducao_mae_equivalente.{reducao_mae_equivalente_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife}",
+          "nota": "Removing the class mean of A (equivalent to correcting the label by the mean of the term); input to criterion (O)"
+        },
+        {
+          "id": "jstarsb_e4_reducao_mae_10_20m",
+          "valor": {
+            "reducao_mae_equivalente_m": -0.4711184692853716,
+            "n_celulas": 258,
+            "n_transectos": 9,
+            "ic95_pond_celula": [
+              -0.8952852576468876,
+              -0.0015750629387220755
+            ],
+            "ic95_t_jackknife": [
+              -1.0667119189886967,
+              0.12447498041795346
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'10-20m'.por_unidade.transecto.reducao_mae_equivalente.{reducao_mae_equivalente_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife}",
+          "nota": "Removing the class mean of A (equivalent to correcting the label by the mean of the term); input to criterion (O)"
+        },
+        {
+          "id": "jstarsb_e4_reducao_mae_20_30m",
+          "valor": {
+            "reducao_mae_equivalente_m": 1.3985143726669773,
+            "n_celulas": 460,
+            "n_transectos": 12,
+            "ic95_pond_celula": [
+              0.24717873360397985,
+              2.654327446668687
+            ],
+            "ic95_t_jackknife": [
+              -0.36922036104085376,
+              3.166249106374808
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'20-30m'.por_unidade.transecto.reducao_mae_equivalente.{reducao_mae_equivalente_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife}",
+          "nota": "Removing the class mean of A (equivalent to correcting the label by the mean of the term); input to criterion (O)"
+        },
+        {
+          "id": "jstarsb_e4_reducao_mae_30m_mais",
+          "valor": {
+            "reducao_mae_equivalente_m": 4.837936126384987,
+            "n_celulas": 441,
+            "n_transectos": 10,
+            "ic95_pond_celula": [
+              2.9217891668014078,
+              5.6335665143611084
+            ],
+            "ic95_t_jackknife": [
+              3.2667214787518217,
+              6.409150774018152
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'>30m'.por_unidade.transecto.reducao_mae_equivalente.{reducao_mae_equivalente_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife}",
+          "nota": "Removing the class mean of A (equivalent to correcting the label by the mean of the term); input to criterion (O)"
+        },
+        {
+          "id": "jstarsb_e4_reducao_mae_todas",
+          "valor": {
+            "reducao_mae_equivalente_m": 1.6045539632201669,
+            "n_celulas": 1194,
+            "n_transectos": 13,
+            "ic95_pond_celula": [
+              0.7439471933323881,
+              2.970907204057885
+            ],
+            "ic95_t_jackknife": [
+              0.40573271689401413,
+              2.80337520954632
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'TODAS'.por_unidade.transecto.reducao_mae_equivalente.{reducao_mae_equivalente_m,n_celulas,n_unidades,ic95_pond_celula,ic95_t_jackknife}",
+          "nota": "Removing the class mean of A (equivalent to correcting the label by the mean of the term); input to criterion (O)"
+        }
+      ],
+      "e4_confirmatorio": [
+        {
+          "id": "jstarsb_e4_confirmatorio",
+          "valor": "nao_avaliavel",
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'>30m'.confirmatorio_E4",
+          "nota": "Pre-registered confirmatory test: 0 of the 36 transect x class pairs reach the floor of 200 cells (largest pair has 154); 'nao_avaliavel', never 'indeterminada' -- the test cannot be run, it did not produce an ambiguous result. Same value in all classes (checked: confirmatorio_E4 identical in '20-30m' and '>30m')"
+        }
+      ],
+      "e4_curva_piso": [
+        {
+          "id": "jstarsb_e4_curva_piso_descritiva",
+          "valor": {
+            "1": {
+              "n_transectos": 10,
+              "n_celulas_A": 441,
+              "media_pond_A_m": 6.651019321277299,
+              "n_celulas_delta": 441,
+              "media_pond_delta_m": 3.7654373275574855
+            },
+            "5": {
+              "n_transectos": 9,
+              "n_celulas_A": 440,
+              "media_pond_A_m": 6.606016429987821,
+              "n_celulas_delta": 440,
+              "media_pond_delta_m": 3.7732554134410727
+            },
+            "10": {
+              "n_transectos": 8,
+              "n_celulas_A": 431,
+              "media_pond_A_m": 6.754886290866648,
+              "n_celulas_delta": 431,
+              "media_pond_delta_m": 3.7553721511009934
+            },
+            "25": {
+              "n_transectos": 8,
+              "n_celulas_A": 431,
+              "media_pond_A_m": 6.754886290866648,
+              "n_celulas_delta": 431,
+              "media_pond_delta_m": 3.7553721511009934
+            },
+            "50": {
+              "n_transectos": 4,
+              "n_celulas_A": 274,
+              "media_pond_A_m": 8.605105448813333,
+              "n_celulas_delta": 274,
+              "media_pond_delta_m": 4.601795679583625
+            },
+            "100": {
+              "n_transectos": 0,
+              "disponivel": false,
+              "motivo": "no transect has this number of cells in the class; media_pond is undefined (the artifact stores null)"
+            },
+            "200": {
+              "n_transectos": 0,
+              "disponivel": false,
+              "motivo": "no transect has this number of cells in the class; media_pond is undefined (the artifact stores null)"
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'>30m'.curva_piso_declarada_apos_E4 (floors with n_transectos=0 have the mean replaced by a descriptive statement in code, G2)",
+          "nota": "descriptive, declared AFTER E4; no isolated point may go into the main text (only the whole curve, if it goes into supplementary material)"
+        }
+      ],
+      "e4_orcamento_p1": [
+        {
+          "id": "jstarsb_e4_orcamento_p1_20_30m",
+          "valor": {
+            "linhas": [
+              {
+                "linha": "A (mean weighted by cell)",
+                "valor_m": 4.560947264795718,
+                "ic95_m": [
+                  2.370060684006678,
+                  6.5448248389826365
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "460 anchor cells (12 transects)",
+                "fonte": "auditar_tabela3_dump.parquet (E4)"
+              },
+              {
+                "linha": "A (mediana)",
+                "valor_m": 2.6272153854370117,
+                "ic95_m": [
+                  1.0328683853149414,
+                  5.047708511352539
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "460 anchor cells (12 transects)",
+                "fonte": "auditar_tabela3_dump.parquet (E4)"
+              },
+              {
+                "linha": "Equivalent MAE reduction (removing the class mean of A)",
+                "valor_m": 1.3985143726669773,
+                "ic95_m": [
+                  0.24717873360397985,
+                  2.654327446668687
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "460 anchor cells (12 transects)",
+                "fonte": "auditar_rotulo_regua_v2 (este script)"
+              },
+              {
+                "linha": "delta nativo (D-1)",
+                "valor_m": 1.8814324598637273,
+                "ic95_m": [
+                  1.6012499902483908,
+                  2.455460237980973
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "460 anchor cells with a pair in the native delta (12 transects)",
+                "fonte": "delta_escala_celulas_nativa.parquet (D-1)"
+              },
+              {
+                "linha": "A - delta (paired by cell)",
+                "valor_m": 2.6795148049319906,
+                "ic95_m": [
+                  0.5346506728361439,
+                  4.4034847503669985
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "460 anchor cells with a pair in the native delta (12 transects)",
+                "fonte": "auditar_rotulo_regua_v2 (este script)"
+              },
+              {
+                "linha": "v23 vs mlp contrast (against lidar)",
+                "valor_m": 0.047287660193617465,
+                "mediana_m": -0.022948211474244973,
+                "ic95_m": [
+                  -0.18705816678700815,
+                  0.35607967854643785
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "31810 cells (judgeable forest; POPULATION DIFFERENT from A -- not the same sample) (12 transects)",
+                "fonte": "auditar_nmad_pareado_nativa_diretas.json.testes_principal_ETH"
+              },
+              {
+                "linha": "v23 vs fabdem contrast (against lidar)",
+                "valor_m": 0.588578459323234,
+                "mediana_m": 0.4546858946859569,
+                "ic95_m": [
+                  -0.17875538315849804,
+                  1.5429212041657943
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "31810 cells (judgeable forest; POPULATION DIFFERENT from A -- not the same sample) (12 transects)",
+                "fonte": "auditar_nmad_pareado_nativa_diretas.json.testes_principal_ETH"
+              },
+              {
+                "linha": "v23 vs gedtm30 contrast (against lidar)",
+                "valor_m": 0.7070190796205983,
+                "mediana_m": 1.2212551723645817,
+                "ic95_m": [
+                  -0.2307884882345237,
+                  1.8391817818748755
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "31810 cells (judgeable forest; POPULATION DIFFERENT from A -- not the same sample) (12 transects)",
+                "fonte": "auditar_nmad_pareado_nativa_diretas.json.testes_principal_ETH"
+              },
+              {
+                "linha": "tree - graph (D8 reserve, fator4; NOT AGAINST THE LIDAR)",
+                "valor_m": -0.019547036803586694,
+                "ic95_m": [
+                  -0.08646575646030716,
+                  0.04737168285313378
+                ],
+                "unidade_cluster": "semente",
+                "populacao": "5 seeds, synthetic reserve (not the lidar)",
+                "fonte": "auditar_d8_triangulo.json.delta_T_em_metros_mae"
+              },
+              {
+                "linha": "tree against the lidar",
+                "valor_m": "not measured",
+                "ic95_m": {
+                  "disponivel": false,
+                  "motivo": "No measurement available (see 'valor_m': 'not measured')"
+                },
+                "unidade_cluster": "nao_aplicavel",
+                "populacao": "not measured",
+                "fonte": "P2 not run; never reported as zero"
+              }
+            ],
+            "maior_teto_abs_contrastes_lidar_m": 1.8391817818748755
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "tabela_orcamento_P1.'20-30m'.{linhas,maior_teto_abs_contrastes_lidar_m}}",
+          "nota": "each row already carries the 'populacao' column (n cells + n transects + the caveat of a DIFFERENT population for the contrasts against lidar)"
+        },
+        {
+          "id": "jstarsb_e4_orcamento_p1_30m_mais",
+          "valor": {
+            "linhas": [
+              {
+                "linha": "A (mean weighted by cell)",
+                "valor_m": 6.651019321277299,
+                "ic95_m": [
+                  3.3086588594711053,
+                  9.50574041667469
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "441 anchor cells (10 transects)",
+                "fonte": "auditar_tabela3_dump.parquet (E4)"
+              },
+              {
+                "linha": "A (mediana)",
+                "valor_m": 3.699343681335449,
+                "ic95_m": [
+                  1.5437850952148438,
+                  8.661331176757812
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "441 anchor cells (10 transects)",
+                "fonte": "auditar_tabela3_dump.parquet (E4)"
+              },
+              {
+                "linha": "Equivalent MAE reduction (removing the class mean of A)",
+                "valor_m": 4.837936126384987,
+                "ic95_m": [
+                  2.9217891668014078,
+                  5.6335665143611084
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "441 anchor cells (10 transects)",
+                "fonte": "auditar_rotulo_regua_v2 (este script)"
+              },
+              {
+                "linha": "delta nativo (D-1)",
+                "valor_m": 3.7654373275574855,
+                "ic95_m": [
+                  2.7280044257678995,
+                  4.490291052158429
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "441 anchor cells with a pair in the native delta (10 transects)",
+                "fonte": "delta_escala_celulas_nativa.parquet (D-1)"
+              },
+              {
+                "linha": "A - delta (paired by cell)",
+                "valor_m": 2.885581993719813,
+                "ic95_m": [
+                  0.2581006502195765,
+                  5.103636190366062
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "441 anchor cells with a pair in the native delta (10 transects)",
+                "fonte": "auditar_rotulo_regua_v2 (este script)"
+              },
+              {
+                "linha": "v23 vs mlp contrast (against lidar)",
+                "valor_m": -0.665376515413645,
+                "mediana_m": -0.6887541231502441,
+                "ic95_m": [
+                  -1.0931085771662499,
+                  -0.4988767736173685
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "41287 cells (judgeable forest; POPULATION DIFFERENT from A -- not the same sample) (11 transects)",
+                "fonte": "auditar_nmad_pareado_nativa_diretas.json.testes_principal_ETH"
+              },
+              {
+                "linha": "v23 vs fabdem contrast (against lidar)",
+                "valor_m": 2.2192080659256175,
+                "mediana_m": 2.3259251909694436,
+                "ic95_m": [
+                  1.779955989135765,
+                  2.6163586058957407
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "41287 cells (judgeable forest; POPULATION DIFFERENT from A -- not the same sample) (11 transects)",
+                "fonte": "auditar_nmad_pareado_nativa_diretas.json.testes_principal_ETH"
+              },
+              {
+                "linha": "v23 vs gedtm30 contrast (against lidar)",
+                "valor_m": 1.7997872924473592,
+                "mediana_m": 1.9311977848190076,
+                "ic95_m": [
+                  0.8958804651972243,
+                  2.9565717562467566
+                ],
+                "unidade_cluster": "transecto",
+                "populacao": "41287 cells (judgeable forest; POPULATION DIFFERENT from A -- not the same sample) (11 transects)",
+                "fonte": "auditar_nmad_pareado_nativa_diretas.json.testes_principal_ETH"
+              },
+              {
+                "linha": "tree - graph (D8 reserve, fator4; NOT AGAINST THE LIDAR)",
+                "valor_m": -0.019547036803586694,
+                "ic95_m": [
+                  -0.08646575646030716,
+                  0.04737168285313378
+                ],
+                "unidade_cluster": "semente",
+                "populacao": "5 seeds, synthetic reserve (not the lidar)",
+                "fonte": "auditar_d8_triangulo.json.delta_T_em_metros_mae"
+              },
+              {
+                "linha": "tree against the lidar",
+                "valor_m": "not measured",
+                "ic95_m": {
+                  "disponivel": false,
+                  "motivo": "No measurement available (see 'valor_m': 'not measured')"
+                },
+                "unidade_cluster": "nao_aplicavel",
+                "populacao": "not measured",
+                "fonte": "P2 not run; never reported as zero"
+              }
+            ],
+            "maior_teto_abs_contrastes_lidar_m": 2.9565717562467566
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "tabela_orcamento_P1.'>30m'.{linhas,maior_teto_abs_contrastes_lidar_m}}",
+          "nota": "each row already carries the 'populacao' column (n cells + n transects + the caveat of a DIFFERENT population for the contrasts against lidar)"
+        }
+      ],
+      "e4_veredito_S": [
+        {
+          "id": "jstarsb_e4_veredito_S_20_30m",
+          "valor": {
+            "veredito": "positivo",
+            "checagens_por_unidade": {
+              "transecto": {
+                "ic95_pond_celula": [
+                  2.370060684006678,
+                  6.5448248389826365
+                ],
+                "exclui_zero_percentil": true,
+                "ic95_t_jackknife": [
+                  1.9456933365786306,
+                  7.1762011930128065
+                ],
+                "exclui_zero_t_jackknife": true
+              },
+              "pegada": {
+                "ic95_pond_celula": [
+                  2.3368076723500724,
+                  6.529975512560943
+                ],
+                "exclui_zero_percentil": true,
+                "ic95_t_jackknife": [
+                  1.9239657482827246,
+                  7.197928781308712
+                ],
+                "exclui_zero_t_jackknife": true
+              }
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "criterios_veredito.'20-30m'.S",
+          "nota": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units"
+        },
+        {
+          "id": "jstarsb_e4_veredito_S_30m_mais",
+          "valor": {
+            "veredito": "positivo",
+            "checagens_por_unidade": {
+              "transecto": {
+                "ic95_pond_celula": [
+                  3.3086588594711053,
+                  9.50574041667469
+                ],
+                "exclui_zero_percentil": true,
+                "ic95_t_jackknife": [
+                  2.7863219468449536,
+                  10.515716695709644
+                ],
+                "exclui_zero_t_jackknife": true
+              },
+              "pegada": {
+                "ic95_pond_celula": [
+                  3.190223921393677,
+                  9.53529477863219
+                ],
+                "exclui_zero_percentil": true,
+                "ic95_t_jackknife": [
+                  2.7863219468449536,
+                  10.515716695709644
+                ],
+                "exclui_zero_t_jackknife": true
+              }
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "criterios_veredito.'>30m'.S",
+          "nota": "(S) lower bound of A > 0 in the percentile AND in the t-jackknife, in the transect AND footprint units"
+        }
+      ],
+      "e4_veredito_R": [
+        {
+          "id": "jstarsb_e4_veredito_R_20_30m",
+          "valor": {
+            "veredito": "ordenacao_valida_A_menos_delta_maior_que_zero",
+            "checagens_por_unidade": {
+              "transecto": {
+                "ic95_pond_celula": [
+                  0.5346506728361439,
+                  4.4034847503669985
+                ],
+                "exclui_zero_percentil": true,
+                "ic95_t_jackknife": [
+                  0.16588475693450677,
+                  5.193144852929475
+                ],
+                "exclui_zero_t_jackknife": true
+              },
+              "pegada": {
+                "ic95_pond_celula": [
+                  0.5782621362111318,
+                  4.418075143462936
+                ],
+                "exclui_zero_percentil": true,
+                "ic95_t_jackknife": [
+                  0.14701751031907184,
+                  5.212012099544909
+                ],
+                "exclui_zero_t_jackknife": true
+              }
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "criterios_veredito.'20-30m'.R",
+          "nota": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units"
+        },
+        {
+          "id": "jstarsb_e4_veredito_R_30m_mais",
+          "valor": {
+            "veredito": "nenhuma_ordenacao",
+            "checagens_por_unidade": {
+              "transecto": {
+                "ic95_pond_celula": [
+                  0.2581006502195765,
+                  5.103636190366062
+                ],
+                "exclui_zero_percentil": true,
+                "ic95_t_jackknife": [
+                  -0.16350689590138634,
+                  5.934670883341012
+                ],
+                "exclui_zero_t_jackknife": false
+              },
+              "pegada": {
+                "ic95_pond_celula": [
+                  0.24905183890733568,
+                  5.142533065596493
+                ],
+                "exclui_zero_percentil": true,
+                "ic95_t_jackknife": [
+                  -0.16350689590138634,
+                  5.934670883341012
+                ],
+                "exclui_zero_t_jackknife": false
+              }
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "criterios_veredito.'>30m'.R",
+          "nota": "(R) conditional sentence 'A - delta > 0' enters only if percentile AND t-jackknife exclude zero in the transect AND footprint units"
+        }
+      ],
+      "e4_veredito_O": [
+        {
+          "id": "jstarsb_e4_veredito_O_produtos_20_30m",
+          "valor": {
+            "veredito": "nao_demonstrado",
+            "teto_abs_contrastes_lidar_m": 1.8391817818748755,
+            "checagens_por_unidade": {
+              "transecto": {
+                "lim_inf_A_media_m": 2.370060684006678,
+                "acima_do_teto_media": true,
+                "lim_inf_A_mediana_m": 1.0328683853149414,
+                "acima_do_teto_mediana": false,
+                "lim_inf_reducao_mae_m": 0.24717873360397985,
+                "acima_do_teto_reducao": false
+              },
+              "pegada": {
+                "lim_inf_A_media_m": 2.3368076723500724,
+                "acima_do_teto_media": true,
+                "lim_inf_A_mediana_m": 1.0328683853149414,
+                "acima_do_teto_mediana": false,
+                "lim_inf_reducao_mae_m": 0.2385740013942586,
+                "acima_do_teto_reducao": false
+              }
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "criterios_veredito.'20-30m'.O",
+          "nota": "'produtos' reading: ceiling = largest |contrast| between v23 and ANY estimator tested against the lidar in the class (includes FABDEM and GEDTM30)"
+        },
+        {
+          "id": "jstarsb_e4_veredito_O_familias_20_30m",
+          "valor": {
+            "veredito": "nao_demonstrado",
+            "teto_abs_contraste_v23_vs_mlp_m": 0.35607967854643785,
+            "checagens_por_unidade": {
+              "transecto": {
+                "lim_inf_A_media_m": 2.370060684006678,
+                "acima_do_teto_media": true,
+                "lim_inf_A_mediana_m": 1.0328683853149414,
+                "acima_do_teto_mediana": true,
+                "lim_inf_reducao_mae_m": 0.24717873360397985,
+                "acima_do_teto_reducao": false
+              },
+              "pegada": {
+                "lim_inf_A_media_m": 2.3368076723500724,
+                "acima_do_teto_media": true,
+                "lim_inf_A_mediana_m": 1.0328683853149414,
+                "acima_do_teto_mediana": true,
+                "lim_inf_reducao_mae_m": 0.2385740013942586,
+                "acima_do_teto_reducao": false
+              }
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "derived (G4) from tabela_orcamento_P1.'20-30m'.contrastes_lidar_detalhe['v23 vs mlp'].teto_abs_ddiferenca_m compared with criterios_veredito.'20-30m'.O.checagens_por_unidade",
+          "nota": "'familias_de_estimador' reading: ceiling = only the v23 vs mlp contrast (SAME label/supervision family); products with different supervision (FABDEM/GEDTM30) make the ceiling circular (physical justification). Recomputation in code matches the prose: >30m passes (min of the three lower bounds = median, 1.5438>1.0931); 20-30m not demonstrated (reduction 0.2472<0.3561)"
+        },
+        {
+          "id": "jstarsb_e4_veredito_O_produtos_30m_mais",
+          "valor": {
+            "veredito": "nao_demonstrado",
+            "teto_abs_contrastes_lidar_m": 2.9565717562467566,
+            "checagens_por_unidade": {
+              "transecto": {
+                "lim_inf_A_media_m": 3.3086588594711053,
+                "acima_do_teto_media": true,
+                "lim_inf_A_mediana_m": 1.5437850952148438,
+                "acima_do_teto_mediana": false,
+                "lim_inf_reducao_mae_m": 2.9217891668014078,
+                "acima_do_teto_reducao": false
+              },
+              "pegada": {
+                "lim_inf_A_media_m": 3.190223921393677,
+                "acima_do_teto_media": true,
+                "lim_inf_A_mediana_m": 1.5437036991119386,
+                "acima_do_teto_mediana": false,
+                "lim_inf_reducao_mae_m": 2.90477187134026,
+                "acima_do_teto_reducao": false
+              }
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "criterios_veredito.'>30m'.O",
+          "nota": "'produtos' reading: ceiling = largest |contrast| between v23 and ANY estimator tested against the lidar in the class (includes FABDEM and GEDTM30)"
+        },
+        {
+          "id": "jstarsb_e4_veredito_O_familias_30m_mais",
+          "valor": {
+            "veredito": "passa",
+            "teto_abs_contraste_v23_vs_mlp_m": 1.0931085771662499,
+            "checagens_por_unidade": {
+              "transecto": {
+                "lim_inf_A_media_m": 3.3086588594711053,
+                "acima_do_teto_media": true,
+                "lim_inf_A_mediana_m": 1.5437850952148438,
+                "acima_do_teto_mediana": true,
+                "lim_inf_reducao_mae_m": 2.9217891668014078,
+                "acima_do_teto_reducao": true
+              },
+              "pegada": {
+                "lim_inf_A_media_m": 3.190223921393677,
+                "acima_do_teto_media": true,
+                "lim_inf_A_mediana_m": 1.5437036991119386,
+                "acima_do_teto_mediana": true,
+                "lim_inf_reducao_mae_m": 2.90477187134026,
+                "acima_do_teto_reducao": true
+              }
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "derived (G4) from tabela_orcamento_P1.'>30m'.contrastes_lidar_detalhe['v23 vs mlp'].teto_abs_ddiferenca_m compared with criterios_veredito.'>30m'.O.checagens_por_unidade",
+          "nota": "'familias_de_estimador' reading: ceiling = only the v23 vs mlp contrast (SAME label/supervision family); products with different supervision (FABDEM/GEDTM30) make the ceiling circular (physical justification). Recomputation in code matches the prose: >30m passes (min of the three lower bounds = median, 1.5438>1.0931); 20-30m not demonstrated (reduction 0.2472<0.3561)"
+        }
+      ],
+      "e4_leitura_declarada": [
+        {
+          "id": "jstarsb_e4_leitura_declarada_20_30m",
+          "valor": {
+            "leitura_declarada": "familias_de_estimador",
+            "decidida_por": "Record of the internal review that fixed this choice (not distributed).",
+            "ata": "internal/note_02.md",
+            "sha256_ata": "261bbf10846951e1749b80ae8eb7060ecca4e27529252dae48d7871244118070"
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "Field absent from the v2 JSON; the decision is recorded in an internal note (cited alongside with its sha256).",
+          "nota": "the reading declared BEFORE the run was that of the estimator families (design notes written before v2 ran already used the GNN-MLP ceiling); the ambiguity came from a summary line that listed external products as 'contrasts between estimators' -- resolved by dated text prior to the run, not by the result"
+        },
+        {
+          "id": "jstarsb_e4_leitura_declarada_30m_mais",
+          "valor": {
+            "leitura_declarada": "familias_de_estimador",
+            "decidida_por": "Record of the internal review that fixed this choice (not distributed).",
+            "ata": "internal/note_02.md",
+            "sha256_ata": "261bbf10846951e1749b80ae8eb7060ecca4e27529252dae48d7871244118070"
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "Field absent from the v2 JSON; the decision is recorded in an internal note (cited alongside with its sha256).",
+          "nota": "the reading declared BEFORE the run was that of the estimator families (design notes written before v2 ran already used the GNN-MLP ceiling); the ambiguity came from a summary line that listed external products as 'contrasts between estimators' -- resolved by dated text prior to the run, not by the result"
+        }
+      ],
+      "tabela_iv_pool": [
+        {
+          "id": "jstarsb_tabIV_pool_0_3m",
+          "valor": {
+            "v23": {
+              "mae": 2.648740234417502,
+              "vies": 2.537514698682322,
+              "nmad": 1.4847672538372372,
+              "n": 86
+            },
+            "mlp": {
+              "mae": 2.312494529945946,
+              "vies": 2.13876332855729,
+              "nmad": 1.4345275005553317,
+              "n": 86
+            },
+            "fabdem": {
+              "mae": 3.010191318600677,
+              "vies": 2.8525412803472476,
+              "nmad": 1.7642947917938232,
+              "n": 86
+            },
+            "gedtm30": {
+              "mae": 1.7932345368141351,
+              "vies": 0.8170146498569223,
+              "nmad": 1.141664891052246,
+              "n": 86
+            },
+            "glo30": {
+              "mae": 3.475492521773937,
+              "vies": 3.4367145715757856,
+              "nmad": 1.5477971517562865,
+              "n": 86
+            },
+            "anadem": {
+              "mae": 3.0402793218923168,
+              "vies": 2.9324887076089547,
+              "nmad": 1.5525846765518188,
+              "n": 86
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.tabela_pool_ETH.*.'0-3m'.{mae,vies,nmad,n}",
+          "nota": "all columns of Table IV (v23, mlp, fabdem, gedtm30, glo30, anadem), population common to the 5+1 products per ETH class"
+        },
+        {
+          "id": "jstarsb_tabIV_pool_3_10m",
+          "valor": {
+            "v23": {
+              "mae": 2.5214461162650057,
+              "vies": 1.0672536496297576,
+              "nmad": 2.36976012240887,
+              "n": 1617
+            },
+            "mlp": {
+              "mae": 2.428680098277956,
+              "vies": 0.5288598055305445,
+              "nmad": 2.509064402224783,
+              "n": 1617
+            },
+            "fabdem": {
+              "mae": 3.1883849354533407,
+              "vies": 2.230135881686992,
+              "nmad": 2.506966291809082,
+              "n": 1617
+            },
+            "gedtm30": {
+              "mae": 3.133334498089924,
+              "vies": -1.1963188313523707,
+              "nmad": 3.3182834884643553,
+              "n": 1617
+            },
+            "glo30": {
+              "mae": 3.826665326851566,
+              "vies": 3.412286513664137,
+              "nmad": 2.597782215499878,
+              "n": 1617
+            },
+            "anadem": {
+              "mae": 3.875858681395088,
+              "vies": -0.10168193576508418,
+              "nmad": 3.171409976005554,
+              "n": 1617
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.tabela_pool_ETH.*.'3-10m'.{mae,vies,nmad,n}",
+          "nota": "all columns of Table IV (v23, mlp, fabdem, gedtm30, glo30, anadem), population common to the 5+1 products per ETH class"
+        },
+        {
+          "id": "jstarsb_tabIV_pool_10_20m",
+          "valor": {
+            "v23": {
+              "mae": 2.8068324628994232,
+              "vies": 0.3191926746831324,
+              "nmad": 3.1284866870373484,
+              "n": 20588
+            },
+            "mlp": {
+              "mae": 2.6459046126633052,
+              "vies": 0.0854630954573696,
+              "nmad": 2.756830282623769,
+              "n": 20588
+            },
+            "fabdem": {
+              "mae": 3.060455324963873,
+              "vies": 1.3782966529394276,
+              "nmad": 2.9320888790130613,
+              "n": 20588
+            },
+            "gedtm30": {
+              "mae": 3.307738553338174,
+              "vies": -1.8739925030830973,
+              "nmad": 3.1108837008476256,
+              "n": 20588
+            },
+            "glo30": {
+              "mae": 5.6771622046072645,
+              "vies": 5.4923895702955905,
+              "nmad": 4.5676316325187685,
+              "n": 20588
+            },
+            "anadem": {
+              "mae": 3.989569698476504,
+              "vies": -2.003100531099374,
+              "nmad": 3.6504445321083066,
+              "n": 20588
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.tabela_pool_ETH.*.'10-20m'.{mae,vies,nmad,n}",
+          "nota": "all columns of Table IV (v23, mlp, fabdem, gedtm30, glo30, anadem), population common to the 5+1 products per ETH class"
+        },
+        {
+          "id": "jstarsb_tabIV_pool_20_30m",
+          "valor": {
+            "v23": {
+              "mae": 4.418009463953923,
+              "vies": 3.7025996108281887,
+              "nmad": 3.4324016922855356,
+              "n": 31810
+            },
+            "mlp": {
+              "mae": 4.2983243596251,
+              "vies": 3.7430818425071113,
+              "nmad": 3.2173550144290863,
+              "n": 31810
+            },
+            "fabdem": {
+              "mae": 3.770150163386536,
+              "vies": 2.579910238067971,
+              "nmad": 3.622735283088684,
+              "n": 31810
+            },
+            "gedtm30": {
+              "mae": 3.7469328032878537,
+              "vies": 0.8637808086024407,
+              "nmad": 4.440809591674804,
+              "n": 31810
+            },
+            "glo30": {
+              "mae": 14.10454233024376,
+              "vies": 14.098871912273436,
+              "nmad": 5.887192800807952,
+              "n": 31810
+            },
+            "anadem": {
+              "mae": 3.5996291441911423,
+              "vies": 1.077351530596581,
+              "nmad": 3.313114205932617,
+              "n": 31810
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.tabela_pool_ETH.*.'20-30m'.{mae,vies,nmad,n}",
+          "nota": "all columns of Table IV (v23, mlp, fabdem, gedtm30, glo30, anadem), population common to the 5+1 products per ETH class"
+        },
+        {
+          "id": "jstarsb_tabIV_pool_30m_mais",
+          "valor": {
+            "v23": {
+              "mae": 6.62774097210393,
+              "vies": 6.563068932810379,
+              "nmad": 3.0139866592025673,
+              "n": 41287
+            },
+            "mlp": {
+              "mae": 7.482468133996334,
+              "vies": 7.465043070425628,
+              "nmad": 2.8922924731063797,
+              "n": 41287
+            },
+            "fabdem": {
+              "mae": 4.650182559744462,
+              "vies": 4.410872074079799,
+              "nmad": 3.3230794967651365,
+              "n": 41287
+            },
+            "gedtm30": {
+              "mae": 5.563192648086919,
+              "vies": 5.366213494313616,
+              "nmad": 3.435032073783874,
+              "n": 41287
+            },
+            "glo30": {
+              "mae": 21.00667958462042,
+              "vies": 21.00667958462042,
+              "nmad": 3.491267816162109,
+              "n": 41287
+            },
+            "anadem": {
+              "mae": 5.047176584956183,
+              "vies": 4.672133534877469,
+              "nmad": 3.4233771514892575,
+              "n": 41287
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.tabela_pool_ETH.*.'>30m'.{mae,vies,nmad,n}",
+          "nota": "all columns of Table IV (v23, mlp, fabdem, gedtm30, glo30, anadem), population common to the 5+1 products per ETH class"
+        },
+        {
+          "id": "jstarsb_tabIV_pool_todas",
+          "valor": {
+            "v23": {
+              "mae": 4.992959904180431,
+              "vies": 4.164723391320723,
+              "nmad": 4.207677777328489,
+              "n": 95388
+            },
+            "mlp": {
+              "mae": 5.286391308571141,
+              "vies": 4.50869376462332,
+              "nmad": 4.444009834964277,
+              "n": 95388
+            },
+            "fabdem": {
+              "mae": 3.9873329262158683,
+              "vies": 3.107376606669492,
+              "nmad": 3.602718452453613,
+              "n": 95388
+            },
+            "gedtm30": {
+              "mae": 4.4261123906975195,
+              "vies": 2.186708832531199,
+              "nmad": 5.126498800849914,
+              "n": 95388
+            },
+            "glo30": {
+              "mae": 15.089280592885093,
+              "vies": 15.040449917795083,
+              "nmad": 7.707060914611816,
+              "n": 95388
+            },
+            "anadem": {
+              "mae": 4.31451515076885,
+              "vies": 1.9501076660293921,
+              "nmad": 4.367842963027954,
+              "n": 95388
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.tabela_pool_ETH.*.'TODAS'.{mae,vies,nmad,n}",
+          "nota": "all columns of Table IV (v23, mlp, fabdem, gedtm30, glo30, anadem), population common to the 5+1 products per ETH class"
+        }
+      ],
+      "tabela_iv_pareado_anadem": [
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_mae_0_3m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 0
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.mae.'0-3m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_mae_3_10m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 2
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.mae.'3-10m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_mae_10_20m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -1.8593310799820677,
+            "media_m": -1.6144558116687655,
+            "ic95_bootstrap_transecto_mediana": [
+              -2.4987148436613094,
+              -1.093327375062862
+            ],
+            "n_transectos": 10,
+            "vence": 9,
+            "total": 10,
+            "p_sinal_binomial": 0.021484375,
+            "p_wilcoxon": 0.009765625
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.mae.'10-20m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_mae_20_30m",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.9370240095247291,
+            "media_m": 0.5266615033342908,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.9821712399777297,
+              2.6212483329028964
+            ],
+            "n_transectos": 12,
+            "vence": 4,
+            "total": 12,
+            "p_sinal_binomial": 0.3876953125,
+            "p_wilcoxon": 0.4697265625
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.mae.'20-30m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_mae_30m_mais",
+          "valor": {
+            "testado": true,
+            "mediana_m": 2.6908326222394647,
+            "media_m": 2.2099393545288426,
+            "ic95_bootstrap_transecto_mediana": [
+              1.9914330334117722,
+              3.3391287669606156
+            ],
+            "n_transectos": 11,
+            "vence": 2,
+            "total": 11,
+            "p_sinal_binomial": 0.0654296875,
+            "p_wilcoxon": 0.0068359375
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.mae.'>30m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_nmad_0_3m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 0
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.nmad.'0-3m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_nmad_3_10m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 2
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.nmad.'3-10m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_nmad_10_20m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -1.453425455210203,
+            "media_m": -1.2408919148016821,
+            "ic95_bootstrap_transecto_mediana": [
+              -1.7919823195052098,
+              -0.13822841720835077
+            ],
+            "n_transectos": 10,
+            "vence": 8,
+            "total": 10,
+            "p_sinal_binomial": 0.109375,
+            "p_wilcoxon": 0.02734375
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.nmad.'10-20m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_nmad_20_30m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.2597555988693243,
+            "media_m": -1.078888077452183,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.6772590793132793,
+              0.41090614119529956
+            ],
+            "n_transectos": 12,
+            "vence": 7,
+            "total": 12,
+            "p_sinal_binomial": 0.7744140625,
+            "p_wilcoxon": 0.5185546875
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.nmad.'20-30m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        },
+        {
+          "id": "jstarsb_tabIV_v23_vs_anadem_nmad_30m_mais",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.22157148313522335,
+            "media_m": -0.19198173663919638,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.5924395092201222,
+              0.3579285597038284
+            ],
+            "n_transectos": 11,
+            "vence": 6,
+            "total": 11,
+            "p_sinal_binomial": 1.0,
+            "p_wilcoxon": 0.51953125
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_comum_5_produtos_ETH.testes_principal_ETH.'v23 vs anadem'.nmad.'>30m'",
+          "nota": "paired contrast by transect, same population common to the 5+1 products; classes 0-3m/3-10m remain 'testado=false' because they have fewer than 6 transects above the 200-cell floor -- not an omission, a recorded proposition"
+        }
+      ],
+      "delta_nativo_fig6b": [
+        {
+          "id": "jstarsb_fig6b_delta_nativo_0_3m",
+          "valor": {
+            "n_celulas": 4,
+            "n_transectos": 1,
+            "media_pond_celula_m": 0.15437674695402315
+          },
+          "unidade": "m",
+          "artefato": "medir_delta_escala_v3_nativa.json",
+          "campo": "populacao_dump_e4_classe_eth_exogena_sem_ic.'0-3m'.{n_celulas,n_transectos,media_pond_celula_m}",
+          "nota": "native delta (D-1), descriptive, WITHOUT confidence interval (the artifact itself states: 'CIs are left to the v2 audit script'); geometry +0.5 px, same logic as medir_delta_escala_v3.py, now on the native grid"
+        },
+        {
+          "id": "jstarsb_fig6b_delta_nativo_3_10m",
+          "valor": {
+            "n_celulas": 31,
+            "n_transectos": 4,
+            "media_pond_celula_m": 0.7994081155157012
+          },
+          "unidade": "m",
+          "artefato": "medir_delta_escala_v3_nativa.json",
+          "campo": "populacao_dump_e4_classe_eth_exogena_sem_ic.'3-10m'.{n_celulas,n_transectos,media_pond_celula_m}",
+          "nota": "native delta (D-1), descriptive, WITHOUT confidence interval (the artifact itself states: 'CIs are left to the v2 audit script'); geometry +0.5 px, same logic as medir_delta_escala_v3.py, now on the native grid"
+        },
+        {
+          "id": "jstarsb_fig6b_delta_nativo_10_20m",
+          "valor": {
+            "n_celulas": 258,
+            "n_transectos": 9,
+            "media_pond_celula_m": 0.7527695875537169
+          },
+          "unidade": "m",
+          "artefato": "medir_delta_escala_v3_nativa.json",
+          "campo": "populacao_dump_e4_classe_eth_exogena_sem_ic.'10-20m'.{n_celulas,n_transectos,media_pond_celula_m}",
+          "nota": "native delta (D-1), descriptive, WITHOUT confidence interval (the artifact itself states: 'CIs are left to the v2 audit script'); geometry +0.5 px, same logic as medir_delta_escala_v3.py, now on the native grid"
+        },
+        {
+          "id": "jstarsb_fig6b_delta_nativo_20_30m",
+          "valor": {
+            "n_celulas": 460,
+            "n_transectos": 12,
+            "media_pond_celula_m": 1.8814324598637273
+          },
+          "unidade": "m",
+          "artefato": "medir_delta_escala_v3_nativa.json",
+          "campo": "populacao_dump_e4_classe_eth_exogena_sem_ic.'20-30m'.{n_celulas,n_transectos,media_pond_celula_m}",
+          "nota": "native delta (D-1), descriptive, WITHOUT confidence interval (the artifact itself states: 'CIs are left to the v2 audit script'); geometry +0.5 px, same logic as medir_delta_escala_v3.py, now on the native grid"
+        },
+        {
+          "id": "jstarsb_fig6b_delta_nativo_30m_mais",
+          "valor": {
+            "n_celulas": 441,
+            "n_transectos": 10,
+            "media_pond_celula_m": 3.7654373275574855
+          },
+          "unidade": "m",
+          "artefato": "medir_delta_escala_v3_nativa.json",
+          "campo": "populacao_dump_e4_classe_eth_exogena_sem_ic.'>30m'.{n_celulas,n_transectos,media_pond_celula_m}",
+          "nota": "native delta (D-1), descriptive, WITHOUT confidence interval (the artifact itself states: 'CIs are left to the v2 audit script'); geometry +0.5 px, same logic as medir_delta_escala_v3.py, now on the native grid"
+        },
+        {
+          "id": "jstarsb_fig6b_delta_nativo_todas",
+          "valor": {
+            "n_celulas": 1194,
+            "n_transectos": 13,
+            "media_pond_celula_m": 2.299523036137209
+          },
+          "unidade": "m",
+          "artefato": "medir_delta_escala_v3_nativa.json",
+          "campo": "populacao_dump_e4_classe_eth_exogena_sem_ic.'TODAS'.{n_celulas,n_transectos,media_pond_celula_m}",
+          "nota": "native delta (D-1), descriptive, WITHOUT confidence interval (the artifact itself states: 'CIs are left to the v2 audit script'); geometry +0.5 px, same logic as medir_delta_escala_v3.py, now on the native grid"
+        }
+      ],
+      "delta_nativo_fig6b_geometria": [
+        {
+          "id": "jstarsb_fig6b_geometria",
+          "valor": {
+            "LON0": -59.99986111111111,
+            "LAT1": -2.000138888888889,
+            "PASSO": 0.0002777777777777778,
+            "GRID": 7200,
+            "dlon_px": 0.5,
+            "dlat_px": 0.5,
+            "convencao": "identica a gridar_lidar_eba_v3_nativa.py"
+          },
+          "unidade": null,
+          "artefato": "medir_delta_escala_v3_nativa.json",
+          "campo": "geometria",
+          "nota": "LON0/LAT1/PASSO/GRID/dlon_px/dlat_px of the native grid (half-pixel offset confirmed by an independent recomputation of D-1)"
+        }
+      ],
+      "d5_veredito": [
+        {
+          "id": "jstarsb_d5_veredito_fabdem",
+          "valor": {
+            "veredito": "FRASE_MANTIDA_SEM_RESTRICAO",
+            "lambda_max_que_passa": 1.0,
+            "todos_passam": true,
+            "frase_literal": "The ordering proposed-FABDEM>0 in MAE (>30 m) survives the per-cell shift by the native delta over the whole physical grid [0;1]."
+          },
+          "unidade": null,
+          "artefato": "auditar_d5_invariancia.json",
+          "campo": "veredito.fabdem",
+          "nota": "independently re-checked, CONFIRMED WITH CAVEAT; FABDEM retained over the whole physical lambda grid [0;1]"
+        },
+        {
+          "id": "jstarsb_d5_veredito_anadem",
+          "valor": {
+            "veredito": "FRASE_CONDICIONADA_A_LAMBDA_MAX",
+            "lambda_max_que_passa": 0.5,
+            "todos_passam": false,
+            "frase_literal": "The sentence gains the restriction 'for reference offsets up to 0.5*delta' (lambda_max of the grid that passes, grid not refined)."
+          },
+          "unidade": null,
+          "artefato": "auditar_d5_invariancia.json",
+          "campo": "veredito.anadem_condicionado_a_contra_auditoria",
+          "nota": "independently re-checked, CONFIRMED WITH CAVEAT; ANADEM only up to lambda_max=0.5 (fails at 0.75 and 1.0)"
+        }
+      ],
+      "d5_fora_do_criterio": [
+        {
+          "id": "jstarsb_d5_estresse_fabdem",
+          "valor": {
+            "criterio_fabdem_passa": true,
+            "ic95_bootstrap_transecto_mediana": [
+              0.03667619764451846,
+              2.093278771622609
+            ],
+            "p_holm": 0.013671875
+          },
+          "unidade": null,
+          "artefato": "auditar_d5_invariancia.json",
+          "campo": "bracos.estresse_delta_ic_sup_transecto.{criterio_fabdem_passa,teste_pareado_v23_vs_fabdem_mae}",
+          "nota": "label fora_do_criterio: the pre-registered criterion defines the sentence only for the physical grid lambda in [0;1]; the stress test (delta = upper bound of the per-transect bootstrap CI) is a complementary check. FABDEM passes, lower CI bound = 0.0367 m"
+        },
+        {
+          "id": "jstarsb_d5_estresse_anadem",
+          "valor": {
+            "criterio_anadem_passa": false,
+            "ic95_bootstrap_transecto_mediana": [
+              -1.3329293046847934,
+              2.4578917989483804
+            ],
+            "p_holm": 0.365234375
+          },
+          "unidade": null,
+          "artefato": "auditar_d5_invariancia.json",
+          "campo": "bracos.estresse_delta_ic_sup_transecto.{criterio_anadem_passa,teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria}",
+          "nota": "label fora_do_criterio (same as above). ANADEM FAILS the stress test: CI [-1.3329; +2.4579] includes zero, p_holm=0.365 (identified by independent recomputation)"
+        },
+        {
+          "id": "jstarsb_d5_controle_sentido_menos0_50",
+          "valor": {
+            "lambda": -0.5,
+            "criterio_fabdem_passa": true,
+            "criterio_anadem_passa": true,
+            "fabdem_ic95": [
+              2.0182005841165154,
+              2.6424341563213343
+            ],
+            "anadem_ic95": [
+              2.32794027855228,
+              3.3965879060756192
+            ]
+          },
+          "unidade": null,
+          "artefato": "auditar_d5_invariancia.json",
+          "campo": "bracos.'lambda_-0.50_controle_sentido'",
+          "nota": "label fora_do_criterio (same as above); direction control, not the physical grid. FABDEM and ANADEM pass at both negative lambdas"
+        },
+        {
+          "id": "jstarsb_d5_controle_sentido_menos1_00",
+          "valor": {
+            "lambda": -1.0,
+            "criterio_fabdem_passa": true,
+            "criterio_anadem_passa": true,
+            "fabdem_ic95": [
+              2.0090437755169983,
+              2.757182662841739
+            ],
+            "anadem_ic95": [
+              2.3906109863024083,
+              3.421105699995678
+            ]
+          },
+          "unidade": null,
+          "artefato": "auditar_d5_invariancia.json",
+          "campo": "bracos.'lambda_-1.00_controle_sentido'",
+          "nota": "label fora_do_criterio (same as above); direction control, not the physical grid. FABDEM and ANADEM pass at both negative lambdas"
+        }
+      ],
+      "populacao": [
+        {
+          "id": "jstarsb_pop_13_entregas_12_pegadas",
+          "valor": {
+            "n_transectos_julgaveis": 13,
+            "n_pegadas": 12,
+            "pares_com_celula_compartilhada": [
+              {
+                "a": "NP_T-0357",
+                "b": "NP_T-0662",
+                "celulas_compartilhadas": 7861
+              }
+            ]
+          },
+          "unidade": null,
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "populacao.{n_transectos_julgaveis,unidade_pegada.{n_pegadas,pares_com_celula_compartilhada}}",
+          "nota": "13 lidar deliveries = 12 footprints: NP_T-0662 repeats the footprint of NP_T-0357 (7,861 shared cells)"
+        },
+        {
+          "id": "jstarsb_pop_full_cover",
+          "valor": {
+            "cob_eth_min": 1.0,
+            "cob_eth_max": 1.0,
+            "n_linhas": 1194,
+            "n_celulas_abaixo_de_0_8": 0,
+            "filtro_cob_eth_maior_igual_0_8_e_vazio": true
+          },
+          "unidade": null,
+          "artefato": "auditar_tabela3_dump.parquet",
+          "campo": "column 'cob_eth' (computed in code: min, max, count below 0.8)",
+          "nota": "'full cover': all 1,194 anchor cells have cob_eth==1.0; the E4 filter cob_eth>=0.8 removes no cell (empty by construction, not by chance)"
+        }
+      ]
+    }
+  },
+  "parte_A_parte_B_fonte": {
+    "arquivo": "folha_de_fatos_jstars_v2.json",
+    "sha256_conferido": "e32782c40b05d7b19cd7e7097097e06ea1fa1383fbb9581a73138ab4cbcfb80a",
+    "contra_auditoria": "Independent check completed: CONFIRMED WITH RESERVATIONS"
+  },
+  "parte_C": {
+    "n_fatos": 53,
+    "grupos": {
+      "c1_fidelidade": 12,
+      "c2_contraste_pareado": 30,
+      "c3_densidade_casca": 6,
+      "c3_densidade_definicoes": 1,
+      "c3_densidade_contra_auditoria_anterior": 1,
+      "c3_densidade_texto_atual": 1,
+      "c4_datum_guarda": 1,
+      "c4_datum_geo_independente": 1
+    },
+    "fatos": {
+      "c1_fidelidade": [
+        {
+          "id": "jstarsc_fidelidade_0_3m_transecto",
+          "valor": {
+            "media_pond_celula_m": 2.944400780392532,
+            "mediana_m": 1.9047141035718926,
+            "n_celulas": 4,
+            "n_unidades": 1,
+            "ic95_pond_celula": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: CI requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_mediana": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: CI requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_t_jackknife_pond": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: CI requires >=2 units; artifact stores [null,null]"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'0-3m'.por_unidade.'transecto'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '0-3m', unit 'transecto'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_0_3m_pegada",
+          "valor": {
+            "media_pond_celula_m": 2.944400780392532,
+            "mediana_m": 1.9047141035718926,
+            "n_celulas": 4,
+            "n_unidades": 1,
+            "ic95_pond_celula": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: CI requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_mediana": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: CI requires >=2 units; artifact stores [null,null]"
+            },
+            "ic95_t_jackknife_pond": {
+              "disponivel": false,
+              "motivo": "n_unidades=1: CI requires >=2 units; artifact stores [null,null]"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'0-3m'.por_unidade.'pegada'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '0-3m', unit 'pegada'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_3_10m_transecto",
+          "valor": {
+            "media_pond_celula_m": 1.7247698014504118,
+            "mediana_m": 3.68693561553955,
+            "n_celulas": 31,
+            "n_unidades": 4,
+            "ic95_pond_celula": [
+              -2.301712455097432,
+              6.05961332299623
+            ],
+            "ic95_mediana": [
+              -1.4695634168673681,
+              5.679135513305667
+            ],
+            "ic95_t_jackknife_pond": [
+              -10.223504692147282,
+              13.673044295048106
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'3-10m'.por_unidade.'transecto'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '3-10m', unit 'transecto'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_3_10m_pegada",
+          "valor": {
+            "media_pond_celula_m": 1.7247698014504118,
+            "mediana_m": 3.68693561553955,
+            "n_celulas": 31,
+            "n_unidades": 4,
+            "ic95_pond_celula": [
+              -2.301712455097432,
+              6.05961332299623
+            ],
+            "ic95_mediana": [
+              -1.4695634168673681,
+              5.679135513305667
+            ],
+            "ic95_t_jackknife_pond": [
+              -10.223504692147282,
+              13.673044295048106
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'3-10m'.por_unidade.'pegada'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '3-10m', unit 'pegada'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_10_20m_transecto",
+          "valor": {
+            "media_pond_celula_m": -1.6250638381523699,
+            "mediana_m": -1.2350325822830204,
+            "n_celulas": 258,
+            "n_unidades": 9,
+            "ic95_pond_celula": [
+              -3.5024699596992295,
+              -0.7681242519150702
+            ],
+            "ic95_mediana": [
+              -3.4480555485188944,
+              -0.3833824157714858
+            ],
+            "ic95_t_jackknife_pond": [
+              -2.7431696489878066,
+              -0.5069580273169332
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'10-20m'.por_unidade.'transecto'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '10-20m', unit 'transecto'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_10_20m_pegada",
+          "valor": {
+            "media_pond_celula_m": -1.6250638381523699,
+            "mediana_m": -1.2350325822830204,
+            "n_celulas": 258,
+            "n_unidades": 9,
+            "ic95_pond_celula": [
+              -3.491028870470159,
+              -0.7512471008974215
+            ],
+            "ic95_mediana": [
+              -3.3950213432311998,
+              -0.3833824157714858
+            ],
+            "ic95_t_jackknife_pond": [
+              -2.7431696489878066,
+              -0.5069580273169332
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'10-20m'.por_unidade.'pegada'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '10-20m', unit 'pegada'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_20_30m_transecto",
+          "valor": {
+            "media_pond_celula_m": -1.143016356281612,
+            "mediana_m": -0.2535809516906724,
+            "n_celulas": 460,
+            "n_unidades": 12,
+            "ic95_pond_celula": [
+              -2.6129739718014924,
+              0.8934146766519628
+            ],
+            "ic95_mediana": [
+              -1.9646310806274414,
+              1.6825530052185051
+            ],
+            "ic95_t_jackknife_pond": [
+              -3.197570293865871,
+              0.911537581302647
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'20-30m'.por_unidade.'transecto'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '20-30m', unit 'transecto'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_20_30m_pegada",
+          "valor": {
+            "media_pond_celula_m": -1.143016356281612,
+            "mediana_m": -0.2535809516906724,
+            "n_celulas": 460,
+            "n_unidades": 11,
+            "ic95_pond_celula": [
+              -2.6008516542454876,
+              0.8539809454159415
+            ],
+            "ic95_mediana": [
+              -1.9646310806274414,
+              1.512249231338501
+            ],
+            "ic95_t_jackknife_pond": [
+              -3.2137844545976417,
+              0.9277517420344177
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'20-30m'.por_unidade.'pegada'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '20-30m', unit 'pegada'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_30m_mais_transecto",
+          "valor": {
+            "media_pond_celula_m": 0.36003706168695904,
+            "mediana_m": 2.183354949951166,
+            "n_celulas": 441,
+            "n_unidades": 10,
+            "ic95_pond_celula": [
+              -1.7795398326599747,
+              2.9394415721773908
+            ],
+            "ic95_mediana": [
+              -0.15725727081299112,
+              4.1782485961914055
+            ],
+            "ic95_t_jackknife_pond": [
+              -2.610645258997467,
+              3.3307193823713845
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'>30m'.por_unidade.'transecto'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '>30m', unit 'transecto'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_30m_mais_pegada",
+          "valor": {
+            "media_pond_celula_m": 0.36003706168695904,
+            "mediana_m": 2.183354949951166,
+            "n_celulas": 441,
+            "n_unidades": 10,
+            "ic95_pond_celula": [
+              -1.753731993456701,
+              3.0451815809928067
+            ],
+            "ic95_mediana": [
+              -0.15725727081299112,
+              4.197337722778322
+            ],
+            "ic95_t_jackknife_pond": [
+              -2.610645258997467,
+              3.3307193823713845
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'>30m'.por_unidade.'pegada'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class '>30m', unit 'pegada'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_todas_transecto",
+          "valor": {
+            "media_pond_celula_m": -0.6038795502197414,
+            "mediana_m": 0.24760017395019496,
+            "n_celulas": 1194,
+            "n_unidades": 13,
+            "ic95_pond_celula": [
+              -1.8404269158644202,
+              0.8792556688297517
+            ],
+            "ic95_mediana": [
+              -1.0098396301269545,
+              1.5898475646972656
+            ],
+            "ic95_t_jackknife_pond": [
+              -2.2219570655209555,
+              1.0141979650814728
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'TODAS'.por_unidade.'transecto'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class 'TODAS', unit 'transecto'; percentile, median and t-jackknife CIs"
+        },
+        {
+          "id": "jstarsc_fidelidade_todas_pegada",
+          "valor": {
+            "media_pond_celula_m": -0.6038795502197415,
+            "mediana_m": 0.24760017395019496,
+            "n_celulas": 1194,
+            "n_unidades": 12,
+            "ic95_pond_celula": [
+              -1.8560605412562468,
+              0.9060605442066668
+            ],
+            "ic95_mediana": [
+              -1.0098396301269545,
+              1.6228499674797037
+            ],
+            "ic95_t_jackknife_pond": [
+              -2.232628614958197,
+              1.0248695145187137
+            ]
+          },
+          "unidade": "m",
+          "artefato": "auditar_rotulo_regua_v2.json",
+          "campo": "por_classe_eth.'TODAS'.por_unidade.'pegada'.fidelidade.{media_pond_celula_m,mediana_m,n_celulas,n_unidades,ic95_pond_celula,ic95_mediana,ic95_t_jackknife_pond}",
+          "nota": "fidelity = |z_ref - solo_anc| weighted per cell (the v2 auditor's own definition), ETH class 'TODAS', unit 'pegada'; percentile, median and t-jackknife CIs"
+        }
+      ],
+      "c2_contraste_pareado": [
+        {
+          "id": "jstarsc_contraste_fabdem_mae_0_3m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 0
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.mae.'0-3m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_mae_3_10m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 2
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.mae.'3-10m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_mae_10_20m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.439112814049855,
+            "media_m": -0.3272103713560542,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.8293331374795279,
+              -0.08844787657774456
+            ],
+            "n_transectos": 10,
+            "vitorias": 8,
+            "empates": 0,
+            "derrotas": 2,
+            "total": 10,
+            "p_sinal_binomial": 0.109375,
+            "p_wilcoxon": 0.10546875,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.mae.'10-20m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_mae_20_30m",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.4546858946859569,
+            "media_m": 0.5885784593232343,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.17875538315849804,
+              1.5429212041657943
+            ],
+            "n_transectos": 12,
+            "vitorias": 3,
+            "empates": 0,
+            "derrotas": 9,
+            "total": 12,
+            "p_sinal_binomial": 0.14599609375,
+            "p_wilcoxon": 0.09228515625,
+            "p_holm": 0.09228515625
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.mae.'20-30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_mae_30m_mais",
+          "valor": {
+            "testado": true,
+            "mediana_m": 2.3259251909694436,
+            "media_m": 2.2192080659256175,
+            "ic95_bootstrap_transecto_mediana": [
+              1.779955989135765,
+              2.6163586058957407
+            ],
+            "n_transectos": 11,
+            "vitorias": 0,
+            "empates": 0,
+            "derrotas": 11,
+            "total": 11,
+            "p_sinal_binomial": 0.0009765625,
+            "p_wilcoxon": 0.0009765625,
+            "p_holm": 0.001953125
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.mae.'>30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_nmad_0_3m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 0
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.nmad.'0-3m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_nmad_3_10m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 2
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.nmad.'3-10m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_nmad_10_20m",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.3847082255361911,
+            "media_m": 0.3300106290673362,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.46957569518566,
+              1.0253336234950996
+            ],
+            "n_transectos": 10,
+            "vitorias": 3,
+            "empates": 0,
+            "derrotas": 7,
+            "total": 10,
+            "p_sinal_binomial": 0.34375,
+            "p_wilcoxon": 0.193359375,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.nmad.'10-20m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_nmad_20_30m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.23974265650748983,
+            "media_m": -0.231162563016415,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.6051234807014478,
+              0.035872077770229494
+            ],
+            "n_transectos": 12,
+            "vitorias": 8,
+            "empates": 0,
+            "derrotas": 4,
+            "total": 12,
+            "p_sinal_binomial": 0.3876953125,
+            "p_wilcoxon": 0.17626953125,
+            "p_holm": 0.3525390625
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.nmad.'20-30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_fabdem_nmad_30m_mais",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.020730434818269305,
+            "media_m": 0.034506002056815206,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.2552599066543535,
+              0.3438455168151733
+            ],
+            "n_transectos": 11,
+            "vitorias": 4,
+            "empates": 0,
+            "derrotas": 7,
+            "total": 11,
+            "p_sinal_binomial": 0.548828125,
+            "p_wilcoxon": 0.7001953125,
+            "p_holm": 0.7001953125
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs fabdem'.nmad.'>30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_mae_0_3m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 0
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.mae.'0-3m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_mae_3_10m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 2
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.mae.'3-10m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_mae_10_20m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.4307091367843465,
+            "media_m": -0.46666211022188175,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.8662821030748633,
+              0.16949892779025344
+            ],
+            "n_transectos": 10,
+            "vitorias": 7,
+            "empates": 0,
+            "derrotas": 3,
+            "total": 10,
+            "p_sinal_binomial": 0.34375,
+            "p_wilcoxon": 0.130859375,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.mae.'10-20m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_mae_20_30m",
+          "valor": {
+            "testado": true,
+            "mediana_m": 1.221255172364582,
+            "media_m": 0.7070190796205985,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.2307884882345237,
+              1.8391817818748755
+            ],
+            "n_transectos": 12,
+            "vitorias": 4,
+            "empates": 0,
+            "derrotas": 8,
+            "total": 12,
+            "p_sinal_binomial": 0.3876953125,
+            "p_wilcoxon": 0.12939453125,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.mae.'20-30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_mae_30m_mais",
+          "valor": {
+            "testado": true,
+            "mediana_m": 1.9311977848190076,
+            "media_m": 1.7997872924473592,
+            "ic95_bootstrap_transecto_mediana": [
+              0.8958804651972243,
+              2.9565717562467566
+            ],
+            "n_transectos": 11,
+            "vitorias": 2,
+            "empates": 0,
+            "derrotas": 9,
+            "total": 11,
+            "p_sinal_binomial": 0.0654296875,
+            "p_wilcoxon": 0.009765625,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.mae.'>30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_nmad_0_3m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 0
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.nmad.'0-3m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_nmad_3_10m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 2
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.nmad.'3-10m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_nmad_10_20m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.031928997552393756,
+            "media_m": 0.0529727160882103,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.23275114809421216,
+              0.20039895407983108
+            ],
+            "n_transectos": 10,
+            "vitorias": 5,
+            "empates": 0,
+            "derrotas": 5,
+            "total": 10,
+            "p_sinal_binomial": 1.0,
+            "p_wilcoxon": 0.845703125,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.nmad.'10-20m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_nmad_20_30m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.32154390147685796,
+            "media_m": -0.20250934729814554,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.5315761561203041,
+              0.032796948509215884
+            ],
+            "n_transectos": 12,
+            "vitorias": 8,
+            "empates": 0,
+            "derrotas": 4,
+            "total": 12,
+            "p_sinal_binomial": 0.3876953125,
+            "p_wilcoxon": 0.12939453125,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.nmad.'20-30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_gedtm30_nmad_30m_mais",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.1091219141006472,
+            "media_m": 0.1197819397440822,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.050909232215877065,
+              0.30639748655319154
+            ],
+            "n_transectos": 11,
+            "vitorias": 3,
+            "empates": 0,
+            "derrotas": 8,
+            "total": 11,
+            "p_sinal_binomial": 0.2265625,
+            "p_wilcoxon": 0.1474609375,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs gedtm30'.nmad.'>30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_mae_0_3m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 0
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.mae.'0-3m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_mae_3_10m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 2
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.mae.'3-10m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_mae_10_20m",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.05030649874698789,
+            "media_m": 0.03055334018870002,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.2310053381531043,
+              0.4498844475780954
+            ],
+            "n_transectos": 10,
+            "vitorias": 3,
+            "empates": 0,
+            "derrotas": 7,
+            "total": 10,
+            "p_sinal_binomial": 0.34375,
+            "p_wilcoxon": 0.556640625,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.mae.'10-20m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_mae_20_30m",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.022948211474244973,
+            "media_m": 0.04728766019361761,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.1870581667870077,
+              0.35607967854643785
+            ],
+            "n_transectos": 12,
+            "vitorias": 7,
+            "empates": 0,
+            "derrotas": 5,
+            "total": 12,
+            "p_sinal_binomial": 0.7744140625,
+            "p_wilcoxon": 0.85009765625,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.mae.'20-30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_mae_30m_mais",
+          "valor": {
+            "testado": true,
+            "mediana_m": -0.6887541231502441,
+            "media_m": -0.6653765154136447,
+            "ic95_bootstrap_transecto_mediana": [
+              -1.0931085771662499,
+              -0.4988767736173676
+            ],
+            "n_transectos": 11,
+            "vitorias": 10,
+            "empates": 0,
+            "derrotas": 1,
+            "total": 11,
+            "p_sinal_binomial": 0.01171875,
+            "p_wilcoxon": 0.009765625,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": "m",
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.mae.'>30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_nmad_0_3m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 0
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.nmad.'0-3m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_nmad_3_10m",
+          "valor": {
+            "testado": false,
+            "motivo": "fewer than 6 transects above the floor of 200 cells",
+            "n_transectos": 2
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.nmad.'3-10m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_nmad_10_20m",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.29427263539167936,
+            "media_m": 0.2816921634553999,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.15108161384580843,
+              0.6055522091311001
+            ],
+            "n_transectos": 10,
+            "vitorias": 3,
+            "empates": 0,
+            "derrotas": 7,
+            "total": 10,
+            "p_sinal_binomial": 0.34375,
+            "p_wilcoxon": 0.064453125,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.nmad.'10-20m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_nmad_20_30m",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.09584558186531211,
+            "media_m": 0.19509173785945896,
+            "ic95_bootstrap_transecto_mediana": [
+              -0.03382811857223733,
+              0.4534350841426855
+            ],
+            "n_transectos": 12,
+            "vitorias": 4,
+            "empates": 0,
+            "derrotas": 8,
+            "total": 12,
+            "p_sinal_binomial": 0.3876953125,
+            "p_wilcoxon": 0.06396484375,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.nmad.'20-30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        },
+        {
+          "id": "jstarsc_contraste_mlp_nmad_30m_mais",
+          "valor": {
+            "testado": true,
+            "mediana_m": 0.10595176958084407,
+            "media_m": 0.11826448487715337,
+            "ic95_bootstrap_transecto_mediana": [
+              0.022696345767976966,
+              0.31063839082718436
+            ],
+            "n_transectos": 11,
+            "vitorias": 2,
+            "empates": 0,
+            "derrotas": 9,
+            "total": 11,
+            "p_sinal_binomial": 0.0654296875,
+            "p_wilcoxon": 0.123046875,
+            "p_holm": {
+              "disponivel": false,
+              "motivo": "pair/class outside the confirmatory family (criterio_pre_registrado.familia_confirmatoria = only 'v23 vs fabdem' in 20-30m/>30m); other pairs/classes are exploratory, raw p without Holm correction"
+            }
+          },
+          "unidade": null,
+          "artefato": "auditar_nmad_pareado_nativa_anadem.json",
+          "campo": "populacao_original_ETH.testes_principal_ETH_produtos_base.'v23 vs mlp'.nmad.'>30m'",
+          "nota": "paired contrast by transect; classes 0-3m/3-10m always 'testado=false' (fewer than 6 transects above the 200-cell floor); losses = total - wins - ties, computed in code (G4)"
+        }
+      ],
+      "c3_densidade_casca": [
+        {
+          "id": "jstarsc_densidade_casca_0_3m",
+          "valor": {
+            "dens_n_casca": {
+              "n": 561,
+              "mediana": 4.569318763425653,
+              "q1": 2.6053230740345827,
+              "q3": 5.392088089171408,
+              "media": 4.010677107577259,
+              "frac_abaixo_de_0.40": 0.024955436720142603,
+              "frac_abaixo_de_0.50": 0.0338680926916221
+            },
+            "n_celulas": 561,
+            "n_transectos": 5,
+            "razao_casca_sobre_piso": {
+              "n": 561,
+              "mediana": 47.42567858681603,
+              "q1": 30.75417267669483,
+              "q3": 49.60054782013239,
+              "media": 39.23523475207353
+            },
+            "razao_das_medianas_casca_sobre_piso": 42.41210663470216
+          },
+          "unidade": "pt/m2",
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "por_faixa.'ETH'.'0-3m'.{dens_n_casca,n_celulas,n_transectos,razao_casca_sobre_piso,razao_das_medianas_casca_sobre_piso}}",
+          "nota": "dens_n_casca = density of returns with z <= p2_all+1m (population of the ground estimator), main ETH stratification; floor = 0.02*dens_n_all"
+        },
+        {
+          "id": "jstarsc_densidade_casca_3_10m",
+          "valor": {
+            "dens_n_casca": {
+              "n": 2799,
+              "mediana": 1.59711890409406,
+              "q1": 0.5843220932156519,
+              "q3": 3.2228279149147996,
+              "media": 2.011723688215845,
+              "frac_abaixo_de_0.40": 0.17399071096820293,
+              "frac_abaixo_de_0.50": 0.21793497677742052
+            },
+            "n_celulas": 2799,
+            "n_transectos": 15,
+            "razao_casca_sobre_piso": {
+              "n": 2799,
+              "mediana": 27.961945861122008,
+              "q1": 9.859452359633414,
+              "q3": 43.439960462954375,
+              "media": 27.019156876784674
+            },
+            "razao_das_medianas_casca_sobre_piso": 18.19137784644231
+          },
+          "unidade": "pt/m2",
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "por_faixa.'ETH'.'3-10m'.{dens_n_casca,n_celulas,n_transectos,razao_casca_sobre_piso,razao_das_medianas_casca_sobre_piso}}",
+          "nota": "dens_n_casca = density of returns with z <= p2_all+1m (population of the ground estimator), main ETH stratification; floor = 0.02*dens_n_all"
+        },
+        {
+          "id": "jstarsc_densidade_casca_10_20m",
+          "valor": {
+            "dens_n_casca": {
+              "n": 24812,
+              "mediana": 0.5247472054423291,
+              "q1": 0.25315602484984007,
+              "q3": 1.371161376102855,
+              "media": 1.048894843846912,
+              "frac_abaixo_de_0.40": 0.41697565694019023,
+              "frac_abaixo_de_0.50": 0.48561180074157667
+            },
+            "n_celulas": 24812,
+            "n_transectos": 17,
+            "razao_casca_sobre_piso": {
+              "n": 24812,
+              "mediana": 5.7724819409730275,
+              "q1": 2.59938585284552,
+              "q3": 14.966302750701644,
+              "media": 11.200563341884493
+            },
+            "razao_das_medianas_casca_sobre_piso": 4.853682879190063
+          },
+          "unidade": "pt/m2",
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "por_faixa.'ETH'.'10-20m'.{dens_n_casca,n_celulas,n_transectos,razao_casca_sobre_piso,razao_das_medianas_casca_sobre_piso}}",
+          "nota": "dens_n_casca = density of returns with z <= p2_all+1m (population of the ground estimator), main ETH stratification; floor = 0.02*dens_n_all"
+        },
+        {
+          "id": "jstarsc_densidade_casca_20_30m",
+          "valor": {
+            "dens_n_casca": {
+              "n": 45264,
+              "mediana": 0.2289757312232135,
+              "q1": 0.16666463815542631,
+              "q3": 0.3711970346598952,
+              "media": 0.3772699121844429,
+              "frac_abaixo_de_0.40": 0.7728437610463061,
+              "frac_abaixo_de_0.50": 0.828340402969247
+            },
+            "n_celulas": 45264,
+            "n_transectos": 19,
+            "razao_casca_sobre_piso": {
+              "n": 45264,
+              "mediana": 1.8921219007591181,
+              "q1": 1.420274941977024,
+              "q3": 3.3130439581758457,
+              "media": 3.479456578540488
+            },
+            "razao_das_medianas_casca_sobre_piso": 1.8553257207793727
+          },
+          "unidade": "pt/m2",
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "por_faixa.'ETH'.'20-30m'.{dens_n_casca,n_celulas,n_transectos,razao_casca_sobre_piso,razao_das_medianas_casca_sobre_piso}}",
+          "nota": "dens_n_casca = density of returns with z <= p2_all+1m (population of the ground estimator), main ETH stratification; floor = 0.02*dens_n_all"
+        },
+        {
+          "id": "jstarsc_densidade_casca_30m_mais",
+          "valor": {
+            "dens_n_casca": {
+              "n": 78426,
+              "mediana": 0.18764919435632507,
+              "q1": 0.14336951115320073,
+              "q3": 0.2508727047925182,
+              "media": 0.23531254197091006,
+              "frac_abaixo_de_0.40": 0.9053502664932548,
+              "frac_abaixo_de_0.50": 0.9362583836992834
+            },
+            "n_celulas": 78426,
+            "n_transectos": 19,
+            "razao_casca_sobre_piso": {
+              "n": 78426,
+              "mediana": 1.4991968588256293,
+              "q1": 1.2962962962962963,
+              "q3": 1.9865640561395277,
+              "media": 2.084920169199943
+            },
+            "razao_das_medianas_casca_sobre_piso": 1.5111933662152945
+          },
+          "unidade": "pt/m2",
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "por_faixa.'ETH'.'>30m'.{dens_n_casca,n_celulas,n_transectos,razao_casca_sobre_piso,razao_das_medianas_casca_sobre_piso}}",
+          "nota": "dens_n_casca = density of returns with z <= p2_all+1m (population of the ground estimator), main ETH stratification; floor = 0.02*dens_n_all"
+        },
+        {
+          "id": "jstarsc_densidade_casca_todas",
+          "valor": {
+            "dens_n_casca": {
+              "n": 151862,
+              "mediana": 0.2161813522839915,
+              "q1": 0.1581212846343526,
+              "q3": 0.3702061236465349,
+              "media": 0.4572397969730663,
+              "frac_abaixo_de_0.40": 0.7693300496503405,
+              "frac_abaixo_de_0.50": 0.8138902424569675
+            },
+            "n_celulas": 151862,
+            "n_transectos": 19,
+            "razao_casca_sobre_piso": {
+              "n": 151862,
+              "mediana": 1.7658791359439108,
+              "q1": 1.3687251162190173,
+              "q3": 3.418803418803419,
+              "media": 4.586743465736016
+            },
+            "razao_das_medianas_casca_sobre_piso": 1.7944509008992002
+          },
+          "unidade": "pt/m2",
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "por_faixa.'ETH'.'TODAS'.{dens_n_casca,n_celulas,n_transectos,razao_casca_sobre_piso,razao_das_medianas_casca_sobre_piso}}",
+          "nota": "dens_n_casca = density of returns with z <= p2_all+1m (population of the ground estimator), main ETH stratification; floor = 0.02*dens_n_all"
+        }
+      ],
+      "c3_densidade_definicoes": [
+        {
+          "id": "jstarsc_densidade_definicoes",
+          "valor": {
+            "area": "A(phi) = (PASSO*m_lat)*(PASSO*m_lon), WGS84, phi = latitude of the cell center; PASSO = 2/7200 degrees",
+            "populacoes": {
+              "n_all": "all returns with -5 < z < 400 m",
+              "n_cl2": "producer's ASPRS class 2 (over-inclusive)",
+              "n_casca": "Returns with z <= p2_all + 1 m (population of the ground estimator)"
+            },
+            "piso": "0.02 * dens_n_all — density that p2 imposes on the shell by construction",
+            "limiares_declarados_pt_m2": [
+              0.4,
+              0.5
+            ],
+            "estratificacao_principal": "Exogenous ETH (h_eth, cob_eth >= 0.8)",
+            "sensibilidade": "dossel_v2 (circular)",
+            "nota": "the article sentence must name the population; never 'ground returns' without a qualifier"
+          },
+          "unidade": null,
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "definicoes",
+          "nota": "definitions of cell area, populations (n_all/n_cl2/n_casca), floor and declared thresholds of the audit script itself"
+        }
+      ],
+      "c3_densidade_contra_auditoria_anterior": [
+        {
+          "id": "jstarsc_densidade_contra_auditoria_anterior",
+          "valor": {
+            "texto": "v1 checked by an independent recomputation (geodesic area, populations, floor and numbers recomputed independently); v2 applies D-1 and D-2a"
+          },
+          "unidade": null,
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "contra_auditoria",
+          "nota": "independent re-check already recorded in the artifact itself before this sheet; copied verbatim, without verifying the referenced file (outside the scope of this task)"
+        }
+      ],
+      "c3_densidade_texto_atual": [
+        {
+          "id": "jstarsc_densidade_0_19_conferencia",
+          "valor": {
+            "mediana_dens_n_casca_30m_mais_pt_m2": 0.18764919435632507,
+            "arredondado_2_casas": 0.19
+          },
+          "unidade": "pt/m2",
+          "artefato": "auditar_densidade_solo_nativa.json",
+          "campo": "por_faixa.'ETH'.'>30m'.dens_n_casca.mediana (rounded in code)",
+          "nota": "check of the number that the current text of the article cites as '0.19 points/m2 above 30 m'"
+        }
+      ],
+      "c4_datum_guarda": [
+        {
+          "id": "jstarsc_datum_anadem_guarda_clareira",
+          "valor": {
+            "mediana_m": 0.0,
+            "iqr_m": 0.07545113563537598,
+            "dp_m": 1.0327867269515991,
+            "n": 160626
+          },
+          "unidade": "m",
+          "artefato": "guarda_sanidade_anadem_vs_glo30.json",
+          "campo": "por_classe_dossel_eth.'clareira (<2 m)'.{mediana_m,iqr_m,dp_m,n}",
+          "nota": "ANADEM vs GLO-30 sanity guard, ETH canopy class 'clareira (<2 m)' (clearing; the least affected by signal penetration); median ANADEM-GLO30 = 0.000 m"
+        }
+      ],
+      "c4_datum_geo_independente": [
+        {
+          "id": "jstarsc_datum_anadem_geo_independente",
+          "valor": {
+            "mediana_m": 0.0,
+            "iqr_m": 0.075,
+            "dp_m": 1.033,
+            "n": 160626,
+            "n_guarda_sanidade": 160626,
+            "diferenca_populacao_n": 0
+          },
+          "unidade": "m",
+          "artefato": "geo_produto_anadem.json",
+          "campo": "achados[id='A3_datum_vertical'].descricao (numbers extracted by regex in code: 'n=...', 'mediana de ANADEM-GLO30 e ... m', 'IQR ... m', 'dp ... m')",
+          "nota": "independent empirical test (run on the .npz files on the node grid, same clearing population ETH<2m); diferenca_populacao_n computed in code against the n of the sanity guard"
+        }
+      ]
+    }
+  }
+}

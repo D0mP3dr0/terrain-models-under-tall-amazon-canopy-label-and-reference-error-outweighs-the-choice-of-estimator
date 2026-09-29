@@ -1,0 +1,2444 @@
+{
+  "_proveniencia": {
+    "script": "auditar_s2_registro_referencia.py",
+    "sha256_script": "72041a6e6f30f7c35fd7781d9c45ada59153edab0486e1b5505dc65a0cef5161",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-28T15:50",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.parquet",
+      "sha256": "b01a6101850dfe7fc514c85be556fbe0aae3cc941fba9263b431a54556f92dc5",
+      "bytes": 4380157,
+      "mtime": "2026-08-18 18:02"
+    },
+    {
+      "caminho": "juiz_grade_nativa_diretas.json",
+      "sha256": "5d8e47397eac39122d7d9b52e3118491c4547cffa6c856e4477d0fe09c6d76f5",
+      "bytes": 29459,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_anadem.json",
+      "sha256": "95c726a1a7b703ba0092b74560df34e1b2ebb8225a45567ce7ffbd641aa75b66",
+      "bytes": 342309,
+      "mtime": "2026-09-28 11:48"
+    },
+    {
+      "caminho": "juiz_lidar_v4.py",
+      "sha256": "7768ba350a38cc94e9ab37a48cbac1b7b8917a902d3eb015ad430919c8b033c2",
+      "bytes": 21820,
+      "mtime": "2026-08-16 12:18"
+    },
+    {
+      "caminho": "auditar_nmad_pareado.py",
+      "sha256": "52e471fc4df6e41f1f87ca6de800275770e7bb6eb1b59b6a84bfd9ce0b57a3a1",
+      "bytes": 21009,
+      "mtime": "2026-08-18 19:11"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_anadem.py",
+      "sha256": "f022646ea98e0ae3c4c7de9ce39e73c901a752442c8763e7564654ee115ea9d9",
+      "bytes": 23220,
+      "mtime": "2026-09-28 11:47"
+    },
+    {
+      "caminho": "rotulos_lidar_v23.py",
+      "sha256": "bf8e36cfd2281b2eefae3cdd36b8b8b51cf145bc6a7e808008cc574792e14f8d",
+      "bytes": 42042,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "geoide_v23.py",
+      "sha256": "001184fd628bba0c97fa030a20292026119260fec8cd21a18f3964aa49001796",
+      "bytes": 8743,
+      "mtime": "2026-08-02 19:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q1.npz",
+      "sha256": "1fd3eb1a1ee78c1076f7fba83a3222c38b7bbcf94f68ffb3a614449539f9e0fd",
+      "bytes": 44856830,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q1.npz",
+      "sha256": "fd520a6189bd588276fc24ae94a9697a12bdb05687b713683d47052271533e23",
+      "bytes": 31052675,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q1.npz",
+      "sha256": "9db07dfe7655207ad67db06b3d717c1941af75b065c0ac72b4f20131e2d33d28",
+      "bytes": 43889002,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q1.npz",
+      "sha256": "b863f994c8b96814534a94343d2a646097deb1b94be7cf165c74530d67cd3e63",
+      "bytes": 44897228,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q1.npz",
+      "sha256": "9535647118c935e0229070c16372e53f60e880927d13e4e3f291348b7cf2a837",
+      "bytes": 539926,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q1.npz",
+      "sha256": "6142d950610129dd294a8cbcc69e53080a849a565f044dffd677d9a434dd2e35",
+      "bytes": 23516585,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q1.npz",
+      "sha256": "015d0347d445bf9a0a4df08758fb1ea0d10fdb3e3a753d140e90e476f4147cf9",
+      "bytes": 11060217,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q2.npz",
+      "sha256": "71d0a11fee3fb44307916a0bff77a45ec640ee54eedb5464e848474058088891",
+      "bytes": 41687083,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q2.npz",
+      "sha256": "d2f7a4d616c40d9fde51b83cb3aad9b3f3a0a7b431d784c1d6bb6e5d4b07c4c3",
+      "bytes": 28393374,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q2.npz",
+      "sha256": "b4266ada01884f9d3e3a7241b303d14de005764f8a0f6c7890ffc82394df3816",
+      "bytes": 42069195,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q2.npz",
+      "sha256": "e70230f02c479067c1edd537235c85e9e623cc5aca6bcd0b7b85ba48efe81bb0",
+      "bytes": 42059826,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q2.npz",
+      "sha256": "fe9317f04bd71463981ef0f058bfc95408f7a4b0a7d621761f469c06af6ef09a",
+      "bytes": 2618347,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q2.npz",
+      "sha256": "a83517bbbae447867262b6926f2a2a5aa88d398596d6f7720296b03041854cf2",
+      "bytes": 22949409,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q2.npz",
+      "sha256": "803a5aaa1d528d8e71d6c416e563bd7df0bb2e3d438e8822ce96fd3257f7b110",
+      "bytes": 12925328,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q3.npz",
+      "sha256": "ef7e529cb710822a145e23370fb1525913009a392cb16c3821f011e1a2c4e2bd",
+      "bytes": 38521636,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q3.npz",
+      "sha256": "6f45c501be1cfdc271e59d5566933c57117f09d5b765919838decc1bd933f933",
+      "bytes": 21843383,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q3.npz",
+      "sha256": "5324d866168d2bfe8b0d5b6d9ee967ccade761297d199dafe3d06fbb79bb6007",
+      "bytes": 39530448,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q3.npz",
+      "sha256": "a9101e9462912e4a494dca0bba4465e86f41b81f4c927b0c1e6fd90713e77633",
+      "bytes": 38822111,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q3.npz",
+      "sha256": "71ec340b90ca66ec05cf452c4d8e19c5a569563f30882219f6cbef2c7331bb6a",
+      "bytes": 7217291,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q3.npz",
+      "sha256": "865bfa10074c1ba55ca25b487f52e267aa1bac83a4fb0b0abc6b2ae2c7af94b2",
+      "bytes": 24834651,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q3.npz",
+      "sha256": "cd20a82c5e9bfb2e36b51385703b037790f9abfdabed75be9b96da5b73087765",
+      "bytes": 10711545,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q4.npz",
+      "sha256": "e689e7b4020ee31d2b0d5e98d14cdc79cc6d74e18e32b300d2c86c503dce6b9d",
+      "bytes": 37351990,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q4.npz",
+      "sha256": "0ccfc5b4dbdd32b855c2781fbb76484797d24e7ce64d5aed4a3e1de9de6acf98",
+      "bytes": 20948032,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q4.npz",
+      "sha256": "672978e10e862690b9e87f9c7e44cd96ecb79563aca7572898cae530599f289e",
+      "bytes": 39699540,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q4.npz",
+      "sha256": "03981d874ab931c3678fc089bc2ff7089741f590a9c18ad585582195ed10f264",
+      "bytes": 37812742,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q4.npz",
+      "sha256": "259ed84611a9df13b5d6bb0067f1a20fc1cd16bfeb83f8cdfe2f5e173043238f",
+      "bytes": 6491679,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q4.npz",
+      "sha256": "8dff93b29aad1fbac2568943baebcb4629aa64b5fc2b489edc6f909cf3ae1cd4",
+      "bytes": 24317269,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q4.npz",
+      "sha256": "f9ffafdaffa777599b56c2143d9730cef677b54e641d952c417e5845fcdd0b93",
+      "bytes": 12905568,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/_proveniencia_anadem.json",
+      "sha256": "868d658a0b819bf9aa8548dd51db54650a7a00e325435c05cda7be726192b14a",
+      "bytes": 1923,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/_proveniencia.json",
+      "sha256": "828b1c74a1528905b8ef8a8f5e24345ab9af58a2d7373bf729e731b6bd724c49",
+      "bytes": 6299,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/anadem/anadem_v1_21M_recorte_amazonia_2x2.tif",
+      "sha256": "52c3bbb50b1f8d463504de7a80d9cf65c9ca615638a197e67e15a1a089629461",
+      "bytes": 121722156,
+      "mtime": "2026-09-28 11:38"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/anadem/anadem_v1_21M_recorte_amazonia_2x2.proveniencia.json",
+      "sha256": "26660621d99fc5dd3f553b0f5c508f16576a6fb4da3ca471c651b1e10d9f1b7c",
+      "bytes": 2525,
+      "mtime": "2026-09-28 11:38"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/alvos/gedi02_a_amazonia_dedup.parquet",
+      "sha256": "b5fb30b7de92577233b85b382eb1e366f240a0475b85e827fed89e42b30ed6f9",
+      "bytes": 174139584,
+      "mtime": "2026-08-04 19:29"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/alvos/gedi02_a_amazonia.parquet",
+      "sha256": "f6b4187589914a5031c9dcc202949a2a193377a8407f5007150118c7e9caa7d2",
+      "bytes": 317711059,
+      "mtime": "2026-08-04 17:59"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/alvos/atl08_amazonia.parquet",
+      "sha256": "34b8ec39f0362d2f5beb938a5afeace9da6420c9020723b88d576a32ff8e4444",
+      "bytes": 20210390,
+      "mtime": "2026-08-02 17:08"
+    },
+    {
+      "caminho": "auditar_s2_registro_referencia.py",
+      "sha256": "72041a6e6f30f7c35fd7781d9c45ada59153edab0486e1b5505dc65a0cef5161",
+      "bytes": 32973,
+      "mtime": "2026-09-28 15:49"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed42.npz",
+      "sha256": "b065964e52c3648e6639176f2efc37100b2bbb2b514e19ff517c61c936eb1998",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed123.npz",
+      "sha256": "e5cae136784d629b10e6d284d865ae2eb7152e1aa3ba2f97bf77d36f2f12d3e3",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed7.npz",
+      "sha256": "b2ae95c70caef15322cd99b7815c6163ac671feeb0a9f8d7a30c2976e2e269cc",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed2024.npz",
+      "sha256": "9616720901be153a82cfc87bc0647d1a1065bfd0bd87790e05a98e9782a1cb72",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed31.npz",
+      "sha256": "47483fbdc83d5127799b7a01182017ece692651b4f797d88efbaae9fa20795e0",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed42.npz",
+      "sha256": "ceb0db4cbfc2cc479a6d4135ab5b2fd18d84cf54b88c920b650048c90af523cf",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed123.npz",
+      "sha256": "c7cd87f784980f77650376028e41ce656510e6383259fc4ec777a8dd68ad82d2",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed7.npz",
+      "sha256": "8f4164aedfdb4ad922cab62f3b4b34436e7c76deffe530c125224c41702bee61",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed2024.npz",
+      "sha256": "7a26ea46817c319f1c272e3166e6d681fa4b61e35653d8a1d87034f3f8275e59",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed31.npz",
+      "sha256": "3766010c9c420b868478a64442049bf6390bf029350d66584fd5ad69fd134327",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    }
+  ],
+  "sha256_conferido_antes_de_calcular": {
+    "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.parquet": "b01a6101850dfe7fc514c85be556fbe0aae3cc941fba9263b431a54556f92dc5",
+    "/trabalho/GNN_TOPO/V23/juiz_grade_nativa_diretas.json": "5d8e47397eac39122d7d9b52e3118491c4547cffa6c856e4477d0fe09c6d76f5",
+    "/trabalho/GNN_TOPO/V23/auditar_nmad_pareado_nativa_anadem.json": "95c726a1a7b703ba0092b74560df34e1b2ebb8225a45567ce7ffbd641aa75b66",
+    "/trabalho/GNN_TOPO/V23/juiz_lidar_v4.py": "7768ba350a38cc94e9ab37a48cbac1b7b8917a902d3eb015ad430919c8b033c2",
+    "/trabalho/GNN_TOPO/V23/auditar_nmad_pareado.py": "52e471fc4df6e41f1f87ca6de800275770e7bb6eb1b59b6a84bfd9ce0b57a3a1",
+    "/trabalho/GNN_TOPO/V23/auditar_nmad_pareado_nativa_anadem.py": "f022646ea98e0ae3c4c7de9ce39e73c901a752442c8763e7564654ee115ea9d9",
+    "/trabalho/GNN_TOPO/V23/rotulos_lidar_v23.py": "bf8e36cfd2281b2eefae3cdd36b8b8b51cf145bc6a7e808008cc574792e14f8d",
+    "/trabalho/GNN_TOPO/V23/geoide_v23.py": "001184fd628bba0c97fa030a20292026119260fec8cd21a18f3964aa49001796"
+  },
+  "criterio_pre_registrado": {
+    "unidade": "fixed judgeable transect (13 from juiz_grade_nativa_diretas.json)",
+    "populacao_fixa": "forest-judgeable cells with valid ANADEM (same as populacao_comum_5_produtos_ETH of auditar_nmad_pareado_nativa_anadem.json)",
+    "pares": [
+      "v23 vs mlp",
+      "v23 vs fabdem",
+      "v23 vs gedtm30",
+      "v23 vs glo30",
+      "v23 vs anadem",
+      "mlp vs fabdem",
+      "mlp vs gedtm30",
+      "mlp vs glo30",
+      "mlp vs anadem",
+      "fabdem vs gedtm30",
+      "fabdem vs glo30",
+      "fabdem vs anadem",
+      "gedtm30 vs glo30",
+      "gedtm30 vs anadem",
+      "glo30 vs anadem"
+    ],
+    "n_pares": 15,
+    "classes_do_criterio": [
+      "20-30m",
+      ">30m"
+    ],
+    "tau": "median of |off_alternativo - off_atual| across the 13 transects, per arm",
+    "regra_nao_depende": "ranking by MAE and by NMAD identical to (i) in (ii-a if assessable), (ii-b) and (iii); in (ii-c) retained in >=95% of the draws",
+    "regra_depende_com_ressalva": "holds in ii-a/ii-b and in >=95% of ii-c but changes in iii; OR only one pair inverts with |dMAE(i)| < tau",
+    "regra_depende": "in ii-a or ii-b a pair with |dMAE(i)| >= tau inverts; OR a pair inverts in >5% of the ii-c draws; OR under ii-b the MAE advantage of FABDEM/ANADEM over GEDTM30 in >30m changes sign",
+    "teste_decisivo": "GLO-30 family (FABDEM, ANADEM) vs GEDTM30 in >30m under (ii-b)",
+    "previsao_registrada_antes_de_rodar": "in 20-30m, ANADEM/GEDTM30/FABDEM lie within 0.17 m of MAE of each other — the three pairs of this trio should fall into 'com ressalva' in almost any arm"
+  },
+  "entradas": {
+    "parquet": "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.parquet",
+    "juiz": "/trabalho/GNN_TOPO/V23/juiz_grade_nativa_diretas.json",
+    "laterais": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas",
+    "referencia_guarda_i": "/trabalho/GNN_TOPO/V23/auditar_nmad_pareado_nativa_anadem.json"
+  },
+  "julgaveis": [
+    "NP_T-0224",
+    "NP_T-0226",
+    "NP_T-0227",
+    "NP_T-0357",
+    "NP_T-0358",
+    "NP_T-0360",
+    "NP_T-0621",
+    "NP_T-0638",
+    "NP_T-0639",
+    "NP_T-0662",
+    "NP_T-0896",
+    "NP_T-0899",
+    "NP_T-0934"
+  ],
+  "guarda_i_reproduz_referencia_1e-6": {
+    "campos_tabela": 180,
+    "campos_teste": 18
+  },
+  "guarda_n_clareira": {
+    "NP_T-0224": 88,
+    "NP_T-0226": 31,
+    "NP_T-0227": 115,
+    "NP_T-0357": 66,
+    "NP_T-0358": 27,
+    "NP_T-0360": 42,
+    "NP_T-0621": 68,
+    "NP_T-0638": 936,
+    "NP_T-0639": 121,
+    "NP_T-0662": 43,
+    "NP_T-0896": 154,
+    "NP_T-0899": 161,
+    "NP_T-0934": 226
+  },
+  "guarda_invariancia_nmad_transecto_faixa": {
+    "celulas_conferidas": 636,
+    "violacoes": 0
+  },
+  "guarda_invariancia_diferenca_vies_pool": {
+    "pares_conferidos": 180,
+    "violacoes": 0
+  },
+  "off_t_por_braco": {
+    "i_atual": {
+      "NP_T-0224": 0.1091461181640625,
+      "NP_T-0226": 2.0644378662109375,
+      "NP_T-0227": 1.3994674682617188,
+      "NP_T-0357": -0.8672447204589844,
+      "NP_T-0358": -0.64337158203125,
+      "NP_T-0360": 3.8000001907348633,
+      "NP_T-0621": 0.3148021697998047,
+      "NP_T-0638": -0.9626483917236328,
+      "NP_T-0639": -0.6826725006103516,
+      "NP_T-0662": 0.19123077392578125,
+      "NP_T-0896": 1.6838884353637695,
+      "NP_T-0899": -0.4019794464111328,
+      "NP_T-0934": -0.7817783355712891
+    },
+    "ii_a_independente": {
+      "NP_T-0638": -0.26516693480113673
+    },
+    "ii_b_gedtm30": {
+      "NP_T-0224": -4.657720565795898,
+      "NP_T-0226": -3.2984542846679688,
+      "NP_T-0227": -0.8271846771240234,
+      "NP_T-0357": -4.302623748779297,
+      "NP_T-0358": -3.7569427490234375,
+      "NP_T-0360": 1.0203361511230469,
+      "NP_T-0621": -1.015909194946289,
+      "NP_T-0638": -1.6304330825805664,
+      "NP_T-0639": -2.0529251098632812,
+      "NP_T-0662": -3.762359619140625,
+      "NP_T-0896": -2.8919830322265625,
+      "NP_T-0899": -3.6751232147216797,
+      "NP_T-0934": -4.859070301055908
+    },
+    "iii_sem_offset": {
+      "NP_T-0224": 0.0,
+      "NP_T-0226": 0.0,
+      "NP_T-0227": 0.0,
+      "NP_T-0357": 0.0,
+      "NP_T-0358": 0.0,
+      "NP_T-0360": 0.0,
+      "NP_T-0621": 0.0,
+      "NP_T-0638": 0.0,
+      "NP_T-0639": 0.0,
+      "NP_T-0662": 0.0,
+      "NP_T-0896": 0.0,
+      "NP_T-0899": 0.0,
+      "NP_T-0934": 0.0
+    }
+  },
+  "braco_ii_a_disponibilidade": {
+    "n_disparos_por_transecto": {
+      "NP_T-0224": 0,
+      "NP_T-0226": 0,
+      "NP_T-0227": 3,
+      "NP_T-0357": 0,
+      "NP_T-0358": 0,
+      "NP_T-0360": 0,
+      "NP_T-0621": 0,
+      "NP_T-0638": 27,
+      "NP_T-0639": 0,
+      "NP_T-0662": 0,
+      "NP_T-0896": 0,
+      "NP_T-0899": 9,
+      "NP_T-0934": 1
+    },
+    "avaliavel_por_transecto": {
+      "NP_T-0224": false,
+      "NP_T-0226": false,
+      "NP_T-0227": false,
+      "NP_T-0357": false,
+      "NP_T-0358": false,
+      "NP_T-0360": false,
+      "NP_T-0621": false,
+      "NP_T-0638": true,
+      "NP_T-0639": false,
+      "NP_T-0662": false,
+      "NP_T-0896": false,
+      "NP_T-0899": false,
+      "NP_T-0934": false
+    },
+    "excluidos": {
+      "NP_T-0224": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0226": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0227": "3 independent shots in canopy gaps < minimum 10",
+      "NP_T-0357": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0358": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0360": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0621": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0639": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0662": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0896": "0 independent shots in canopy gaps < minimum 10",
+      "NP_T-0899": "9 independent shots in canopy gaps < minimum 10",
+      "NP_T-0934": "1 independent shots in canopy gaps < minimum 10"
+    },
+    "n_transectos_avaliaveis": 1,
+    "avaliavel": false,
+    "motivo": "1 transects with >= 10 independent shots in canopy gaps, below the minimum of 6 required by the design"
+  },
+  "tau_m": {
+    "ii-b": 3.273143768310547,
+    "iii": 0.7817783355712891,
+    "ii-a": NaN
+  },
+  "tabela_pool_ETH": {
+    "i_atual": {
+      "v23": {
+        "0-3m": {
+          "n": 86,
+          "mae": 2.648740234417502,
+          "vies": 2.537514698682322,
+          "nmad": 1.4847672538372372,
+          "rmse": 4.371296177920394
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 2.5214461162650057,
+          "vies": 1.0672536496297576,
+          "nmad": 2.36976012240887,
+          "rmse": 3.63754912496294
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 2.8068324628994232,
+          "vies": 0.3191926746831324,
+          "nmad": 3.1284866870373484,
+          "rmse": 3.800810347711492
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 4.418009463953923,
+          "vies": 3.7025996108281887,
+          "nmad": 3.4324016922855356,
+          "rmse": 5.2599040687478995
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 6.62774097210393,
+          "vies": 6.563068932810379,
+          "nmad": 3.0139866592025673,
+          "rmse": 7.294313145164994
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 4.992959904180431,
+          "vies": 4.164723391320723,
+          "nmad": 4.207677777328489,
+          "rmse": 5.967869789728046
+        }
+      },
+      "mlp": {
+        "0-3m": {
+          "n": 86,
+          "mae": 2.312494529945946,
+          "vies": 2.13876332855729,
+          "nmad": 1.4345275005553317,
+          "rmse": 3.685233433541897
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 2.428680098277956,
+          "vies": 0.5288598055305445,
+          "nmad": 2.509064402224783,
+          "rmse": 3.334265583847951
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 2.6459046126633052,
+          "vies": 0.0854630954573696,
+          "nmad": 2.756830282623769,
+          "rmse": 3.705772234606471
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 4.2983243596251,
+          "vies": 3.7430818425071113,
+          "nmad": 3.2173550144290863,
+          "rmse": 5.156193525497603
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 7.482468133996334,
+          "vies": 7.465043070425628,
+          "nmad": 2.8922924731063797,
+          "rmse": 8.044982581890503
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 5.286391308571141,
+          "vies": 4.50869376462332,
+          "nmad": 4.444009834964277,
+          "rmse": 6.328062114578811
+        }
+      },
+      "fabdem": {
+        "0-3m": {
+          "n": 86,
+          "mae": 3.010191318600677,
+          "vies": 2.8525412803472476,
+          "nmad": 1.7642947917938232,
+          "rmse": 5.241232653073974
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.1883849354533407,
+          "vies": 2.230135881686992,
+          "nmad": 2.506966291809082,
+          "rmse": 5.2186588366788484
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 3.060455324963873,
+          "vies": 1.3782966529394276,
+          "nmad": 2.9320888790130613,
+          "rmse": 4.366177772698706
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 3.770150163386536,
+          "vies": 2.579910238067971,
+          "nmad": 3.622735283088684,
+          "rmse": 4.8923564327446565
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 4.650182559744462,
+          "vies": 4.410872074079799,
+          "nmad": 3.3230794967651365,
+          "rmse": 5.6189894079192655
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 3.9873329262158683,
+          "vies": 3.107376606669492,
+          "nmad": 3.602718452453613,
+          "rmse": 5.123350924344923
+        }
+      },
+      "gedtm30": {
+        "0-3m": {
+          "n": 86,
+          "mae": 1.7932345368141351,
+          "vies": 0.8170146498569223,
+          "nmad": 1.141664891052246,
+          "rmse": 3.2916407518932176
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.133334498089924,
+          "vies": -1.1963188313523707,
+          "nmad": 3.3182834884643553,
+          "rmse": 4.085311042333047
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 3.307738553338174,
+          "vies": -1.8739925030830973,
+          "nmad": 3.1108837008476256,
+          "rmse": 4.171941613164653
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 3.7469328032878537,
+          "vies": 0.8637808086024407,
+          "nmad": 4.440809591674804,
+          "rmse": 4.670940216067032
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 5.563192648086919,
+          "vies": 5.366213494313616,
+          "nmad": 3.435032073783874,
+          "rmse": 6.512642760215926
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 4.4261123906975195,
+          "vies": 2.186708832531199,
+          "nmad": 5.126498800849914,
+          "rmse": 5.448251002333093
+        }
+      },
+      "glo30": {
+        "0-3m": {
+          "n": 86,
+          "mae": 3.475492521773937,
+          "vies": 3.4367145715757856,
+          "nmad": 1.5477971517562865,
+          "rmse": 6.415599397497537
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.826665326851566,
+          "vies": 3.412286513664137,
+          "nmad": 2.597782215499878,
+          "rmse": 6.101415860967374
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 5.6771622046072645,
+          "vies": 5.4923895702955905,
+          "nmad": 4.5676316325187685,
+          "rmse": 7.325535991210541
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 14.10454233024376,
+          "vies": 14.098871912273436,
+          "nmad": 5.887192800807952,
+          "rmse": 15.16740807973183
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 21.00667958462042,
+          "vies": 21.00667958462042,
+          "nmad": 3.491267816162109,
+          "rmse": 21.31066106095071
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 15.089280592885093,
+          "vies": 15.040449917795083,
+          "nmad": 7.707060914611816,
+          "rmse": 16.89781226532575
+        }
+      },
+      "anadem": {
+        "0-3m": {
+          "n": 86,
+          "mae": 3.0402793218923168,
+          "vies": 2.9324887076089547,
+          "nmad": 1.5525846765518188,
+          "rmse": 5.7297087204390555
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.875858681395088,
+          "vies": -0.10168193576508418,
+          "nmad": 3.171409976005554,
+          "rmse": 5.588317069562713
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 3.989569698476504,
+          "vies": -2.003100531099374,
+          "nmad": 3.6504445321083066,
+          "rmse": 5.357887338428378
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 3.5996291441911423,
+          "vies": 1.077351530596581,
+          "nmad": 3.313114205932617,
+          "rmse": 5.760776674649436
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 5.047176584956183,
+          "vies": 4.672133534877469,
+          "nmad": 3.4233771514892575,
+          "rmse": 7.151739149301277
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 4.31451515076885,
+          "vies": 1.9501076660293921,
+          "nmad": 4.367842963027954,
+          "rmse": 6.321409762474036
+        }
+      }
+    },
+    "ii_b_gedtm30": {
+      "v23": {
+        "0-3m": {
+          "n": 86,
+          "mae": 3.4737008470818522,
+          "vies": 3.432814410575093,
+          "nmad": 1.4847672538372372,
+          "rmse": 5.300709930509205
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.876667940218622,
+          "vies": 3.5926305598848267,
+          "nmad": 2.861144678251151,
+          "rmse": 5.1394237026278695
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 4.090634088163125,
+          "vies": 3.27921565877705,
+          "nmad": 3.649052106113435,
+          "rmse": 5.115051596331392
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 7.003626695948969,
+          "vies": 6.776439862572112,
+          "nmad": 3.48738590555191,
+          "rmse": 7.838375067580013
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 9.835677567517404,
+          "vies": 9.824618610746853,
+          "nmad": 3.493941251449591,
+          "rmse": 10.457934277535008
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 7.544515765793526,
+          "vies": 7.283983082231197,
+          "nmad": 4.3339582877540614,
+          "rmse": 8.599264411362075
+        }
+      },
+      "mlp": {
+        "0-3m": {
+          "n": 86,
+          "mae": 3.1379521309659073,
+          "vies": 3.0340630404500613,
+          "nmad": 1.4345275005553317,
+          "rmse": 4.689168384686096
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.44779295190405,
+          "vies": 3.054236715785613,
+          "nmad": 2.6785429438937003,
+          "rmse": 4.5473858769762945
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 4.0416843092949435,
+          "vies": 3.0454860795512873,
+          "nmad": 3.3023549120306965,
+          "rmse": 4.909770874639865
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 6.990246110160049,
+          "vies": 6.816922094251036,
+          "nmad": 3.1612461711502093,
+          "rmse": 7.781142873178574
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 10.728115100375755,
+          "vies": 10.726592748362105,
+          "nmad": 3.3519876064681986,
+          "rmse": 11.249405108004504
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 7.908191371657454,
+          "vies": 7.6279534555337944,
+          "nmad": 4.523968798398971,
+          "rmse": 8.974336596826777
+        }
+      },
+      "fabdem": {
+        "0-3m": {
+          "n": 86,
+          "mae": 3.7478409922400187,
+          "vies": 3.7478409922400187,
+          "nmad": 1.964448958969116,
+          "rmse": 5.9806015142561515
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 4.941398907238566,
+          "vies": 4.755512791942061,
+          "nmad": 2.8950908987045287,
+          "rmse": 6.858358467823137
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 4.752293912894706,
+          "vies": 4.338319637033345,
+          "nmad": 3.4306595337867734,
+          "rmse": 5.995812308868415
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 5.787512734066724,
+          "vies": 5.6537504898118955,
+          "nmad": 3.863408085250854,
+          "rmse": 6.985221281771102
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 7.6872163152337825,
+          "vies": 7.672421752016274,
+          "nmad": 3.791747916412353,
+          "rmse": 8.58070403028099
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 6.370147854182217,
+          "vies": 6.226636297579966,
+          "nmad": 3.967516954708099,
+          "rmse": 7.531877750285412
+        }
+      },
+      "gedtm30": {
+        "0-3m": {
+          "n": 86,
+          "mae": 1.8960679520008177,
+          "vies": 1.7123143617496934,
+          "nmad": 1.0817324612617492,
+          "rmse": 3.4787099311203273
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 2.7542629846467896,
+          "vies": 1.329058078902698,
+          "nmad": 2.825496463394165,
+          "rmse": 3.96794176025366
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 2.900024136583018,
+          "vies": 1.0860304810108201,
+          "nmad": 3.4515402680397034,
+          "rmse": 3.90155842109099
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 4.841385745203971,
+          "vies": 3.9376210603463653,
+          "nmad": 4.288248595905304,
+          "rmse": 6.015969791426286
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 8.656609150532224,
+          "vies": 8.627763172250091,
+          "nmad": 4.236854814147949,
+          "rmse": 9.560684678690864
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 6.035689023430404,
+          "vies": 5.305968523441673,
+          "nmad": 5.365289678764343,
+          "rmse": 7.429421934081536
+        }
+      },
+      "glo30": {
+        "0-3m": {
+          "n": 86,
+          "mae": 4.332014283468557,
+          "vies": 4.332014283468557,
+          "nmad": 1.5477971517562865,
+          "rmse": 7.170108689236554
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 6.025549673930907,
+          "vies": 5.937663423919206,
+          "nmad": 4.086845232582092,
+          "rmse": 8.045117599881738
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 8.468184762460087,
+          "vies": 8.452412554389507,
+          "nmad": 5.346806948661804,
+          "rmse": 9.869411107676985
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 17.173102391897903,
+          "vies": 17.172712164017362,
+          "nmad": 5.681214000320434,
+          "rmse": 18.07982394665655
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 24.268229262556897,
+          "vies": 24.268229262556897,
+          "nmad": 4.1085417972564695,
+          "rmse": 24.609632694922436
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 18.164733756763027,
+          "vies": 18.15970960870556,
+          "nmad": 8.232176457309722,
+          "rmse": 19.832116437044252
+        }
+      },
+      "anadem": {
+        "0-3m": {
+          "n": 86,
+          "mae": 3.838839708372604,
+          "vies": 3.827788419501726,
+          "nmad": 1.5525846765518188,
+          "rmse": 6.421541534631727
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 4.221140278808556,
+          "vies": 2.4236949744899845,
+          "nmad": 3.8496584441184996,
+          "rmse": 5.9808690548075045
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 3.778338818972102,
+          "vies": 0.9569224529945436,
+          "nmad": 4.216116885566711,
+          "rmse": 5.125003547227752
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 4.827010055080745,
+          "vies": 4.151191782340506,
+          "nmad": 3.250427111291885,
+          "rmse": 7.0494641343387565
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 7.969577876573373,
+          "vies": 7.9336832128139445,
+          "nmad": 3.9341039623260494,
+          "rmse": 9.73089999560887
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 5.94971396080172,
+          "vies": 5.069367356939866,
+          "nmad": 4.404042079925537,
+          "rmse": 7.991866215471151
+        }
+      }
+    },
+    "iii_sem_offset": {
+      "v23": {
+        "0-3m": {
+          "n": 86,
+          "mae": 2.3164399572033862,
+          "vies": 1.6045664753021667,
+          "nmad": 1.4847672538372372,
+          "rmse": 3.957562629220777
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 2.4381737282071767,
+          "vies": 0.9756861241612628,
+          "nmad": 2.2953434950719065,
+          "rmse": 3.5045627025689923
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 2.690734649533282,
+          "vies": 0.3991226695760629,
+          "nmad": 2.946002605276106,
+          "rmse": 3.688819536362788
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 4.569741811783241,
+          "vies": 3.9855464934628593,
+          "nmad": 3.158710946302412,
+          "rmse": 5.357281299961884
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 7.236470592053991,
+          "vies": 7.198099586044154,
+          "nmad": 2.8110137060165403,
+          "rmse": 7.815947123198157
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 5.280268315578267,
+          "vies": 4.548800543746962,
+          "nmad": 4.2365168878555295,
+          "rmse": 6.25872168516249
+        }
+      },
+      "mlp": {
+        "0-3m": {
+          "n": 86,
+          "mae": 1.9780247974993996,
+          "vies": 1.2058151051771342,
+          "nmad": 1.4345275005553317,
+          "rmse": 3.3009522332311727
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 2.279485479545143,
+          "vies": 0.43729228006204973,
+          "nmad": 2.1927340710280907,
+          "rmse": 3.183619784468997
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 2.5358801289207147,
+          "vies": 0.16539309035030003,
+          "nmad": 2.490061387639044,
+          "rmse": 3.627423119983932
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 4.494937861893015,
+          "vies": 4.026028725141782,
+          "nmad": 2.983295599479674,
+          "rmse": 5.291010064749257
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 8.109472815142206,
+          "vies": 8.100073723659404,
+          "nmad": 2.688382375373838,
+          "rmse": 8.592534999416225
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 5.5967681024114375,
+          "vies": 4.89277091704956,
+          "nmad": 4.586886361598968,
+          "rmse": 6.65688014439451
+        }
+      },
+      "fabdem": {
+        "0-3m": {
+          "n": 86,
+          "mae": 2.7102906870287518,
+          "vies": 1.919593056967092,
+          "nmad": 1.7642947917938232,
+          "rmse": 4.824187405436298
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 2.908667313145795,
+          "vies": 2.138568356218497,
+          "nmad": 2.26837901802063,
+          "rmse": 5.001422430356875
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 2.7484325946292207,
+          "vies": 1.458226647832358,
+          "nmad": 2.3573313983917235,
+          "rmse": 4.1556901958717924
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 3.6083280467230057,
+          "vies": 2.862857120702642,
+          "nmad": 3.4396315475463863,
+          "rmse": 4.830933708700451
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 5.156089702308413,
+          "vies": 5.045902727313574,
+          "nmad": 2.876250447463989,
+          "rmse": 5.977512880093203
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 4.079984075650332,
+          "vies": 3.4914537590957315,
+          "nmad": 3.6842619049072263,
+          "rmse": 5.236462399725427
+        }
+      },
+      "gedtm30": {
+        "0-3m": {
+          "n": 86,
+          "mae": 1.9990157637485237,
+          "vies": -0.11593357352323311,
+          "nmad": 1.114694413948059,
+          "rmse": 3.1612126768496354
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.097325699227639,
+          "vies": -1.2878863568208656,
+          "nmad": 2.91226858291626,
+          "rmse": 4.0000675460535815
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 3.204567371478747,
+          "vies": -1.7940625081901669,
+          "nmad": 2.9379064427375794,
+          "rmse": 4.000834816278983
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 3.6687305081793813,
+          "vies": 1.1467276912371118,
+          "nmad": 4.492403442764282,
+          "rmse": 4.533201677650702
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 6.109857895636064,
+          "vies": 6.001244147547391,
+          "nmad": 3.0686139289855956,
+          "rmse": 6.897255273641978
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 4.61395505155418,
+          "vies": 2.5707859849574386,
+          "nmad": 5.435397366142273,
+          "rmse": 5.58379597264197
+        }
+      },
+      "glo30": {
+        "0-3m": {
+          "n": 86,
+          "mae": 3.09600399815759,
+          "vies": 2.5037663481956303,
+          "nmad": 1.5477971517562865,
+          "rmse": 5.999219351874097
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.7995469477269554,
+          "vies": 3.320718988195642,
+          "nmad": 3.027915726470947,
+          "rmse": 6.007913087322019
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 5.690055619785571,
+          "vies": 5.572319565188521,
+          "nmad": 4.540950301551819,
+          "rmse": 7.282579023452075
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 14.3838614230072,
+          "vies": 14.381818794908106,
+          "nmad": 6.150170859146118,
+          "rmse": 15.39200349720986
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 21.6417102378542,
+          "vies": 21.6417102378542,
+          "nmad": 3.1203915893554686,
+          "rmse": 21.90432547606347
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 15.459270676758152,
+          "vies": 15.424527070221323,
+          "nmad": 7.767699596214294,
+          "rmse": 17.284964671175562
+        }
+      },
+      "anadem": {
+        "0-3m": {
+          "n": 86,
+          "mae": 2.7561718918556393,
+          "vies": 1.9995404842287996,
+          "nmad": 1.5525846765518188,
+          "rmse": 5.336503280982062
+        },
+        "3-10m": {
+          "n": 1617,
+          "mae": 3.666464090199845,
+          "vies": -0.193249461233579,
+          "nmad": 2.6330990478515623,
+          "rmse": 5.381465278056194
+        },
+        "10-20m": {
+          "n": 20588,
+          "mae": 3.8734931722182036,
+          "vies": -1.9231705362064435,
+          "nmad": 3.1676800615310667,
+          "rmse": 5.214132429330661
+        },
+        "20-30m": {
+          "n": 31810,
+          "mae": 3.500223462992365,
+          "vies": 1.3602984132312521,
+          "nmad": 3.1102170387268067,
+          "rmse": 5.630274834105951
+        },
+        ">30m": {
+          "n": 41287,
+          "mae": 5.522680685063801,
+          "vies": 5.307164188111244,
+          "nmad": 3.050742011260986,
+          "rmse": 7.324652616550258
+        },
+        "TODAS": {
+          "n": 95388,
+          "mae": 4.458319772384339,
+          "vies": 2.3341848184556317,
+          "nmad": 4.613366209316253,
+          "rmse": 6.338574431228713
+        }
+      }
+    },
+    "ii_a_independente": null
+  },
+  "ordenacoes_por_braco": {
+    "i_atual": {
+      "20-30m": {
+        "v23_vs_mlp": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.11968510432882251
+        },
+        "v23_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.6478593005673869
+        },
+        "v23_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.6710766606660692
+        },
+        "v23_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -9.686532866289838
+        },
+        "v23_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.8183803197627806
+        },
+        "mlp_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.5281741962385644
+        },
+        "mlp_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.5513915563372467
+        },
+        "mlp_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -9.80621797061866
+        },
+        "mlp_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.6986952154339581
+        },
+        "fabdem_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.02321736009868225
+        },
+        "fabdem_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -10.334392166857224
+        },
+        "fabdem_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.17052101919539364
+        },
+        "gedtm30_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -10.357609526955907
+        },
+        "gedtm30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.1473036590967114
+        },
+        "glo30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 10.504913186052617
+        }
+      },
+      ">30m": {
+        "v23_vs_mlp": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": -0.8547271618924039
+        },
+        "v23_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.9775584123594676
+        },
+        "v23_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.0645483240170108
+        },
+        "v23_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -14.378938612516492
+        },
+        "v23_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.5805643871477466
+        },
+        "mlp_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.8322855742518716
+        },
+        "mlp_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.9192754859094148
+        },
+        "mlp_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -13.524211450624087
+        },
+        "mlp_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.4352915490401505
+        },
+        "fabdem_vs_gedtm30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -0.9130100883424568
+        },
+        "fabdem_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -16.35649702487596
+        },
+        "fabdem_vs_anadem": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -0.396994025211721
+        },
+        "gedtm30_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -15.443486936533503
+        },
+        "gedtm30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.5160160631307358
+        },
+        "glo30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 15.959502999664238
+        }
+      }
+    },
+    "ii_a_independente": null,
+    "ii_b_gedtm30": {
+      "20-30m": {
+        "v23_vs_mlp": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.013380585788920207
+        },
+        "v23_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.216113961882245
+        },
+        "v23_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.162240950744998
+        },
+        "v23_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -10.169475695948933
+        },
+        "v23_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 2.1766166408682244
+        },
+        "mlp_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.2027333760933248
+        },
+        "mlp_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.148860364956078
+        },
+        "mlp_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -10.182856281737854
+        },
+        "mlp_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.163236055079304
+        },
+        "fabdem_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.946126988862753
+        },
+        "fabdem_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -11.38558965783118
+        },
+        "fabdem_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.9605026789859794
+        },
+        "gedtm30_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -12.33171664669393
+        },
+        "gedtm30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.01437569012322637
+        },
+        "glo30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 12.346092336817158
+        }
+      },
+      ">30m": {
+        "v23_vs_mlp": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": -0.8924375328583505
+        },
+        "v23_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.1484612522836217
+        },
+        "v23_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.1790684169851797
+        },
+        "v23_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -14.432551695039493
+        },
+        "v23_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.866099690944031
+        },
+        "mlp_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 3.040898785141972
+        },
+        "mlp_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.07150594984353
+        },
+        "mlp_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -13.540114162181142
+        },
+        "mlp_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.7585372238023815
+        },
+        "fabdem_vs_gedtm30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -0.969392835298442
+        },
+        "fabdem_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -16.581012947323114
+        },
+        "fabdem_vs_anadem": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -0.28236156133959067
+        },
+        "gedtm30_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": -15.611620112024672
+        },
+        "gedtm30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.6870312739588513
+        },
+        "glo30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 16.298651385983526
+        }
+      }
+    },
+    "iii_sem_offset": {
+      "20-30m": {
+        "v23_vs_mlp": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.0748039498902262
+        },
+        "v23_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.9614137650602355
+        },
+        "v23_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.9010113036038598
+        },
+        "v23_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -9.814119611223958
+        },
+        "v23_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 1.0695183487908761
+        },
+        "mlp_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.8866098151700093
+        },
+        "mlp_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.8262073537136336
+        },
+        "mlp_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -9.888923561114186
+        },
+        "mlp_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 0.9947143989006499
+        },
+        "fabdem_vs_gedtm30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -0.06040246145637562
+        },
+        "fabdem_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -10.775533376284194
+        },
+        "fabdem_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.10810458373064069
+        },
+        "gedtm30_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -10.715130914827819
+        },
+        "gedtm30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.1685070451870163
+        },
+        "glo30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 10.883637960014836
+        }
+      },
+      ">30m": {
+        "v23_vs_mlp": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": -0.8730022230882151
+        },
+        "v23_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.0803808897455784
+        },
+        "v23_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.1266126964179275
+        },
+        "v23_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -14.405239645800208
+        },
+        "v23_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.7137899069901907
+        },
+        "mlp_vs_fabdem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.9533831128337935
+        },
+        "mlp_vs_gedtm30": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 1.9996149195061426
+        },
+        "mlp_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -13.532237422711992
+        },
+        "mlp_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": 2.586792130078406
+        },
+        "fabdem_vs_gedtm30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -0.953768193327651
+        },
+        "fabdem_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -16.485620535545785
+        },
+        "fabdem_vs_anadem": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -0.3665909827553877
+        },
+        "gedtm30_vs_glo30": {
+          "sinal_mae": -1.0,
+          "sinal_nmad": -1.0,
+          "dif_mae_m": -15.531852342218134
+        },
+        "gedtm30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 0.5871772105722632
+        },
+        "glo30_vs_anadem": {
+          "sinal_mae": 1.0,
+          "sinal_nmad": 1.0,
+          "dif_mae_m": 16.119029552790398
+        }
+      }
+    }
+  },
+  "fracao_ii_c_mantida_ordenacao": {
+    "20-30m": {
+      "v23_vs_mlp": 1.0,
+      "v23_vs_fabdem": 1.0,
+      "v23_vs_gedtm30": 1.0,
+      "v23_vs_glo30": 1.0,
+      "v23_vs_anadem": 1.0,
+      "mlp_vs_fabdem": 1.0,
+      "mlp_vs_gedtm30": 1.0,
+      "mlp_vs_glo30": 1.0,
+      "mlp_vs_anadem": 1.0,
+      "fabdem_vs_gedtm30": 0.922,
+      "fabdem_vs_glo30": 1.0,
+      "fabdem_vs_anadem": 1.0,
+      "gedtm30_vs_glo30": 1.0,
+      "gedtm30_vs_anadem": 1.0,
+      "glo30_vs_anadem": 1.0
+    },
+    ">30m": {
+      "v23_vs_mlp": 1.0,
+      "v23_vs_fabdem": 1.0,
+      "v23_vs_gedtm30": 1.0,
+      "v23_vs_glo30": 1.0,
+      "v23_vs_anadem": 1.0,
+      "mlp_vs_fabdem": 1.0,
+      "mlp_vs_gedtm30": 1.0,
+      "mlp_vs_glo30": 1.0,
+      "mlp_vs_anadem": 1.0,
+      "fabdem_vs_gedtm30": 1.0,
+      "fabdem_vs_glo30": 1.0,
+      "fabdem_vs_anadem": 1.0,
+      "gedtm30_vs_glo30": 1.0,
+      "gedtm30_vs_anadem": 0.998,
+      "glo30_vs_anadem": 1.0
+    }
+  },
+  "veredito_por_par_e_classe": {
+    "20-30m": {
+      "v23_vs_mlp": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.11968510432882251,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "v23_vs_fabdem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.6478593005673869,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "v23_vs_gedtm30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.6710766606660692,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "v23_vs_glo30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -9.686532866289838,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "v23_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.8183803197627806,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "mlp_vs_fabdem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.5281741962385644,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "mlp_vs_gedtm30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.5513915563372467,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "mlp_vs_glo30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -9.80621797061866,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "mlp_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.6986952154339581,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "fabdem_vs_gedtm30": {
+        "veredito": "depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": true
+        },
+        "fracao_ii_c_mantida": 0.922,
+        "dif_mae_i_m": 0.02321736009868225,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "fabdem_vs_glo30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -10.334392166857224,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "fabdem_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.17052101919539364,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "gedtm30_vs_glo30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -10.357609526955907,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "gedtm30_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 0.1473036590967114,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "glo30_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 10.504913186052617,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      }
+    },
+    ">30m": {
+      "v23_vs_mlp": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -0.8547271618924039,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "v23_vs_fabdem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 1.9775584123594676,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "v23_vs_gedtm30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 1.0645483240170108,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "v23_vs_glo30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -14.378938612516492,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "v23_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 1.5805643871477466,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "mlp_vs_fabdem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 2.8322855742518716,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "mlp_vs_gedtm30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 1.9192754859094148,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "mlp_vs_glo30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -13.524211450624087,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "mlp_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 2.4352915490401505,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "fabdem_vs_gedtm30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -0.9130100883424568,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "fabdem_vs_glo30": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -16.35649702487596,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "fabdem_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -0.396994025211721,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "gedtm30_vs_glo30": {
+        "veredito": "depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": true,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -15.443486936533503,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "gedtm30_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 0.998,
+        "dif_mae_i_m": 0.5160160631307358,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      },
+      "glo30_vs_anadem": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": 15.959502999664238,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      }
+    }
+  },
+  "teste_decisivo_familia_glo30_vs_gedtm30_30m": {
+    "fabdem": {
+      "mae_i": 4.650182559744462,
+      "mae_gedtm30_i": 5.563192648086919,
+      "mae_ii_b": 7.6872163152337825,
+      "mae_gedtm30_ii_b": 8.656609150532224,
+      "vantagem_i_m": -0.9130100883424568,
+      "vantagem_ii_b_m": -0.969392835298442,
+      "troca_de_sinal_sob_ii_b": false,
+      "veredito": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 1.0,
+        "dif_mae_i_m": -0.9130100883424568,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      }
+    },
+    "anadem": {
+      "mae_i": 5.047176584956183,
+      "mae_gedtm30_i": 5.563192648086919,
+      "mae_ii_b": 7.969577876573373,
+      "mae_gedtm30_ii_b": 8.656609150532224,
+      "vantagem_i_m": -0.5160160631307358,
+      "vantagem_ii_b_m": -0.6870312739588513,
+      "troca_de_sinal_sob_ii_b": false,
+      "veredito": {
+        "veredito": "nao depende",
+        "inverte_por_braco": {
+          "ii-a": null,
+          "ii-b": false,
+          "iii": false
+        },
+        "fracao_ii_c_mantida": 0.998,
+        "dif_mae_i_m": 0.5160160631307358,
+        "tau_ii_b_m": 3.273143768310547,
+        "disponiveis": [
+          "ii-b",
+          "iii"
+        ]
+      }
+    }
+  },
+  "efeito_sobre_A_por_classe": {
+    "ii-b": {
+      "3-10m": {
+        "n": 31,
+        "A_braco_i_m": 1.2862107676844443,
+        "A_analitico_m": 3.1775338880477415,
+        "A_recomputado_m": 3.1775338880477415,
+        "guarda_bate": true
+      },
+      "10-20m": {
+        "n": 258,
+        "A_braco_i_m": 2.1542668601339177,
+        "A_analitico_m": 4.7318210306093675,
+        "A_recomputado_m": 4.7318210306093675,
+        "guarda_bate": true
+      },
+      "20-30m": {
+        "n": 460,
+        "A_braco_i_m": 4.560947264795718,
+        "A_analitico_m": 7.5690788310507084,
+        "A_recomputado_m": 7.569078831050707,
+        "guarda_bate": true
+      },
+      ">30m": {
+        "n": 441,
+        "A_braco_i_m": 6.651019321277299,
+        "A_analitico_m": 9.898030694109513,
+        "A_recomputado_m": 9.898030694109512,
+        "guarda_bate": true
+      },
+      "TODAS": {
+        "n": 1194,
+        "A_braco_i_m": 4.705479253676269,
+        "A_analitico_m": 7.671964737238795,
+        "A_recomputado_m": 7.671964737238796,
+        "guarda_bate": true
+      }
+    },
+    "iii": {
+      "3-10m": {
+        "n": 31,
+        "A_braco_i_m": 1.2862107676844443,
+        "A_analitico_m": 0.8928116213890813,
+        "A_recomputado_m": 0.8928116213890814,
+        "guarda_bate": true
+      },
+      "10-20m": {
+        "n": 258,
+        "A_braco_i_m": 2.1542668601339177,
+        "A_analitico_m": 2.0426963133405347,
+        "A_recomputado_m": 2.0426963133405347,
+        "guarda_bate": true
+      },
+      "20-30m": {
+        "n": 460,
+        "A_braco_i_m": 4.560947264795718,
+        "A_analitico_m": 4.86950917865919,
+        "A_recomputado_m": 4.86950917865919,
+        "guarda_bate": true
+      },
+      ">30m": {
+        "n": 441,
+        "A_braco_i_m": 6.651019321277299,
+        "A_analitico_m": 6.773765140109592,
+        "A_recomputado_m": 6.773765140109592,
+        "guarda_bate": true
+      },
+      "TODAS": {
+        "n": 1194,
+        "A_braco_i_m": 4.705479253676269,
+        "A_analitico_m": 4.832144428138157,
+        "A_recomputado_m": 4.832144428138158,
+        "guarda_bate": true
+      }
+    },
+    "ii-a": null
+  },
+  "resumo_vereditos": {
+    "20-30m": {
+      "nao depende": 14,
+      "depende com ressalva": 0,
+      "depende": 1
+    },
+    ">30m": {
+      "nao depende": 14,
+      "depende com ressalva": 0,
+      "depende": 1
+    }
+  },
+  "tempo_total_s": 12.9
+}

@@ -1,0 +1,289 @@
+{
+  "_proveniencia": {
+    "script": "auditar_admissibilidade.py",
+    "commit": "82c77a1",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-08-16T19:35",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "results/ofat_suavfina_b4s035.json",
+      "sha256": "cd2074745a15b1211e5248a8df788d34f13c255b475986dcb5ee074211bf21f0",
+      "bytes": 3704055,
+      "mtime": "2026-08-10 09:51"
+    },
+    {
+      "caminho": "results/baseline_mlp_b4s035.json",
+      "sha256": "e11a3ecbe67086402ff75369d7faa581042fdf6a35f2271fae5bbf0a29acf46c",
+      "bytes": 3660859,
+      "mtime": "2026-08-11 20:02"
+    },
+    {
+      "caminho": "results/noite_lote1536_gatv2_2_semobs.json",
+      "sha256": "c12525b8649cedda44dcb027ba5141383d9af9e47c5302ed219d6d0f1d166399",
+      "bytes": 7380296,
+      "mtime": "2026-08-14 22:48"
+    },
+    {
+      "caminho": "results/noite_lote1536_mlp_semobs.json",
+      "sha256": "b7aa85db941a22d0f8540a0ae493e6eb297078714546f26b69c41ef7d1e9c2f6",
+      "bytes": 7299839,
+      "mtime": "2026-08-15 00:16"
+    },
+    {
+      "caminho": "results/d1_orcamento_gatv2_2_semobs.json",
+      "sha256": "2b5ac8c07523e7c770536737a89a8766f3da6a5c99a53cca7d28cc83a823b371",
+      "bytes": 9324935,
+      "mtime": "2026-08-15 22:20"
+    },
+    {
+      "caminho": "results/d1_orcamento_mlp_semobs.json",
+      "sha256": "238f7230fdc406f90e2296363947cf6c1ef5e4e6573596a4d384f721f25466a4",
+      "bytes": 8668684,
+      "mtime": "2026-08-16 00:02"
+    },
+    {
+      "caminho": "results/d2_frac025_gatv2_2_semobs.json",
+      "sha256": "c84e6223ea826e9cf0417dfd28e63669d758d49eb52d085c3dc97115d7f7970f",
+      "bytes": 4804093,
+      "mtime": "2026-08-15 17:27"
+    },
+    {
+      "caminho": "results/d2_frac025_mlp_semobs.json",
+      "sha256": "42e1e47ebaa0060733de1b9f0a0b71486284e445f794227325f7a51628fca852",
+      "bytes": 4547059,
+      "mtime": "2026-08-15 18:10"
+    }
+  ],
+  "regra": "no skill number of an operating point enters a table without the admissibility column beside it",
+  "definicoes": {
+    "violacoes_dossel_acima_1m": "n_violacoes_dossel * frac_violacoes_acima_1m, summed over the 4 quadrants; fields written by the training itself in G_raiox.F_dossel",
+    "agregacao": "Sum for counts, max for maxima, mean across seeds in the summary"
+  },
+  "tabela": {
+    "lote_adotado_epocas_x1": {
+      "gatv2": {
+        "n_sementes": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "violacoes_acima_1m_media": 0.2,
+        "violacoes_acima_1m_min": 0,
+        "violacoes_acima_1m_max": 1,
+        "sementes_com_zero_violacoes": 4,
+        "quadrantes_zero_por_testemunha_total": 0,
+        "quadrantes_com_medicao_total": 20,
+        "violacoes_acima_10cm_media": 285.8,
+        "violacao_p95_m_max_entre_quadrantes_media": 0.06390599999999999,
+        "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+        "violacao_max_m_pior": 1.1887,
+        "pocos_por_km2_media": 118.80471832861258,
+        "slope_p99_9_graus_pior": 31.0
+      },
+      "mlp": {
+        "n_sementes": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "violacoes_acima_1m_media": 0.0,
+        "violacoes_acima_1m_min": 0,
+        "violacoes_acima_1m_max": 0,
+        "sementes_com_zero_violacoes": 5,
+        "quadrantes_zero_por_testemunha_total": 14,
+        "quadrantes_com_medicao_total": 6,
+        "violacoes_acima_10cm_media": 0.0,
+        "violacao_p95_m_max_entre_quadrantes_media": 2.2e-05,
+        "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+        "violacao_max_m_pior": 0.0001,
+        "pocos_por_km2_media": 133.80023563399263,
+        "slope_p99_9_graus_pior": 30.038
+      }
+    },
+    "lote_1536_epocas_x1": {
+      "gatv2": {
+        "n_sementes": 10,
+        "sementes": [
+          7,
+          31,
+          42,
+          100,
+          123,
+          200,
+          300,
+          400,
+          500,
+          2024
+        ],
+        "violacoes_acima_1m_media": 182.8,
+        "violacoes_acima_1m_min": 73,
+        "violacoes_acima_1m_max": 370,
+        "sementes_com_zero_violacoes": 0,
+        "quadrantes_zero_por_testemunha_total": 0,
+        "quadrantes_com_medicao_total": 40,
+        "violacoes_acima_10cm_media": 5093.1,
+        "violacao_p95_m_max_entre_quadrantes_media": 0.283223,
+        "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+        "violacao_max_m_pior": 5.9643,
+        "pocos_por_km2_media": 115.99230154695329,
+        "slope_p99_9_graus_pior": 31.328
+      },
+      "mlp": {
+        "n_sementes": 10,
+        "sementes": [
+          7,
+          31,
+          42,
+          100,
+          123,
+          200,
+          300,
+          400,
+          500,
+          2024
+        ],
+        "violacoes_acima_1m_media": 0.0,
+        "violacoes_acima_1m_min": 0,
+        "violacoes_acima_1m_max": 0,
+        "sementes_com_zero_violacoes": 10,
+        "quadrantes_zero_por_testemunha_total": 25,
+        "quadrantes_com_medicao_total": 15,
+        "violacoes_acima_10cm_media": 0.0,
+        "violacao_p95_m_max_entre_quadrantes_media": 2e-05,
+        "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+        "violacao_max_m_pior": 0.0039,
+        "pocos_por_km2_media": 136.4133802987387,
+        "slope_p99_9_graus_pior": 29.988
+      }
+    },
+    "lote_adotado_epocas_x4_D1": {
+      "gatv2": {
+        "n_sementes": 10,
+        "sementes": [
+          7,
+          31,
+          42,
+          100,
+          123,
+          200,
+          300,
+          400,
+          500,
+          2024
+        ],
+        "violacoes_acima_1m_media": 971.0,
+        "violacoes_acima_1m_min": 476,
+        "violacoes_acima_1m_max": 1544,
+        "sementes_com_zero_violacoes": 0,
+        "quadrantes_zero_por_testemunha_total": 0,
+        "quadrantes_com_medicao_total": 40,
+        "violacoes_acima_10cm_media": 9932.8,
+        "violacao_p95_m_max_entre_quadrantes_media": 1.322007,
+        "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+        "violacao_max_m_pior": 9.6415,
+        "pocos_por_km2_media": 95.06373011838187,
+        "slope_p99_9_graus_pior": 31.503
+      },
+      "mlp": {
+        "n_sementes": 10,
+        "sementes": [
+          7,
+          31,
+          42,
+          100,
+          123,
+          200,
+          300,
+          400,
+          500,
+          2024
+        ],
+        "violacoes_acima_1m_media": 0.0,
+        "violacoes_acima_1m_min": 0,
+        "violacoes_acima_1m_max": 0,
+        "sementes_com_zero_violacoes": 10,
+        "quadrantes_zero_por_testemunha_total": 22,
+        "quadrantes_com_medicao_total": 18,
+        "violacoes_acima_10cm_media": 0.0,
+        "violacao_p95_m_max_entre_quadrantes_media": 2.1000000000000002e-05,
+        "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+        "violacao_max_m_pior": 0.0001,
+        "pocos_por_km2_media": 137.31779722565184,
+        "slope_p99_9_graus_pior": 30.257
+      }
+    },
+    "d2_frac025_epocas_x4": {
+      "gatv2": {
+        "n_sementes": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "violacoes_acima_1m_media": 69.6,
+        "violacoes_acima_1m_min": 0,
+        "violacoes_acima_1m_max": 264,
+        "sementes_com_zero_violacoes": 1,
+        "quadrantes_zero_por_testemunha_total": 0,
+        "quadrantes_com_medicao_total": 20,
+        "violacoes_acima_10cm_media": 804.0,
+        "violacao_p95_m_max_entre_quadrantes_media": 0.292482,
+        "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+        "violacao_max_m_pior": 3.4953,
+        "pocos_por_km2_media": 105.98994520702703,
+        "slope_p99_9_graus_pior": 31.23
+      },
+      "mlp": {
+        "n_sementes": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "violacoes_acima_1m_media": 0.0,
+        "violacoes_acima_1m_min": 0,
+        "violacoes_acima_1m_max": 0,
+        "sementes_com_zero_violacoes": 5,
+        "quadrantes_zero_por_testemunha_total": 8,
+        "quadrantes_com_medicao_total": 12,
+        "violacoes_acima_10cm_media": 0.0,
+        "violacao_p95_m_max_entre_quadrantes_media": 8.000000000000001e-06,
+        "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+        "violacao_max_m_pior": 0.0,
+        "pocos_por_km2_media": 135.00817859765496,
+        "slope_p99_9_graus_pior": 30.242
+      }
+    }
+  },
+  "testes": {
+    "gatv2_adotado_vs_D1": {
+      "n": 5,
+      "dif_media": 1090.0,
+      "sinais_positivos": 5,
+      "t": 6.128345828269871,
+      "p": 0.003592252593685684
+    }
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "figura": "fig1",
+  "fontes": [
+    {
+      "caminho": "geometria_celula.json",
+      "sha256": "02c116803207b295"
+    },
+    {
+      "caminho": "juiz_lidar_v4.json",
+      "sha256": "4c02e2edbe0deff2"
+    },
+    {
+      "caminho": "results/ofat_suavfina_b4s035.json",
+      "sha256": "345f448bdf52a29e"
+    }
+  ],
+  "numeros": {
+    "regime_por_populacao": {
+      "whole cell": {
+        "share_por_classe": {
+          "0–3": 0.0060690876162651725,
+          "3–10": 0.0771615377131529,
+          "10–20": 0.1681227460050691,
+          "20–30": 0.25619784218176955,
+          ">30": 0.49244878648374324
+        },
+        "n_celulas": 47466278
+      },
+      "spatial reserves": {
+        "share_por_classe": {
+          "0–3": 0.006841484591244289,
+          "3–10": 0.10941923938259147,
+          "10–20": 0.1844956083052183,
+          "20–30": 0.2443737107480452,
+          ">30": 0.4548699569729007
+        },
+        "n_celulas": 11546909
+      },
+      "lidar strips (kept)": {
+        "share_por_classe": {
+          "0–3": 0.00545820430591673,
+          "3–10": 0.02653753204627528,
+          "10–20": 0.21419316897461108,
+          "20–30": 0.31011605575822176,
+          ">30": 0.44369503891497514
+        },
+        "n_celulas": 108827
+      },
+      "orbital anchors": {
+        "share_por_classe": {
+          "0–3": 0.006906739359989216,
+          "3–10": 0.08643159912827925,
+          "10–20": 0.1835940132855035,
+          "20–30": 0.24913969999026428,
+          ">30": 0.47392794823596374
+        },
+        "n_celulas": 2136464
+      }
+    },
+    "regime_nota": "derived from the ETH canopy rasters (not stamped); classes [0, 3, 10, 20, 30]+; anchors = candidate cells",
+    "bbox": [
+      -60.0,
+      -4.0,
+      -58.0,
+      -2.0
+    ],
+    "area_km2": 49168.18466864113,
+    "grade": "7200x7200 (1 arcsec)",
+    "posting_centro_m": {
+      "ns_m": 30.71592143578167,
+      "ew_m": 30.879986251869763
+    },
+    "reservas_caixas_globais": {
+      "Q1": [
+        0,
+        1800,
+        0,
+        1800
+      ],
+      "Q2": [
+        0,
+        1800,
+        3600,
+        5400
+      ],
+      "Q3": [
+        3600,
+        5400,
+        0,
+        1800
+      ],
+      "Q4": [
+        3600,
+        5400,
+        3600,
+        5400
+      ]
+    },
+    "buffer_celulas": 67,
+    "separacao_minima_celulas": 1800,
+    "separacao_minima_m": 55660.0,
+    "transectos_total": 19,
+    "transectos_mantidos": 13,
+    "transectos_dimensoes": {
+      "NP_T-0224": {
+        "mantido": true,
+        "n_celulas": 9137,
+        "area_km2": 8.22,
+        "comprimento_km": 14.67,
+        "largura_km": 0.75
+      },
+      "NP_T-0226": {
+        "mantido": true,
+        "n_celulas": 8857,
+        "area_km2": 7.97,
+        "comprimento_km": 14.52,
+        "largura_km": 0.75
+      },
+      "NP_T-0227": {
+        "mantido": true,
+        "n_celulas": 5025,
+        "area_km2": 4.52,
+        "comprimento_km": 9.48,
+        "largura_km": 0.8
+      },
+      "NP_T-0357": {
+        "mantido": true,
+        "n_celulas": 8838,
+        "area_km2": 7.95,
+        "comprimento_km": 14.89,
+        "largura_km": 0.66
+      },
+      "NP_T-0358": {
+        "mantido": true,
+        "n_celulas": 8802,
+        "area_km2": 7.92,
+        "comprimento_km": 14.84,
+        "largura_km": 0.75
+      },
+      "NP_T-0359": {
+        "mantido": false,
+        "n_celulas": 8745,
+        "area_km2": 7.87,
+        "comprimento_km": 14.63,
+        "largura_km": 0.64
+      },
+      "NP_T-0360": {
+        "mantido": true,
+        "n_celulas": 8770,
+        "area_km2": 7.89,
+        "comprimento_km": 14.44,
+        "largura_km": 0.69
+      },
+      "NP_T-0390": {
+        "mantido": false,
+        "n_celulas": 4355,
+        "area_km2": 3.92,
+        "comprimento_km": 7.91,
+        "largura_km": 0.65
+      },
+      "NP_T-0391": {
+        "mantido": false,
+        "n_celulas": 4469,
+        "area_km2": 4.02,
+        "comprimento_km": 7.64,
+        "largura_km": 0.66
+      },
+      "NP_T-0394": {
+        "mantido": false,
+        "n_celulas": 9098,
+        "area_km2": 8.19,
+        "comprimento_km": 14.67,
+        "largura_km": 0.71
+      },
+      "NP_T-0395": {
+        "mantido": false,
+        "n_celulas": 9080,
+        "area_km2": 8.17,
+        "comprimento_km": 14.67,
+        "largura_km": 0.73
+      },
+      "NP_T-0621": {
+        "mantido": true,
+        "n_celulas": 9022,
+        "area_km2": 8.12,
+        "comprimento_km": 14.92,
+        "largura_km": 0.73
+      },
+      "NP_T-0638": {
+        "mantido": true,
+        "n_celulas": 8904,
+        "area_km2": 8.01,
+        "comprimento_km": 14.51,
+        "largura_km": 0.67
+      },
+      "NP_T-0639": {
+        "mantido": true,
+        "n_celulas": 9243,
+        "area_km2": 8.32,
+        "comprimento_km": 14.47,
+        "largura_km": 0.71
+      },
+      "NP_T-0662": {
+        "mantido": true,
+        "n_celulas": 8243,
+        "area_km2": 7.42,
+        "comprimento_km": 13.97,
+        "largura_km": 0.65
+      },
+      "NP_T-0663": {
+        "mantido": false,
+        "n_celulas": 8242,
+        "area_km2": 7.42,
+        "comprimento_km": 14.07,
+        "largura_km": 0.64
+      },
+      "NP_T-0896": {
+        "mantido": true,
+        "n_celulas": 7799,
+        "area_km2": 7.02,
+        "comprimento_km": 13.21,
+        "largura_km": 0.69
+      },
+      "NP_T-0899": {
+        "mantido": true,
+        "n_celulas": 8614,
+        "area_km2": 7.75,
+        "comprimento_km": 14.26,
+        "largura_km": 0.74
+      },
+      "NP_T-0934": {
+        "mantido": true,
+        "n_celulas": 8401,
+        "area_km2": 7.56,
+        "comprimento_km": 13.85,
+        "largura_km": 0.7
+      }
+    },
+    "faixa_mediana_km": {
+      "comprimento": 14.47,
+      "largura": 0.7,
+      "area_km2": 7.89
+    },
+    "transectos_excluidos": [
+      "NP_T-0359",
+      "NP_T-0390",
+      "NP_T-0391",
+      "NP_T-0394",
+      "NP_T-0395",
+      "NP_T-0663"
+    ],
+    "n_ancoras_candidatas_por_quadrante": {
+      "Q1": 505594,
+      "Q2": 647379,
+      "Q3": 615407,
+      "Q4": 599623
+    },
+    "fonte": {
+      "geometria": "geometria_celula.json",
+      "reservas": "Source: results/ofat_suavfina_b4s035.json -> layout_reservas, quadrantes.Q1.particao.buffer_celulas",
+      "juiz": "Judge source: juiz_lidar_v4.json -> offsets_por_transecto[*].julgavel, fora_do_julgamento",
+      "dossel": "SATELITES/laterais/dossel_eth_amazonia_Q*.npz (h_dossel, downsampled by 8 for the figure)",
+      "transectos": "SATELITES/lidar_eba/solo_lidar_30m_v2.parquet (columns lin, col, transecto)",
+      "ancoras": "SATELITES/laterais/rotulos_amazonia_Q*.npz (count of idx_no; candidates before the quality filter)"
+    },
+    "rodape_removido_para_legenda": {
+      "a": "2°×2° cell, 49,168 km², 30 m posting; minimum reserve separation 55.7 km (1800 cells)\norbital anchors: 2,368,003 candidate cells (GEDI L2A and ICESat-2 ATL08); lidar strips: median 14.5 km × 0.70 km (7.9 km² each)",
+      "b": "colors as in the color bar of (a)"
+    },
+    "nota": "the anchor count here is that of candidate cells in the label rasters; the article's citable number (157,847 in the union of reserves; 95.1% GEDI) comes from F8/F9",
+    "_pagina_in": {
+      "largura": 7.16,
+      "altura": 3.957
+    }
+  }
+}

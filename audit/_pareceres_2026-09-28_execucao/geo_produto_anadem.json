@@ -1,0 +1,59 @@
+{
+  "frente": "geo-produtos-referencia",
+  "alvo": "ANADEM v1.0 (Laipelt et al. 2024) as the 5th terrain product compared against airborne lidar, Table IV of the V23 article (IEEE JSTARS)",
+  "veredito": "APTO COM RESSALVA",
+  "achados": [
+    {
+      "id": "A1_versao_licenca_fonte",
+      "gravidade": "atencao",
+      "descricao": "Version (v1.0, tile 21M, last updated 20 Aug 2025 on the server / 28 Feb 2024 on the project page) and source (SNIRH/HGE-IPH, authored by Laipelt et al. 2024) match between the .proveniencia.json of the raw clip and the ANADEM preparation record. License documented as MIT via the API of the GitHub repository HGE-IPH/anadem (accessed 28 Sep 2026), but that license covers the repository CODE; the project page only says 'freely available and open-source' with no explicit DATA license, and the primary article (Laipelt 2024, record 5DDD66CA0B42A3548E502482DB1CF07F) was not checked here for a data license clause of its own. Low risk (the product is citable and publicly accessible without credentials), but the equivalence 'repository license = raster license' is not 100% settled."
+    },
+    {
+      "id": "A2_crs_resolucao",
+      "gravidade": "ok",
+      "descricao": "Read from the file itself (rasterio, tags of the raw clip and of the sidecar): CRS EPSG:4326, native resolution 0.00026949458523585647 degree/px (~30 m at the equator), nodata -9999.0, dtype float32. Consistent with the preparation (same node grid GRID=7200, P=2/7200, identical to GEDTM30/GLO-30)."
+    },
+    {
+      "id": "A3_datum_vertical",
+      "gravidade": "atencao",
+      "descricao": "The ANADEM GeoTIFF does NOT declare a vertical CRS in its tags (unlike GEDTM30, which has epsg.4326.3855 explicit in the COG name). The statement 'EGM2008, same as GLO-30' rests on the primary source (SBSR 2025, record 9BE323872CDC04F61C0FDDBD7E5DFDF0, Table 1 Vertical Datum: ANADEM=EGM2008, GLO-30=EGM2008, FABDEM=EGM2008) and on the ANADEM method itself (vegetation bias correction ON TOP OF Copernicus GLO-30, inheriting the same reference frame). Empirical test run for this check (inline script, CUDA venv, on the .npz files on the node grid): in clearings (ETH canopy <2 m, n=160,626) the median of ANADEM-GLO30 is +0.000 m with IQR 0.075 m and sd 1.033 m -- i.e., no systematic bias where canopy interference is minimal, exactly what is expected if the two products share a vertical datum. The bias grows monotonically with canopy height (median -0.77 m in low canopy down to -17.37 m in closed canopy), consistent with signal penetration error, not with a constant datum shift. Risk of different datums: low, but the confirmation remains indirect (literature + empirical test), never from a file tag."
+    },
+    {
+      "id": "A4_cobertura",
+      "gravidade": "ok",
+      "descricao": "Raw clip: 55,204,900/55,204,900 valid pixels (100%, no nodata -9999 in the window). Prepared (.npz on the node grid): 51,840,000/51,840,000 valid nodes (100%) -- ANADEM itself has NO hole at all in the 2x2 degree clip. Confirmed by an independent script run here (numpy on the 4 .npz files): np.isnan(anadem).sum() = 0 on all 51,840,000 nodes; GLO-30 is also 100% valid. The fraction 47,465,116/51,840,000 (91.6%) cited in the sanity guard is the INTERSECTION with the ETH canopy (Global Canopy Height), which has 4,374,884 NaN (8.4%) -- it is NOT an ANADEM hole. Additional check: 4,307,815 of the 4,374,884 ETH NaN (98.5%) coincide with JRC water pixels (occurrence>0), 4,041,904 (92.4%) with high-occurrence water (occurrence>=50%); the NaN count in the 1px border of each quadrant is negligible (254 to 1607 per quadrant). That is, the nodes without a value are water bodies where ETH does not estimate canopy, not a resampling border nor an ANADEM failure. The transect judge filter already requires cob_eth>=0.8, which tends to automatically exclude water-dominated cells before they reach the judgeable population -- the risk of contamination of the judgeable lidar transect cells is low, but it was not checked point by point against the coordinates of the 1,194 approved transects (outside the scope of this product audit)."
+    },
+    {
+      "id": "A5_comparacao_scripts",
+      "gravidade": "ok",
+      "descricao": "Line-by-line comparison between anadem_direto() (preparar_anadem_nativa.py) and gedtm30_direto() (preparar_laterais_nativa_v3_diretas.py, reference script): same window via win_from_bounds + round_offsets(floor)/round_lengths(ceil) with an integer-offset guard, same rasterio.windows.transform, same DESTINATION grid (GRID=7200, P=2/7200, same node convention dlon=dlat=+0.5px), same Resampling.bilinear via reproject(), same nodata->NaN handling, same per-quadrant write to .npz with key DTM. Two non-material differences: (1) GEDTM30 applies a fixed scale a/=ESCALA_GEDTM (needed because the GEDTM30 COG is scaled int16; ANADEM is already float32 in meters, with no need for scaling); (2) ANADEM reads crs_fonte=src.crs from the file itself for the src_crs/dst_crs of reproject, while GEDTM30 has 'EPSG:4326' hardcoded -- since ANADEM confirms EPSG:4326 in the file, the result is equivalent, and the dynamic read is defensible as more robust. The preparation IS the same method, direct bilinear onto the node grid, same transform and convention."
+    },
+    {
+      "id": "A6_epoca",
+      "gravidade": "atencao",
+      "descricao": "Reference lidar (EBA/INPE): 2016/2017 and 2017/2018 campaigns declared by the provider (Zenodo 10.5281/zenodo.7636454, Ometto et al. 2023) and corroborated by independent evidence in the file itself (file_creation_date of the LAS headers clustered between 2016-03 and 2018-05-22, auditar_epoca_lidar.json). ANADEM is built on Copernicus GLO-30 (COPDEM), whose basis is the global TanDEM-X radar survey (acquired mostly 2011-2015, public mosaic 2019-2021) -- this is domain knowledge of the Copernicus/COPDEM mission, but there is NO document/manifest in the local material of this audit with the COPDEM acquisition date confirmed by script; it remains nao_verificado. The temporal mismatch (radar basis ~2011-2015 vs lidar 2016-2018, ~2 to 7 years) is the SAME risk already accepted for GLO-30, which is already in Table IV -- ANADEM does not introduce a new problem, it only inherits what GLO-30 already carries."
+    }
+  ],
+  "cobertura": {
+    "recorte_bruto_pixels": 55204900,
+    "recorte_bruto_validos": 55204900,
+    "recorte_bruto_frac_valida": 1.0,
+    "preparado_nos_totais": 51840000,
+    "preparado_anadem_validos": 51840000,
+    "preparado_anadem_frac_valida": 1.0,
+    "preparado_glo30_validos": 51840000,
+    "preparado_intersecao_com_eth_validos": 47465116,
+    "preparado_intersecao_com_eth_frac": 0.9157,
+    "nan_eth_total": 4374884,
+    "nan_eth_coincide_com_agua_jrc_qualquer": 4307815,
+    "nan_eth_coincide_com_agua_jrc_frac": 0.9847,
+    "nan_eth_coincide_com_agua_jrc_alta_ge50": 4041904,
+    "conclusao_cobertura": "ANADEM covers 100% of the 2x2 degree crop and 100% of the prepared nodes; the ~8.4% without value at the intersection with ETH are water bodies where ETH does not estimate canopy, not an ANADEM gap"
+  },
+  "nao_verificado": [
+    "Exact acquisition/release date of the COPDEM mosaic (TanDEM-X) that feeds ANADEM -- it would be confirmed with the ESA Copernicus DEM documentation (https://spacedata.copernicus.eu/collections/copernicus-digital-elevation-model) or with Section 2 of the primary article Laipelt et al. 2024, without internet access from this audit.",
+    "Whether the MIT license of the GitHub repository HGE-IPH/anadem explicitly applies to the raster distributed via SNIRH (data), and not only to the processing code -- this would be confirmed by reading the data availability section of the primary article Laipelt et al. 2024 (record 5DDD66CA0B42A3548E502482DB1CF07F) or a LICENSE file in the dataset itself, without downloading anything as part of this audit."
+  ],
+  "arquivo": "/trabalho/GNN_TOPO/V23/artigo_v23_2/_pareceres_2026-09-28_execucao/geo_produto_anadem.json",
+  "status": "concluido"
+}

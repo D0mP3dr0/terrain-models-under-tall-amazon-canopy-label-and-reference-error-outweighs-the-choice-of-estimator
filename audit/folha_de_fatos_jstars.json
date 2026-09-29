@@ -1,0 +1,490 @@
+{
+  "_proveniencia": {
+    "script": "folha_de_fatos_jstars.py",
+    "sha256_script": "add0cee5457b6c9443d9f543da32a74f154a79b3a98c9df917ad0aa196e44c5f",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-28T10:24",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "comparar_ponto_s035.json",
+      "sha256": "8b86c87ada3738d85ce5f369e5dfb74f5bfc0c21626d58a5f9722efb2432fba2",
+      "bytes": 1586,
+      "mtime": "2026-09-03 18:23"
+    },
+    {
+      "caminho": "folha_de_fatos_acdsa.json",
+      "sha256": "848ccc1ec5afbf67c3f36f7a063ca4ecc604e0217c7bf69afa311285d6935207",
+      "bytes": 42142,
+      "mtime": "2026-09-05 21:40"
+    },
+    {
+      "caminho": "auditar_paridade_capacidade.json",
+      "sha256": "448bedb643f8dd1355bd06d3fd123a78c904111e6c30ffe6410e2593c207d3a2",
+      "bytes": 10630,
+      "mtime": "2026-09-01 21:49"
+    },
+    {
+      "caminho": "auditar_recursos_s7.json",
+      "sha256": "93a96efff7bcb49cf1eb05583dfff5f51fd02bbab6dcecb512161f2e8e44e986",
+      "bytes": 7157,
+      "mtime": "2026-09-05 17:54"
+    },
+    {
+      "caminho": "auditar_d8_triangulo.json",
+      "sha256": "8c034686e697d6cb82bdf233e738c3e061cf3726367a9fbfbbc922766e607bc5",
+      "bytes": 23711,
+      "mtime": "2026-08-16 19:35"
+    },
+    {
+      "caminho": "auditar_f2_celula.json",
+      "sha256": "16a603cdbcc1c8d6c4e9aa9dc0b92ee085e77997b52a9fafe89f5ea6218b3a01",
+      "bytes": 36827,
+      "mtime": "2026-08-17 08:15"
+    },
+    {
+      "caminho": "results/f2_arvores.json",
+      "sha256": "c5c53ff7cb6c1b251eb25e1ac1ee8d92e4e0547c3085bcaadb41189df9d43db7",
+      "bytes": 14092,
+      "mtime": "2026-08-14 20:34"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_diretas.json",
+      "sha256": "bb3cce3e12470fb2da78fb3ebcc25fb3beeffee7a10c637726eaf3f7e6f00f2d",
+      "bytes": 217379,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "preparar_laterais_nativa_v3_diretas.py",
+      "sha256": "b52e1cf6fff507020ca5d3e7acab2a3ae5c599c807acc074196c506631a76cd9",
+      "bytes": 10741,
+      "mtime": "2026-08-19 19:14"
+    },
+    {
+      "caminho": "artigo_v23_2/pacote_overleaf/main.tex",
+      "sha256": "30af94df1f5a6cc7671ad1023e3ba6300c7c3cdda8f8b2b4acf376b1a87b5afa",
+      "bytes": 72330,
+      "mtime": "2026-09-13 00:35"
+    }
+  ],
+  "gerado_para": "Article 1 of V23 (target IEEE JSTARS, pacote_overleaf/main.tex)",
+  "regra": "every number cited in the paper text has a row in this sheet; an unused row is allowed, a number without a row DOES NOT EXIST. Copy from the sheet and check by diff against the row's artifact.",
+  "protocolo": "Pre-declared protocol for this analysis (internal design note, not distributed).",
+  "parte_A": {
+    "n_fatos": 34,
+    "fatos": [
+      {
+        "id": "jstars_lambda_criterio_regra",
+        "valor": "smallest weight that halves those created >2m within the skill guardrail",
+        "unidade": null,
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "recomendacao.regra",
+        "carimbo_retroativo": true,
+        "nota": "criterion pre-declared before the fine smoothing-weight sweep"
+      },
+      {
+        "id": "jstars_lambda_guarda_skill",
+        "valor": 0.01,
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "tolerancia_skill",
+        "carimbo_retroativo": true
+      },
+      {
+        "id": "jstars_lambda_peso_nao_eleito",
+        "valor": true,
+        "unidade": null,
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "recomendacao.peso",
+        "carimbo_retroativo": true,
+        "nota": "recomendacao.peso = null in the source (no weight selected by the rule); the raw null value does not enter the fact sheet (guard G2), only the derived boolean proposition is kept"
+      },
+      {
+        "id": "jstars_lambda_p0",
+        "valor": {
+          "skill": 0.27488865102393545,
+          "skill_dp": 0.0055670356574596645,
+          "dentro_guarda_corpo": true
+        },
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "por_peso.0.0.{skill,skill_dp,dentro_guarda_corpo}",
+        "carimbo_retroativo": true
+      },
+      {
+        "id": "jstars_lambda_p035",
+        "valor": {
+          "skill": 0.2637525543241753,
+          "skill_dp": 0.0046419487860392145,
+          "skill_delta_vs_p0": -0.011136096699760123,
+          "dentro_guarda_corpo": false
+        },
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "por_peso.0.35.{skill,skill_dp,skill_delta_vs_p0,dentro_guarda_corpo}",
+        "carimbo_retroativo": true
+      },
+      {
+        "id": "jstars_lambda_criados_2m",
+        "valor": {
+          "p0": 55968.2147132,
+          "p035": 27820.738340799995
+        },
+        "unidade": "pocos hidrologicos >2m",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "por_peso.{0.0,0.35}.criados_2m_soma",
+        "carimbo_retroativo": true
+      },
+      {
+        "id": "jstars_lambda_corte_relativo_criados_2m",
+        "valor": 0.5029189606393051,
+        "unidade": "fracao",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "derived: 1 - criados_2m_soma(0.35)/criados_2m_soma(0.0)",
+        "carimbo_retroativo": true,
+        "nota": "computed in code from the two fields cited above"
+      },
+      {
+        "id": "jstars_lambda_excesso_sobre_guarda",
+        "valor": 0.0011360966997601227,
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "derived: |por_peso.0.35.skill_delta_vs_p0| - tolerancia_skill",
+        "carimbo_retroativo": true,
+        "nota": "calculado em codigo"
+      },
+      {
+        "id": "jstars_lambda_excesso_vs_skill_dp",
+        "valor": {
+          "excesso_sobre_guarda": 0.0011360966997601227,
+          "skill_dp_p035": 0.0046419487860392145,
+          "excesso_menor_que_skill_dp": true
+        },
+        "unidade": "skill",
+        "artefato": "comparar_ponto_s035.json",
+        "campo": "derived: excesso_sobre_guarda compared with por_peso.0.35.skill_dp",
+        "carimbo_retroativo": true,
+        "nota": "computed in code: the excess over the skill guard is smaller than the spread (sd) across seeds at the same weight"
+      },
+      {
+        "id": "jstars_lambda_registro_acdsa",
+        "valor": {
+          "ids": [
+            "lambda_criterio_regra",
+            "lambda_guarda_skill",
+            "lambda_pocos_2m",
+            "lambda_custo_skill",
+            "lambda_criterio_candidatos_vazio"
+          ],
+          "n": 5
+        },
+        "unidade": null,
+        "artefato": "folha_de_fatos_acdsa.json",
+        "campo": "fatos[*].id (prefix 'lambda_'), filtered in code",
+        "nota": "ACDSA (folha_de_fatos_acdsa.json) already records the same caveat about 0.35 lying outside the skill guardrail for the same criterion comparar_ponto_s035.json; see the ids above for the values stamped there"
+      },
+      {
+        "id": "jstars_params_gatv2",
+        "valor": 156929,
+        "unidade": "parametros",
+        "artefato": "auditar_paridade_capacidade.json",
+        "campo": "familias.gatv2_2_semobs.params_treinaveis"
+      },
+      {
+        "id": "jstars_params_mlp",
+        "valor": 209665,
+        "unidade": "parametros",
+        "artefato": "auditar_paridade_capacidade.json",
+        "campo": "familias.mlp_semobs.params_treinaveis"
+      },
+      {
+        "id": "jstars_params_razao_mlp_sobre_gatv2",
+        "valor": 1.3360500608555461,
+        "unidade": null,
+        "artefato": "auditar_paridade_capacidade.json",
+        "campo": "leitura.razao_mlp_sobre_gatv2",
+        "nota": "checked in code: 209665/156929 = 1.3360500609; the MLP (control) has MORE parameters than GATv2"
+      },
+      {
+        "id": "jstars_params_arvore_disponivel",
+        "valor": false,
+        "unidade": null,
+        "artefato": "results/f2_arvores.json",
+        "campo": "config (keys: colsample_bytree, learning_rate, max_depth, min_child_weight, subsample)",
+        "carimbo_retroativo": true,
+        "nota": "no project artifact records a parameter or leaf count for XGBoost (results/f2_arvores.json.config only has training hyperparameters: max_depth, learning_rate, min_child_weight, subsample, colsample_bytree); there is no tree count to include"
+      },
+      {
+        "id": "jstars_custo_estrategia",
+        "valor": "growing window as a disjoint union of the quadrants in a single graph; neighborhood sampling in mini-batches (NeighborLoader); 8-connected edges generated from the mesh; queue with a RAM guard and an epoch budget locked per stage (b2_transferencia.py)",
+        "unidade": null,
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "estrategia"
+      },
+      {
+        "id": "jstars_custo_hardware",
+        "valor": {
+          "cpu": "AMD Ryzen 9 5900X 12-Core Processor",
+          "ram_total_gb": 128,
+          "gpu": "GPU: NVIDIA GeForce RTX 5070 Ti",
+          "vram_total_gb": 15.9
+        },
+        "unidade": null,
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "hardware_da_maquina_de_auditoria.{cpu,ram_total_gb,gpu,vram_total_gb}",
+        "nota": "author's statement (D3): hardware of the machine on which THIS audit ran, not a measurement of the original runs of 10-11/08 (which only record 'dispositivo: cuda'); same caveat used in the ACDSA for the same S7 artifact"
+      },
+      {
+        "id": "jstars_custo_gatv2_parede_b2_min",
+        "valor": 62.5,
+        "unidade": "min",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.gatv2.parede_b2_min",
+        "nota": "graph: INICIO -> B2 CONCLUIDO, same scope in both families"
+      },
+      {
+        "id": "jstars_custo_gatv2_treino_puro_min",
+        "valor": 4.35,
+        "unidade": "min",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.gatv2.treino_s_soma_media_min",
+        "nota": "mean over the 5 seeds; excludes loading, union and dense prediction"
+      },
+      {
+        "id": "jstars_custo_gatv2_vram_pico_gb",
+        "valor": {
+          "valor": 4.6,
+          "onde": "Peak VRAM at seed 7, stage Q4"
+        },
+        "unidade": "GB",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.gatv2.{vram_pico_gb,vram_pico_onde}"
+      },
+      {
+        "id": "jstars_custo_gatv2_rss_pico_gb",
+        "valor": 26.9,
+        "unidade": "GB",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.gatv2.rss_pico_gb"
+      },
+      {
+        "id": "jstars_custo_mlp_parede_b2_min",
+        "valor": 47.5,
+        "unidade": "min",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.mlp.parede_b2_min",
+        "nota": "Single measurement: log line INICIO -> B2 CONCLUIDO, same scope for both families"
+      },
+      {
+        "id": "jstars_custo_mlp_treino_puro_min",
+        "valor": 1.05,
+        "unidade": "min",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.mlp.treino_s_soma_media_min",
+        "nota": "mean over the 5 seeds; excludes loading, union and dense prediction"
+      },
+      {
+        "id": "jstars_custo_mlp_vram_pico_gb",
+        "valor": {
+          "valor": 0.735,
+          "onde": "Peak VRAM at seed 42, stage Q4"
+        },
+        "unidade": "GB",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.mlp.{vram_pico_gb,vram_pico_onde}"
+      },
+      {
+        "id": "jstars_custo_mlp_rss_pico_gb",
+        "valor": 26.8,
+        "unidade": "GB",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "familias.mlp.rss_pico_gb"
+      },
+      {
+        "id": "jstars_custo_epocas_teto",
+        "valor": {
+          "etapa1": 45,
+          "etapa2": 25,
+          "etapa3": 18,
+          "etapa4": 14
+        },
+        "unidade": "epocas",
+        "artefato": "auditar_recursos_s7.json",
+        "campo": "epocas_teto",
+        "nota": "per-stage cap of the growing window, identical in both families"
+      },
+      {
+        "id": "jstars_custo_registro_acdsa",
+        "valor": {
+          "ids": [
+            "s7_gatv2_parede_b2_min",
+            "s7_gatv2_treino_puro_por_semente_min",
+            "s7_gatv2_vram_pico_gb",
+            "s7_gatv2_rss_pico_gb",
+            "s7_mlp_parede_b2_min",
+            "s7_mlp_treino_puro_por_semente_min",
+            "s7_mlp_vram_pico_gb",
+            "s7_mlp_rss_pico_gb",
+            "s7_epocas_teto",
+            "s7_hardware_da_maquina_de_auditoria"
+          ],
+          "n": 10
+        },
+        "unidade": null,
+        "artefato": "folha_de_fatos_acdsa.json",
+        "campo": "fatos[*].id (prefix 's7_'), filtered in code",
+        "nota": "ACDSA already uses the same auditar_recursos_s7.json for the computational cost paragraph and the parameter count; same source, same audit machine, same caveats"
+      },
+      {
+        "id": "jstars_admissibilidade_x4_gatv2_1m",
+        "valor": 1090.2,
+        "unidade": "celulas/replica",
+        "artefato": "auditar_f2_celula.json",
+        "campo": "admissibilidade.'(100%, x4) gatv2'.violacoes_acima_1m_media",
+        "aviso_proveniencia": "source without sha256_script and without retroativo=true (artifact from 16-17/08, predating that requirement of 18/08); see parte_A.qualidade_das_fontes",
+        "nota": "numeric source of 'about 1,090 cells per replicate': main.tex:60 \"places the ground above the canopy in 1,090 cells per replicate. Cutting\"; main.tex:153 \"above the canopy in about 1,090 cells per training replicate, where before\"; main.tex:785 \"meter above the canopy in about 1,090 cells per replicate, against 0.2 cells\" (lines located by code search)"
+      },
+      {
+        "id": "jstars_admissibilidade_x1_gatv2_1m",
+        "valor": 0.2,
+        "unidade": "celulas/replica",
+        "artefato": "auditar_f2_celula.json",
+        "campo": "admissibilidade.'(100%, x1) gatv2'.violacoes_acima_1m_media",
+        "aviso_proveniencia": "source without sha256_script and without retroativo=true (artifact from 16-17/08, predating that requirement of 18/08); see parte_A.qualidade_das_fontes",
+        "nota": "numeric source of 'against 0.2 cells at the one-times cap': main.tex:785 \"meter above the canopy in about 1,090 cells per replicate, against 0.2 cells\" (line located by code search)"
+      },
+      {
+        "id": "jstars_admissibilidade_xgb_nulo",
+        "valor": true,
+        "unidade": null,
+        "artefato": "auditar_d8_triangulo.json",
+        "campo": "admissibilidade.xgb (all numeric fields None, checked in code)",
+        "aviso_proveniencia": "source without sha256_script and without retroativo=true (artifact from 16-17/08, predating that requirement of 18/08); see parte_A.qualidade_das_fontes",
+        "nota": "f2_arvores.json does not store G_raiox: tree admissibility is not measured in this artifact (E3, the XGBoost raster on the hydrological axis, is the route)"
+      },
+      {
+        "id": "jstars_admissibilidade_familias_medidas",
+        "valor": [
+          "gatv2",
+          "mlp"
+        ],
+        "unidade": null,
+        "artefato": "auditar_f2_celula.json",
+        "campo": "derived: admissibility keys with numeric violacoes_acima_1m_media in auditar_f2_celula.json, versus admissibilidade.xgb entirely None in auditar_d8_triangulo.json",
+        "aviso_proveniencia": "source without sha256_script and without retroativo=true (artifact from 16-17/08, predating that requirement of 18/08); see parte_A.qualidade_das_fontes",
+        "nota": "the physical admissibility measure (violations above 1 m) exists only for the two networks (graph and pointwise); the tree (XGBoost) has no such measure in any project artifact — f2_arvores.json does not record the required raster (noted path: E3, the XGBoost raster on the hydrological axis)"
+      },
+      {
+        "id": "jstars_gedtm30_metodo_amostragem",
+        "valor": "window of the official COG reprojected bilinearly directly onto the node grid",
+        "unidade": null,
+        "artefato": "preparar_laterais_nativa_v3_diretas.py",
+        "campo": "function gedtm30_direto(), return field 'metodo'",
+        "nota": "extracted by regex from the body of the function that writes laterais_nativa_diretas/gedtm30_amazonia_*.npz, a direct input of auditar_nmad_pareado_nativa_diretas.json (Table IV); in prose: bilinear on the node lattice (grid)"
+      },
+      {
+        "id": "jstars_gedtm30_pixel_nativo_graus",
+        "valor": 0.00025,
+        "unidade": "graus",
+        "artefato": "preparar_laterais_nativa_v3_diretas.py",
+        "campo": "function gedtm30_direto(), return field 'pixel_nativo_graus'"
+      },
+      {
+        "id": "jstars_gedtm30_fonte_tabela_iv",
+        "valor": {
+          "artefato": "auditar_nmad_pareado_nativa_diretas.json",
+          "entradas_laterais": "D:\\GNN_TOPO\\SATELITES\\laterais_nativa_diretas",
+          "mae_20_30m": 3.7469328032878537,
+          "vies_20_30m": 0.8637808086024407,
+          "nmad_20_30m": 4.440809591674804,
+          "confere_com_main_tex_arredondado_2casas": true
+        },
+        "unidade": null,
+        "artefato": "auditar_nmad_pareado_nativa_diretas.json",
+        "campo": "entradas.laterais + tabela_pool_ETH.gedtm30.'20-30m'.{mae,vies,nmad}",
+        "nota": "code check against the Table IV row in main.tex ('GEDTM30$^{\\\\dagger}$ & 3.75 & $+0.86$ & 4.44 & 5.56 & $+5.37$ & 3.44\\\\\\\\'): mae 3.75 vs 3.75, bias 0.86 vs 0.86, nmad 4.44 vs 4.44"
+      },
+      {
+        "id": "jstars_anadem_busca",
+        "valor": {
+          "comando": "Search command used: `find /trabalho/GNN_TOPO /arquivo -iname *anadem*`",
+          "n_achados": 8,
+          "achados_raster_ou_dado": [],
+          "achados_bibliograficos": [
+            "Web link to a PDF, not a document: ANADEM: A Digital Terrain Model for South America.",
+            "Web link, not a document: ANADEM: A Digital Terrain Model for South America.",
+            "internal/library_record_03.md",
+            "Bibliographic reading note: ANADEM: A Digital Terrain Model for South America (MDPI).",
+            "internal/library_record_01.md",
+            "Bibliographic source file: ANADEM: A Digital Terrain Model for South America (PDF).",
+            "internal/library_record_02.md",
+            "Extracted full text: ANADEM: A Digital Terrain Model for South America (MDPI)."
+          ]
+        },
+        "unidade": null,
+        "artefato": "artigo_v23_2/pacote_overleaf/main.tex",
+        "campo": "search on disk (not in the manuscript); citation in main.tex:95 \"itself \\cite{laipelt2024anadem} enter those comparisons on the same terms.\"",
+        "nota": "no data/raster file with 'anadem' in its name under `/trabalho/GNN_TOPO` or `/arquivo`; the hits are all bibliographic material (PDF/reading note/.url shortcut) about the ANADEM paper, and none is an input to the training or evaluation pipeline. Fact: ANADEM is ABSENT from the evaluated set (cited in the Introduction, not compared in Table IV)"
+      }
+    ],
+    "qualidade_das_fontes": {
+      "cmp_lambda": {
+        "arquivo": "comparar_ponto_s035.json",
+        "estado": "retroativo",
+        "script_declarado": null
+      },
+      "acdsa": {
+        "arquivo": "folha_de_fatos_acdsa.json",
+        "estado": "sha256_script",
+        "script_declarado": "folha_de_fatos_acdsa.py"
+      },
+      "s3": {
+        "arquivo": "auditar_paridade_capacidade.json",
+        "estado": "sha256_script",
+        "script_declarado": "auditar_paridade_capacidade.py"
+      },
+      "f2arv": {
+        "arquivo": "f2_arvores.json",
+        "estado": "retroativo",
+        "script_declarado": "braco_arvores.py"
+      },
+      "s7": {
+        "arquivo": "auditar_recursos_s7.json",
+        "estado": "sha256_script",
+        "script_declarado": "auditar_recursos_s7.py"
+      },
+      "f2cel": {
+        "arquivo": "auditar_f2_celula.json",
+        "estado": "NO sha256_script AND NO retroactive record (predates August 18)",
+        "script_declarado": "auditar_f2_celula.py"
+      },
+      "d8": {
+        "arquivo": "auditar_d8_triangulo.json",
+        "estado": "NO sha256_script AND NO retroactive record (predates August 18)",
+        "script_declarado": "auditar_d8_triangulo.py"
+      },
+      "nmad_diretas": {
+        "arquivo": "auditar_nmad_pareado_nativa_diretas.json",
+        "estado": "sha256_script",
+        "script_declarado": "auditar_nmad_pareado.py"
+      }
+    }
+  },
+  "parte_B": {
+    "status": "pendente",
+    "nota": "Reserved for audits E4 (estimator and per-transect CI of the +6.65 m) and T3 (reading of the scale delta from 0.15 to 4.99 m over the 13 transects). Neither has run yet; no value is invented here. This section will be added once the artifacts exist.",
+    "fatos": []
+  }
+}

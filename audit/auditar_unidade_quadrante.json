@@ -1,0 +1,238 @@
+{
+  "_proveniencia": {
+    "script": "auditar_unidade_quadrante.py",
+    "commit": "2f4130c",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-08-15T12:27",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "results/ofat_suavfina_b4s035.json",
+      "sha256": "cd2074745a15b1211e5248a8df788d34f13c255b475986dcb5ee074211bf21f0",
+      "bytes": 3704055,
+      "mtime": "2026-08-10 09:51"
+    },
+    {
+      "caminho": "results/baseline_mlp_b4s035.json",
+      "sha256": "e11a3ecbe67086402ff75369d7faa581042fdf6a35f2271fae5bbf0a29acf46c",
+      "bytes": 3660859,
+      "mtime": "2026-08-11 20:02"
+    },
+    {
+      "caminho": "results/noite_lote1536_gatv2_2_semobs.json",
+      "sha256": "c12525b8649cedda44dcb027ba5141383d9af9e47c5302ed219d6d0f1d166399",
+      "bytes": 7380296,
+      "mtime": "2026-08-14 22:48"
+    },
+    {
+      "caminho": "results/noite_lote1536_mlp_semobs.json",
+      "sha256": "b7aa85db941a22d0f8540a0ae493e6eb297078714546f26b69c41ef7d1e9c2f6",
+      "bytes": 7299839,
+      "mtime": "2026-08-15 00:16"
+    }
+  ],
+  "motivo": "the seed-paired test resamples the source that accounts for less than 6% of the variance; the correct unit of generalization is the spatial reserve",
+  "margem_skill": 0.01,
+  "alfa": 0.05,
+  "pares": {
+    "lote_adotado": {
+      "nota": "the pair that supports the headline TOST (main.tex:65)",
+      "arquivos": {
+        "gatv2": "results/ofat_suavfina_b4s035.json",
+        "mlp": "results/baseline_mlp_b4s035.json"
+      },
+      "quadrantes": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "delta_por_quadrante": {
+        "Q1": 0.020818494755069118,
+        "Q2": 0.0034097297931611425,
+        "Q3": -0.02846337448600129,
+        "Q4": 0.017747374109876323
+      },
+      "sinal_por_quadrante": {
+        "Q1": {
+          "positivo_em_n_sementes": 5,
+          "de": 5
+        },
+        "Q2": {
+          "positivo_em_n_sementes": 4,
+          "de": 5
+        },
+        "Q3": {
+          "positivo_em_n_sementes": 0,
+          "de": 5
+        },
+        "Q4": {
+          "positivo_em_n_sementes": 5,
+          "de": 5
+        }
+      },
+      "por_semente": {
+        "unidade": "seed (the unit the article uses)",
+        "n": 5,
+        "media": 0.003378056043026323,
+        "dp": 0.0037726718893573976,
+        "se": 0.0016871901602811413,
+        "ic95": [
+          -0.0013063348190241325,
+          0.008062446905076778
+        ],
+        "t": 2.002178605915665,
+        "p": 0.11582807139413763,
+        "tost_p_inf": 0.0006847039462237747,
+        "tost_p_sup": 0.008588772293711966,
+        "equivalentes": true,
+        "ic_cabe_na_margem": true
+      },
+      "por_quadrante": {
+        "unidade": "quadrante (conservadora)",
+        "n": 4,
+        "media": 0.003378056043026323,
+        "dp": 0.02254272909784263,
+        "se": 0.011271364548921315,
+        "ic95": [
+          -0.03249245642119408,
+          0.03924856850724673
+        ],
+        "t": 0.29970249195334625,
+        "p": 0.7839694493976717,
+        "tost_p_inf": 0.1603437680438612,
+        "tost_p_sup": 0.29907909387505505,
+        "equivalentes": false,
+        "ic_cabe_na_margem": false
+      },
+      "variancia": {
+        "frac_entre_quadrantes": 0.9161826171552908,
+        "frac_entre_sementes": 0.02737132739118596,
+        "frac_residual": 0.05644605545352326,
+        "F_quadrante": 64.92447415813919,
+        "gl": [
+          3,
+          12
+        ],
+        "p": 1.092173931294127e-07
+      },
+      "reservas_para_80pct_de_potencia": 352,
+      "reservas_disponiveis": 4
+    },
+    "lote_1536": {
+      "nota": "E1 of the overnight queue of 2026-08-14",
+      "arquivos": {
+        "gatv2": "results/noite_lote1536_gatv2_2_semobs.json",
+        "mlp": "results/noite_lote1536_mlp_semobs.json"
+      },
+      "quadrantes": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "sementes": [
+        7,
+        31,
+        42,
+        100,
+        123,
+        200,
+        300,
+        400,
+        500,
+        2024
+      ],
+      "delta_por_quadrante": {
+        "Q1": 0.029429696351236212,
+        "Q2": 0.013795922218833056,
+        "Q3": -0.012530469818748446,
+        "Q4": 0.02832532049647757
+      },
+      "sinal_por_quadrante": {
+        "Q1": {
+          "positivo_em_n_sementes": 10,
+          "de": 10
+        },
+        "Q2": {
+          "positivo_em_n_sementes": 9,
+          "de": 10
+        },
+        "Q3": {
+          "positivo_em_n_sementes": 0,
+          "de": 10
+        },
+        "Q4": {
+          "positivo_em_n_sementes": 10,
+          "de": 10
+        }
+      },
+      "por_semente": {
+        "unidade": "seed (the unit the article uses)",
+        "n": 10,
+        "media": 0.014755117311949598,
+        "dp": 0.002724373355342534,
+        "se": 0.0008615224999557664,
+        "ic95": [
+          0.012806218017762844,
+          0.01670401660613635
+        ],
+        "t": 17.126792756668774,
+        "p": 3.548806455347795e-08,
+        "tost_p_inf": 1.8238643928469855e-10,
+        "tost_p_sup": 0.999814622961723,
+        "equivalentes": false,
+        "ic_cabe_na_margem": false
+      },
+      "por_quadrante": {
+        "unidade": "quadrante (conservadora)",
+        "n": 4,
+        "media": 0.014755117311949598,
+        "dp": 0.019535582959847198,
+        "se": 0.009767791479923599,
+        "ic95": [
+          -0.016330354594114936,
+          0.045840589218014136
+        ],
+        "t": 1.51058889230762,
+        "p": 0.22805748987005509,
+        "tost_p_inf": 0.042549179928935255,
+        "tost_p_sup": 0.6701303754718201,
+        "equivalentes": false,
+        "ic_cabe_na_margem": false
+      },
+      "variancia": {
+        "frac_entre_quadrantes": 0.9195979351532582,
+        "frac_entre_sementes": 0.021461483109057378,
+        "frac_residual": 0.05894058173768442,
+        "F_quadrante": 140.41906564840897,
+        "gl": [
+          3,
+          27
+        ],
+        "p": 1.1102230246251565e-16
+      },
+      "reservas_para_80pct_de_potencia": 16,
+      "reservas_disponiveis": 4
+    }
+  },
+  "veredito": "THE GENERALIZATION UNIT DECIDES BOTH CLAIMS. lote_adotado: equivalence ONLY survives with seed as the unit (per quadrant the 95% CI runs from -0.032 to +0.039); lote_1536: the difference is ONLY significant with seed as the unit (per quadrant p = 0.23). With four spatial reserves and the sign reversing between them, this design establishes neither equivalence nor architectural superiority; what it establishes is that the contrast is NOT DECIDABLE at this n."
+}

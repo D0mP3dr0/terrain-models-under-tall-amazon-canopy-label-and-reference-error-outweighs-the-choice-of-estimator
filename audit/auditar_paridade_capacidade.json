@@ -1,0 +1,288 @@
+{
+  "_proveniencia": {
+    "script": "auditar_paridade_capacidade.py",
+    "sha256_script": "313bf2a136cad9ff56840b2377076e4917a47e78572d81678d3d8e8e224c0a4f",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-09-01T21:49",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "manifesto_features_46.json",
+      "sha256": "b4e33cff9d6dfc4d37b591f6cf87fe5fbdb1396b3dbe37474578be026ab09d44",
+      "bytes": 5192,
+      "mtime": "2026-08-19 20:33"
+    },
+    {
+      "caminho": "results/b1_referencia.json",
+      "sha256": "29af3815e151796610603c7421e8bd6a67bc021cb263c8c890d690d8210c45b2",
+      "bytes": 2881106,
+      "mtime": "2026-07-29 21:16"
+    },
+    {
+      "caminho": "results/b1_gatv2_bloco_bioma.json",
+      "sha256": "559ec358e00c2e3ccd3ddc9eca61c70683e01031600fbded24ceba1cf02b37f2",
+      "bytes": 2170742,
+      "mtime": "2026-07-31 09:44"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed7_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "990d3643782f03d69efa2e448902af770cc1452ae6f162c284a758117a6a0aa0",
+      "bytes": 634445,
+      "mtime": "2026-08-10 09:23"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed31_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "f6149ef1aa15453cea937c76d6bf4c57ca392aa1cc51f163096581b1f441ec08",
+      "bytes": 634465,
+      "mtime": "2026-08-10 09:47"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed42_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "556b1648d5f53874bbe948441478f10d4f4e88dedc2be14116314f4b840be4b9",
+      "bytes": 634465,
+      "mtime": "2026-08-10 08:57"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed123_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "7e0b7a90c3f3c2477d1c7e7d5a44a74141ada157b2c97e8ecfbb33b885c57a6f",
+      "bytes": 634485,
+      "mtime": "2026-08-10 09:11"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed2024_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "6f4a9150294b18569d6cf0f986c82c6ee983766f2cd455e37f1132aca13b031e",
+      "bytes": 634569,
+      "mtime": "2026-08-10 09:35"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed100_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "1332f61f602593f9fe85b2cad6efa9e4d9d20f1fe718a4bc035fa27b7c88d551",
+      "bytes": 634485,
+      "mtime": "2026-08-10 10:09"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed200_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "6dc0f6257c40a7ca7fe60ae9e60b3a959a952c089ed2ba01ee19dc7c68e608ed",
+      "bytes": 634485,
+      "mtime": "2026-08-10 10:22"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed300_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "c7a9ee68a4f2d7f42330942ff563b0458b14b61ad4377581c9e9fe6ef20045f2",
+      "bytes": 634485,
+      "mtime": "2026-08-10 10:33"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed400_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "70b430db1e052c36f72bef0489c1e386c1f00b36c04ccd3d056603cec04f76bd",
+      "bytes": 634485,
+      "mtime": "2026-08-10 10:45"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed500_gatv2_2_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "6b2b77e52a79f0d525d89417ced7d91bf9f2dca77b05406720019a8c1666529a",
+      "bytes": 634485,
+      "mtime": "2026-08-10 10:57"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed7_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "cb2d25fdddc9fe52a1ffadd4bcd57be72c0922d9c7ebbcae1f3a419bc5b85b9e",
+      "bytes": 843925,
+      "mtime": "2026-08-11 19:37"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed31_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "9eb2bd1056adaaea01751afa95f2e39e2673479bdb69adbacae95f3ad5b2e766",
+      "bytes": 843941,
+      "mtime": "2026-08-11 19:57"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed42_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "cdc1d54e5e1897a18aee9e41718b3723b605cdecd47577610b1daaaf4e06bde8",
+      "bytes": 843941,
+      "mtime": "2026-08-11 19:20"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed123_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "9b281c449c6444f097b4f86979d7972defbb03f0c03863effdfc805da0024af9",
+      "bytes": 844021,
+      "mtime": "2026-08-11 19:29"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed2024_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "410daeacade10e8e80e1add6411e2bb695da6aac6619d41879b1728f71391f0c",
+      "bytes": 844037,
+      "mtime": "2026-08-11 19:47"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed100_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "bdbaf5a2b0b5715e9628cba4ad29153c00182c5b69a383f33dfefcff034b0ac0",
+      "bytes": 844021,
+      "mtime": "2026-08-12 11:27"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed200_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "65e4ad869cd76bb5c74735a35e1087031d6c6fe5fc4ca692773a3ba85d9f198d",
+      "bytes": 844021,
+      "mtime": "2026-08-12 11:36"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed300_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "80bb7de99acd84e06c1fe7e2f13b0194c615b61c89dec02ab7382e1ff3283cb0",
+      "bytes": 844021,
+      "mtime": "2026-08-12 11:44"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed400_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "e71bc596279f5a08e994428d850ae633572c20a315586ec59055437d12bb1880",
+      "bytes": 844021,
+      "mtime": "2026-08-12 11:52"
+    },
+    {
+      "caminho": "checkpoints_b2/amazonia_seed500_mlp_semobs_v23_ampliacao_b4s035_ateQ4.pt",
+      "sha256": "a2bf2db13272d2e66e9f613e9bbcc0b1a606b723b4b3fd1f2fa31426c26cba3b",
+      "bytes": 844021,
+      "mtime": "2026-08-12 11:59"
+    }
+  ],
+  "d_in": 46,
+  "receita": "v23_ampliacao_b4s035 (adotada)",
+  "sementes_g2": [
+    7,
+    31,
+    42,
+    123,
+    2024,
+    100,
+    200,
+    300,
+    400,
+    500
+  ],
+  "sementes_da_receita": [
+    7,
+    31,
+    42,
+    123,
+    2024
+  ],
+  "d_in_era_b1_derivado": {
+    "feat_nomes": [
+      "topo8",
+      "comp10",
+      "regime4"
+    ],
+    "larguras": {
+      "topo8": 8,
+      "comp10": 10,
+      "regime4": 4
+    },
+    "colunas": 22,
+    "n_obs": 2,
+    "d_in_era_b1": 24
+  },
+  "familias": {
+    "gatv2_2_semobs": {
+      "params_treinaveis": 156929,
+      "params_milhoes": 0.156929,
+      "m1_treinaveis_por_semente": {
+        "7": 156929,
+        "31": 156929,
+        "42": 156929,
+        "123": 156929,
+        "2024": 156929,
+        "100": 156929,
+        "200": 156929,
+        "300": 156929,
+        "400": 156929,
+        "500": 156929
+      },
+      "tensores_totais_no_checkpoint_por_semente": {
+        "7": 156929,
+        "31": 156929,
+        "42": 156929,
+        "123": 156929,
+        "2024": 156929,
+        "100": 156929,
+        "200": 156929,
+        "300": 156929,
+        "400": 156929,
+        "500": 156929
+      },
+      "m2_instanciacao": 156929,
+      "g1_m1_igual_m2": true,
+      "buffers_na_instanciacao": [],
+      "divergencia_vs_era_b1": {
+        "era_b1_params_milhoes": 0.1457,
+        "era_b1_braco": "gatv2_2",
+        "era_b1_arquivo": "b1_gatv2_bloco_bioma.json",
+        "razao_atual_sobre_b1": 1.0771,
+        "nota_razao": "rounded to 4 decimal places — the era B1 denominator was recorded with 4 decimal places",
+        "delta_por_d_in": 11264,
+        "nota_delta": "measured by instantiation: M2(d_in=46) - M2(d_in=24); d_in of the B1 era derived from the artifact (feat_nomes), not from a constant",
+        "residuo_vs_registro_b1": -35,
+        "origem_da_divergencia": "d_in fully explains it: M2(d_in=24) reproduces the B1-era record within 4-decimal rounding (residual -35, window +-50); the architecture did not change, only the input width"
+      }
+    },
+    "mlp_semobs": {
+      "params_treinaveis": 209665,
+      "params_milhoes": 0.209665,
+      "m1_treinaveis_por_semente": {
+        "7": 209665,
+        "31": 209665,
+        "42": 209665,
+        "123": 209665,
+        "2024": 209665,
+        "100": 209665,
+        "200": 209665,
+        "300": 209665,
+        "400": 209665,
+        "500": 209665
+      },
+      "tensores_totais_no_checkpoint_por_semente": {
+        "7": 209665,
+        "31": 209665,
+        "42": 209665,
+        "123": 209665,
+        "2024": 209665,
+        "100": 209665,
+        "200": 209665,
+        "300": 209665,
+        "400": 209665,
+        "500": 209665
+      },
+      "m2_instanciacao": 209665,
+      "g1_m1_igual_m2": true,
+      "buffers_na_instanciacao": [],
+      "divergencia_vs_era_b1": {
+        "era_b1_params_milhoes": 0.204,
+        "era_b1_braco": "mlp",
+        "era_b1_arquivo": "b1_referencia.json",
+        "razao_atual_sobre_b1": 1.0278,
+        "nota_razao": "rounded to 4 decimal places — the era B1 denominator was recorded with 4 decimal places",
+        "delta_por_d_in": 5632,
+        "nota_delta": "measured by instantiation: M2(d_in=46) - M2(d_in=24); d_in of the B1 era derived from the artifact (feat_nomes), not from a constant",
+        "residuo_vs_registro_b1": 33,
+        "origem_da_divergencia": "d_in fully explains it: M2(d_in=24) reproduces the B1-era record within 4-decimal rounding (residual +33, window +-50); the architecture did not change, only the input width"
+      }
+    }
+  },
+  "nota_sage2": "sage2 excluded from the reference block (C7; justification corrected in v3): the SAGE class exists in b1_kriging_indutivo.py, but there is NO sage2 checkpoint in the b4s035 recipe, so without M1 there is no double measurement; the historical value remains in the B1-era JSONs",
+  "nota_checkpoints": "tensores_totais == treinaveis in all seeds because the b4s035 checkpoints store neither optimizer state nor buffers — only model weights",
+  "leitura": {
+    "razao_mlp_sobre_gatv2": 1.3360500608555461,
+    "nota": "Ratio > 1 means the MLP baseline has MORE parameters than GATv2, which favors the claim of a capacity-fair comparison; descriptive number, not a test"
+  }
+}

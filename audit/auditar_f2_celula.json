@@ -1,0 +1,1202 @@
+{
+  "_proveniencia": {
+    "script": "auditar_f2_celula.py",
+    "commit": "82c77a1",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-08-17T08:15",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "fila_2026-08-16_d8_f2_f1.sh",
+      "sha256": "444263624df84c14d3748b3b73806c50a9f568cfde1266b5054759863c60c448",
+      "bytes": 6142,
+      "mtime": "2026-08-16 18:01"
+    },
+    {
+      "caminho": "results/ofat_suavfina_b4s035.json",
+      "sha256": "cd2074745a15b1211e5248a8df788d34f13c255b475986dcb5ee074211bf21f0",
+      "bytes": 3704055,
+      "mtime": "2026-08-10 09:51"
+    },
+    {
+      "caminho": "results/baseline_mlp_b4s035.json",
+      "sha256": "e11a3ecbe67086402ff75369d7faa581042fdf6a35f2271fae5bbf0a29acf46c",
+      "bytes": 3660859,
+      "mtime": "2026-08-11 20:02"
+    },
+    {
+      "caminho": "results/f2cel_frac025_fator1_gatv2_2_semobs.json",
+      "sha256": "03fc8fc7612c08994d367269e544ea99e2f8289edbbc491812054f19c640482e",
+      "bytes": 3706094,
+      "mtime": "2026-08-16 19:41"
+    },
+    {
+      "caminho": "results/f2cel_frac025_fator1_mlp_semobs.json",
+      "sha256": "cc90efd68a836e784a19c28b098ef555e12590cab6b31b8fcea71fbd4b098328",
+      "bytes": 3712895,
+      "mtime": "2026-08-16 20:18"
+    },
+    {
+      "caminho": "results/d1_orcamento_gatv2_2_semobs.json",
+      "sha256": "2b5ac8c07523e7c770536737a89a8766f3da6a5c99a53cca7d28cc83a823b371",
+      "bytes": 9324935,
+      "mtime": "2026-08-15 22:20"
+    },
+    {
+      "caminho": "results/d1_orcamento_mlp_semobs.json",
+      "sha256": "238f7230fdc406f90e2296363947cf6c1ef5e4e6573596a4d384f721f25466a4",
+      "bytes": 8668684,
+      "mtime": "2026-08-16 00:02"
+    },
+    {
+      "caminho": "results/d2_frac025_gatv2_2_semobs.json",
+      "sha256": "c84e6223ea826e9cf0417dfd28e63669d758d49eb52d085c3dc97115d7f7970f",
+      "bytes": 4804093,
+      "mtime": "2026-08-15 17:27"
+    },
+    {
+      "caminho": "results/d2_frac025_mlp_semobs.json",
+      "sha256": "42e1e47ebaa0060733de1b9f0a0b71486284e445f794227325f7a51628fca852",
+      "bytes": 4547059,
+      "mtime": "2026-08-15 18:10"
+    }
+  ],
+  "criterio_pre_declarado": {
+    "fonte": "fila_2026-08-16_d8_f2_f1.sh, header, section F2 (file stored in _fontes)",
+    "contraste": "Delta_frac(arm) = skill(0.25, x1) - skill(1.00, x1), paired, 5 seeds",
+    "regra": "DEPENDENCIA_DIFERENCIAL if the 95% CI of Delta_frac(GATv2) lies entirely < -0.010 AND the 95% CI of [Delta_frac(GATv2) - Delta_frac(MLP)] lies entirely < 0; otherwise DEGRADACAO_COMUM",
+    "operacionalizacao_fixada_em": "this script, before reading the MLP arm of F2 (docstring)",
+    "margem": 0.01
+  },
+  "veredito": "DEPENDENCIA_DIFERENCIAL",
+  "condicoes": {
+    "cond1_gatv2_alem_da_margem": true,
+    "cond2_mais_negativo_que_mlp": true
+  },
+  "frase_autorizada": "Under the same nominal epoch ceiling, the graph depends more on supervision: cutting the anchors to one quarter degrades GATv2 beyond the margin and more than the MLP (in three of the four quadrants; not in Q3)",
+  "delta_frac_gatv2_x1": {
+    "n": 5,
+    "sementes": [
+      7,
+      31,
+      42,
+      123,
+      2024
+    ],
+    "media": -0.07136150904269394,
+    "dp": 0.003055366457348105,
+    "se": 0.0013664014189606148,
+    "t": -52.22587451422345,
+    "p": 8.045399386199889e-07,
+    "ic95": [
+      -0.07515524757410245,
+      -0.06756777051128542
+    ],
+    "sinal_consistente": 5,
+    "por_semente": {
+      "7": -0.07063085972608399,
+      "31": -0.0736306704048603,
+      "42": -0.07397222246689572,
+      "123": -0.0721359535607134,
+      "2024": -0.06643783905491626
+    }
+  },
+  "delta_frac_mlp_x1": {
+    "n": 5,
+    "sementes": [
+      7,
+      31,
+      42,
+      123,
+      2024
+    ],
+    "media": -0.048772329668137916,
+    "dp": 0.012699381470466216,
+    "se": 0.0056793360480327385,
+    "t": -8.587681597927652,
+    "p": 0.0010101220590775924,
+    "ic95": [
+      -0.06454069443947179,
+      -0.033003964896804044
+    ],
+    "sinal_consistente": 5,
+    "por_semente": {
+      "7": -0.06725794901271032,
+      "31": -0.05153468219462709,
+      "42": -0.051526538464050864,
+      "123": -0.03653624952622797,
+      "2024": -0.03700622914307333
+    }
+  },
+  "diferenca_das_degradacoes_gatv2_menos_mlp": {
+    "n": 5,
+    "media": -0.02258917937455602,
+    "dp": 0.012099808028324612,
+    "se": 0.005411198653206307,
+    "t": -4.174524134531859,
+    "p": 0.013979983692230212,
+    "ic95": [
+      -0.03761307538850356,
+      -0.007565283360608476
+    ],
+    "sinal_consistente": 5,
+    "por_semente": {
+      "123": -0.035599704034485424,
+      "2024": -0.029431609911842932,
+      "31": -0.022095988210233203,
+      "42": -0.022445684002844857,
+      "7": -0.0033729107133736724
+    }
+  },
+  "em_metros_de_mae": {
+    "delta_frac_gatv2_x1": {
+      "n": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "media": 0.5904972544048546,
+      "dp": 0.022098890460117655,
+      "se": 0.009882924259228936,
+      "t": 59.749244142332934,
+      "p": 4.6990602047430226e-07,
+      "ic95": [
+        0.5630578577202778,
+        0.6179366510894313
+      ],
+      "sinal_consistente": 5,
+      "por_semente": {
+        "7": 0.5823375235033028,
+        "31": 0.6018417002653331,
+        "42": 0.6115514360939338,
+        "123": 0.6009734423415649,
+        "2024": 0.5557821698201382
+      }
+    },
+    "delta_frac_mlp_x1": {
+      "n": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "media": 0.40235863397977634,
+      "dp": 0.10403962227686406,
+      "se": 0.04652793355289389,
+      "t": 8.647679001741327,
+      "p": 0.0009835480953040046,
+      "ic95": [
+        0.2731763806118759,
+        0.5315408873476768
+      ],
+      "sinal_consistente": 5,
+      "por_semente": {
+        "7": 0.5582711185748295,
+        "31": 0.41934160813229937,
+        "42": 0.42098261788669156,
+        "123": 0.3040350760280859,
+        "2024": 0.3091627492769753
+      }
+    },
+    "diferenca_gatv2_menos_mlp": {
+      "n": 5,
+      "media": 0.18813862042507826,
+      "dp": 0.10273117765356937,
+      "se": 0.04594277932839769,
+      "t": 4.095063972518265,
+      "p": 0.014913152191363232,
+      "ic95": [
+        0.06058101563956614,
+        0.3156962252105904
+      ],
+      "sinal_consistente": 5,
+      "por_semente": {
+        "123": 0.29693836631347903,
+        "2024": 0.24661942054316288,
+        "31": 0.18250009213303375,
+        "42": 0.19056881820724225,
+        "7": 0.02406640492847334
+      }
+    }
+  },
+  "exploratorios_2x2_sem_pre_registro": {
+    "gatv2": {
+      "frac_a_x1": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": -0.07136150904269394,
+        "dp": 0.003055366457348105,
+        "se": 0.0013664014189606148,
+        "t": -52.22587451422345,
+        "p": 8.045399386199889e-07,
+        "ic95": [
+          -0.07515524757410245,
+          -0.06756777051128542
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": -0.07063085972608399,
+          "31": -0.0736306704048603,
+          "42": -0.07397222246689572,
+          "123": -0.0721359535607134,
+          "2024": -0.06643783905491626
+        }
+      },
+      "frac_a_x4": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": -0.02156307681845778,
+        "dp": 0.00581111751793245,
+        "se": 0.002598810759067362,
+        "t": -8.297286265736465,
+        "p": 0.0011520724966828798,
+        "ic95": [
+          -0.02877853222980572,
+          -0.014347621407109842
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": -0.02319782177800994,
+          "31": -0.02964833855685073,
+          "42": -0.021387117512249032,
+          "123": -0.013515605307214795,
+          "2024": -0.020066500937964415
+        }
+      },
+      "fator_a_100": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": 0.024058454357871573,
+        "dp": 0.0034569193457720027,
+        "se": 0.0015459813299760596,
+        "t": 15.561930724120796,
+        "p": 9.9548677713819e-05,
+        "ic95": [
+          0.019766122061532367,
+          0.02835078665421078
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": 0.02146115154647088,
+          "31": 0.02665139095546265,
+          "42": 0.025613766481764944,
+          "123": 0.019364426123857525,
+          "2024": 0.027201536681801863
+        }
+      },
+      "fator_a_025": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": 0.07385688658210772,
+        "dp": 0.004212781146257818,
+        "se": 0.0018840130034723929,
+        "t": 39.20189852510748,
+        "p": 2.5295379787020306e-06,
+        "ic95": [
+          0.0686260279004878,
+          0.07908774526372764
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": 0.06889418949454493,
+          "31": 0.07063372280347222,
+          "42": 0.07819887143641163,
+          "123": 0.07798477437735613,
+          "2024": 0.07357287479875371
+        }
+      },
+      "interacao_frac_x_fator": {
+        "n": 5,
+        "media": 0.04979843222423615,
+        "dp": 0.005847196657843777,
+        "se": 0.0026149458409496524,
+        "t": 19.04377193760586,
+        "p": 4.4791733151830666e-05,
+        "ic95": [
+          0.042538178643774155,
+          0.05705868580469814
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "123": 0.0586203482534986,
+          "2024": 0.04637133811695185,
+          "31": 0.043982331848009565,
+          "42": 0.05258510495464669,
+          "7": 0.04743303794807405
+        }
+      }
+    },
+    "mlp": {
+      "frac_a_x1": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": -0.048772329668137916,
+        "dp": 0.012699381470466216,
+        "se": 0.0056793360480327385,
+        "t": -8.587681597927652,
+        "p": 0.0010101220590775924,
+        "ic95": [
+          -0.06454069443947179,
+          -0.033003964896804044
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": -0.06725794901271032,
+          "31": -0.05153468219462709,
+          "42": -0.051526538464050864,
+          "123": -0.03653624952622797,
+          "2024": -0.03700622914307333
+        }
+      },
+      "frac_a_x4": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": -0.010587342206311435,
+        "dp": 0.005163938012603538,
+        "se": 0.0023093832855553354,
+        "t": -4.584488972676316,
+        "p": 0.010148968791193971,
+        "ic95": [
+          -0.016999218125517142,
+          -0.0041754662871057256
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": -0.012823899537403538,
+          "31": -0.01623408837481849,
+          "42": -0.011668773118834852,
+          "123": -0.0023350699718225343,
+          "2024": -0.009874880028677757
+        }
+      },
+      "fator_a_100": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": 0.00784422054794084,
+        "dp": 0.004863067634278295,
+        "se": 0.002174829961885071,
+        "t": 3.6068201585478104,
+        "p": 0.022620459457577444,
+        "ic95": [
+          0.0018059245456275306,
+          0.013882516550254149
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": 0.013466854705183384,
+          "31": 0.009234679366462273,
+          "42": 0.010697597456104657,
+          "123": 0.0014558321939965868,
+          "2024": 0.004366139017957293
+        }
+      },
+      "fator_a_025": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": 0.04602920800976732,
+        "dp": 0.014316444650456093,
+        "se": 0.0064025086869066074,
+        "t": 7.1892456942540255,
+        "p": 0.0019832522954178586,
+        "ic95": [
+          0.02825299410501912,
+          0.06380542191451552
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": 0.06790090418049016,
+          "31": 0.044535273186270874,
+          "42": 0.05055536280132067,
+          "123": 0.03565701174840202,
+          "2024": 0.03149748813235287
+        }
+      },
+      "interacao_frac_x_fator": {
+        "n": 5,
+        "media": 0.03818498746182648,
+        "dp": 0.010163704725716703,
+        "se": 0.00454534693398768,
+        "t": 8.400896128808014,
+        "p": 0.0010987500837541548,
+        "ic95": [
+          0.02556508121553059,
+          0.05080489370812238
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "123": 0.034201179554405436,
+          "2024": 0.027131349114395575,
+          "31": 0.0353005938198086,
+          "42": 0.03985776534521601,
+          "7": 0.05443404947530678
+        }
+      }
+    },
+    "diferenca_das_degradacoes_a_x4_gatv2_menos_mlp": {
+      "n": 5,
+      "media": -0.010975734612146348,
+      "dp": 0.0014617065465178155,
+      "se": 0.0006536950402340587,
+      "t": -16.790298130786535,
+      "p": 7.374229777848033e-05,
+      "ic95": [
+        -0.012790683006896276,
+        -0.009160786217396421
+      ],
+      "sinal_consistente": 5,
+      "por_semente": {
+        "123": -0.011180535335392261,
+        "2024": -0.010191620909286658,
+        "31": -0.013414250182032239,
+        "42": -0.00971834439341418,
+        "7": -0.010373922240606404
+      }
+    },
+    "diferenca_das_interacoes_entre_bracos": {
+      "n": 5,
+      "media": 0.011613444762409669,
+      "dp": 0.01202585123446667,
+      "se": 0.005378124169513447,
+      "t": 2.159385762835655,
+      "p": 0.09695581056467228,
+      "ic95": [
+        -0.00331862176318189,
+        0.026545511288001228
+      ],
+      "sinal_consistente": 4,
+      "por_semente": {
+        "123": 0.024419168699093163,
+        "2024": 0.019239989002556274,
+        "31": 0.008681738028200964,
+        "42": 0.012727339609430677,
+        "7": -0.007001011527232731
+      }
+    },
+    "ordenacao_intracelula_gatv2_menos_mlp": {
+      "(100%, x1)": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": 0.0010119916325633028,
+        "dp": 0.003973285284122716,
+        "se": 0.0017769071978595917,
+        "t": 0.5695241899983956,
+        "p": 0.5994597393511202,
+        "ic95": [
+          -0.003921493659324687,
+          0.005945476924451293
+        ],
+        "sinal_consistente": 3,
+        "por_semente": {
+          "7": 0.0034310447901010344,
+          "31": 0.0027966593571181475,
+          "42": 0.004437312593778053,
+          "123": -0.00022598476985152827,
+          "2024": -0.005379073808329193
+        }
+      },
+      "( 25%, x1)": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": -0.021577187741992715,
+        "dp": 0.014698277447234237,
+        "se": 0.006573269504833566,
+        "t": -3.282565506575718,
+        "p": 0.03042726344632751,
+        "ic95": [
+          -0.03982750968383379,
+          -0.0033268658001516377
+        ],
+        "sinal_consistente": 4,
+        "por_semente": {
+          "7": 5.813407672736193e-05,
+          "31": -0.019299328853115055,
+          "42": -0.018008371409066803,
+          "123": -0.03582568880433695,
+          "2024": -0.034810683720172125
+        }
+      },
+      "(100%, x4)": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": 0.017226225442494036,
+        "dp": 0.003440920715063256,
+        "se": 0.001538826524813725,
+        "t": 11.194390767717804,
+        "p": 0.0003625695304549434,
+        "ic95": [
+          0.012953758069926439,
+          0.021498692815061633
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": 0.01142534163138853,
+          "31": 0.020213370946118525,
+          "42": 0.01935348161943834,
+          "123": 0.01768260916000941,
+          "2024": 0.017456323855515377
+        }
+      },
+      "( 25%, x4)": {
+        "n": 5,
+        "sementes": [
+          7,
+          31,
+          42,
+          123,
+          2024
+        ],
+        "media": 0.006250490830347688,
+        "dp": 0.0031574946587710775,
+        "se": 0.0014120745391209262,
+        "t": 4.426459550951802,
+        "p": 0.011453383323182218,
+        "ic95": [
+          0.0023299433880309625,
+          0.010171038272664414
+        ],
+        "sinal_consistente": 5,
+        "por_semente": {
+          "7": 0.0010514193907821268,
+          "31": 0.006799120764086286,
+          "42": 0.00963513722602416,
+          "123": 0.0065020738246171494,
+          "2024": 0.007264702946228718
+        }
+      }
+    },
+    "diferencial_por_quadrante_a_x1": {
+      "Q1": {
+        "delta_frac_gatv2": -0.025245716869081235,
+        "delta_frac_mlp": -0.0004950978182563182,
+        "dif_gatv2_menos_mlp": -0.02475061905082492,
+        "ic95": [
+          -0.02881988081198626,
+          -0.02068135728966358
+        ],
+        "sinal_consistente": 5
+      },
+      "Q2": {
+        "delta_frac_gatv2": -0.031131812245631506,
+        "delta_frac_mlp": -0.015210568852749518,
+        "dif_gatv2_menos_mlp": -0.01592124339288199,
+        "ic95": [
+          -0.02499756397236341,
+          -0.006844922813400569
+        ],
+        "sinal_consistente": 5
+      },
+      "Q3": {
+        "delta_frac_gatv2": -0.12421377288411821,
+        "delta_frac_mlp": -0.11247027037678292,
+        "dif_gatv2_menos_mlp": -0.011743502507335291,
+        "ic95": [
+          -0.03873657035208451,
+          0.01524956533741393
+        ],
+        "sinal_consistente": 3
+      },
+      "Q4": {
+        "delta_frac_gatv2": -0.07363017997779213,
+        "delta_frac_mlp": -0.03676281217477504,
+        "dif_gatv2_menos_mlp": -0.036867367803017095,
+        "ic95": [
+          -0.061662156517946126,
+          -0.012072579088088061
+        ],
+        "sinal_consistente": 5
+      }
+    }
+  },
+  "vinculo_do_teto": {
+    "(100%, x1) gatv2": {
+      "etapas_com_melhor_no_teto": 6,
+      "etapas_total": 20,
+      "razao_melhor_sobre_teto_media": 0.8613333333333332
+    },
+    "(100%, x1) mlp": {
+      "etapas_com_melhor_no_teto": 0,
+      "etapas_total": 20,
+      "razao_melhor_sobre_teto_media": 0.5968412698412698
+    },
+    "( 25%, x1) gatv2": {
+      "etapas_com_melhor_no_teto": 6,
+      "etapas_total": 20,
+      "razao_melhor_sobre_teto_media": 0.8325396825396825
+    },
+    "( 25%, x1) mlp": {
+      "etapas_com_melhor_no_teto": 1,
+      "etapas_total": 20,
+      "razao_melhor_sobre_teto_media": 0.7433174603174604
+    },
+    "(100%, x4) gatv2": {
+      "etapas_com_melhor_no_teto": 0,
+      "etapas_total": 20,
+      "razao_melhor_sobre_teto_media": 0.8060277777777778
+    },
+    "(100%, x4) mlp": {
+      "etapas_com_melhor_no_teto": 0,
+      "etapas_total": 20,
+      "razao_melhor_sobre_teto_media": 0.5314007936507937
+    },
+    "( 25%, x4) gatv2": {
+      "etapas_com_melhor_no_teto": 0,
+      "etapas_total": 20,
+      "razao_melhor_sobre_teto_media": 0.9002380952380952
+    },
+    "( 25%, x4) mlp": {
+      "etapas_com_melhor_no_teto": 0,
+      "etapas_total": 20,
+      "razao_melhor_sobre_teto_media": 0.589797619047619
+    }
+  },
+  "pool_de_ancoras_comum": {
+    "valores_de_quadrante_confrontados": 140,
+    "nota": "The 1st cell of each seed is the reference; the other 7 cells x 4 quadrants are compared against it",
+    "n_base_por_semente_quadrante": {
+      "7": {
+        "Q1": 242235,
+        "Q2": 283109,
+        "Q3": 266668,
+        "Q4": 261019
+      },
+      "31": {
+        "Q1": 241011,
+        "Q2": 279115,
+        "Q3": 269074,
+        "Q4": 259263
+      },
+      "42": {
+        "Q1": 242488,
+        "Q2": 286589,
+        "Q3": 275286,
+        "Q4": 263882
+      },
+      "123": {
+        "Q1": 247859,
+        "Q2": 293740,
+        "Q3": 282642,
+        "Q4": 271862
+      },
+      "2024": {
+        "Q1": 243280,
+        "Q2": 283187,
+        "Q3": 274614,
+        "Q4": 262476
+      }
+    }
+  },
+  "resumo_por_celula": {
+    "(100%, x1) gatv2": {
+      "skill": {
+        "media": 0.2637525543241753,
+        "dp": 0.0046419487860392145,
+        "min": 0.2581569082383163,
+        "max": 0.26933112694869965,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.957157786815804,
+        "dp": 0.029476633025442543,
+        "min": 5.919360020281102,
+        "max": 5.985232798536788,
+        "n": 5
+      }
+    },
+    "(100%, x1) mlp": {
+      "skill": {
+        "media": 0.262740562691612,
+        "dp": 0.004539049325066804,
+        "min": 0.2575476827134316,
+        "max": 0.2695571117185512,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.967423152343574,
+        "dp": 0.03776761594264874,
+        "min": 5.919545472512958,
+        "max": 6.013681782302673,
+        "n": 5
+      }
+    },
+    "( 25%, x1) gatv2": {
+      "skill": {
+        "media": 0.19239104528148138,
+        "dp": 0.0031792792814088824,
+        "min": 0.18905051940769255,
+        "max": 0.19719517338798626,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 6.5476550412206596,
+        "dp": 0.02101772525371086,
+        "min": 6.520333462622667,
+        "max": 6.56968740150668,
+        "n": 5
+      }
+    },
+    "( 25%, x1) mlp": {
+      "skill": {
+        "media": 0.2139682330234741,
+        "dp": 0.01672125708771578,
+        "min": 0.19028973370072128,
+        "max": 0.2330208621923232,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 6.369781786323351,
+        "dp": 0.14033474399255058,
+        "min": 6.223580548541044,
+        "max": 6.571952900877503,
+        "n": 5
+      }
+    },
+    "(100%, x4) gatv2": {
+      "skill": {
+        "media": 0.28781100868204684,
+        "dp": 0.004102189737782681,
+        "min": 0.2824398790500035,
+        "max": 0.2932285855995401,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.759224341332819,
+        "dp": 0.029895383579116815,
+        "min": 5.723106477767599,
+        "max": 5.805346370259163,
+        "n": 5
+      }
+    },
+    "(100%, x4) mlp": {
+      "skill": {
+        "media": 0.2705847832395529,
+        "dp": 0.002265987785682814,
+        "min": 0.26790212106460276,
+        "max": 0.2738751039801018,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.9002074148860855,
+        "dp": 0.010528801018200572,
+        "min": 5.882926172756015,
+        "max": 5.91151285713455,
+        "n": 5
+      }
+    },
+    "( 25%, x4) gatv2": {
+      "skill": {
+        "media": 0.2662479318635891,
+        "dp": 0.007143996938531633,
+        "min": 0.25924205727199356,
+        "max": 0.2751799477653424,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.936961745188116,
+        "dp": 0.05368022907577789,
+        "min": 5.874733051108839,
+        "max": 5.997548254657561,
+        "n": 5
+      }
+    },
+    "( 25%, x4) mlp": {
+      "skill": {
+        "media": 0.2599974410332414,
+        "dp": 0.005872827796066614,
+        "min": 0.2528851214470785,
+        "max": 0.26867787394072523,
+        "n": 5
+      },
+      "mae_m": {
+        "media": 5.989851273604453,
+        "dp": 0.04145890296510332,
+        "min": 5.928465803161914,
+        "max": 6.040874978825019,
+        "n": 5
+      }
+    }
+  },
+  "por_semente": {
+    "7": {
+      "(100%, x1) gatv2": 0.2609787275035326,
+      "(100%, x1) mlp": 0.2575476827134316,
+      "( 25%, x1) gatv2": 0.19034786777744864,
+      "( 25%, x1) mlp": 0.19028973370072128,
+      "(100%, x4) gatv2": 0.2824398790500035,
+      "(100%, x4) mlp": 0.271014537418615,
+      "( 25%, x4) gatv2": 0.25924205727199356,
+      "( 25%, x4) mlp": 0.25819063788121144
+    },
+    "31": {
+      "(100%, x1) gatv2": 0.26268118981255284,
+      "(100%, x1) mlp": 0.2598845304554347,
+      "( 25%, x1) gatv2": 0.18905051940769255,
+      "( 25%, x1) mlp": 0.2083498482608076,
+      "(100%, x4) gatv2": 0.2893325807680155,
+      "(100%, x4) mlp": 0.26911920982189697,
+      "( 25%, x4) gatv2": 0.25968424221116476,
+      "( 25%, x4) mlp": 0.2528851214470785
+    },
+    "42": {
+      "(100%, x1) gatv2": 0.2676148191177752,
+      "(100%, x1) mlp": 0.26317750652399713,
+      "( 25%, x1) gatv2": 0.19364259665087946,
+      "( 25%, x1) mlp": 0.21165096805994627,
+      "(100%, x4) gatv2": 0.2932285855995401,
+      "(100%, x4) mlp": 0.2738751039801018,
+      "( 25%, x4) gatv2": 0.2718414680872911,
+      "( 25%, x4) mlp": 0.26220633086126693
+    },
+    "123": {
+      "(100%, x1) gatv2": 0.26933112694869965,
+      "(100%, x1) mlp": 0.2695571117185512,
+      "( 25%, x1) gatv2": 0.19719517338798626,
+      "( 25%, x1) mlp": 0.2330208621923232,
+      "(100%, x4) gatv2": 0.2886955530725572,
+      "(100%, x4) mlp": 0.27101294391254777,
+      "( 25%, x4) gatv2": 0.2751799477653424,
+      "( 25%, x4) mlp": 0.26867787394072523
+    },
+    "2024": {
+      "(100%, x1) gatv2": 0.2581569082383163,
+      "(100%, x1) mlp": 0.26353598204664547,
+      "( 25%, x1) gatv2": 0.1917190691834,
+      "( 25%, x1) mlp": 0.22652975290357213,
+      "(100%, x4) gatv2": 0.28535844492011814,
+      "(100%, x4) mlp": 0.26790212106460276,
+      "( 25%, x4) gatv2": 0.2652919439821537,
+      "( 25%, x4) mlp": 0.258027241035925
+    }
+  },
+  "admissibilidade": {
+    "(100%, x1) gatv2": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.2,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 1,
+      "sementes_com_zero_violacoes": 4,
+      "quadrantes_zero_por_testemunha_total": 0,
+      "quadrantes_com_medicao_total": 20,
+      "violacoes_acima_10cm_media": 285.8,
+      "violacao_p95_m_max_entre_quadrantes_media": 0.06390599999999999,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 1.1887,
+      "pocos_por_km2_media": 118.80471832861258,
+      "slope_p99_9_graus_pior": 31.0
+    },
+    "(100%, x1) mlp": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.0,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 0,
+      "sementes_com_zero_violacoes": 5,
+      "quadrantes_zero_por_testemunha_total": 14,
+      "quadrantes_com_medicao_total": 6,
+      "violacoes_acima_10cm_media": 0.0,
+      "violacao_p95_m_max_entre_quadrantes_media": 2.2e-05,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 0.0001,
+      "pocos_por_km2_media": 133.80023563399263,
+      "slope_p99_9_graus_pior": 30.038
+    },
+    "( 25%, x1) gatv2": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.0,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 0,
+      "sementes_com_zero_violacoes": 5,
+      "quadrantes_zero_por_testemunha_total": 0,
+      "quadrantes_com_medicao_total": 20,
+      "violacoes_acima_10cm_media": 0.8,
+      "violacao_p95_m_max_entre_quadrantes_media": 0.01724,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 0.14,
+      "pocos_por_km2_media": 61.10831900969166,
+      "slope_p99_9_graus_pior": 30.148
+    },
+    "( 25%, x1) mlp": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.0,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 0,
+      "sementes_com_zero_violacoes": 5,
+      "quadrantes_zero_por_testemunha_total": 4,
+      "quadrantes_com_medicao_total": 16,
+      "violacoes_acima_10cm_media": 0.0,
+      "violacao_p95_m_max_entre_quadrantes_media": 0.000318,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 0.0021,
+      "pocos_por_km2_media": 69.78261150248949,
+      "slope_p99_9_graus_pior": 29.566
+    },
+    "(100%, x4) gatv2": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 1090.2,
+      "violacoes_acima_1m_min": 618,
+      "violacoes_acima_1m_max": 1544,
+      "sementes_com_zero_violacoes": 0,
+      "quadrantes_zero_por_testemunha_total": 0,
+      "quadrantes_com_medicao_total": 20,
+      "violacoes_acima_10cm_media": 9943.2,
+      "violacao_p95_m_max_entre_quadrantes_media": 1.7153800000000001,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 9.6415,
+      "pocos_por_km2_media": 95.32433566546429,
+      "slope_p99_9_graus_pior": 31.473
+    },
+    "(100%, x4) mlp": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.0,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 0,
+      "sementes_com_zero_violacoes": 5,
+      "quadrantes_zero_por_testemunha_total": 11,
+      "quadrantes_com_medicao_total": 9,
+      "violacoes_acima_10cm_media": 0.0,
+      "violacao_p95_m_max_entre_quadrantes_media": 2.6000000000000002e-05,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 0.0001,
+      "pocos_por_km2_media": 136.384494960499,
+      "slope_p99_9_graus_pior": 30.208
+    },
+    "( 25%, x4) gatv2": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 69.6,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 264,
+      "sementes_com_zero_violacoes": 1,
+      "quadrantes_zero_por_testemunha_total": 0,
+      "quadrantes_com_medicao_total": 20,
+      "violacoes_acima_10cm_media": 804.0,
+      "violacao_p95_m_max_entre_quadrantes_media": 0.292482,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 3.4953,
+      "pocos_por_km2_media": 105.98994520702703,
+      "slope_p99_9_graus_pior": 31.23
+    },
+    "( 25%, x4) mlp": {
+      "n_sementes": 5,
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "violacoes_acima_1m_media": 0.0,
+      "violacoes_acima_1m_min": 0,
+      "violacoes_acima_1m_max": 0,
+      "sementes_com_zero_violacoes": 5,
+      "quadrantes_zero_por_testemunha_total": 8,
+      "quadrantes_com_medicao_total": 12,
+      "violacoes_acima_10cm_media": 0.0,
+      "violacao_p95_m_max_entre_quadrantes_media": 8.000000000000001e-06,
+      "nota_p95": "intra-quadrant p95 over the violating cells; the per-run aggregate is the MAXIMUM across quadrants, not the pooled p95 — the pooled p95 would require the vector of violations, which is not stored",
+      "violacao_max_m_pior": 0.0,
+      "pocos_por_km2_media": 135.00817859765496,
+      "slope_p99_9_graus_pior": 30.242
+    }
+  },
+  "guardas_verificadas": {
+    "tetos_por_fator": {
+      "1": {
+        "etapa1": 45,
+        "etapa2": 25,
+        "etapa3": 18,
+        "etapa4": 14
+      },
+      "4": {
+        "etapa1": 180,
+        "etapa2": 100,
+        "etapa3": 72,
+        "etapa4": 56
+      }
+    },
+    "lambda_efetivo_por_testemunha": 0.35,
+    "fracao_por_testemunha": "requested == fracao; achieved +- 0.002",
+    "sementes": [
+      7,
+      31,
+      42,
+      123,
+      2024
+    ],
+    "n_reserva": 157847,
+    "d1_com_10_sementes": "uses only the 5 common seeds (pairing)",
+    "config_era_nova": {
+      "(0.25, 1)": {
+        "fator_epocas": 1,
+        "frac_ancoras_treino": 0.25,
+        "peso_suavidade": 0.35,
+        "boost_atl08": 4.0,
+        "batch": null
+      },
+      "(1.0, 4)": {
+        "fator_epocas": 4,
+        "frac_ancoras_treino": 1.0,
+        "peso_suavidade": 0.35,
+        "boost_atl08": 4.0,
+        "batch": null
+      },
+      "(0.25, 4)": {
+        "fator_epocas": 4,
+        "frac_ancoras_treino": 0.25,
+        "peso_suavidade": 0.35,
+        "boost_atl08": 4.0,
+        "batch": null
+      }
+    },
+    "criterio_em_fontes": "fila_2026-08-16_d8_f2_f1.sh",
+    "boost_por_testemunha": "garantias.peso_rotulo.origem contains 'ATL08 x4' in every quadrant",
+    "fracao_cheia_por_testemunha": "n_observada (100%) == n_observada_antes_da_subamostragem (25%) per seed and quadrant, in all cells and arms"
+  },
+  "ressalvas": [
+    "5 seeds, t(4); decision on the mean across seeds",
+    "Only Delta_frac at x1 is the pre-declared contrast; the 2x2 is exploratory, without multiplicity correction",
+    "the operationalization of 'beyond -0.010' and 'more negative' (entire 95% CI) was fixed in this script before reading the F2 MLP result, but was NOT written in the queue header",
+    "baseline_mlp_b4s035.json (older era) does not declare peso_suavidade or boost in its config; lambda and boost checked through a scope witness (0.35; 'ATL08 x4')",
+    "the joint decision (cond1 AND cond2) is an intersection-union test: it requires no multiplicity correction; the 95% CI operationalization is one-sided at 2.5% and biases AGAINST the claim",
+    "the subsampling pairing between arms is deductive (same seed/geometry, b2_transferencia.py:1039-1042) and checked by count (n_observada bit-for-bit equal); there is no hash of the set of retained anchors in the artifact",
+    "`mae_trivial_m` derives from the training anchors and moves between cells (measured bias 3.0e-5 in skill): declare in Methods, do not correct",
+    "'at comparable budget' means the same nominal epoch CAP; at x1 GATv2 still has stages with the optimum pinned to the cap (see vinculo_do_teto) and the MLP does not — the magnitude of the differential at x4 falls by half (see diferenca_das_degradacoes_a_x4)"
+  ],
+  "contra_auditoria": {
+    "data": "2026-08-16",
+    "pareceres": [
+      "internal/note_08.md",
+      "internal/note_05.md",
+      "internal/note_11.md"
+    ],
+    "veredito_dos_tres": "approved with corrections — applied in this version 2 (script frozen while v1 was being read, sha256 aaee07dc...)"
+  }
+}

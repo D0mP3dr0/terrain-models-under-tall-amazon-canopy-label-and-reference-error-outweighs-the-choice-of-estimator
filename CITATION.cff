@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: >-
+  If you use the audit scripts or the stamped artifacts in this repository,
+  please cite them using the metadata below.
+title: >-
+  Terrain Models Under Tall Amazon Canopy: Label and Reference Error
+  Outweighs the Choice of Estimator — audit scripts and stamped artifacts
+abstract: >-
+  Audit scripts and stamped JSON artifacts supporting the manuscript "Terrain
+  Models Under Tall Amazon Canopy: Label and Reference Error Outweighs the
+  Choice of Estimator" (IEEE Journal of Selected Topics in Applied Earth
+  Observations and Remote Sensing). Every number quoted in the manuscript has
+  a line in the fact sheet (audit/folha_de_fatos_jstars_v26.py and its output
+  audit/folha_de_fatos_jstars_v26.json) pointing to a stamped artifact and
+  field; a number without a line does not exist.
+type: software
+authors:
+  - given-names: Luis Felipe Comodo
+    family-names: Seelig
+    email: seelig.felipe@eb.mil.br
+    affiliation: >-
+      Postgraduate Program in Defense Engineering (PGED), Military Institute
+      of Engineering (IME), Rio de Janeiro, Brazil
+  - given-names: Ronaldo Moreira
+    family-names: Salles
+    email: salles@ime.eb.br
+    affiliation: >-
+      Military Institute of Engineering (IME), Brazil; CIICESI, ESTG,
+      Polytechnic of Porto, Felgueiras, Portugal
+version: 1.2.0
+date-released: '2026-09-29'
+repository-code: 'https://github.com/D0mP3dr0/dem-gnn-v23-jstars-audit'
+license: MIT
+keywords:
+  - graph neural network
+  - digital elevation model
+  - terrain correction
+  - spaceborne lidar
+  - canopy height
+  - reproducibility
+  - audit trail
+notes: >-
+  The whole repository is released under the MIT licence; see LICENSE. The
+  manuscript is under review; update this file with the published reference
+  once it is available.

@@ -1,0 +1,230 @@
+{
+  "_proveniencia": {
+    "script": "auditar_recursos_s7.py",
+    "sha256_script": "32daadcc9a3e36be73fec020beba8b1e99882dbcf3db17aa09a00ae054089bbc",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-09-05T17:54",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "logs/ponto_s035.log",
+      "sha256": "7a3d0c23d9c1b20208a166dcaf235688c2c409d9f9321da6eb6af31ca7d8086a",
+      "bytes": 420372,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "results/ofat_suavfina_b4s035.json",
+      "sha256": "345f448bdf52a29ed2f43706724746131cf370b845ad5811b7f83e67938b0bc8",
+      "bytes": 3705040,
+      "mtime": "2026-09-02 23:56"
+    },
+    {
+      "caminho": "logs/baseline_mlp.log",
+      "sha256": "b428a83e3569c698eb0f9728b8cee420d9a3c70f0a7ee23635437a3615313b2b",
+      "bytes": 374039,
+      "mtime": "2026-08-11 20:02"
+    },
+    {
+      "caminho": "results/baseline_mlp_b4s035.json",
+      "sha256": "e70c0d3bf5b7eaeb9760fbfe02811de9e7cb8541bb95524dc20879a6faa2ca84",
+      "bytes": 3661844,
+      "mtime": "2026-09-02 23:56"
+    },
+    {
+      "caminho": "contagem_arestas.json",
+      "sha256": "701a483db07f9c73b2b3fdba3101a29f95f5767498c3110b91c79ae6e92c0f4b",
+      "bytes": 1128,
+      "mtime": "2026-08-16 12:20"
+    }
+  ],
+  "tag": "b4s035",
+  "familias": {
+    "gatv2": {
+      "braco": "gatv2_2_semobs",
+      "log": "ponto_s035.log",
+      "parede_b2_min": 62.5,
+      "parede_b2_escopo": "START -> B2 COMPLETED: 5 seeds x 4 stages, loading, training and dense prediction of phase B2",
+      "inicio_origem": "linha INICIO",
+      "tem_pos_b2": true,
+      "pos_b2_min": 9.9,
+      "pos_b2_escopo": "B2 COMPLETED -> END: materialization and poco_herdado (also processes another arm); NOT comparable across families",
+      "semente_ponta_a_ponta_min": {
+        "42": 8.32,
+        "123": 8.07,
+        "7": 7.93,
+        "2024": 7.87,
+        "31": 7.58
+      },
+      "semente_ponta_a_ponta_escopo": "seed header -> [MEM] post-expansion (includes graph loading and union)",
+      "carga_uniao_min": {
+        "42": 3.17,
+        "123": 3.08,
+        "7": 3.02,
+        "2024": 2.93,
+        "31": 2.88
+      },
+      "sementes_no_log": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "rss_pico_gb": 26.9,
+      "n_linhas_rss": 78,
+      "vram_pico_log_gb": 4.6,
+      "vram_reservada_log_gb": 9.16,
+      "n_nos_uniao_log": 51840000,
+      "data": "2026-08-10",
+      "data_origem": "INICIO (start) line of the log",
+      "json": "ofat_suavfina_b4s035.json",
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "epocas_teto": {
+        "etapa1": 45,
+        "etapa2": 25,
+        "etapa3": 18,
+        "etapa4": 14
+      },
+      "epocas_usadas_media": {
+        "etapa1": 42.2,
+        "etapa2": 22.8,
+        "etapa3": 18.0,
+        "etapa4": 14.0
+      },
+      "vram_pico_gb": 4.6,
+      "vram_pico_onde": "Peak VRAM at seed 7, stage Q4",
+      "vram_reservada_max_gb": 9.16,
+      "treino_s_soma_min": {
+        "42": 4.53,
+        "123": 4.39,
+        "7": 4.3,
+        "2024": 4.38,
+        "31": 4.14
+      },
+      "treino_s_soma_media_min": 4.35,
+      "treino_s_escopo": "Sum of quadrantes[*].treino.treino_s over the 4 stages, per seed (pure training, without loading or prediction)",
+      "host_carimbo": "DESKTOP-PR3HC7J",
+      "carimbo_retroativo": true
+    },
+    "mlp": {
+      "braco": "mlp_semobs",
+      "log": "baseline_mlp.log",
+      "parede_b2_min": 47.5,
+      "parede_b2_escopo": "START -> B2 COMPLETED: 5 seeds x 4 stages, loading, training and dense prediction of phase B2",
+      "inicio_origem": "First log timestamp (no INICIO line)",
+      "tem_pos_b2": false,
+      "pos_b2_min": 0.0,
+      "pos_b2_escopo": "B2 COMPLETED -> END: materialization and poco_herdado (also processes another arm); NOT comparable across families",
+      "semente_ponta_a_ponta_min": {
+        "42": 5.35,
+        "123": 4.32,
+        "7": 4.37,
+        "2024": 5.43,
+        "31": 5.58
+      },
+      "semente_ponta_a_ponta_escopo": "seed header -> [MEM] post-expansion (includes graph loading and union)",
+      "carga_uniao_min": {
+        "42": 3.78,
+        "123": 3.05,
+        "7": 3.0,
+        "2024": 3.98,
+        "31": 4.05
+      },
+      "sementes_no_log": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "rss_pico_gb": 26.8,
+      "n_linhas_rss": 70,
+      "vram_pico_log_gb": 0.73,
+      "vram_reservada_log_gb": 0.81,
+      "n_nos_uniao_log": 51840000,
+      "data_estimada_por_mtime": "2026-08-11",
+      "data_origem": "file mtime (D8: estimate, not citable)",
+      "json": "baseline_mlp_b4s035.json",
+      "sementes": [
+        7,
+        31,
+        42,
+        123,
+        2024
+      ],
+      "epocas_teto": {
+        "etapa1": 45,
+        "etapa2": 25,
+        "etapa3": 18,
+        "etapa4": 14
+      },
+      "epocas_usadas_media": {
+        "etapa1": 42.0,
+        "etapa2": 18.6,
+        "etapa3": 16.0,
+        "etapa4": 10.4
+      },
+      "vram_pico_gb": 0.735,
+      "vram_pico_onde": "Peak VRAM at seed 42, stage Q4",
+      "vram_reservada_max_gb": 0.811,
+      "treino_s_soma_min": {
+        "42": 1.19,
+        "123": 0.91,
+        "7": 1.0,
+        "2024": 1.05,
+        "31": 1.1
+      },
+      "treino_s_soma_media_min": 1.05,
+      "treino_s_escopo": "Sum of quadrantes[*].treino.treino_s over the 4 stages, per seed (pure training, without loading or prediction)",
+      "host_carimbo": "DESKTOP-PR3HC7J",
+      "carimbo_retroativo": true
+    }
+  },
+  "n_nos_uniao": 51840000,
+  "epocas_teto": {
+    "etapa1": 45,
+    "etapa2": 25,
+    "etapa3": 18,
+    "etapa4": 14
+  },
+  "host_carimbo_dos_jsons": {
+    "gatv2": {
+      "host": "DESKTOP-PR3HC7J",
+      "retroativo": true
+    },
+    "mlp": {
+      "host": "DESKTOP-PR3HC7J",
+      "retroativo": true
+    }
+  },
+  "estrategia": "growing window as a disjoint union of the quadrants in a single graph; neighborhood sampling in mini-batches (NeighborLoader); 8-connected edges generated from the mesh; queue with a RAM guard and an epoch budget locked per stage (b2_transferencia.py)",
+  "hardware_da_maquina_de_auditoria": {
+    "host": "DESKTOP-PR3HC7J",
+    "cpu": "AMD Ryzen 9 5900X 12-Core Processor",
+    "os": "Windows-10-10.0.26200-SP0",
+    "lido_em": "2026-09-05T17:54",
+    "ram_total_gb": 128,
+    "gpu": "GPU: NVIDIA GeForce RTX 5070 Ti",
+    "vram_total_gb": 15.9,
+    "torch": "2.10.0+cu128",
+    "nota": "D3: machine on which THIS audit ran. The logs of the 10-11/08 runs do not record hardware (only 'dispositivo: cuda'); the host in the JSON stamp is retroactive (02/09). Author declaration, not a measurement from a run artifact."
+  }
+}

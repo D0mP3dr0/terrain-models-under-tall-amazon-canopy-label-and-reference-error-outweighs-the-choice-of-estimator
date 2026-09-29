@@ -1,0 +1,951 @@
+{
+  "_proveniencia": {
+    "script": "treinar_arvore_persistir.py",
+    "sha256_script": "6bdf215c5c0e5253c713050842edc1381443af1a8e1d2f4b054de6a3327a3ad8",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-28T18:04",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    },
+    "comando": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python treinar_arvore_persistir.py",
+    "ambiente": {
+      "V23_LATDIR": "/trabalho/GNN_TOPO/SATELITES/laterais",
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "12"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "results/f2_arvores.json",
+      "sha256": "c5c53ff7cb6c1b251eb25e1ac1ee8d92e4e0547c3085bcaadb41189df9d43db7",
+      "bytes": 14092,
+      "mtime": "2026-08-14 20:34"
+    },
+    {
+      "caminho": "f2_arvores_config.json",
+      "sha256": "142aba794f5c2f530c118ad416dac33de060821b7614615d4607e02af5e4d2b2",
+      "bytes": 247,
+      "mtime": "2026-08-14 17:27"
+    },
+    {
+      "caminho": "braco_arvores.py",
+      "sha256": "8f3b1544535d55c653944caf06cc6bedf193ce0d3c7ed219d5f46a76030416b2",
+      "bytes": 13433,
+      "mtime": "2026-08-14 19:07"
+    },
+    {
+      "caminho": "b2_transferencia.py",
+      "sha256": "aad40bb59cc7c5bf57dbc0ac789434fedc029803b97ebe445f48d6a95749d389",
+      "bytes": 192240,
+      "mtime": "2026-08-16 11:48"
+    },
+    {
+      "caminho": "vetor_v23.py",
+      "sha256": "743e6e3a76580d5362b6c21e2c623fba76f8b2b305563845a6bcef78348f1985",
+      "bytes": 52870,
+      "mtime": "2026-08-13 19:47"
+    },
+    {
+      "caminho": "topo_v23.py",
+      "sha256": "9b85234dc6a4ea3b629f5268c25fd6dc5ce29cf4b809c1a0567523b482e44507",
+      "bytes": 4686,
+      "mtime": "2026-08-06 18:22"
+    },
+    {
+      "caminho": "grade_v23.py",
+      "sha256": "b5765a4047899145075b69dbe856a75421cd363a74e2fbb4426d913368f4d2df",
+      "bytes": 9757,
+      "mtime": "2026-08-13 13:19"
+    },
+    {
+      "caminho": "regime.py",
+      "sha256": "b7e68338e02c5e4c602f68def091e1e63f0842963d1b4f594f37091156423566",
+      "bytes": 4466,
+      "mtime": "2026-07-29 13:17"
+    },
+    {
+      "caminho": "treinar_arvore_persistir.py",
+      "sha256": "6bdf215c5c0e5253c713050842edc1381443af1a8e1d2f4b054de6a3327a3ad8",
+      "bytes": 13703,
+      "mtime": "2026-09-28 17:52"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/agua_jrc_amazonia_Q1.npz",
+      "sha256": "1a69d0c882e52e87fbdd0e89f90ae12c74f35966945d95e56951f9b95a7f243a",
+      "bytes": 364942,
+      "mtime": "2026-08-18 19:18"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/agua_jrc_amazonia_Q2.npz",
+      "sha256": "4c18bcf8034f3c48b3f9d0da2b7143a5cf2c1aa40624fe16031af6aaba60e39e",
+      "bytes": 1706964,
+      "mtime": "2026-08-18 19:18"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/agua_jrc_amazonia_Q3.npz",
+      "sha256": "a0c127e4ff8a56840200682c467a514d371397c07cf2a361f69ea97b1a4d786f",
+      "bytes": 4757051,
+      "mtime": "2026-08-18 19:18"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/agua_jrc_amazonia_Q4.npz",
+      "sha256": "628f18fdd928f728ab066119f10c9665ab5ec81550b075e17d5ff2bd32ccb63d",
+      "bytes": 4271888,
+      "mtime": "2026-08-18 19:18"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/alos_amazonia_Q1.npz",
+      "sha256": "399a1d219e7be0324208a6cef3bb9ac297f951f05f05561e338f7a7a3db7389e",
+      "bytes": 127117670,
+      "mtime": "2026-08-04 20:35"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/alos_amazonia_Q2.npz",
+      "sha256": "9f22679c9875740c293a55a0de67dec37ecd58b46a9ea50bd93414589bc52c50",
+      "bytes": 128567818,
+      "mtime": "2026-08-04 20:35"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/alos_amazonia_Q3.npz",
+      "sha256": "4a5f8c20d72cbbc504e7ce9fefb1d00a8272e8bbe3e503c0f924cb306e2af6f3",
+      "bytes": 129856458,
+      "mtime": "2026-08-04 20:35"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/alos_amazonia_Q4.npz",
+      "sha256": "d9f99c6a08929be0bc1066e1f608858e0fbda913f57143068c874b65b5cf78f9",
+      "bytes": 130520853,
+      "mtime": "2026-08-04 20:35"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/aw3d30_amazonia_Q1.npz",
+      "sha256": "c7840f82fce232295b59fe8cdae5b9a1a80dc6d58864d2cf137861bedd71aa11",
+      "bytes": 12077050,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/aw3d30_amazonia_Q2.npz",
+      "sha256": "705b2dc0dbc85b1fb708a92670f807b2d8404650c5047380ba48e24b71076e1a",
+      "bytes": 11915860,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/aw3d30_amazonia_Q3.npz",
+      "sha256": "81db6d6b848b6aedf70d933a62f47a2bf5fb0eab03318d1ab941a077f3444700",
+      "bytes": 9349719,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/aw3d30_amazonia_Q4.npz",
+      "sha256": "750f53bb39292ae1d5339086c346765287673d5c1e754469caf4ded1a8745e1e",
+      "bytes": 9728651,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/dossel_eth_amazonia_Q1.npz",
+      "sha256": "82ae0eb47b6814dfc93d76c20dcd16591da67adb2201495bae0ec830460a9e41",
+      "bytes": 23521254,
+      "mtime": "2026-08-18 19:18"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/dossel_eth_amazonia_Q2.npz",
+      "sha256": "53bbb0b85666720c6baa806ebea72a6e87d410bb7a95c34f1a0cd091f053c192",
+      "bytes": 22953421,
+      "mtime": "2026-08-18 19:18"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/dossel_eth_amazonia_Q3.npz",
+      "sha256": "2f0eafe5f3ae58ca91f1865751ea9e904915379656c41b880658ab2e751e2774",
+      "bytes": 24836580,
+      "mtime": "2026-08-18 19:18"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/dossel_eth_amazonia_Q4.npz",
+      "sha256": "3a6a149114104d6c7adc5e41dd65b583d38f205493613869471dd50e61923a93",
+      "bytes": 24310510,
+      "mtime": "2026-08-18 19:18"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/fabdem_amazonia_Q1.npz",
+      "sha256": "fd520a6189bd588276fc24ae94a9697a12bdb05687b713683d47052271533e23",
+      "bytes": 31052675,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/fabdem_amazonia_Q2.npz",
+      "sha256": "d2f7a4d616c40d9fde51b83cb3aad9b3f3a0a7b431d784c1d6bb6e5d4b07c4c3",
+      "bytes": 28393374,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/fabdem_amazonia_Q3.npz",
+      "sha256": "6f45c501be1cfdc271e59d5566933c57117f09d5b765919838decc1bd933f933",
+      "bytes": 21843383,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/fabdem_amazonia_Q4.npz",
+      "sha256": "0ccfc5b4dbdd32b855c2781fbb76484797d24e7ce64d5aed4a3e1de9de6acf98",
+      "bytes": 20948032,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/gedtm30_amazonia_Q1.npz",
+      "sha256": "1cb40640efed2c98a69feaeeae136a223f88f95ce51e4f6631264a38038e3834",
+      "bytes": 29260010,
+      "mtime": "2026-08-11 18:45"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/gedtm30_amazonia_Q2.npz",
+      "sha256": "6136ccf29f49d73a2bbd9c2b1fd1f5c075997307c7ab40cdc39398b80b4e8d10",
+      "bytes": 28257759,
+      "mtime": "2026-08-11 18:46"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/gedtm30_amazonia_Q3.npz",
+      "sha256": "a9948c61738690c6adc12124cd141f34fe452da5f8b005e8bdfa7fe6d66eba5a",
+      "bytes": 24179455,
+      "mtime": "2026-08-11 18:46"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/gedtm30_amazonia_Q4.npz",
+      "sha256": "c80b439396886ef8efce095525ee5e5239d6feab3a89014ea7d31cdbf099ae3c",
+      "bytes": 24533756,
+      "mtime": "2026-08-11 18:46"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/glo30_amazonia_Q1.npz",
+      "sha256": "1fd3eb1a1ee78c1076f7fba83a3222c38b7bbcf94f68ffb3a614449539f9e0fd",
+      "bytes": 44856830,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/glo30_amazonia_Q2.npz",
+      "sha256": "71d0a11fee3fb44307916a0bff77a45ec640ee54eedb5464e848474058088891",
+      "bytes": 41687083,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/glo30_amazonia_Q3.npz",
+      "sha256": "ef7e529cb710822a145e23370fb1525913009a392cb16c3821f011e1a2c4e2bd",
+      "bytes": 38521636,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/glo30_amazonia_Q4.npz",
+      "sha256": "e689e7b4020ee31d2b0d5e98d14cdc79cc6d74e18e32b300d2c86c503dce6b9d",
+      "bytes": 37351990,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/nasadem_amazonia_Q1.npz",
+      "sha256": "bff449fc7d9ecb64c3a54583268564ac563e93c3ef1460a24017aae1fa410d34",
+      "bytes": 11733320,
+      "mtime": "2026-08-02 20:04"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/nasadem_amazonia_Q2.npz",
+      "sha256": "a2b04dbc77daac7c1c9f0e308043b6a1dab0ef971739a32cc630bf01d680924a",
+      "bytes": 11204015,
+      "mtime": "2026-08-02 20:04"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/nasadem_amazonia_Q3.npz",
+      "sha256": "1d4bd258d98d2e4e7bb987d5d8067ba2a7afe7a12a4a3f6b56fd2b4eed4fddad",
+      "bytes": 8566701,
+      "mtime": "2026-08-02 20:04"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/nasadem_amazonia_Q4.npz",
+      "sha256": "d3dfa5e32e6eb4056fa7214626d58de25ca8dea6674dee58136731e1e3059b6a",
+      "bytes": 8813021,
+      "mtime": "2026-08-02 20:04"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/palsar2_amazonia_Q1.npz",
+      "sha256": "972c2ac632dea632baa2d5377599e04f95d2a6fdd1c02844302232872bc5e76f",
+      "bytes": 54045175,
+      "mtime": "2026-08-02 20:07"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/palsar2_amazonia_Q2.npz",
+      "sha256": "4cf0c2da8018225a8899ee9a70e8e1f7a0de139d39ed6f0f7db96d2d114b9011",
+      "bytes": 55584944,
+      "mtime": "2026-08-02 20:07"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/palsar2_amazonia_Q3.npz",
+      "sha256": "7cd8cab247b171fd58fac4119f5ed04f61b646639940ebbd8b838eda642d857c",
+      "bytes": 56947257,
+      "mtime": "2026-08-02 20:08"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/palsar2_amazonia_Q4.npz",
+      "sha256": "d56dfeba0b2e354119d8cb4a227674120a5b7b3e0e2e6b8d0760bd5b05fae206",
+      "bytes": 56440567,
+      "mtime": "2026-08-02 20:08"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/prova_amazonia_Q1.npz",
+      "sha256": "eaacdbce69cc942138763dfce44967936ffb7b2864b5aee4729b5c8be5fc9f1a",
+      "bytes": 383423,
+      "mtime": "2026-08-02 19:45"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/prova_amazonia_Q2.npz",
+      "sha256": "02a45aeb95d009d7943297b32c85473a50f4e0c68fc35f35dcdfb8472bd03809",
+      "bytes": 712416,
+      "mtime": "2026-08-02 19:45"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/prova_amazonia_Q3.npz",
+      "sha256": "6729bfe04c5b1432b93a98e29cc47fbcafc19941023e65e49fc79e4d6a4c90a6",
+      "bytes": 1954147,
+      "mtime": "2026-08-02 19:45"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/prova_amazonia_Q4.npz",
+      "sha256": "f0b6ef5bce482967f74fd530ce8d1fee7fecb76ecfba7a71c5b2bbe903bc8479",
+      "bytes": 1811136,
+      "mtime": "2026-08-02 19:45"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/rotulos_amazonia_Q1.npz",
+      "sha256": "015d0347d445bf9a0a4df08758fb1ea0d10fdb3e3a753d140e90e476f4147cf9",
+      "bytes": 11060217,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/rotulos_amazonia_Q2.npz",
+      "sha256": "803a5aaa1d528d8e71d6c416e563bd7df0bb2e3d438e8822ce96fd3257f7b110",
+      "bytes": 12925328,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/rotulos_amazonia_Q3.npz",
+      "sha256": "cd20a82c5e9bfb2e36b51385703b037790f9abfdabed75be9b96da5b73087765",
+      "bytes": 10711545,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/rotulos_amazonia_Q4.npz",
+      "sha256": "f9ffafdaffa777599b56c2143d9730cef677b54e641d952c417e5845fcdd0b93",
+      "bytes": 12905568,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s1_seca_amazonia_Q1.npz",
+      "sha256": "5a781d232d093356cc3e6fac36bfdf257ded07895a65903203bce3fcea61eb45",
+      "bytes": 221353335,
+      "mtime": "2026-08-06 21:12"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s1_seca_amazonia_Q2.npz",
+      "sha256": "52dea75a676f790de5fff374f186e05f22e3dd77fed86b7c8def48bcd4e7cb43",
+      "bytes": 222413443,
+      "mtime": "2026-08-06 21:12"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s1_seca_amazonia_Q3.npz",
+      "sha256": "4eccb7b4d92115dd63ed88025da0ba58813dd9def40d9e8cf863584dbee03308",
+      "bytes": 224369112,
+      "mtime": "2026-08-06 21:12"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s1_seca_amazonia_Q4.npz",
+      "sha256": "09b7b5e77574528ee59863bf61be0cea29c48b6bda9db02dbac1146424dc6c00",
+      "bytes": 223580294,
+      "mtime": "2026-08-06 21:12"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s1_umida_amazonia_Q1.npz",
+      "sha256": "60539740ca9910b8388cf03c551e3809f853f40ac3b7ed6b04ea870979c71046",
+      "bytes": 220991443,
+      "mtime": "2026-08-06 21:11"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s1_umida_amazonia_Q2.npz",
+      "sha256": "70c5bdd6ebd9a2d680f5239b63388ea3b573f0a9e000cb1f9e5989182881d0b4",
+      "bytes": 222115416,
+      "mtime": "2026-08-06 21:11"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s1_umida_amazonia_Q3.npz",
+      "sha256": "32d15467fdbf0ed88613c72fd4dc82efbd0cda0ec7a5e0f8a1d03e3ccc4931c2",
+      "bytes": 223738681,
+      "mtime": "2026-08-06 21:11"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s1_umida_amazonia_Q4.npz",
+      "sha256": "2c152324361375977bffea22776afcd330addf6aa375d95929b03d1076d82b24",
+      "bytes": 223377551,
+      "mtime": "2026-08-06 21:11"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s2_amazonia_Q1.npz",
+      "sha256": "389e727029f415f052042b7c8c6e8f1b14ddc2f5a699af5c9203bdb7a0d99355",
+      "bytes": 389382817,
+      "mtime": "2026-08-06 18:22"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s2_amazonia_Q2.npz",
+      "sha256": "c524227cf2fd28ccddc447ba82df584b22db9dc88a45e6083c5eb393e3f1aee9",
+      "bytes": 383770696,
+      "mtime": "2026-08-06 18:23"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s2_amazonia_Q3.npz",
+      "sha256": "e1a1e9e0227c38c34d996e2c37403d541365eb137a0caf2d0bff4c398477de1d",
+      "bytes": 413948013,
+      "mtime": "2026-08-06 18:23"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais/s2_amazonia_Q4.npz",
+      "sha256": "c604e2d78e709e389ec7208d31480abf1e9bc028961923a22bfb5baccc249052",
+      "bytes": 399622512,
+      "mtime": "2026-08-06 18:23"
+    }
+  ],
+  "status": "FALHOU_G1",
+  "semente_que_falhou": 31,
+  "config": {
+    "max_depth": 8,
+    "learning_rate": 0.05,
+    "min_child_weight": 50,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
+  },
+  "boost": 4.0,
+  "g1": {
+    "42": {
+      "skill_reserva": 0.2942352154350746,
+      "skill_reserva_f2": 0.29620047563585616,
+      "dif_skill_reserva": -0.0019652602007815823,
+      "n_reserva": 157847,
+      "n_reserva_f2": 157847,
+      "dif_skill_validacao": -0.0008617353089760416,
+      "dif_skill_teste": -0.0011817966139331948,
+      "dif_mae_m": {
+        "validacao": 0.005870711211788837,
+        "teste": 0.00773348966061338,
+        "reserva": 0.012386546195094716
+      },
+      "arvores_finais": 1018,
+      "avaliacao": {
+        "validacao": {
+          "n": 96331,
+          "mae_media_ponderada_por_n_m": 5.201072712059717,
+          "mae_media_simples_m": 5.127345860004425,
+          "skill_media_ponderada_por_n": 0.2862473700315692,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.332126140594482,
+              "n": 24324,
+              "skill": 0.14062801428094118
+            },
+            "Q2": {
+              "mae": 6.196897983551025,
+              "n": 26133,
+              "skill": 0.20200553580295944
+            },
+            "Q3": {
+              "mae": 3.691180467605591,
+              "n": 19571,
+              "skill": 0.44608754072966494
+            },
+            "Q4": {
+              "mae": 4.289178848266602,
+              "n": 26303,
+              "skill": 0.3856772861035802
+            }
+          }
+        },
+        "teste": {
+          "n": 102849,
+          "mae_media_ponderada_por_n_m": 5.190567444099388,
+          "mae_media_simples_m": 5.095746040344238,
+          "skill_media_ponderada_por_n": 0.2904524959797315,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.182577610015869,
+              "n": 26973,
+              "skill": 0.17295976611363761
+            },
+            "Q2": {
+              "mae": 6.280641555786133,
+              "n": 28000,
+              "skill": 0.20385983030735888
+            },
+            "Q3": {
+              "mae": 3.6758265495300293,
+              "n": 21050,
+              "skill": 0.46208641278806273
+            },
+            "Q4": {
+              "mae": 4.243938446044922,
+              "n": 26826,
+              "skill": 0.36429250539929503
+            }
+          }
+        },
+        "reserva": {
+          "n": 157847,
+          "mae_media_ponderada_por_n_m": 5.711800534290167,
+          "mae_media_simples_m": 5.886945486068726,
+          "skill_media_ponderada_por_n": 0.2942352154350746,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.69849967956543,
+              "n": 23026,
+              "skill": 0.07387527057184973
+            },
+            "Q2": {
+              "mae": 6.784988880157471,
+              "n": 38029,
+              "skill": 0.13455091771041705
+            },
+            "Q3": {
+              "mae": 4.28113317489624,
+              "n": 46896,
+              "skill": 0.46765360375824694
+            },
+            "Q4": {
+              "mae": 5.783160209655762,
+              "n": 49896,
+              "skill": 0.3546411299329928
+            }
+          }
+        }
+      },
+      "tolerancia": 0.002,
+      "passou": true,
+      "segundos": 133.1
+    },
+    "123": {
+      "skill_reserva": 0.2890696265123845,
+      "skill_reserva_f2": 0.28919676317919635,
+      "dif_skill_reserva": -0.00012713666681185565,
+      "n_reserva": 157847,
+      "n_reserva_f2": 157847,
+      "dif_skill_validacao": 0.0008873462045735914,
+      "dif_skill_teste": 0.00114464202636827,
+      "dif_mae_m": {
+        "validacao": -0.005640914273787878,
+        "teste": -0.00777664845477144,
+        "reserva": 7.858701828222792e-05
+      },
+      "arvores_finais": 860,
+      "avaliacao": {
+        "validacao": {
+          "n": 95945,
+          "mae_media_ponderada_por_n_m": 5.166847570013668,
+          "mae_media_simples_m": 5.116426944732666,
+          "skill_media_ponderada_por_n": 0.29153158380063227,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.343231678009033,
+              "n": 24356,
+              "skill": 0.1631618814035296
+            },
+            "Q2": {
+              "mae": 6.2287702560424805,
+              "n": 25221,
+              "skill": 0.1992952545719081
+            },
+            "Q3": {
+              "mae": 3.7488179206848145,
+              "n": 20321,
+              "skill": 0.4487344581799273
+            },
+            "Q4": {
+              "mae": 4.144887924194336,
+              "n": 26047,
+              "skill": 0.37823428740564746
+            }
+          }
+        },
+        "teste": {
+          "n": 93505,
+          "mae_media_ponderada_por_n_m": 5.212742747972881,
+          "mae_media_simples_m": 5.167220115661621,
+          "skill_media_ponderada_por_n": 0.2890823640229518,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.2269110679626465,
+              "n": 23255,
+              "skill": 0.16345052932716364
+            },
+            "Q2": {
+              "mae": 6.367784023284912,
+              "n": 24837,
+              "skill": 0.20017274414574815
+            },
+            "Q3": {
+              "mae": 3.860739231109619,
+              "n": 19538,
+              "skill": 0.4398084603306369
+            },
+            "Q4": {
+              "mae": 4.213446140289307,
+              "n": 25875,
+              "skill": 0.3735241060550717
+            }
+          }
+        },
+        "reserva": {
+          "n": 157847,
+          "mae_media_ponderada_por_n_m": 5.755929205774354,
+          "mae_media_simples_m": 5.916342854499817,
+          "skill_media_ponderada_por_n": 0.2890696265123845,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.5734543800354,
+              "n": 23026,
+              "skill": 0.08948692970549454
+            },
+            "Q2": {
+              "mae": 6.97352409362793,
+              "n": 38029,
+              "skill": 0.11086697604402695
+            },
+            "Q3": {
+              "mae": 4.289228439331055,
+              "n": 46896,
+              "skill": 0.4708746356336818
+            },
+            "Q4": {
+              "mae": 5.829164505004883,
+              "n": 49896,
+              "skill": 0.3461189303360228
+            }
+          }
+        }
+      },
+      "tolerancia": 0.002,
+      "passou": true,
+      "segundos": 144.1
+    },
+    "7": {
+      "skill_reserva": 0.2875062273239892,
+      "skill_reserva_f2": 0.2881588174792661,
+      "dif_skill_reserva": -0.0006525901552768554,
+      "n_reserva": 157847,
+      "n_reserva_f2": 157847,
+      "dif_skill_validacao": 0.001438173258277109,
+      "dif_skill_teste": 0.0018754544507988968,
+      "dif_mae_m": {
+        "validacao": -0.010436678241497077,
+        "teste": -0.01327065119088644,
+        "reserva": 0.004609035264603989
+      },
+      "arvores_finais": 840,
+      "avaliacao": {
+        "validacao": {
+          "n": 99921,
+          "mae_media_ponderada_por_n_m": 5.200360413427818,
+          "mae_media_simples_m": 5.124398708343506,
+          "skill_media_ponderada_por_n": 0.2932257649208323,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.322758674621582,
+              "n": 25610,
+              "skill": 0.15124501116361255
+            },
+            "Q2": {
+              "mae": 6.224629878997803,
+              "n": 26909,
+              "skill": 0.22247109430653733
+            },
+            "Q3": {
+              "mae": 3.6726536750793457,
+              "n": 20770,
+              "skill": 0.47216086919067657
+            },
+            "Q4": {
+              "mae": 4.277552604675293,
+              "n": 26632,
+              "skill": 0.36169912101867685
+            }
+          }
+        },
+        "teste": {
+          "n": 96889,
+          "mae_media_ponderada_por_n_m": 5.186799255922063,
+          "mae_media_simples_m": 5.1547887325286865,
+          "skill_media_ponderada_por_n": 0.29468635980681046,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.107173919677734,
+              "n": 24833,
+              "skill": 0.1715872504995959
+            },
+            "Q2": {
+              "mae": 6.41502046585083,
+              "n": 24600,
+              "skill": 0.20290759520685409
+            },
+            "Q3": {
+              "mae": 3.814450740814209,
+              "n": 21698,
+              "skill": 0.4350549850615353
+            },
+            "Q4": {
+              "mae": 4.282509803771973,
+              "n": 25758,
+              "skill": 0.3827739193924913
+            }
+          }
+        },
+        "reserva": {
+          "n": 157847,
+          "mae_media_ponderada_por_n_m": 5.764789459237071,
+          "mae_media_simples_m": 5.919274926185608,
+          "skill_media_ponderada_por_n": 0.2875062273239892,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.5102033615112305,
+              "n": 23026,
+              "skill": 0.09507684686428886
+            },
+            "Q2": {
+              "mae": 7.03873348236084,
+              "n": 38029,
+              "skill": 0.10260627468832284
+            },
+            "Q3": {
+              "mae": 4.326676845550537,
+              "n": 46896,
+              "skill": 0.4636354780310832
+            },
+            "Q4": {
+              "mae": 5.801486015319824,
+              "n": 49896,
+              "skill": 0.3516933740308783
+            }
+          }
+        }
+      },
+      "tolerancia": 0.002,
+      "passou": true,
+      "segundos": 142.1
+    },
+    "2024": {
+      "skill_reserva": 0.28779645102179785,
+      "skill_reserva_f2": 0.28734231457662124,
+      "dif_skill_reserva": 0.00045413644517661167,
+      "n_reserva": 157847,
+      "n_reserva_f2": 157847,
+      "dif_skill_validacao": -0.0004278509385874929,
+      "dif_skill_teste": -0.0012943487566867695,
+      "dif_mae_m": {
+        "validacao": 0.0024556530133299503,
+        "teste": 0.008870741467773335,
+        "reserva": -0.003817725053343324
+      },
+      "arvores_finais": 847,
+      "avaliacao": {
+        "validacao": {
+          "n": 96501,
+          "mae_media_ponderada_por_n_m": 5.2165524670277765,
+          "mae_media_simples_m": 5.141302287578583,
+          "skill_media_ponderada_por_n": 0.28878087056453,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.378223419189453,
+              "n": 24197,
+              "skill": 0.16208509643745483
+            },
+            "Q2": {
+              "mae": 6.133354663848877,
+              "n": 26681,
+              "skill": 0.2196228682105169
+            },
+            "Q3": {
+              "mae": 3.7628438472747803,
+              "n": 19574,
+              "skill": 0.4532168771261993
+            },
+            "Q4": {
+              "mae": 4.290787220001221,
+              "n": 26049,
+              "skill": 0.35374274683318296
+            }
+          }
+        },
+        "teste": {
+          "n": 99096,
+          "mae_media_ponderada_por_n_m": 5.180785863453591,
+          "mae_media_simples_m": 5.1152015924453735,
+          "skill_media_ponderada_por_n": 0.2921910716098111,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.226459503173828,
+              "n": 23870,
+              "skill": 0.15674142820314518
+            },
+            "Q2": {
+              "mae": 6.354655742645264,
+              "n": 27562,
+              "skill": 0.20198834061732873
+            },
+            "Q3": {
+              "mae": 3.648219108581543,
+              "n": 20688,
+              "skill": 0.4642128585216393
+            },
+            "Q4": {
+              "mae": 4.231472015380859,
+              "n": 26976,
+              "skill": 0.37228315094329345
+            }
+          }
+        },
+        "reserva": {
+          "n": 157847,
+          "mae_media_ponderada_por_n_m": 5.74139407146473,
+          "mae_media_simples_m": 5.892461061477661,
+          "skill_media_ponderada_por_n": 0.28779645102179785,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.5114216804504395,
+              "n": 23026,
+              "skill": 0.09628056845590938
+            },
+            "Q2": {
+              "mae": 6.9050421714782715,
+              "n": 38029,
+              "skill": 0.11945203490298839
+            },
+            "Q3": {
+              "mae": 4.291694164276123,
+              "n": 46896,
+              "skill": 0.4635473743349874
+            },
+            "Q4": {
+              "mae": 5.8616862297058105,
+              "n": 49896,
+              "skill": 0.3392995617490909
+            }
+          }
+        }
+      },
+      "tolerancia": 0.002,
+      "passou": true,
+      "segundos": 135.2
+    },
+    "31": {
+      "skill_reserva": 0.2864357113271486,
+      "skill_reserva_f2": 0.2836898960181334,
+      "dif_skill_reserva": 0.0027458153090152426,
+      "n_reserva": 157847,
+      "n_reserva_f2": 157847,
+      "dif_skill_validacao": -0.0002648525399133739,
+      "dif_skill_teste": -0.0006850558012478358,
+      "dif_mae_m": {
+        "validacao": 0.0016862922364095922,
+        "teste": 0.005184927208349954,
+        "reserva": -0.021696084553767925
+      },
+      "arvores_finais": 1012,
+      "avaliacao": {
+        "validacao": {
+          "n": 97987,
+          "mae_media_ponderada_por_n_m": 5.140829204609079,
+          "mae_media_simples_m": 5.090279400348663,
+          "skill_media_ponderada_por_n": 0.29615733082106793,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.098575115203857,
+              "n": 24722,
+              "skill": 0.1680855468964194
+            },
+            "Q2": {
+              "mae": 6.369748592376709,
+              "n": 26094,
+              "skill": 0.19395191696570901
+            },
+            "Q3": {
+              "mae": 3.8572208881378174,
+              "n": 20234,
+              "skill": 0.4334907301197207
+            },
+            "Q4": {
+              "mae": 4.0355730056762695,
+              "n": 26937,
+              "skill": 0.4095454107823835
+            }
+          }
+        },
+        "teste": {
+          "n": 103045,
+          "mae_media_ponderada_por_n_m": 5.188792701398935,
+          "mae_media_simples_m": 5.145724594593048,
+          "skill_media_ponderada_por_n": 0.2893987381233478,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.2886786460876465,
+              "n": 25602,
+              "skill": 0.15312532187275818
+            },
+            "Q2": {
+              "mae": 6.3357625007629395,
+              "n": 27175,
+              "skill": 0.19624996899825964
+            },
+            "Q3": {
+              "mae": 3.681774377822876,
+              "n": 22656,
+              "skill": 0.44602582726373474
+            },
+            "Q4": {
+              "mae": 4.2766828536987305,
+              "n": 27612,
+              "skill": 0.3789122276299849
+            }
+          }
+        },
+        "reserva": {
+          "n": 157847,
+          "mae_media_ponderada_por_n_m": 5.7719417639979245,
+          "mae_media_simples_m": 5.92460310459137,
+          "skill_media_ponderada_por_n": 0.2864357113271486,
+          "por_quadrante": {
+            "Q1": {
+              "mae": 6.5456318855285645,
+              "n": 23026,
+              "skill": 0.09812091455495753
+            },
+            "Q2": {
+              "mae": 6.942852973937988,
+              "n": 38029,
+              "skill": 0.1144749611509075
+            },
+            "Q3": {
+              "mae": 4.366776466369629,
+              "n": 46896,
+              "skill": 0.4607927831513915
+            },
+            "Q4": {
+              "mae": 5.843151092529297,
+              "n": 49896,
+              "skill": 0.34052787580243826
+            }
+          }
+        }
+      },
+      "tolerancia": 0.002,
+      "passou": false,
+      "segundos": 138.5
+    }
+  },
+  "nota": "guard g1 failed: no grid was predicted or written"
+}

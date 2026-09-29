@@ -1,0 +1,874 @@
+{
+  "_proveniencia": {
+    "script": "auditar_tabela3.py",
+    "sha256_script": "c7691eab1b1d77d28d8bec26a54207dcfe87352f062c1a0f77809b9a4c719d52",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-28T10:23",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.parquet",
+      "sha256": "b01a6101850dfe7fc514c85be556fbe0aae3cc941fba9263b431a54556f92dc5",
+      "bytes": 4380157,
+      "mtime": "2026-08-18 18:02"
+    },
+    {
+      "caminho": "juiz_grade_nativa_diretas.json",
+      "sha256": "5d8e47397eac39122d7d9b52e3118491c4547cffa6c856e4477d0fe09c6d76f5",
+      "bytes": 29459,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "juiz_lidar_v4.py",
+      "sha256": "7768ba350a38cc94e9ab37a48cbac1b7b8917a902d3eb015ad430919c8b033c2",
+      "bytes": 21820,
+      "mtime": "2026-08-16 12:18"
+    },
+    {
+      "caminho": "auditar_tabela3.py",
+      "sha256": "c7691eab1b1d77d28d8bec26a54207dcfe87352f062c1a0f77809b9a4c719d52",
+      "bytes": 22266,
+      "mtime": "2026-09-28 10:23"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/_proveniencia.json",
+      "sha256": "828b1c74a1528905b8ef8a8f5e24345ab9af58a2d7373bf729e731b6bd724c49",
+      "bytes": 6299,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q1.npz",
+      "sha256": "1fd3eb1a1ee78c1076f7fba83a3222c38b7bbcf94f68ffb3a614449539f9e0fd",
+      "bytes": 44856830,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q1.npz",
+      "sha256": "fd520a6189bd588276fc24ae94a9697a12bdb05687b713683d47052271533e23",
+      "bytes": 31052675,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q1.npz",
+      "sha256": "9db07dfe7655207ad67db06b3d717c1941af75b065c0ac72b4f20131e2d33d28",
+      "bytes": 43889002,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q1.npz",
+      "sha256": "9535647118c935e0229070c16372e53f60e880927d13e4e3f291348b7cf2a837",
+      "bytes": 539926,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q1.npz",
+      "sha256": "6142d950610129dd294a8cbcc69e53080a849a565f044dffd677d9a434dd2e35",
+      "bytes": 23516585,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q1.npz",
+      "sha256": "015d0347d445bf9a0a4df08758fb1ea0d10fdb3e3a753d140e90e476f4147cf9",
+      "bytes": 11060217,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q2.npz",
+      "sha256": "71d0a11fee3fb44307916a0bff77a45ec640ee54eedb5464e848474058088891",
+      "bytes": 41687083,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q2.npz",
+      "sha256": "d2f7a4d616c40d9fde51b83cb3aad9b3f3a0a7b431d784c1d6bb6e5d4b07c4c3",
+      "bytes": 28393374,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q2.npz",
+      "sha256": "b4266ada01884f9d3e3a7241b303d14de005764f8a0f6c7890ffc82394df3816",
+      "bytes": 42069195,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q2.npz",
+      "sha256": "fe9317f04bd71463981ef0f058bfc95408f7a4b0a7d621761f469c06af6ef09a",
+      "bytes": 2618347,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q2.npz",
+      "sha256": "a83517bbbae447867262b6926f2a2a5aa88d398596d6f7720296b03041854cf2",
+      "bytes": 22949409,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q2.npz",
+      "sha256": "803a5aaa1d528d8e71d6c416e563bd7df0bb2e3d438e8822ce96fd3257f7b110",
+      "bytes": 12925328,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q3.npz",
+      "sha256": "ef7e529cb710822a145e23370fb1525913009a392cb16c3821f011e1a2c4e2bd",
+      "bytes": 38521636,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q3.npz",
+      "sha256": "6f45c501be1cfdc271e59d5566933c57117f09d5b765919838decc1bd933f933",
+      "bytes": 21843383,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q3.npz",
+      "sha256": "5324d866168d2bfe8b0d5b6d9ee967ccade761297d199dafe3d06fbb79bb6007",
+      "bytes": 39530448,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q3.npz",
+      "sha256": "71ec340b90ca66ec05cf452c4d8e19c5a569563f30882219f6cbef2c7331bb6a",
+      "bytes": 7217291,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q3.npz",
+      "sha256": "865bfa10074c1ba55ca25b487f52e267aa1bac83a4fb0b0abc6b2ae2c7af94b2",
+      "bytes": 24834651,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q3.npz",
+      "sha256": "cd20a82c5e9bfb2e36b51385703b037790f9abfdabed75be9b96da5b73087765",
+      "bytes": 10711545,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q4.npz",
+      "sha256": "e689e7b4020ee31d2b0d5e98d14cdc79cc6d74e18e32b300d2c86c503dce6b9d",
+      "bytes": 37351990,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q4.npz",
+      "sha256": "0ccfc5b4dbdd32b855c2781fbb76484797d24e7ce64d5aed4a3e1de9de6acf98",
+      "bytes": 20948032,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q4.npz",
+      "sha256": "672978e10e862690b9e87f9c7e44cd96ecb79563aca7572898cae530599f289e",
+      "bytes": 39699540,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q4.npz",
+      "sha256": "259ed84611a9df13b5d6bb0067f1a20fc1cd16bfeb83f8cdfe2f5e173043238f",
+      "bytes": 6491679,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q4.npz",
+      "sha256": "8dff93b29aad1fbac2568943baebcb4629aa64b5fc2b489edc6f909cf3ae1cd4",
+      "bytes": 24317269,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q4.npz",
+      "sha256": "f9ffafdaffa777599b56c2143d9730cef677b54e641d952c417e5845fcdd0b93",
+      "bytes": 12905568,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed42.npz",
+      "sha256": "b065964e52c3648e6639176f2efc37100b2bbb2b514e19ff517c61c936eb1998",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed123.npz",
+      "sha256": "e5cae136784d629b10e6d284d865ae2eb7152e1aa3ba2f97bf77d36f2f12d3e3",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed7.npz",
+      "sha256": "b2ae95c70caef15322cd99b7815c6163ac671feeb0a9f8d7a30c2976e2e269cc",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed2024.npz",
+      "sha256": "9616720901be153a82cfc87bc0647d1a1065bfd0bd87790e05a98e9782a1cb72",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_seed31.npz",
+      "sha256": "47483fbdc83d5127799b7a01182017ece692651b4f797d88efbaae9fa20795e0",
+      "bytes": 207360966,
+      "mtime": "2026-08-10 10:01"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed42.npz",
+      "sha256": "ceb0db4cbfc2cc479a6d4135ab5b2fd18d84cf54b88c920b650048c90af523cf",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed123.npz",
+      "sha256": "c7cd87f784980f77650376028e41ce656510e6383259fc4ec777a8dd68ad82d2",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed7.npz",
+      "sha256": "8f4164aedfdb4ad922cab62f3b4b34436e7c76deffe530c125224c41702bee61",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed2024.npz",
+      "sha256": "7a26ea46817c319f1c272e3166e6d681fa4b61e35653d8a1d87034f3f8275e59",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    },
+    {
+      "caminho": "superficies/delta_amazonia_ampliacao_b4s035_mlp_semobs_seed31.npz",
+      "sha256": "3766010c9c420b868478a64442049bf6390bf029350d66584fd5ad69fd134327",
+      "bytes": 207360966,
+      "mtime": "2026-08-11 23:37"
+    }
+  ],
+  "hipotese": "the label term above 20 m of ETH canopy is positive, with a transect-clustered CI excluding zero",
+  "criterio_pre_registrado": {
+    "piso_celulas_por_transecto_classe": 200,
+    "min_transectos_acima_do_piso": 6,
+    "bootstrap": {
+      "B": 10000,
+      "semente": 42,
+      "cluster": "transecto"
+    },
+    "alpha": 0.05,
+    "estimandos": [
+      "media_ponderada_por_celula",
+      "mediana",
+      "media_das_medias_por_transecto"
+    ],
+    "aceite": "95% CI (with floor) excludes zero in both estimands media_ponderada_por_celula and media_das_medias_por_transecto; otherwise the class is indeterminate",
+    "fonte_das_constantes": "inherited from auditar_nmad_pareado.py:63; no other value was fixed for this run",
+    "leitura_de_ambiguidade": "the floor restricts the input CELLS (only cells from transects with >= floor cells in the class)"
+  },
+  "entradas": {
+    "parquet": "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.parquet",
+    "juiz": "/trabalho/GNN_TOPO/V23/juiz_grade_nativa_diretas.json",
+    "laterais": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas"
+  },
+  "populacao": {
+    "n_linhas_parquet": 153711,
+    "n_floresta_julgavel": 96287,
+    "n_ancoras_dossel_exogeno": 1194,
+    "julgaveis": [
+      "NP_T-0224",
+      "NP_T-0226",
+      "NP_T-0227",
+      "NP_T-0357",
+      "NP_T-0358",
+      "NP_T-0360",
+      "NP_T-0621",
+      "NP_T-0638",
+      "NP_T-0639",
+      "NP_T-0662",
+      "NP_T-0896",
+      "NP_T-0899",
+      "NP_T-0934"
+    ],
+    "n_julgaveis": 13
+  },
+  "guarda_reproducao_decomposicao_por_dossel_exogeno_eth": {
+    "0-3m": {
+      "n": 4,
+      "vies_rotulo_m_recomputado": -2.1166043281555176,
+      "vies_rotulo_m_juiz": null,
+      "diferenca_m": null,
+      "nota": "class absent from the judge (n<5 in the original artifact)"
+    },
+    "3-10m": {
+      "n": 31,
+      "vies_rotulo_m_recomputado": 1.2862107676844443,
+      "vies_rotulo_m_juiz": 1.2862107676844443,
+      "diferenca_m": 0.0
+    },
+    "10-20m": {
+      "n": 258,
+      "vies_rotulo_m_recomputado": 2.1542668601339177,
+      "vies_rotulo_m_juiz": 2.1542668601339177,
+      "diferenca_m": 0.0
+    },
+    "20-30m": {
+      "n": 460,
+      "vies_rotulo_m_recomputado": 4.560947264795718,
+      "vies_rotulo_m_juiz": 4.560947264795718,
+      "diferenca_m": 0.0
+    },
+    ">30m": {
+      "n": 441,
+      "vies_rotulo_m_recomputado": 6.651019321277299,
+      "vies_rotulo_m_juiz": 6.651019321277299,
+      "diferenca_m": 0.0
+    },
+    "TODAS": {
+      "n": 1194,
+      "vies_rotulo_m_recomputado": 4.705479253676269,
+      "vies_rotulo_m_juiz": 4.705479253676269,
+      "diferenca_m": 0.0
+    }
+  },
+  "por_classe_eth": {
+    "0-3m": {
+      "n_celulas": 4,
+      "n_transectos": 1,
+      "n_transectos_acima_do_piso": 0,
+      "transectos": [
+        "NP_T-0638"
+      ],
+      "transectos_acima_do_piso": [],
+      "transectos_excluidos_pelo_piso": [
+        "NP_T-0638"
+      ],
+      "celulas_por_transecto": {
+        "NP_T-0638": 4
+      },
+      "sem_piso": {
+        "n_celulas": 4,
+        "n_transectos": 1,
+        "media_pond_celula_m": -2.1166043281555176,
+        "mediana_m": -1.4621210098266602,
+        "media_por_transecto_m": -2.1166043281555176,
+        "celulas_por_transecto": {
+          "NP_T-0638": 4
+        },
+        "ic95_pond_celula": [
+          -2.1166043281555176,
+          -2.1166043281555176
+        ],
+        "ic95_mediana": [
+          -1.4621210098266602,
+          -1.4621210098266602
+        ],
+        "ic95_media_por_transecto": [
+          -2.1166043281555176,
+          -2.1166043281555176
+        ]
+      },
+      "com_piso": {
+        "n_celulas": 0,
+        "n_transectos": 0,
+        "media_pond_celula_m": null,
+        "mediana_m": null,
+        "media_por_transecto_m": null
+      },
+      "veredito": "indeterminada",
+      "motivo_indeterminada": "fewer than 6 transects above the floor of 200 cells (0 available)"
+    },
+    "3-10m": {
+      "n_celulas": 31,
+      "n_transectos": 4,
+      "n_transectos_acima_do_piso": 0,
+      "transectos": [
+        "NP_T-0227",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0899"
+      ],
+      "transectos_acima_do_piso": [],
+      "transectos_excluidos_pelo_piso": [
+        "NP_T-0227",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0899"
+      ],
+      "celulas_por_transecto": {
+        "NP_T-0227": 3,
+        "NP_T-0621": 3,
+        "NP_T-0638": 13,
+        "NP_T-0899": 12
+      },
+      "sem_piso": {
+        "n_celulas": 31,
+        "n_transectos": 4,
+        "media_pond_celula_m": 1.2862107676844443,
+        "mediana_m": 0.3238353729248047,
+        "media_por_transecto_m": 0.3912175190754426,
+        "celulas_por_transecto": {
+          "NP_T-0227": 3,
+          "NP_T-0621": 3,
+          "NP_T-0638": 13,
+          "NP_T-0899": 12
+        },
+        "ic95_pond_celula": [
+          -0.9821200370788574,
+          3.0478254726954868
+        ],
+        "ic95_mediana": [
+          -1.6918506622314453,
+          1.4463510513305664
+        ],
+        "ic95_media_por_transecto": [
+          -1.274877150853475,
+          2.5052796877347507
+        ]
+      },
+      "com_piso": {
+        "n_celulas": 0,
+        "n_transectos": 0,
+        "media_pond_celula_m": null,
+        "mediana_m": null,
+        "media_por_transecto_m": null
+      },
+      "veredito": "indeterminada",
+      "motivo_indeterminada": "fewer than 6 transects above the floor of 200 cells (0 available)"
+    },
+    "10-20m": {
+      "n_celulas": 258,
+      "n_transectos": 9,
+      "n_transectos_acima_do_piso": 0,
+      "transectos": [
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0896",
+        "NP_T-0899",
+        "NP_T-0934"
+      ],
+      "transectos_acima_do_piso": [],
+      "transectos_excluidos_pelo_piso": [
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0896",
+        "NP_T-0899",
+        "NP_T-0934"
+      ],
+      "celulas_por_transecto": {
+        "NP_T-0226": 2,
+        "NP_T-0227": 13,
+        "NP_T-0360": 6,
+        "NP_T-0621": 22,
+        "NP_T-0638": 57,
+        "NP_T-0639": 2,
+        "NP_T-0896": 19,
+        "NP_T-0899": 133,
+        "NP_T-0934": 4
+      },
+      "sem_piso": {
+        "n_celulas": 258,
+        "n_transectos": 9,
+        "media_pond_celula_m": 2.1542668601339177,
+        "mediana_m": 1.1662821769714355,
+        "media_por_transecto_m": 0.7951904893476507,
+        "celulas_por_transecto": {
+          "NP_T-0226": 2,
+          "NP_T-0227": 13,
+          "NP_T-0360": 6,
+          "NP_T-0621": 22,
+          "NP_T-0638": 57,
+          "NP_T-0639": 2,
+          "NP_T-0896": 19,
+          "NP_T-0899": 133,
+          "NP_T-0934": 4
+        },
+        "ic95_pond_celula": [
+          0.6669339644167603,
+          2.643616443022035
+        ],
+        "ic95_mediana": [
+          0.06769371032714844,
+          1.3825511932373047
+        ],
+        "ic95_media_por_transecto": [
+          -0.5179265873920866,
+          2.0521263201125617
+        ]
+      },
+      "com_piso": {
+        "n_celulas": 0,
+        "n_transectos": 0,
+        "media_pond_celula_m": null,
+        "mediana_m": null,
+        "media_por_transecto_m": null
+      },
+      "veredito": "indeterminada",
+      "motivo_indeterminada": "fewer than 6 transects above the floor of 200 cells (0 available)"
+    },
+    "20-30m": {
+      "n_celulas": 460,
+      "n_transectos": 12,
+      "n_transectos_acima_do_piso": 0,
+      "transectos": [
+        "NP_T-0224",
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0357",
+        "NP_T-0358",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0662",
+        "NP_T-0896",
+        "NP_T-0899"
+      ],
+      "transectos_acima_do_piso": [],
+      "transectos_excluidos_pelo_piso": [
+        "NP_T-0224",
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0357",
+        "NP_T-0358",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0662",
+        "NP_T-0896",
+        "NP_T-0899"
+      ],
+      "celulas_por_transecto": {
+        "NP_T-0224": 19,
+        "NP_T-0226": 11,
+        "NP_T-0227": 29,
+        "NP_T-0357": 11,
+        "NP_T-0358": 17,
+        "NP_T-0360": 11,
+        "NP_T-0621": 54,
+        "NP_T-0638": 56,
+        "NP_T-0639": 4,
+        "NP_T-0662": 1,
+        "NP_T-0896": 93,
+        "NP_T-0899": 154
+      },
+      "sem_piso": {
+        "n_celulas": 460,
+        "n_transectos": 12,
+        "media_pond_celula_m": 4.560947264795718,
+        "mediana_m": 2.6272153854370117,
+        "media_por_transecto_m": 4.370290840834027,
+        "celulas_por_transecto": {
+          "NP_T-0224": 19,
+          "NP_T-0226": 11,
+          "NP_T-0227": 29,
+          "NP_T-0357": 11,
+          "NP_T-0358": 17,
+          "NP_T-0360": 11,
+          "NP_T-0621": 54,
+          "NP_T-0638": 56,
+          "NP_T-0639": 4,
+          "NP_T-0662": 1,
+          "NP_T-0896": 93,
+          "NP_T-0899": 154
+        },
+        "ic95_pond_celula": [
+          2.359240298588031,
+          6.551613552344732
+        ],
+        "ic95_mediana": [
+          1.0429998397827152,
+          4.974340438842773
+        ],
+        "ic95_media_por_transecto": [
+          1.9919984464012719,
+          6.8554058063488865
+        ]
+      },
+      "com_piso": {
+        "n_celulas": 0,
+        "n_transectos": 0,
+        "media_pond_celula_m": null,
+        "mediana_m": null,
+        "media_por_transecto_m": null
+      },
+      "veredito": "indeterminada",
+      "motivo_indeterminada": "fewer than 6 transects above the floor of 200 cells (0 available)"
+    },
+    ">30m": {
+      "n_celulas": 441,
+      "n_transectos": 10,
+      "n_transectos_acima_do_piso": 0,
+      "transectos": [
+        "NP_T-0224",
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0357",
+        "NP_T-0358",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0899"
+      ],
+      "transectos_acima_do_piso": [],
+      "transectos_excluidos_pelo_piso": [
+        "NP_T-0224",
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0357",
+        "NP_T-0358",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0899"
+      ],
+      "celulas_por_transecto": {
+        "NP_T-0224": 68,
+        "NP_T-0226": 55,
+        "NP_T-0227": 46,
+        "NP_T-0357": 77,
+        "NP_T-0358": 74,
+        "NP_T-0360": 9,
+        "NP_T-0621": 28,
+        "NP_T-0638": 46,
+        "NP_T-0639": 1,
+        "NP_T-0899": 37
+      },
+      "sem_piso": {
+        "n_celulas": 441,
+        "n_transectos": 10,
+        "media_pond_celula_m": 6.651019321277299,
+        "mediana_m": 3.699343681335449,
+        "media_por_transecto_m": 7.47968749542977,
+        "celulas_por_transecto": {
+          "NP_T-0224": 68,
+          "NP_T-0226": 55,
+          "NP_T-0227": 46,
+          "NP_T-0357": 77,
+          "NP_T-0358": 74,
+          "NP_T-0360": 9,
+          "NP_T-0621": 28,
+          "NP_T-0638": 46,
+          "NP_T-0639": 1,
+          "NP_T-0899": 37
+        },
+        "ic95_pond_celula": [
+          3.296380327724531,
+          9.404564189259515
+        ],
+        "ic95_mediana": [
+          1.5437850952148438,
+          8.550474166870117
+        ],
+        "ic95_media_por_transecto": [
+          3.3512624017102985,
+          12.551122781390083
+        ]
+      },
+      "com_piso": {
+        "n_celulas": 0,
+        "n_transectos": 0,
+        "media_pond_celula_m": null,
+        "mediana_m": null,
+        "media_por_transecto_m": null
+      },
+      "veredito": "indeterminada",
+      "motivo_indeterminada": "fewer than 6 transects above the floor of 200 cells (0 available)"
+    },
+    "TODAS": {
+      "n_celulas": 1194,
+      "n_transectos": 13,
+      "n_transectos_acima_do_piso": 1,
+      "transectos": [
+        "NP_T-0224",
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0357",
+        "NP_T-0358",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0662",
+        "NP_T-0896",
+        "NP_T-0899",
+        "NP_T-0934"
+      ],
+      "transectos_acima_do_piso": [
+        "NP_T-0899"
+      ],
+      "transectos_excluidos_pelo_piso": [
+        "NP_T-0224",
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0357",
+        "NP_T-0358",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0662",
+        "NP_T-0896",
+        "NP_T-0934"
+      ],
+      "celulas_por_transecto": {
+        "NP_T-0224": 87,
+        "NP_T-0226": 68,
+        "NP_T-0227": 91,
+        "NP_T-0357": 88,
+        "NP_T-0358": 91,
+        "NP_T-0360": 26,
+        "NP_T-0621": 107,
+        "NP_T-0638": 176,
+        "NP_T-0639": 7,
+        "NP_T-0662": 1,
+        "NP_T-0896": 112,
+        "NP_T-0899": 336,
+        "NP_T-0934": 4
+      },
+      "sem_piso": {
+        "n_celulas": 1194,
+        "n_transectos": 13,
+        "media_pond_celula_m": 4.705479253676269,
+        "mediana_m": 2.34466552734375,
+        "media_por_transecto_m": 4.021987088095711,
+        "celulas_por_transecto": {
+          "NP_T-0224": 87,
+          "NP_T-0226": 68,
+          "NP_T-0227": 91,
+          "NP_T-0357": 88,
+          "NP_T-0358": 91,
+          "NP_T-0360": 26,
+          "NP_T-0621": 107,
+          "NP_T-0638": 176,
+          "NP_T-0639": 7,
+          "NP_T-0662": 1,
+          "NP_T-0896": 112,
+          "NP_T-0899": 336,
+          "NP_T-0934": 4
+        },
+        "ic95_pond_celula": [
+          2.753129230861303,
+          7.133975685162108
+        ],
+        "ic95_mediana": [
+          1.1850333213806152,
+          4.34613037109375
+        ],
+        "ic95_media_por_transecto": [
+          1.8017159079969796,
+          6.35424706625303
+        ]
+      },
+      "com_piso": {
+        "n_celulas": 336,
+        "n_transectos": 1,
+        "media_pond_celula_m": 4.473052518708365,
+        "mediana_m": 2.7543649673461914,
+        "media_por_transecto_m": 4.473052518708365,
+        "celulas_por_transecto": {
+          "NP_T-0899": 336
+        }
+      },
+      "veredito": "indeterminada",
+      "motivo_indeterminada": "fewer than 6 transects above the floor of 200 cells (1 available)"
+    }
+  },
+  "sensibilidade_transecto_1_celula_NP_T_0639": {
+    "10-20m": {
+      "n_celulas_no_transecto": 2,
+      "vies_rotulo_no_transecto_m": -2.2194347381591797,
+      "com_transecto": {
+        "n_transectos": 9,
+        "media_pond_celula_m": 2.1542668601339177,
+        "media_por_transecto_m": 0.7951904893476507
+      },
+      "sem_transecto": {
+        "n_transectos": 8,
+        "media_pond_celula_m": 2.1884364038705826,
+        "media_por_transecto_m": 1.1720186427860044
+      }
+    },
+    "20-30m": {
+      "n_celulas_no_transecto": 4,
+      "vies_rotulo_no_transecto_m": -1.0798873901367188,
+      "com_transecto": {
+        "n_transectos": 12,
+        "media_pond_celula_m": 4.560947264795718,
+        "media_por_transecto_m": 4.370290840834027
+      },
+      "sem_transecto": {
+        "n_transectos": 11,
+        "media_pond_celula_m": 4.61042827054074,
+        "media_por_transecto_m": 4.865761589104095
+      }
+    },
+    ">30m": {
+      "n_celulas_no_transecto": 1,
+      "vies_rotulo_no_transecto_m": 26.45229148864746,
+      "com_transecto": {
+        "n_transectos": 10,
+        "media_pond_celula_m": 6.651019321277299,
+        "media_por_transecto_m": 7.47968749542977
+      },
+      "sem_transecto": {
+        "n_transectos": 9,
+        "media_pond_celula_m": 6.606016429987821,
+        "media_por_transecto_m": 5.37162038507225
+      }
+    },
+    "TODAS": {
+      "n_celulas_no_transecto": 7,
+      "vies_rotulo_no_transecto_m": 2.527696064540318,
+      "com_transecto": {
+        "n_transectos": 13,
+        "media_pond_celula_m": 4.705479253676269,
+        "media_por_transecto_m": 4.021987088095711
+      },
+      "sem_transecto": {
+        "n_transectos": 12,
+        "media_pond_celula_m": 4.7183221199980485,
+        "media_por_transecto_m": 4.1465113400586615
+      }
+    }
+  },
+  "dump": {
+    "arquivo": "auditar_tabela3_dump.parquet",
+    "n_linhas": 1194,
+    "colunas": [
+      "quad",
+      "idx_no",
+      "transecto",
+      "classe_eth",
+      "termo_rotulo",
+      "h_eth",
+      "cob_eth",
+      "e_modelo_m",
+      "fidelidade_m",
+      "n_cel_classe_transecto",
+      "acima_do_piso"
+    ],
+    "chave": [
+      "quad",
+      "idx_no"
+    ]
+  },
+  "contra_auditoria": "PENDING — not yet checked by anyone other than the author of this script (rule: no one audits their own result)"
+}

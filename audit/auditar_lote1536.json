@@ -1,0 +1,127 @@
+{
+  "_proveniencia": {
+    "script": "auditar_lote1536.py",
+    "commit": "2f4130c",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-08-15T11:46",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "results/noite_lote1536_gatv2_2_semobs.json",
+      "sha256": "c12525b8649cedda44dcb027ba5141383d9af9e47c5302ed219d6d0f1d166399",
+      "bytes": 7380296,
+      "mtime": "2026-08-14 22:48"
+    },
+    {
+      "caminho": "results/noite_lote1536_mlp_semobs.json",
+      "sha256": "b7aa85db941a22d0f8540a0ae493e6eb297078714546f26b69c41ef7d1e9c2f6",
+      "bytes": 7299839,
+      "mtime": "2026-08-15 00:16"
+    },
+    {
+      "caminho": "auditoria_equivalencia_10s.json",
+      "sha256": "831827d4736e3d2506a398f2d1617e49f866f63d1d257987fa45c2b811288e27",
+      "bytes": 3921,
+      "mtime": "2026-08-14 17:47"
+    },
+    {
+      "caminho": "fila_noite_20260814.sh",
+      "sha256": "a7c8357200af01d4650bd9e680ef27406d44ab6ef016dd839d1b846d7350cc33",
+      "bytes": 5708,
+      "mtime": "2026-08-14 19:10"
+    }
+  ],
+  "pre_registro": {
+    "origem": "fila_noite_20260814.sh, written before the queue ran",
+    "criterio": "|delta| outside +-0.010 of skill => the non-superiority of the graph is a property of the operating point",
+    "margem_skill": 0.01,
+    "alfa": 0.05,
+    "fonte_da_margem": "skill guardrail of the smoothness rule, set before any architecture comparison; the same as in auditoria_equivalencia_10s.py",
+    "lote": 1536,
+    "lote_adotado": 6144
+  },
+  "sementes": [
+    7,
+    31,
+    42,
+    100,
+    123,
+    200,
+    300,
+    400,
+    500,
+    2024
+  ],
+  "skill": {
+    "gatv2": {
+      "7": 0.28274373878378306,
+      "31": 0.28383358484754123,
+      "42": 0.28777916457012565,
+      "100": 0.2884662805362986,
+      "123": 0.2856858326299674,
+      "200": 0.2816908261971593,
+      "300": 0.2870364532708873,
+      "400": 0.28147066817059246,
+      "500": 0.2828328157915303,
+      "2024": 0.27873755455541616
+    },
+    "mlp": {
+      "7": 0.26613061002148014,
+      "31": 0.2680593922646353,
+      "42": 0.27427027914287955,
+      "100": 0.27476597256730273,
+      "123": 0.2745777861948164,
+      "200": 0.273329014769302,
+      "300": 0.2741782165408726,
+      "400": 0.2693264126484363,
+      "500": 0.2662950251304429,
+      "2024": 0.27086634270056487
+    }
+  },
+  "delta": {
+    "media": 0.012847786737256861,
+    "dp": 0.003090013634523254,
+    "se": 0.0009771481086068585,
+    "n": 10,
+    "ic95": [
+      0.010637324144257138,
+      0.015058249330256585
+    ],
+    "gl": 9
+  },
+  "tost": {
+    "t_inf": 23.382112226396725,
+    "p_inf": 1.1399219346230893e-09,
+    "t_sup": 2.9143859688957625,
+    "p_sup": 0.991405940194157,
+    "equivalentes": false
+  },
+  "bilateral": {
+    "t": 13.148249097646241,
+    "p": 3.522581840559178e-07,
+    "difere_de_zero": true
+  },
+  "resolucao_alcancada": {
+    "margem_minima_skill": 0.014639009572264675,
+    "em_metros": 0.11844714553545074,
+    "mae_trivial_medio_m": 8.091199404627947
+  },
+  "referencia_lote_adotado": {
+    "arquivo": "auditoria_equivalencia_10s.json",
+    "delta_lote_adotado": 0.0015886515648261934,
+    "equivalentes_lote_adotado": true,
+    "menor_margem_que_passa_lote_adotado": 0.004810826280450819
+  },
+  "veredito": "THE OPERATING POINT DECIDES. At batch size 1536, GATv2 outperforms the MLP by +0.0128 in skill (95% CI [+0.0106, +0.0151], p 3.5e-07), outside the +-0.01 margin. The non-superiority of the graph reported at batch size 6144 is a property of the batch-size choice, not of the problem, and the text must state this."
+}

@@ -1,0 +1,75 @@
+{
+  "_proveniencia": {
+    "script": "geometria_celula.py",
+    "commit": "82c77a1",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-08-16T12:20",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    },
+    "retroativo": true,
+    "nota": "retroactive stamp: the artifact was written before proveniencia.py existed; the sha256 of the sources is from stamping time, not from the original read",
+    "carimbo_anterior": {
+      "script": "geometria_celula.py",
+      "commit": "2f4130c",
+      "em": "2026-08-14T17:47"
+    }
+  },
+  "_fontes": [],
+  "gerado_em": "2026-08-13 19:55",
+  "elipsoide": "WGS84",
+  "bbox": [
+    -60.0,
+    -4.0,
+    -58.0,
+    -2.0
+  ],
+  "grade": "7200x7200 (1 arcsec)",
+  "posting_por_latitude": {
+    "-4.0": {
+      "ns_m": 30.716577476280882,
+      "ew_m": 30.847258564277393,
+      "diagonal_m": 43.53230401423466
+    },
+    "-3.0": {
+      "ns_m": 30.71592143578167,
+      "ew_m": 30.879986251869763,
+      "diagonal_m": 43.55503852098833
+    },
+    "-2.0": {
+      "ns_m": 30.715452277993897,
+      "ew_m": 30.903369866695314,
+      "diagonal_m": 43.571289604044225
+    }
+  },
+  "posting_centro": {
+    "ns_m": 30.71592143578167,
+    "ew_m": 30.879986251869763
+  },
+  "area_km2": 49168.18466864113,
+  "aproximacoes_superadas": {
+    "30m_por_celula_km2": 46656.0,
+    "esferica_grau111320_km2": 49500.5664509618,
+    "nota": "30 m underestimates the area by ~5.5%; the spherical area of grade_v23 overestimates the N-S step by ~0.7%"
+  },
+  "alcances_gnn": {
+    "k2_m": 87.11007704197667,
+    "k4_m": 174.22015408395333,
+    "k8_m": 348.44030816790666,
+    "nota": "k-hop ball on the 8-connected lattice: k cells in Chebyshev distance; maximum reach = k x diagonal"
+  },
+  "conversoes_texto": {
+    "buffer_67_celulas_km": 2.057966736197372,
+    "reserva_1800_celulas_km": 55.28865858440701,
+    "separacao_3600_celulas_km": 110.57731716881402,
+    "espaco_130m_em_celulas": 4.232332742216226
+  }
+}

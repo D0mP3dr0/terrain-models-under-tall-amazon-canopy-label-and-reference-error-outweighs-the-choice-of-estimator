@@ -1,0 +1,189 @@
+{
+  "figura": "fig9",
+  "fontes": [
+    {
+      "caminho": "auditar_unidade_quadrante.json",
+      "sha256": "e4800fcdedb67bcf"
+    },
+    {
+      "caminho": "auditar_f2_celula.json",
+      "sha256": "16a603cdbcc1c8d6"
+    },
+    {
+      "caminho": "auditar_f1_rampa.json",
+      "sha256": "a2d47c6ec1265a83"
+    },
+    {
+      "caminho": "auditar_lote1536.json",
+      "sha256": "82e5fa792fab97aa"
+    }
+  ],
+  "numeros": {
+    "margem_skill": 0.01,
+    "pares": {
+      "lote_adotado": {
+        "por_semente_ponderada_por_n": {
+          "n": 5,
+          "sementes": [
+            7,
+            31,
+            42,
+            123,
+            2024
+          ],
+          "media": 0.0010119916325633028,
+          "ic95": [
+            -0.003921493659324687,
+            0.005945476924451293
+          ],
+          "sinal_consistente": 3
+        },
+        "por_semente_media_simples_NAO_desenhada": {
+          "unidade": "seed (the unit the article uses)",
+          "n": 5,
+          "media": 0.003378056043026323,
+          "dp": 0.0037726718893573976,
+          "se": 0.0016871901602811413,
+          "ic95": [
+            -0.0013063348190241325,
+            0.008062446905076778
+          ],
+          "t": 2.002178605915665,
+          "p": 0.11582807139413763,
+          "tost_p_inf": 0.0006847039462237747,
+          "tost_p_sup": 0.008588772293711966,
+          "equivalentes": true,
+          "ic_cabe_na_margem": true
+        },
+        "por_quadrante": {
+          "unidade": "quadrante (conservadora)",
+          "n": 4,
+          "media": 0.003378056043026323,
+          "dp": 0.02254272909784263,
+          "se": 0.011271364548921315,
+          "ic95": [
+            -0.03249245642119408,
+            0.03924856850724673
+          ],
+          "t": 0.29970249195334625,
+          "p": 0.7839694493976717,
+          "tost_p_inf": 0.1603437680438612,
+          "tost_p_sup": 0.29907909387505505,
+          "equivalentes": false,
+          "ic_cabe_na_margem": false
+        },
+        "delta_por_quadrante": {
+          "Q1": 0.020818494755069118,
+          "Q2": 0.0034097297931611425,
+          "Q3": -0.02846337448600129,
+          "Q4": 0.017747374109876323
+        },
+        "variancia": {
+          "frac_entre_quadrantes": 0.9161826171552908,
+          "frac_entre_sementes": 0.02737132739118596,
+          "frac_residual": 0.05644605545352326,
+          "F_quadrante": 64.92447415813919,
+          "gl": [
+            3,
+            12
+          ],
+          "p": 1.092173931294127e-07
+        },
+        "reservas_para_80pct": 352,
+        "reservas_disponiveis": 4
+      },
+      "lote_1536": {
+        "por_semente_ponderada_por_n": {
+          "n": 10,
+          "sementes": [
+            7,
+            31,
+            42,
+            100,
+            123,
+            200,
+            300,
+            400,
+            500,
+            2024
+          ],
+          "media": 0.012847786737256861,
+          "ic95": [
+            0.010637324144257138,
+            0.015058249330256585
+          ],
+          "sinal_consistente": 10
+        },
+        "por_semente_media_simples_NAO_desenhada": {
+          "unidade": "seed (the unit the article uses)",
+          "n": 10,
+          "media": 0.014755117311949598,
+          "dp": 0.002724373355342534,
+          "se": 0.0008615224999557664,
+          "ic95": [
+            0.012806218017762844,
+            0.01670401660613635
+          ],
+          "t": 17.126792756668774,
+          "p": 3.548806455347795e-08,
+          "tost_p_inf": 1.8238643928469855e-10,
+          "tost_p_sup": 0.999814622961723,
+          "equivalentes": false,
+          "ic_cabe_na_margem": false
+        },
+        "por_quadrante": {
+          "unidade": "quadrante (conservadora)",
+          "n": 4,
+          "media": 0.014755117311949598,
+          "dp": 0.019535582959847198,
+          "se": 0.009767791479923599,
+          "ic95": [
+            -0.016330354594114936,
+            0.045840589218014136
+          ],
+          "t": 1.51058889230762,
+          "p": 0.22805748987005509,
+          "tost_p_inf": 0.042549179928935255,
+          "tost_p_sup": 0.6701303754718201,
+          "equivalentes": false,
+          "ic_cabe_na_margem": false
+        },
+        "delta_por_quadrante": {
+          "Q1": 0.029429696351236212,
+          "Q2": 0.013795922218833056,
+          "Q3": -0.012530469818748446,
+          "Q4": 0.02832532049647757
+        },
+        "variancia": {
+          "frac_entre_quadrantes": 0.9195979351532582,
+          "frac_entre_sementes": 0.021461483109057378,
+          "frac_residual": 0.05894058173768442,
+          "F_quadrante": 140.41906564840897,
+          "gl": [
+            3,
+            27
+          ],
+          "p": 1.1102230246251565e-16
+        },
+        "reservas_para_80pct": 16,
+        "reservas_disponiveis": 4
+      }
+    },
+    "rodape_removido_para_legenda": "92% of the contrast variance lies between reserves (adopted point); 4 reserves available, ~352 needed for 80% power",
+    "tost_ponderado_carimbado": {
+      "lote_1536": {
+        "t_inf": 23.382112226396725,
+        "p_inf": 1.1399219346230893e-09,
+        "t_sup": 2.9143859688957625,
+        "p_sup": 0.991405940194157,
+        "equivalentes": false
+      },
+      "lote_adotado": "not stamped with 5 weighted seeds; TOST label removed from the figure"
+    },
+    "fonte": "unit=seed: auditar_f2_celula.json -> exploratorios_2x2_sem_pre_registro.ordenacao_intracelula_gatv2_menos_mlp.'(100%, x1)' (adopted) and auditar_f1_rampa.json -> delta_1536_reconferido (= auditar_lote1536.json -> delta), skill of the union weighted by number of anchors; unit=reserve and per quadrant: auditar_unidade_quadrante.json -> pares.*, margem_skill",
+    "_pagina_in": {
+      "largura": 7.16,
+      "altura": 2.842
+    }
+  }
+}

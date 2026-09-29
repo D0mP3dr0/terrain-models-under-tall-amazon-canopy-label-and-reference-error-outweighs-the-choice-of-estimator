@@ -1,0 +1,1828 @@
+{
+  "_proveniencia": {
+    "script": "auditar_d5_invariancia.py",
+    "sha256_script": "1fd917242f00b06afff4f55925eb667d59c963c6bd9971e882d9d5f1577491f9",
+    "commit": "d35f050",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "luis-felipe-B550M-AORUS-ELITE",
+    "em": "2026-09-28T12:03",
+    "versoes": {
+      "python": "3.11.16",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.post1",
+      "xgboost": "3.2.0"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/lidar_eba/solo_lidar_30m_v3_nativa.parquet",
+      "sha256": "b01a6101850dfe7fc514c85be556fbe0aae3cc941fba9263b431a54556f92dc5",
+      "bytes": 4380157,
+      "mtime": "2026-08-18 18:02"
+    },
+    {
+      "caminho": "juiz_grade_nativa_diretas.json",
+      "sha256": "5d8e47397eac39122d7d9b52e3118491c4547cffa6c856e4477d0fe09c6d76f5",
+      "bytes": 29459,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "delta_escala_celulas_nativa.parquet",
+      "sha256": "110d75ca56626f268f32ece2acb2d0719ff7a19ced3e8f2b18fa3c122b2a14c2",
+      "bytes": 4865835,
+      "mtime": "2026-09-28 11:41"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_diretas.json",
+      "sha256": "bb3cce3e12470fb2da78fb3ebcc25fb3beeffee7a10c637726eaf3f7e6f00f2d",
+      "bytes": 217379,
+      "mtime": "2026-08-19 19:17"
+    },
+    {
+      "caminho": "juiz_lidar_v4.py",
+      "sha256": "7768ba350a38cc94e9ab37a48cbac1b7b8917a902d3eb015ad430919c8b033c2",
+      "bytes": 21820,
+      "mtime": "2026-08-16 12:18"
+    },
+    {
+      "caminho": "auditar_nmad_pareado.py",
+      "sha256": "52e471fc4df6e41f1f87ca6de800275770e7bb6eb1b59b6a84bfd9ce0b57a3a1",
+      "bytes": 21009,
+      "mtime": "2026-08-18 19:11"
+    },
+    {
+      "caminho": "auditar_nmad_pareado_nativa_anadem.py",
+      "sha256": "f022646ea98e0ae3c4c7de9ce39e73c901a752442c8763e7564654ee115ea9d9",
+      "bytes": 23220,
+      "mtime": "2026-09-28 11:47"
+    },
+    {
+      "caminho": "auditar_d5_invariancia.py",
+      "sha256": "1fd917242f00b06afff4f55925eb667d59c963c6bd9971e882d9d5f1577491f9",
+      "bytes": 24544,
+      "mtime": "2026-09-28 12:02"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q1.npz",
+      "sha256": "1fd3eb1a1ee78c1076f7fba83a3222c38b7bbcf94f68ffb3a614449539f9e0fd",
+      "bytes": 44856830,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q1.npz",
+      "sha256": "fd520a6189bd588276fc24ae94a9697a12bdb05687b713683d47052271533e23",
+      "bytes": 31052675,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q1.npz",
+      "sha256": "9db07dfe7655207ad67db06b3d717c1941af75b065c0ac72b4f20131e2d33d28",
+      "bytes": 43889002,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q1.npz",
+      "sha256": "9535647118c935e0229070c16372e53f60e880927d13e4e3f291348b7cf2a837",
+      "bytes": 539926,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q1.npz",
+      "sha256": "6142d950610129dd294a8cbcc69e53080a849a565f044dffd677d9a434dd2e35",
+      "bytes": 23516585,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q1.npz",
+      "sha256": "015d0347d445bf9a0a4df08758fb1ea0d10fdb3e3a753d140e90e476f4147cf9",
+      "bytes": 11060217,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q1.npz",
+      "sha256": "b863f994c8b96814534a94343d2a646097deb1b94be7cf165c74530d67cd3e63",
+      "bytes": 44897228,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q2.npz",
+      "sha256": "71d0a11fee3fb44307916a0bff77a45ec640ee54eedb5464e848474058088891",
+      "bytes": 41687083,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q2.npz",
+      "sha256": "d2f7a4d616c40d9fde51b83cb3aad9b3f3a0a7b431d784c1d6bb6e5d4b07c4c3",
+      "bytes": 28393374,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q2.npz",
+      "sha256": "b4266ada01884f9d3e3a7241b303d14de005764f8a0f6c7890ffc82394df3816",
+      "bytes": 42069195,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q2.npz",
+      "sha256": "fe9317f04bd71463981ef0f058bfc95408f7a4b0a7d621761f469c06af6ef09a",
+      "bytes": 2618347,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q2.npz",
+      "sha256": "a83517bbbae447867262b6926f2a2a5aa88d398596d6f7720296b03041854cf2",
+      "bytes": 22949409,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q2.npz",
+      "sha256": "803a5aaa1d528d8e71d6c416e563bd7df0bb2e3d438e8822ce96fd3257f7b110",
+      "bytes": 12925328,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q2.npz",
+      "sha256": "e70230f02c479067c1edd537235c85e9e623cc5aca6bcd0b7b85ba48efe81bb0",
+      "bytes": 42059826,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q3.npz",
+      "sha256": "ef7e529cb710822a145e23370fb1525913009a392cb16c3821f011e1a2c4e2bd",
+      "bytes": 38521636,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q3.npz",
+      "sha256": "6f45c501be1cfdc271e59d5566933c57117f09d5b765919838decc1bd933f933",
+      "bytes": 21843383,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q3.npz",
+      "sha256": "5324d866168d2bfe8b0d5b6d9ee967ccade761297d199dafe3d06fbb79bb6007",
+      "bytes": 39530448,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q3.npz",
+      "sha256": "71ec340b90ca66ec05cf452c4d8e19c5a569563f30882219f6cbef2c7331bb6a",
+      "bytes": 7217291,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q3.npz",
+      "sha256": "865bfa10074c1ba55ca25b487f52e267aa1bac83a4fb0b0abc6b2ae2c7af94b2",
+      "bytes": 24834651,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q3.npz",
+      "sha256": "cd20a82c5e9bfb2e36b51385703b037790f9abfdabed75be9b96da5b73087765",
+      "bytes": 10711545,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q3.npz",
+      "sha256": "a9101e9462912e4a494dca0bba4465e86f41b81f4c927b0c1e6fd90713e77633",
+      "bytes": 38822111,
+      "mtime": "2026-09-28 11:39"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/glo30_amazonia_Q4.npz",
+      "sha256": "e689e7b4020ee31d2b0d5e98d14cdc79cc6d74e18e32b300d2c86c503dce6b9d",
+      "bytes": 37351990,
+      "mtime": "2026-08-02 20:05"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/fabdem_amazonia_Q4.npz",
+      "sha256": "0ccfc5b4dbdd32b855c2781fbb76484797d24e7ce64d5aed4a3e1de9de6acf98",
+      "bytes": 20948032,
+      "mtime": "2026-08-02 20:06"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/gedtm30_amazonia_Q4.npz",
+      "sha256": "672978e10e862690b9e87f9c7e44cd96ecb79563aca7572898cae530599f289e",
+      "bytes": 39699540,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/agua_jrc_amazonia_Q4.npz",
+      "sha256": "259ed84611a9df13b5d6bb0067f1a20fc1cd16bfeb83f8cdfe2f5e173043238f",
+      "bytes": 6491679,
+      "mtime": "2026-08-18 19:20"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/dossel_eth_amazonia_Q4.npz",
+      "sha256": "8dff93b29aad1fbac2568943baebcb4629aa64b5fc2b489edc6f909cf3ae1cd4",
+      "bytes": 24317269,
+      "mtime": "2026-08-19 19:16"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/rotulos_amazonia_Q4.npz",
+      "sha256": "f9ffafdaffa777599b56c2143d9730cef677b54e641d952c417e5845fcdd0b93",
+      "bytes": 12905568,
+      "mtime": "2026-08-07 13:34"
+    },
+    {
+      "caminho": "/trabalho/GNN_TOPO/SATELITES/laterais_nativa_diretas/anadem_amazonia_Q4.npz",
+      "sha256": "03981d874ab931c3678fc089bc2ff7089741f590a9c18ad585582195ed10f264",
+      "bytes": 37812742,
+      "mtime": "2026-09-28 11:39"
+    }
+  ],
+  "criterio_pre_registrado": {
+    "pergunta": "Does the ordering 'proposed - FABDEM > 0 in MAE above 30 m', paired by transect, survive a PER-CELL shift of the reference of the size of delta_c?",
+    "dado": "Population from auditar_nmad_pareado_nativa_diretas.json: judgeable forest, ETH class >30 m, per-cell error reconstructed as in the NMAD audit; delta_c ONLY from delta_escala_celulas_nativa.parquet, joined on (transecto,quad,idx_no); area-grid proxy FORBIDDEN",
+    "bracos": "g'_c=g_c+lambda*delta_c, lambda in {0;0.25;0.5;0.75;1} in the physical direction; direction control lambda in {-0.5;-1}; stress test with delta = upper CI bound of the transect; the common-shift guard reproduces the invariance of 13/09; the positive control reverses by construction",
+    "estatistica": "same as the NMAD auditor (REF.testar): median of per-transect MAE differences, bootstrap B=10000 seed 42, Wilcoxon, sign test, Holm (singleton in this run)",
+    "guarda_de_reproducao": "lambda=0 reproduces testes_principal_ETH['v23 vs fabdem'].mae['>30m'].mediana_m=+2.3259 CI[+1.780;+2.616] to within 1e-6, sha256 checked before computing",
+    "controle_positivo": "per-cell offset injected into FABDEM that reverses the ranking by construction; the script reports the reversal",
+    "criterio": "sentence kept if for EVERY lambda in [0;1] of the grid the 95% CI of the median excludes 0 and p_holm<0.05; if it fails at some lambda, the sentence gains 'for reference offsets up to lambda_max*delta' (grid not refined); if it already fails at lambda=0.25, the sentence is removed from the abstract",
+    "dono_do_desenho": "Design scope of this check: ranking statistics, native delta, and sign convention.",
+    "acrescimo_do_dono_28_09": "ANADEM enters as an additional product, same path as auditar_nmad_pareado_nativa_anadem.py, same rule, no new criterion; results conditional on a pending independent recomputation"
+  },
+  "guarda_sha256_delta_nativo": {
+    "sha256": "110d75ca56626f268f32ece2acb2d0719ff7a19ced3e8f2b18fa3c122b2a14c2",
+    "arquivo": "delta_escala_celulas_nativa.parquet",
+    "conferido_antes_de_calcular": true
+  },
+  "guarda_reproducao_lambda_0": {
+    "mediana_m_recomputada": 2.3259251909694436,
+    "mediana_m_esperada": 2.3259251909694436,
+    "diferenca_abs_mediana": 0.0,
+    "ic95_recomputado": [
+      1.779955989135765,
+      2.6163586058957407
+    ],
+    "ic95_esperado": [
+      1.779955989135765,
+      2.6163586058957407
+    ],
+    "diferenca_abs_ic_max": 0.0,
+    "tolerancia": 1e-06,
+    "passou": true
+  },
+  "populacao": {
+    "n_linhas_parquet_raw": 153711,
+    "n_floresta_julgavel_total": 96287,
+    "n_floresta_julgavel_eth_>30m": 41287,
+    "n_delta_nativo_parquet_linhas": 108918,
+    "n_com_delta_valido": 41287,
+    "n_perdidas_por_delta_ausente": 0,
+    "n_julgaveis": 13,
+    "julgaveis": [
+      "NP_T-0224",
+      "NP_T-0226",
+      "NP_T-0227",
+      "NP_T-0357",
+      "NP_T-0358",
+      "NP_T-0360",
+      "NP_T-0621",
+      "NP_T-0638",
+      "NP_T-0639",
+      "NP_T-0662",
+      "NP_T-0896",
+      "NP_T-0899",
+      "NP_T-0934"
+    ],
+    "n_transectos_na_populacao_>30m": 13
+  },
+  "bracos": {
+    "lambda_+0.00_sentido_fisico": {
+      "lambda": 0.0,
+      "n_cel": 41287,
+      "n_transectos": 13,
+      "pool_mae_>30m": {
+        "v23": 6.62774097210393,
+        "mlp": 7.482468133996334,
+        "fabdem": 4.650182559744462,
+        "gedtm30": 5.563192648086919,
+        "glo30": 21.00667958462042,
+        "anadem": 5.047176584956183
+      },
+      "ranking_mae_crescente": [
+        "fabdem",
+        "anadem",
+        "gedtm30",
+        "v23",
+        "mlp",
+        "glo30"
+      ],
+      "teste_pareado_v23_vs_fabdem_mae": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 2.0217495606087974,
+          "NP_T-0226": 2.3485559051960574,
+          "NP_T-0227": 2.952741790607558,
+          "NP_T-0357": 1.5684735333935178,
+          "NP_T-0358": 0.4341032608373494,
+          "NP_T-0360": 1.779955989135765,
+          "NP_T-0621": 2.6163586058957407,
+          "NP_T-0638": 2.4495919865683513,
+          "NP_T-0639": 2.06647883575512,
+          "NP_T-0899": 3.847354066214094,
+          "NP_T-0934": 2.3259251909694436
+        },
+        "mediana_m": 2.3259251909694436,
+        "media_m": 2.2192080659256175,
+        "ic95_bootstrap_transecto_mediana": [
+          1.779955989135765,
+          2.6163586058957407
+        ],
+        "vence": 0,
+        "total": 11,
+        "p_sinal_binomial": 0.0009765625,
+        "empates": 0,
+        "wilcoxon_W": 0.0,
+        "p_wilcoxon": 0.0009765625,
+        "delta_sinal_pareado": 1.0,
+        "dp_entre_transectos_m": 0.8540005209076614,
+        "mde80_m": 0.800074699874836,
+        "d_z": 2.598602707603698,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0009765625
+      },
+      "teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 3.080125902553375,
+          "NP_T-0226": 2.271540022928928,
+          "NP_T-0227": 3.3391287669606156,
+          "NP_T-0357": -2.023752305065349,
+          "NP_T-0358": -1.7802266633795956,
+          "NP_T-0360": 1.9914330334117722,
+          "NP_T-0621": 3.295877025191456,
+          "NP_T-0638": 2.6908326222394647,
+          "NP_T-0639": 2.469567321218849,
+          "NP_T-0899": 4.195927345195074,
+          "NP_T-0934": 4.778879828562681
+        },
+        "mediana_m": 2.6908326222394647,
+        "media_m": 2.2099393545288426,
+        "ic95_bootstrap_transecto_mediana": [
+          1.9914330334117722,
+          3.3391287669606156
+        ],
+        "vence": 2,
+        "total": 11,
+        "p_sinal_binomial": 0.0654296875,
+        "empates": 0,
+        "wilcoxon_W": 4.0,
+        "p_wilcoxon": 0.0068359375,
+        "delta_sinal_pareado": 0.6363636363636364,
+        "dp_entre_transectos_m": 2.1897701256067004,
+        "mde80_m": 2.0514971983595487,
+        "d_z": 1.0092106603731084,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0068359375
+      },
+      "criterio_fabdem_passa": true,
+      "criterio_anadem_passa": true
+    },
+    "lambda_+0.25_sentido_fisico": {
+      "lambda": 0.25,
+      "n_cel": 41287,
+      "n_transectos": 13,
+      "pool_mae_>30m": {
+        "v23": 5.708993901930426,
+        "mlp": 6.526690005478751,
+        "fabdem": 3.880828874505023,
+        "gedtm30": 4.700307725339071,
+        "glo30": 20.035312168965913,
+        "anadem": 4.3421149794084775
+      },
+      "ranking_mae_crescente": [
+        "fabdem",
+        "anadem",
+        "gedtm30",
+        "v23",
+        "mlp",
+        "glo30"
+      ],
+      "teste_pareado_v23_vs_fabdem_mae": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 2.0037369345035065,
+          "NP_T-0226": 2.040147859468649,
+          "NP_T-0227": 2.8340679380606297,
+          "NP_T-0357": 1.547903339332688,
+          "NP_T-0358": 0.4091507267228067,
+          "NP_T-0360": 1.3155261651746206,
+          "NP_T-0621": 2.579494147893513,
+          "NP_T-0638": 2.370721374494538,
+          "NP_T-0639": 1.9297114630103107,
+          "NP_T-0899": 3.6066498037559027,
+          "NP_T-0934": 2.3152744197593744
+        },
+        "mediana_m": 2.040147859468649,
+        "media_m": 2.0865803792887765,
+        "ic95_bootstrap_transecto_mediana": [
+          1.547903339332688,
+          2.579494147893513
+        ],
+        "vence": 0,
+        "total": 11,
+        "p_sinal_binomial": 0.0009765625,
+        "empates": 0,
+        "wilcoxon_W": 0.0,
+        "p_wilcoxon": 0.0009765625,
+        "delta_sinal_pareado": 1.0,
+        "dp_entre_transectos_m": 0.835310985455339,
+        "mde80_m": 0.7825653142225598,
+        "d_z": 2.4979683203272542,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0009765625
+      },
+      "teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 2.9925948629801056,
+          "NP_T-0226": 1.8081781764638452,
+          "NP_T-0227": 3.2512800880160038,
+          "NP_T-0357": -2.0560314215327127,
+          "NP_T-0358": -1.8621471229415603,
+          "NP_T-0360": 1.4241821554287684,
+          "NP_T-0621": 3.262279616157227,
+          "NP_T-0638": 2.524543325443217,
+          "NP_T-0639": 2.2949158024392493,
+          "NP_T-0899": 3.8517226747464344,
+          "NP_T-0934": 4.668294318375917
+        },
+        "mediana_m": 2.524543325443217,
+        "media_m": 2.0145284068705904,
+        "ic95_bootstrap_transecto_mediana": [
+          1.4241821554287684,
+          3.262279616157227
+        ],
+        "vence": 2,
+        "total": 11,
+        "p_sinal_binomial": 0.0654296875,
+        "empates": 0,
+        "wilcoxon_W": 7.0,
+        "p_wilcoxon": 0.0185546875,
+        "delta_sinal_pareado": 0.6363636363636364,
+        "dp_entre_transectos_m": 2.1630695778832045,
+        "mde80_m": 2.026482655413293,
+        "d_z": 0.9313285284341257,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0185546875
+      },
+      "criterio_fabdem_passa": true,
+      "criterio_anadem_passa": true
+    },
+    "lambda_+0.50_sentido_fisico": {
+      "lambda": 0.5,
+      "n_cel": 41287,
+      "n_transectos": 13,
+      "pool_mae_>30m": {
+        "v23": 4.860634181927695,
+        "mlp": 5.601607740107023,
+        "fabdem": 3.3128957588756895,
+        "gedtm30": 3.9580352301648336,
+        "glo30": 19.063944753311404,
+        "anadem": 3.8568996496324504
+      },
+      "ranking_mae_crescente": [
+        "fabdem",
+        "anadem",
+        "gedtm30",
+        "v23",
+        "mlp",
+        "glo30"
+      ],
+      "teste_pareado_v23_vs_fabdem_mae": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 1.905823780256358,
+          "NP_T-0226": 1.5810811741741695,
+          "NP_T-0227": 2.6474048325468997,
+          "NP_T-0357": 1.4672765367806941,
+          "NP_T-0358": 0.3522927081342182,
+          "NP_T-0360": 0.42873618427777993,
+          "NP_T-0621": 2.472774158956793,
+          "NP_T-0638": 2.2335467246723937,
+          "NP_T-0639": 1.7250219485323015,
+          "NP_T-0899": 3.035800881428563,
+          "NP_T-0934": 2.261584612586188
+        },
+        "mediana_m": 1.905823780256358,
+        "media_m": 1.8283039583951235,
+        "ic95_bootstrap_transecto_mediana": [
+          1.4672765367806941,
+          2.472774158956793
+        ],
+        "vence": 0,
+        "total": 11,
+        "p_sinal_binomial": 0.0009765625,
+        "empates": 0,
+        "wilcoxon_W": 0.0,
+        "p_wilcoxon": 0.0009765625,
+        "delta_sinal_pareado": 1.0,
+        "dp_entre_transectos_m": 0.850988031131019,
+        "mde80_m": 0.7972524336174788,
+        "d_z": 2.1484484992875723,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0009765625
+      },
+      "teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 2.737023594709421,
+          "NP_T-0226": 1.1687324161709545,
+          "NP_T-0227": 3.0527248919871877,
+          "NP_T-0357": -2.135267956572724,
+          "NP_T-0358": -1.995499397670204,
+          "NP_T-0360": 0.46903781018931756,
+          "NP_T-0621": 3.1569081484240096,
+          "NP_T-0638": 2.325592108403945,
+          "NP_T-0639": 2.0061591372974155,
+          "NP_T-0899": 3.2013584112666003,
+          "NP_T-0934": 4.461509549073359
+        },
+        "mediana_m": 2.325592108403945,
+        "media_m": 1.677116246661753,
+        "ic95_bootstrap_transecto_mediana": [
+          0.46903781018931756,
+          3.1569081484240096
+        ],
+        "vence": 2,
+        "total": 11,
+        "p_sinal_binomial": 0.0654296875,
+        "empates": 0,
+        "wilcoxon_W": 8.0,
+        "p_wilcoxon": 0.0244140625,
+        "delta_sinal_pareado": 0.6363636363636364,
+        "dp_entre_transectos_m": 2.134261554306606,
+        "mde80_m": 1.9994937130733779,
+        "d_z": 0.7858063334728561,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0244140625
+      },
+      "criterio_fabdem_passa": true,
+      "criterio_anadem_passa": true
+    },
+    "lambda_+0.75_sentido_fisico": {
+      "lambda": 0.75,
+      "n_cel": 41287,
+      "n_transectos": 13,
+      "pool_mae_>30m": {
+        "v23": 4.157244727290666,
+        "mlp": 4.7654638881578615,
+        "fabdem": 3.010362521626435,
+        "gedtm30": 3.4173821928497943,
+        "glo30": 18.092577337656888,
+        "anadem": 3.651032888293805
+      },
+      "ranking_mae_crescente": [
+        "fabdem",
+        "gedtm30",
+        "anadem",
+        "v23",
+        "mlp",
+        "glo30"
+      ],
+      "teste_pareado_v23_vs_fabdem_mae": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 1.6170464478661648,
+          "NP_T-0226": 0.9645339637985937,
+          "NP_T-0227": 2.3679636255092036,
+          "NP_T-0357": 1.2449839495036619,
+          "NP_T-0358": 0.23017855716272173,
+          "NP_T-0360": -0.5095070578103424,
+          "NP_T-0621": 2.248152490442904,
+          "NP_T-0638": 2.0651858091748094,
+          "NP_T-0639": 1.4590937543367994,
+          "NP_T-0899": 2.0788164062040426,
+          "NP_T-0934": 2.1780408301104752
+        },
+        "mediana_m": 1.6170464478661648,
+        "media_m": 1.4494989796635485,
+        "ic95_bootstrap_transecto_mediana": [
+          0.9645339637985937,
+          2.1780408301104752
+        ],
+        "vence": 1,
+        "total": 11,
+        "p_sinal_binomial": 0.01171875,
+        "empates": 0,
+        "wilcoxon_W": 2.0,
+        "p_wilcoxon": 0.0029296875,
+        "delta_sinal_pareado": 0.8181818181818182,
+        "dp_entre_transectos_m": 0.9174386783183642,
+        "mde80_m": 0.8595070579453395,
+        "d_z": 1.5799409965148121,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0029296875
+      },
+      "teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 2.147193533011774,
+          "NP_T-0226": 0.4138973452254273,
+          "NP_T-0227": 2.7319388742017257,
+          "NP_T-0357": -2.2947215859596053,
+          "NP_T-0358": -2.193669081758487,
+          "NP_T-0360": -0.5033742714455824,
+          "NP_T-0621": 2.85476102380239,
+          "NP_T-0638": 2.105412069139006,
+          "NP_T-0639": 1.6176907958641484,
+          "NP_T-0899": 2.218491232080565,
+          "NP_T-0934": 4.099201169277548
+        },
+        "mediana_m": 2.105412069139006,
+        "media_m": 1.1997110094035373,
+        "ic95_bootstrap_transecto_mediana": [
+          -0.5033742714455824,
+          2.7319388742017257
+        ],
+        "vence": 3,
+        "total": 11,
+        "p_sinal_binomial": 0.2265625,
+        "empates": 0,
+        "wilcoxon_W": 16.0,
+        "p_wilcoxon": 0.1474609375,
+        "delta_sinal_pareado": 0.45454545454545453,
+        "dp_entre_transectos_m": 2.0897053368471235,
+        "mde80_m": 1.9577509957813963,
+        "d_z": 0.5741053478925505,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.1474609375
+      },
+      "criterio_fabdem_passa": true,
+      "criterio_anadem_passa": false
+    },
+    "lambda_+1.00_sentido_fisico": {
+      "lambda": 1.0,
+      "n_cel": 41287,
+      "n_transectos": 13,
+      "pool_mae_>30m": {
+        "v23": 3.6777444914505937,
+        "mlp": 4.110306851089451,
+        "fabdem": 2.985228479920219,
+        "gedtm30": 3.1354332911041785,
+        "glo30": 17.12124861938687,
+        "anadem": 3.7168676764297155
+      },
+      "ranking_mae_crescente": [
+        "fabdem",
+        "gedtm30",
+        "v23",
+        "anadem",
+        "mlp",
+        "glo30"
+      ],
+      "teste_pareado_v23_vs_fabdem_mae": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 1.131402617332986,
+          "NP_T-0226": 0.2943267901956923,
+          "NP_T-0227": 2.008773293752282,
+          "NP_T-0357": 0.8813806000812092,
+          "NP_T-0358": 0.08117673095768696,
+          "NP_T-0360": -1.195160564664834,
+          "NP_T-0621": 1.8882630454888423,
+          "NP_T-0638": 1.8766277097412054,
+          "NP_T-0639": 1.1487274732074004,
+          "NP_T-0899": 0.9612838162568864,
+          "NP_T-0934": 2.071201549018489
+        },
+        "mediana_m": 1.131402617332986,
+        "media_m": 1.0134548237607133,
+        "ic95_bootstrap_transecto_mediana": [
+          0.2943267901956923,
+          1.8882630454888423
+        ],
+        "vence": 1,
+        "total": 11,
+        "p_sinal_binomial": 0.01171875,
+        "empates": 0,
+        "wilcoxon_W": 7.0,
+        "p_wilcoxon": 0.0185546875,
+        "delta_sinal_pareado": 0.8181818181818182,
+        "dp_entre_transectos_m": 0.9968193988203682,
+        "mde80_m": 0.9338752867421883,
+        "d_z": 1.0166885044171807,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0185546875
+      },
+      "teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 1.2943808903346414,
+          "NP_T-0226": -0.32182920155064343,
+          "NP_T-0227": 2.3137632750423123,
+          "NP_T-0357": -2.5216833050468352,
+          "NP_T-0358": -2.3808536382705814,
+          "NP_T-0360": -1.2184050009159613,
+          "NP_T-0621": 2.324642858531831,
+          "NP_T-0638": 1.8725735627993272,
+          "NP_T-0639": 1.193963878480357,
+          "NP_T-0899": 1.0518605711868663,
+          "NP_T-0934": 3.5553591994415417
+        },
+        "mediana_m": 1.193963878480357,
+        "media_m": 0.6512520990938959,
+        "ic95_bootstrap_transecto_mediana": [
+          -1.2184050009159613,
+          2.3137632750423123
+        ],
+        "vence": 4,
+        "total": 11,
+        "p_sinal_binomial": 0.548828125,
+        "empates": 0,
+        "wilcoxon_W": 24.0,
+        "p_wilcoxon": 0.46484375,
+        "delta_sinal_pareado": 0.2727272727272727,
+        "dp_entre_transectos_m": 2.001548681599644,
+        "mde80_m": 1.875160988208412,
+        "d_z": 0.32537409910680426,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.46484375
+      },
+      "criterio_fabdem_passa": true,
+      "criterio_anadem_passa": false
+    },
+    "lambda_-0.50_controle_sentido": {
+      "lambda": -0.5,
+      "n_cel": 41287,
+      "n_transectos": 13,
+      "pool_mae_>30m": {
+        "v23": 8.534643892397852,
+        "mlp": 9.415418841770544,
+        "fabdem": 6.444950780668892,
+        "gedtm30": 7.417292516371369,
+        "glo30": 22.949414415929443,
+        "anadem": 6.782457831577149
+      },
+      "ranking_mae_crescente": [
+        "fabdem",
+        "anadem",
+        "gedtm30",
+        "v23",
+        "mlp",
+        "glo30"
+      ],
+      "teste_pareado_v23_vs_fabdem_mae": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 2.0182005841165154,
+          "NP_T-0226": 2.6424341563213343,
+          "NP_T-0227": 3.041587140577683,
+          "NP_T-0357": 1.5779716300833382,
+          "NP_T-0358": 0.4465904636802396,
+          "NP_T-0360": 2.0875593404739607,
+          "NP_T-0621": 2.6309557179058736,
+          "NP_T-0638": 2.516425754252073,
+          "NP_T-0639": 2.189918900953848,
+          "NP_T-0899": 3.9868518271402538,
+          "NP_T-0934": 2.337730129108687
+        },
+        "mediana_m": 2.337730129108687,
+        "media_m": 2.3160205131467095,
+        "ic95_bootstrap_transecto_mediana": [
+          2.0182005841165154,
+          2.6424341563213343
+        ],
+        "vence": 0,
+        "total": 11,
+        "p_sinal_binomial": 0.0009765625,
+        "empates": 0,
+        "wilcoxon_W": 0.0,
+        "p_wilcoxon": 0.0009765625,
+        "delta_sinal_pareado": 1.0,
+        "dp_entre_transectos_m": 0.8809520716918366,
+        "mde80_m": 0.825324396305808,
+        "d_z": 2.628997181082594,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0009765625
+      },
+      "teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 3.1295856655465677,
+          "NP_T-0226": 2.7776811748480474,
+          "NP_T-0227": 3.3965879060756192,
+          "NP_T-0357": -2.000890400816493,
+          "NP_T-0358": -1.7032290853058356,
+          "NP_T-0360": 2.32794027855228,
+          "NP_T-0621": 3.30950213739679,
+          "NP_T-0638": 2.9036534551524316,
+          "NP_T-0639": 2.5901826671343384,
+          "NP_T-0899": 4.385984923241436,
+          "NP_T-0934": 4.863992705681354
+        },
+        "mediana_m": 2.9036534551524316,
+        "media_m": 2.3619083115915034,
+        "ic95_bootstrap_transecto_mediana": [
+          2.32794027855228,
+          3.3965879060756192
+        ],
+        "vence": 2,
+        "total": 11,
+        "p_sinal_binomial": 0.0654296875,
+        "empates": 0,
+        "wilcoxon_W": 3.0,
+        "p_wilcoxon": 0.0048828125,
+        "delta_sinal_pareado": 0.6363636363636364,
+        "dp_entre_transectos_m": 2.213461303714149,
+        "mde80_m": 2.073692398186655,
+        "d_z": 1.0670655536775198,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0048828125
+      },
+      "criterio_fabdem_passa": true,
+      "criterio_anadem_passa": true
+    },
+    "lambda_-1.00_controle_sentido": {
+      "lambda": -1.0,
+      "n_cel": 41287,
+      "n_transectos": 13,
+      "pool_mae_>30m": {
+        "v23": 10.46630683536465,
+        "mlp": 11.356041119631845,
+        "fabdem": 8.343699037957608,
+        "gedtm30": 9.323444311684783,
+        "glo30": 24.892149247238468,
+        "anadem": 8.655747324718202
+      },
+      "ranking_mae_crescente": [
+        "fabdem",
+        "anadem",
+        "gedtm30",
+        "v23",
+        "mlp",
+        "glo30"
+      ],
+      "teste_pareado_v23_vs_fabdem_mae": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 2.0090437755169983,
+          "NP_T-0226": 2.757182662841739,
+          "NP_T-0227": 3.0665527968073025,
+          "NP_T-0357": 1.5792203491811136,
+          "NP_T-0358": 0.45347902812778784,
+          "NP_T-0360": 2.1643880234566346,
+          "NP_T-0621": 2.6318001414445114,
+          "NP_T-0638": 2.53440123360486,
+          "NP_T-0639": 2.214757032011555,
+          "NP_T-0899": 4.015001818358841,
+          "NP_T-0934": 2.3423716029099992
+        },
+        "mediana_m": 2.3423716029099992,
+        "media_m": 2.342563496751031,
+        "ic95_bootstrap_transecto_mediana": [
+          2.0090437755169983,
+          2.757182662841739
+        ],
+        "vence": 0,
+        "total": 11,
+        "p_sinal_binomial": 0.0009765625,
+        "empates": 0,
+        "wilcoxon_W": 0.0,
+        "p_wilcoxon": 0.0009765625,
+        "delta_sinal_pareado": 1.0,
+        "dp_entre_transectos_m": 0.8901813509901497,
+        "mde80_m": 0.8339708932152137,
+        "d_z": 2.6315575968260796,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0009765625
+      },
+      "teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 3.138481508527878,
+          "NP_T-0226": 3.0089901222279254,
+          "NP_T-0227": 3.421105699995678,
+          "NP_T-0357": -1.9907046024133468,
+          "NP_T-0358": -1.6787396936634824,
+          "NP_T-0360": 2.3906109863024083,
+          "NP_T-0621": 3.312286120086049,
+          "NP_T-0638": 2.9925801440685182,
+          "NP_T-0639": 2.6197152464991067,
+          "NP_T-0899": 4.417813374712032,
+          "NP_T-0934": 4.877691627290738
+        },
+        "mediana_m": 3.0089901222279254,
+        "media_m": 2.409984593966682,
+        "ic95_bootstrap_transecto_mediana": [
+          2.3906109863024083,
+          3.421105699995678
+        ],
+        "vence": 2,
+        "total": 11,
+        "p_sinal_binomial": 0.0654296875,
+        "empates": 0,
+        "wilcoxon_W": 3.0,
+        "p_wilcoxon": 0.0048828125,
+        "delta_sinal_pareado": 0.6363636363636364,
+        "dp_entre_transectos_m": 2.2206867246257516,
+        "mde80_m": 2.080461570248957,
+        "d_z": 1.0852429418529679,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.0048828125
+      },
+      "criterio_fabdem_passa": true,
+      "criterio_anadem_passa": true
+    },
+    "estresse_delta_ic_sup_transecto": {
+      "descricao": "delta_c replaced by the upper bound of the bootstrap CI (B=10000, seed 42) of the mean delta PER TRANSECT, constant within a transect",
+      "delta_ic_sup_por_transecto_m": {
+        "NP_T-0224": 5.47368840936892,
+        "NP_T-0226": 3.8398126553200997,
+        "NP_T-0227": 1.990777836535355,
+        "NP_T-0357": 4.422311189664125,
+        "NP_T-0358": 4.560316930753129,
+        "NP_T-0360": 4.94261236405679,
+        "NP_T-0621": 3.298315728937188,
+        "NP_T-0638": 1.3478701661355488,
+        "NP_T-0639": 1.837220653110031,
+        "NP_T-0662": 5.215438000994449,
+        "NP_T-0896": 3.075256649246448,
+        "NP_T-0899": 3.6032813567014617,
+        "NP_T-0934": 2.662136753201124
+      },
+      "n_cel": 41287,
+      "n_transectos": 13,
+      "pool_mae_>30m": {
+        "v23": 3.4437051920267217,
+        "mlp": 3.920285994657827,
+        "fabdem": 2.697478280967083,
+        "gedtm30": 2.9220411422830606,
+        "glo30": 17.055150811396448,
+        "anadem": 3.467304540395054
+      },
+      "ranking_mae_crescente": [
+        "fabdem",
+        "gedtm30",
+        "v23",
+        "anadem",
+        "mlp",
+        "glo30"
+      ],
+      "teste_pareado_v23_vs_fabdem_mae": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 1.2308857573359595,
+          "NP_T-0226": 0.018866505329629746,
+          "NP_T-0227": 2.1268826223700623,
+          "NP_T-0357": 1.0666231335743226,
+          "NP_T-0358": 0.03667619764451846,
+          "NP_T-0360": -1.2899476280711268,
+          "NP_T-0621": 2.093278771622609,
+          "NP_T-0638": 2.1234121266121435,
+          "NP_T-0639": 1.5283972360984417,
+          "NP_T-0899": 1.1440514171870517,
+          "NP_T-0934": 1.9870158855908993
+        },
+        "mediana_m": 1.2308857573359595,
+        "media_m": 1.0969220022995012,
+        "ic95_bootstrap_transecto_mediana": [
+          0.03667619764451846,
+          2.093278771622609
+        ],
+        "vence": 1,
+        "total": 11,
+        "p_sinal_binomial": 0.01171875,
+        "empates": 0,
+        "wilcoxon_W": 6.0,
+        "p_wilcoxon": 0.013671875,
+        "delta_sinal_pareado": 0.8181818181818182,
+        "dp_entre_transectos_m": 1.0995554832984242,
+        "mde80_m": 1.0301241062016133,
+        "d_z": 0.9976049585137594,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.013671875
+      },
+      "teste_pareado_v23_vs_anadem_mae_condicionado_a_contra_auditoria": {
+        "n_transectos": 11,
+        "transectos": [
+          "NP_T-0224",
+          "NP_T-0226",
+          "NP_T-0227",
+          "NP_T-0357",
+          "NP_T-0358",
+          "NP_T-0360",
+          "NP_T-0621",
+          "NP_T-0638",
+          "NP_T-0639",
+          "NP_T-0899",
+          "NP_T-0934"
+        ],
+        "excluidos_abaixo_do_piso": [
+          "NP_T-0662",
+          "NP_T-0896"
+        ],
+        "testado": true,
+        "diferencas_por_transecto": {
+          "NP_T-0224": 1.3225232818551045,
+          "NP_T-0226": -0.6821302251594306,
+          "NP_T-0227": 2.4578917989483804,
+          "NP_T-0357": -2.512500318016192,
+          "NP_T-0358": -2.508212261357901,
+          "NP_T-0360": -1.3329293046847934,
+          "NP_T-0621": 2.5984344137164572,
+          "NP_T-0638": 2.3000341782780858,
+          "NP_T-0639": 1.7065329004184542,
+          "NP_T-0899": 1.0231219078810596,
+          "NP_T-0934": 3.643588499382589
+        },
+        "mediana_m": 1.3225232818551045,
+        "media_m": 0.728759533751074,
+        "ic95_bootstrap_transecto_mediana": [
+          -1.3329293046847934,
+          2.4578917989483804
+        ],
+        "vence": 4,
+        "total": 11,
+        "p_sinal_binomial": 0.548828125,
+        "empates": 0,
+        "wilcoxon_W": 22.0,
+        "p_wilcoxon": 0.365234375,
+        "delta_sinal_pareado": 0.2727272727272727,
+        "dp_entre_transectos_m": 2.1464128776753766,
+        "mde80_m": 2.0108777417236396,
+        "d_z": 0.3395243950177658,
+        "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+        "p_holm": 0.365234375
+      },
+      "criterio_fabdem_passa": true,
+      "criterio_anadem_passa": false
+    }
+  },
+  "guarda_deslocamento_comum_13_09": {
+    "s_max_grade_m": 4.410872074079799,
+    "n_pontos_grade": 21,
+    "produtos_avaliados": [
+      "v23",
+      "mlp",
+      "fabdem",
+      "gedtm30",
+      "glo30"
+    ],
+    "ordem_em_s_0": [
+      "fabdem",
+      "gedtm30",
+      "v23",
+      "mlp",
+      "glo30"
+    ],
+    "ordem_cruza_no_intervalo": false,
+    "s_onde_cruzou_m": null,
+    "reproduz_invariancia_13_09": true,
+    "curva": [
+      {
+        "s": 0.0,
+        "pool_mae": {
+          "v23": 6.62774097210393,
+          "mlp": 7.482468133996334,
+          "fabdem": 4.650182559744462,
+          "gedtm30": 5.563192648086919,
+          "glo30": 21.00667958462042
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 0.22054360370398993,
+        "pool_mae": {
+          "v23": 6.416663391343743,
+          "mlp": 7.265266540767781,
+          "fabdem": 4.470597961330497,
+          "gedtm30": 5.369048764893388,
+          "glo30": 20.78613598091643
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 0.44108720740797985,
+        "pool_mae": {
+          "v23": 6.207099321769579,
+          "mlp": 7.048659524110794,
+          "fabdem": 4.296756907547728,
+          "gedtm30": 5.178254515605113,
+          "glo30": 20.565592377212443
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 0.6616308111119698,
+        "pool_mae": {
+          "v23": 5.99918691047741,
+          "mlp": 6.832816087598224,
+          "fabdem": 4.129152245728781,
+          "gedtm30": 4.9911626507564915,
+          "glo30": 20.34504877350846
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 0.8821744148159597,
+        "pool_mae": {
+          "v23": 5.7933176157518735,
+          "mlp": 6.617795432135539,
+          "fabdem": 3.9686717225993364,
+          "gedtm30": 4.808418341648765,
+          "glo30": 20.124505169804465
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 1.1027180185199497,
+        "pool_mae": {
+          "v23": 5.58957615598169,
+          "mlp": 6.403830248736576,
+          "fabdem": 3.8158791500469205,
+          "gedtm30": 4.630783304067519,
+          "glo30": 19.903961566100467
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 1.3232616222239395,
+        "pool_mae": {
+          "v23": 5.388238006760118,
+          "mlp": 6.191008847880879,
+          "fabdem": 3.6718134663620337,
+          "gedtm30": 4.458543003715649,
+          "glo30": 19.683417962396486
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 1.5438052259279296,
+        "pool_mae": {
+          "v23": 5.189455674340907,
+          "mlp": 5.979499433610117,
+          "fabdem": 3.5370243033251825,
+          "gedtm30": 4.292168598623921,
+          "glo30": 19.462874358692492
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 1.7643488296319194,
+        "pool_mae": {
+          "v23": 4.993888376598724,
+          "mlp": 5.769500423066153,
+          "fabdem": 3.411676161648566,
+          "gedtm30": 4.132436012025469,
+          "glo30": 19.242330754988497
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 1.9848924333359093,
+        "pool_mae": {
+          "v23": 4.801993770575736,
+          "mlp": 5.561333754024839,
+          "fabdem": 3.295904613565164,
+          "gedtm30": 3.9802062492456556,
+          "glo30": 19.02179589054964
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 2.2054360370398993,
+        "pool_mae": {
+          "v23": 4.613988595418898,
+          "mlp": 5.355309500899479,
+          "fabdem": 3.1899205792780476,
+          "gedtm30": 3.835768614521046,
+          "glo30": 18.80126297028614
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 2.4259796407438894,
+        "pool_mae": {
+          "v23": 4.430244139361434,
+          "mlp": 5.151660710832991,
+          "fabdem": 3.0938829100741834,
+          "gedtm30": 3.6993686523517475,
+          "glo30": 18.580730050022634
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 2.646523244447879,
+        "pool_mae": {
+          "v23": 4.251506586518524,
+          "mlp": 4.950819099000745,
+          "fabdem": 3.0078548499281244,
+          "gedtm30": 3.571572577134971,
+          "glo30": 18.360197129759133
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 2.867066848151869,
+        "pool_mae": {
+          "v23": 4.078477761749285,
+          "mlp": 4.753259000650822,
+          "fabdem": 2.932399298684575,
+          "gedtm30": 3.453326306596541,
+          "glo30": 18.139664944101686
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 3.087610451855859,
+        "pool_mae": {
+          "v23": 3.911501255095861,
+          "mlp": 4.559698235738302,
+          "fabdem": 2.867966413739612,
+          "gedtm30": 3.3451807453979723,
+          "glo30": 17.91915231429799
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 3.3081540555598488,
+        "pool_mae": {
+          "v23": 3.750991237877573,
+          "mlp": 4.370630926986201,
+          "fabdem": 2.8142876568727124,
+          "gedtm30": 3.2471924208124214,
+          "glo30": 17.69864103453972
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 3.528697659263839,
+        "pool_mae": {
+          "v23": 3.5976043948523357,
+          "mlp": 4.186432211275731,
+          "fabdem": 2.7716105670212947,
+          "gedtm30": 3.159282525219914,
+          "glo30": 17.47814016459768
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 3.749241262967829,
+        "pool_mae": {
+          "v23": 3.451746484592521,
+          "mlp": 4.007781908039649,
+          "fabdem": 2.739840891916975,
+          "gedtm30": 3.08166276437866,
+          "glo30": 17.257639294655643
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 3.9697848666718185,
+        "pool_mae": {
+          "v23": 3.314299130223193,
+          "mlp": 3.8352407435169424,
+          "fabdem": 2.719423557731756,
+          "gedtm30": 3.015005659956867,
+          "glo30": 17.03714015300773
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 4.190328470375809,
+        "pool_mae": {
+          "v23": 3.1853049360350174,
+          "mlp": 3.6692368150558057,
+          "fabdem": 2.7104613833495614,
+          "gedtm30": 2.959070049236127,
+          "glo30": 16.816649966506176
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      },
+      {
+        "s": 4.410872074079799,
+        "pool_mae": {
+          "v23": 3.065413694521256,
+          "mlp": 3.510461041020542,
+          "fabdem": 2.7132149027322474,
+          "gedtm30": 2.9144304266047687,
+          "glo30": 16.59615978000462
+        },
+        "ordem": [
+          "fabdem",
+          "gedtm30",
+          "v23",
+          "mlp",
+          "glo30"
+        ]
+      }
+    ],
+    "nota": "Common s (not the per-cell delta_c); guard defined on 13/09. ANADEM is left out because it did not exist at that date; see the separate block for ANADEM."
+  },
+  "controle_positivo_inversao_por_construcao": {
+    "construcao": "fabdem_construido = fabdem + K*delta_c, K=1.0, applied to the RAW product value (not to z_ref); other products unchanged",
+    "pool_mae_antes": {
+      "v23": 6.62774097210393,
+      "mlp": 7.482468133996334,
+      "fabdem": 4.650182559744462,
+      "gedtm30": 5.563192648086919,
+      "glo30": 21.00667958462042
+    },
+    "ordem_antes": [
+      "fabdem",
+      "gedtm30",
+      "v23",
+      "mlp",
+      "glo30"
+    ],
+    "pool_mae_depois": {
+      "v23": 6.62774097210393,
+      "mlp": 7.482468133996334,
+      "fabdem": 8.343699037957608,
+      "gedtm30": 5.563192648086919,
+      "glo30": 21.00667958462042
+    },
+    "ordem_depois": [
+      "gedtm30",
+      "v23",
+      "mlp",
+      "fabdem",
+      "glo30"
+    ],
+    "teste_pareado_v23_vs_fabdem_construido_mae": {
+      "n_transectos": 11,
+      "transectos": [
+        "NP_T-0224",
+        "NP_T-0226",
+        "NP_T-0227",
+        "NP_T-0357",
+        "NP_T-0358",
+        "NP_T-0360",
+        "NP_T-0621",
+        "NP_T-0638",
+        "NP_T-0639",
+        "NP_T-0899",
+        "NP_T-0934"
+      ],
+      "excluidos_abaixo_do_piso": [
+        "NP_T-0662",
+        "NP_T-0896"
+      ],
+      "testado": true,
+      "diferencas_por_transecto": {
+        "NP_T-0224": -3.3448591012106395,
+        "NP_T-0226": -0.9551929336449572,
+        "NP_T-0227": 1.1662197725555599,
+        "NP_T-0357": -2.7689701081500075,
+        "NP_T-0358": -4.008380376505089,
+        "NP_T-0360": -2.5661282089373207,
+        "NP_T-0621": -0.6072381361641108,
+        "NP_T-0638": 1.2806359056187997,
+        "NP_T-0639": 0.44848890341058034,
+        "NP_T-0899": 0.5110591774543662,
+        "NP_T-0934": -0.17557597634042654
+      },
+      "mediana_m": -0.6072381361641108,
+      "media_m": -1.0018128256284766,
+      "ic95_bootstrap_transecto_mediana": [
+        -2.7689701081500075,
+        0.5110591774543662
+      ],
+      "vence": 7,
+      "total": 11,
+      "p_sinal_binomial": 0.548828125,
+      "empates": 0,
+      "wilcoxon_W": 18.0,
+      "p_wilcoxon": 0.2060546875,
+      "delta_sinal_pareado": -0.2727272727272727,
+      "dp_entre_transectos_m": 1.8772817065819292,
+      "mde80_m": 1.7587408452370914,
+      "d_z": -0.5336507686172113,
+      "mde80_metodo": "t approximation (t_{1-a/2}+t_{0.80})*dp/sqrt(n); exact nct differs by <0.001 m in this sample; MDE of the paired t test, not of the Wilcoxon test (ARE 0.955)",
+      "p_holm": 0.2060546875
+    },
+    "inversao_reportada": true
+  },
+  "anadem_condicionado_a_contra_auditoria": {
+    "instrucao_recebida": "ANADEM results are conditional on a pending independent recomputation; same rule, no new criterion.",
+    "status_observado_no_disco_desta_corrida": "Verdict: CONFIRMED WITH RESERVATIONS",
+    "arquivo_contra_auditoria": "internal/note_01.md"
+  },
+  "veredito": {
+    "fabdem": {
+      "passa_por_lambda": {
+        "0.0": true,
+        "0.25": true,
+        "0.5": true,
+        "0.75": true,
+        "1.0": true
+      },
+      "todos_passam": true,
+      "falha_em_lambda_0_25": false,
+      "lambda_max_que_passa": 1.0,
+      "veredito": "FRASE_MANTIDA_SEM_RESTRICAO",
+      "frase_literal": "The ordering proposed-FABDEM>0 in MAE (>30 m) survives the per-cell shift by the native delta over the whole physical grid [0;1]."
+    },
+    "anadem_condicionado_a_contra_auditoria": {
+      "passa_por_lambda": {
+        "0.0": true,
+        "0.25": true,
+        "0.5": true,
+        "0.75": false,
+        "1.0": false
+      },
+      "todos_passam": false,
+      "falha_em_lambda_0_25": false,
+      "lambda_max_que_passa": 0.5,
+      "veredito": "FRASE_CONDICIONADA_A_LAMBDA_MAX",
+      "frase_literal": "The sentence gains the restriction 'for reference offsets up to 0.5*delta' (lambda_max of the grid that passes, grid not refined)."
+    }
+  }
+}

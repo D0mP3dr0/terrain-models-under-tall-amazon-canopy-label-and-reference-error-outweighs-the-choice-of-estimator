@@ -1,0 +1,164 @@
+{
+  "_proveniencia": {
+    "script": "selecao_em_validacao.py",
+    "commit": "82c77a1",
+    "tag": "v23-baseline",
+    "arvore_suja": true,
+    "host": "DESKTOP-PR3HC7J",
+    "em": "2026-08-16T12:20",
+    "versoes": {
+      "python": "3.11.9",
+      "numpy": "2.4.6",
+      "pandas": "3.0.0",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "torch_geometric": "2.8.0.dev20260214",
+      "xgboost": "3.2.0"
+    },
+    "retroativo": true,
+    "nota": "retroactive stamp: the artifact was written before proveniencia.py existed; the sha256 of the sources is from stamping time, not from the original read",
+    "carimbo_anterior": {
+      "script": "selecao_em_validacao.py",
+      "commit": "2f4130c",
+      "em": "2026-08-14T17:47"
+    }
+  },
+  "_fontes": [
+    {
+      "caminho": "results/ofat_boost_ba4.json",
+      "sha256": "2b16594822059650225e63e6551a3c26039dbcddd8b1bb1986dc7f466e6ec68f",
+      "bytes": 3712075,
+      "mtime": "2026-08-09 19:09"
+    },
+    {
+      "caminho": "results/ofat_suavfina_b4s025.json",
+      "sha256": "1a6fd30f06651f5cf557cb96ba89810719a93baa5a6c7a202c062d99a9d4445b",
+      "bytes": 3712145,
+      "mtime": "2026-08-09 22:37"
+    },
+    {
+      "caminho": "results/ofat_suavfina_b4s035.json",
+      "sha256": "cd2074745a15b1211e5248a8df788d34f13c255b475986dcb5ee074211bf21f0",
+      "bytes": 3704055,
+      "mtime": "2026-08-10 09:51"
+    },
+    {
+      "caminho": "results/ofat_suavfina_b4s05.json",
+      "sha256": "07b60dd10a590910b5095782e49144223a5fb61cdceca16026ecbe120b0765a3",
+      "bytes": 3711144,
+      "mtime": "2026-08-09 23:39"
+    },
+    {
+      "caminho": "results/ofat_dossel_pd137.json",
+      "sha256": "fccf02b417e0e75ab3f344f74768c69af2515f879537a97ba74606f58f346c05",
+      "bytes": 3663169,
+      "mtime": "2026-08-08 21:12"
+    },
+    {
+      "caminho": "results/ofat_boost_ba2.json",
+      "sha256": "94a5e4fa75fb16ec8b8407e6d151e540022833dab94eece05def7a0c4cc94568",
+      "bytes": 3710178,
+      "mtime": "2026-08-10 12:00"
+    },
+    {
+      "caminho": "results/ofat_boost_ba16.json",
+      "sha256": "a50ca9c6595e7b35c2117bf4e07fa3e2b6237746f9d72f2e9e1f553f7268afa9",
+      "bytes": 3712672,
+      "mtime": "2026-08-09 20:08"
+    },
+    {
+      "caminho": "comparar_suavidade_fina_ba4.json",
+      "sha256": "dd860227c347f4b73ae227aef9aaf2348dd875ea7f3bfeb1450fa8e2996d7378",
+      "bytes": 1426,
+      "mtime": "2026-08-10 08:47"
+    },
+    {
+      "caminho": "comparar_ponto_s035.json",
+      "sha256": "3e9825e7d13ed4667cc6c22884312e38a1e26a647349b2f7db8854b7d5cff849",
+      "bytes": 831,
+      "mtime": "2026-08-10 10:02"
+    }
+  ],
+  "traducao_guarda_corpo": "0.081 m of val_mae (= 0.010 of skill x trivial 8.09 m)",
+  "populacoes_usadas": [
+    "treino.val_mae_melhor (final stage, union)",
+    "teste_em_dist (MAE ATL08)"
+  ],
+  "reserva_tocada": false,
+  "familias": {
+    "suavidade": {
+      "0.0": {
+        "val_mae": 5.269892512267493,
+        "dp": 0.040180247490383035,
+        "delta_vs_0": 0.0,
+        "n_sementes": 5,
+        "dentro_guarda_val": true,
+        "criados_2m": 55968.2147132,
+        "corte_criados": 0.0
+      },
+      "0.25": {
+        "val_mae": 5.315145989100901,
+        "dp": 0.04107903795901509,
+        "delta_vs_0": 0.04525347683340826,
+        "n_sementes": 5,
+        "dentro_guarda_val": true,
+        "criados_2m": 33415.8495952,
+        "corte_criados": 0.40294951757110575
+      },
+      "0.35": {
+        "val_mae": 5.3336126063706075,
+        "dp": 0.04276627973288928,
+        "delta_vs_0": 0.06372009410311481,
+        "n_sementes": 5,
+        "dentro_guarda_val": true,
+        "criados_2m": 27820.738340799995,
+        "corte_criados": 0.5029189606393051
+      },
+      "0.5": {
+        "val_mae": 5.366106007354551,
+        "dp": 0.048204294978503225,
+        "delta_vs_0": 0.0962134950870583,
+        "n_sementes": 5,
+        "dentro_guarda_val": false,
+        "criados_2m": 19475.6342912,
+        "corte_criados": 0.6520233066035837
+      },
+      "_regra": "smallest lambda that cuts >=50% of those created >2m, with val_mae delta <= 0.081 m",
+      "_eleito": 0.35,
+      "_adotado_sobrevive": true
+    },
+    "boost": {
+      "1": {
+        "mae_atl08_teste": 5.655974960327148,
+        "dp_atl08": 0.5073344622463737,
+        "val_mae": 5.488331516099102,
+        "dp_val": 0.04021970288631172,
+        "n_sementes": 5
+      },
+      "2": {
+        "mae_atl08_teste": 4.114169311523438,
+        "dp_atl08": 0.09673847687629675,
+        "val_mae": 5.406872888361276,
+        "dp_val": 0.040781141898126316,
+        "n_sementes": 5
+      },
+      "4": {
+        "mae_atl08_teste": 4.092303466796875,
+        "dp_atl08": 0.10233153988999727,
+        "val_mae": 5.269892512267493,
+        "dp_val": 0.040180247490383035,
+        "n_sementes": 5
+      },
+      "16": {
+        "mae_atl08_teste": 4.052933120727539,
+        "dp_atl08": 0.10360997457841468,
+        "val_mae": 4.803824702844391,
+        "dp_val": 0.06940328447190584,
+        "n_sementes": 5
+      },
+      "_regra": "smallest K beyond which the ATL08 test MAE gain stays within 1 sd across seeds",
+      "_eleito": 2,
+      "_adotado_sobrevive": false
+    }
+  }
+}
